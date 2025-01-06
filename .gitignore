@@ -1,3 +1,7 @@
+#utility files/folders
+debug-output.yaml
+dump
+
 #IDE specific files
 #vscode
 .vscode

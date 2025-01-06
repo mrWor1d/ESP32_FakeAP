@@ -4,6 +4,7 @@
 #include "include.h"
 
 
+
 class CaptivePortalManager
 {
 protected:
@@ -11,12 +12,13 @@ protected:
     IPAddress*  _serverIP;
     String      _pageContent = "\0";
 
-    inline bool getLoginPage(Platform_t platform)
+    inline bool getLoginPage(const String& platform)
     {
         //WiFiClient* client = new WiFiClient();
         
         if (_client->connect(*_serverIP, 80))
         {
+            /*
             String socialNetwork;
             [platform, &socialNetwork] () {
                 switch (platform)
@@ -27,8 +29,8 @@ protected:
                     case TWITTER:	socialNetwork = "twitter";
                 }
             };
-
-            String url = "/get-login-page?platform=" + socialNetwork;
+            */
+            String url = "/get-login-page?platform=" + platform;
 
             _client->print(String("GET ") + url + " HTTP/1.1\r\n" +
                 "Host: "+ _serverIP->toString() +"\r\n" +
@@ -105,13 +107,16 @@ public:
 
     inline void setServerIP(const IPAddress& IP) { *_serverIP = IP; }
 
-    //TODO find a way to log the static methods
 
     inline String& getPageContent() { return _pageContent; }
 
+    inline IPAddress& getServerIp() { return *_serverIP; }
+
+    //TODO find a way to log the static methods
     static inline bool setWifiStation(const String& wifissid, const String& wifipsw="\0",
                                         const IPAddress& apIp = IPAddress(192,168,1,3))
     {
+        if (wifissid==NULL) return 0;
         Serial.printf("Connectando a %s", wifissid.c_str());
         wifipsw != NULL ? WiFi.begin(wifissid, wifipsw) : WiFi.begin(wifissid);
 
@@ -119,7 +124,12 @@ public:
         while (WiFi.status() != WL_CONNECTED)
         {
             if ((millis() - timeout) > TIME_OUT_LIMIT)
+            {
+    #if (WITH_ERROR_TYPE)
+                Serial.printf(ERROR_WIFI_CONNECT, wifissid);
+    #endif
                 return 0;
+            }
             delay(500);
             Serial.print(".");
         }

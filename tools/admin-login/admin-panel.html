@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./admin-style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <title>Admin Dashboard</title>
+    <script>
+
+        fetch("./data.json")
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                const frame = document.getElementById("files-page").getElementsByClassName("file-list")[0];
+                for (const element in data) {
+                    data[element].forEach(item => {
+                        console.log(element);
+                        let newDiv = document.createElement("div");
+                        newDiv.className = "file-item";
+                        newDiv.innerHTML = `<span> ${item.name}</span>
+                                <div class="file-actions">
+                                <button class="btn btn-small btn-primary">Download</button>
+                                <button class="btn btn-small btn-primary" >Edit</button>
+                                <button class="btn btn-small btn-primary">Delete</button>`;
+                        frame.appendChild(newDiv);
+                    });
+                }
+            })
+            .catch((error) => console.error("Error loading JSON file", error));
+
+    </script>
+</head>
+
+<body>
+    <div class="overlay" id="overlay"></div>
+    <nav class="navbar">
+        <button id="menu-toggle">☰</button>
+        <div class="navbar-brand">Administrator panel</div>
+        <button class="logout-btn">Logout</button>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+        <div class="nav-item active" data-page="info">
+            <span>📊</span> System Info
+        </div>
+        <div class="nav-item" data-page="config">
+            <span>⚙️</span> Configuration
+        </div>
+        <div class="nav-item" data-page="files">
+            <span>📁</span> File Management
+        </div>
+    </div>
+
+
+    <main class="main-content">
+        <!----------------- Info Page ----------------->
+        <div id="info-page">
+            <div class="card">
+                <h2>System Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>SSID Punto de Acceso</h3>
+                        <p id="device-name">!{AP_SSID}</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Dirección IP Local</h3>
+                        <p id="firmware-version">!{SERV_IP}</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Uptime</h3>
+                        <p id="uptime">2 days, 3 hours</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Hosts conectados</h3>
+                        <p id="free-memory">!{TOTAL_HOST}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Network Status</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>WiFi SSID</h3>
+                        <p id="wifi-ssid">!{WIFI_SSID}</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Client IP Address</h3>
+                        <p id="ip-address">!{CLIENT_IP}</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Status</h3>
+                        <p id="signal-strength">!{WIFI_STATUS}</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>MAC Address</h3>
+                        <p id="mac-address">!{SERV_MAC}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!----------------- Configuration Page ----------------->
+        <div id="config-page" style="display: none;">
+            <div class="card">
+                <h2>Network Configuration</h2>
+                <form id="network-config">
+                    <div class="form-group">
+                        <label>WiFi SSID</label>
+                        <input type="text" name="wifi-ssid" placeholder="Enter WiFi name">
+                    </div>
+                    <div class="form-group">
+                        <label>WiFi Password</label>
+                        <input type="password" name="wifi-password" placeholder="Enter WiFi password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Network Settings</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>System Configuration</h2>
+                <form id="system-config">
+                    <div class="form-group">
+                        <label>Device Name</label>
+                        <input type="text" name="deviceName" placeholder="Enter device name">
+                    </div>
+                    <div class="form-group">
+                        <label>Session Timeout (milli seconds)</label>
+                        <input type="number" name="timeout" placeholder="Enter timeout in minutes">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save System Settings</button>
+                </form>
+            </div>
+        </div>
+
+        <!----------------- File man Page ----------------->
+        <div id="files-page" style="display: none;">
+            <div class="card">
+                <h2>File Management</h2>
+                <label class="upload-area" for="file-upload">
+                    <div>
+                        <p>Drop files here or click to upload</p>
+                        <input type="file" id="file-upload" multiple>
+                    </div>
+                </label>
+
+                <div class="file-list">
+                    <div class="file-item">
+                        <span>!{FILE_NAME}</span>
+                        <div class="file-actions">
+                            <button class="btn btn-small btn-primary">Download</button>
+                            <button class="btn btn-small btn-primary">Edit</button>
+                            <button class="btn btn-small btn-primary">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./admin-app.js"></script>
+</body>
+
+</html>

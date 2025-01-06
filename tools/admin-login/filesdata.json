@@ -1,0 +1,18 @@
+{
+    "file" : [
+        {
+            "name" : "first file.txt",
+            "path" : "/root/first file.txt"
+        },
+
+        {
+            "name" : "third file.txt",
+            "path" : "/root/third file.txt"
+        },
+        {
+            "name" : "second file.txt",
+            "path" : "/root/second file.txt"
+        }
+
+    ]
+}
