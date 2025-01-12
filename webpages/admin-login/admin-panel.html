@@ -4,33 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./admin-style.css">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <link rel="stylesheet" href="admin-panel/admin-style.css">
+    <link rel="stylesheet" href="admin-style.css">
+    <script type="text/javascript" defer src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
     <title>Admin Dashboard</title>
-    <script>
-
-        fetch("./data.json")
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                const frame = document.getElementById("files-page").getElementsByClassName("file-list")[0];
-                for (const element in data) {
-                    data[element].forEach(item => {
-                        console.log(element);
-                        let newDiv = document.createElement("div");
-                        newDiv.className = "file-item";
-                        newDiv.innerHTML = `<span> ${item.name}</span>
-                                <div class="file-actions">
-                                <button class="btn btn-small btn-primary">Download</button>
-                                <button class="btn btn-small btn-primary" >Edit</button>
-                                <button class="btn btn-small btn-primary">Delete</button>`;
-                        frame.appendChild(newDiv);
-                    });
-                }
-            })
-            .catch((error) => console.error("Error loading JSON file", error));
-
-    </script>
 </head>
 
 <body>
@@ -140,12 +117,31 @@
             <div class="card">
                 <h2>File Management</h2>
                 <label class="upload-area" for="file-upload">
-                    <div>
+                    <div class="upload-icon">📁</div>
+                    <div class="upload-message">
                         <p>Drop files here or click to upload</p>
                         <input type="file" id="file-upload" multiple>
                     </div>
                 </label>
 
+                <div id="folders-container">
+                </div>
+                
+            </div>
+        </div>
+    </main>
+
+    <script src="admin-app.js" type="text/javascript">
+        fetch("/data.json")
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+            });
+        loadFileData();
+    </script>
+    <script src="admin-panel/admin-app.js">
+        loadFileData();
+        /*
                 <div class="file-list">
                     <div class="file-item">
                         <span>!{FILE_NAME}</span>
@@ -156,11 +152,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </main>
-
-    <script src="./admin-app.js"></script>
+        */
+    </script>
 </body>
 
 </html>
