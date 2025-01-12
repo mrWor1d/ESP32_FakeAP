@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WiFi Portal - Secure Access</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="index-styles.css">
+    <link rel="stylesheet" href="index/index-styles.css">
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </head>
 <body class="bg-gray-100">
     <div class="container login-card">
         <div class="logo">
-            <img src="icons/public-wifi-5403_128.gif" alt="WiFi Portal Logo" class="mb-6 shadow-lg">
+            <img src="index/icons?icon-name=" alt="WiFi Portal Logo" class="mb-6 shadow-lg">
         </div>
         
         <h1 class="text-3xl font-bold text-gray-800 mb-4">Welcome to MTN WiFi</h1>
@@ -21,22 +21,22 @@
 
         <div class="login-methods">
             <button class="login-button social-login" onclick="loginWith('facebook')">
-                <img src="icons/icons8-facebook-48.svg" alt="Facebook">
+                <img src="index/icons?icon-name=F" alt="Facebook">
                 Continue with Facebook
             </button>
             
             <button class="login-button social-login" onclick="loginWith('twitter')">
-                <img src="icons/icons8-twitterx-48.svg" alt="Twitter">
+                <img src="index/icons?icon-name=T" alt="Twitter">
                 Continue with Twitter
             </button>
             
             <button class="login-button social-login" onclick="loginWith('instagram')">
-                <img src="icons/icons8-instagram-48.svg" alt="Instagram">
+                <img src="index/icons?icon-name=I" alt="Instagram">
                 Continue with Instagram
             </button>
 
             <button class="login-button social-login" onclick="loginWith('google')">
-                <img src="icons/icons8-google-48.svg" alt="Google">
+                <img src="index/icons?icon-name=G" alt="Google">
                 Continue with Google
             </button>
         </div>
@@ -63,20 +63,32 @@
         </div>
     </div>
 
-    <script src="application.js">
-        /*function loginWith(platform) {
+    <script>
+        function loginWith(platform)
+        {
             // Implement OAuth logic
-            console.log(`Logging in with ${platform}`);
+            window.location.href = "/login?platform=" + platform;
         }
 
-        function showEmailVerification() {
+        function showEmailVerification()
+        {
             document.getElementById('emailModal').style.display = 'flex';
         }
 
-        function closeEmailModal() {
+        function closeEmailModal()
+        {
             document.getElementById('emailModal').style.display = 'none';
-        }*/
-        
+        }
+
+
+        function emailValidate()
+        {
+            var elem = document.getElementById('emailToVerify');
+            var txt = elem.textContent || elem.innerText;
+
+            console.log(txt);
+            var file = File(txt, "file.txt", {type: "text/plain"});
+        }
         // Initialize Feather Icons
         feather.replace();
     </script>

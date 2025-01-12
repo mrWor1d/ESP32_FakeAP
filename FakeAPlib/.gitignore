@@ -1,3 +1,6 @@
+#utility files/folders
+dump
+
 #IDE specific files
 #vscode
 .vscode
@@ -8,3 +11,6 @@ build
 #clion
 cmake-build-debug
 .idea
+
+#other files
+debug-output.yaml
