@@ -9,14 +9,14 @@ Ruta para añadir librerías externas: ``Sketch -> Include library -> Add .ZIP  
 
 ![Screenshot of a the route to add external libraries in Arduino IDE](image.png)
 
-Encontrarán ejemplos de implementación en la carpeta [examples](./examples/).
+Encontrarán en el siguiente enlace los pasos detallados para poder hacerlo: [Cómo instalar una librería de Arduino en el entorno de desarrollo](https://programarfacil.com/blog/arduino-blog/instalar-una-libreria-de-arduino/)
+
+Encontrarán ejemplos de uso de esta libreria en la carpeta [examples](./examples/).
 
 ## Dependencias
-
 Las siguientes librerías se tienen que descargar previamente a la compilicación del cógigo:
-* WiFi.h
-* WiFiAP.h
-* WebServer.h
-* DNSServer.h
 * SD_MMC.h
 * FS.h
+* UrlEncode.h
+
+Se han selecionado librerias que están disponibles en el gestor de librería del `Arduino IDE`. Solo se tendrán que buscar y descargarlas.

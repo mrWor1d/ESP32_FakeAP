@@ -1,6 +1,7 @@
 #utility files/folders
 debug-output.yaml
 dump
+FakeAPlib/dump
 .zip
 
 #IDE specific files

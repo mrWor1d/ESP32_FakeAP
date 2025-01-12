@@ -40,7 +40,9 @@ class FakeAP
     * 
     * Procesa la información enviada por el cliente y la manda al servidor.
     */
-    void handleSubmit();
+    void handleSubmit(void);
+
+    void handleIcons(void);
 public:
 
     FakeAP();
@@ -69,8 +71,6 @@ public:
      * @brief Imprime el contenido de los archivos de las variables path
      */
     void printFilesContent();
-
-    void checkState();
     
     /**
      * @brief Inicia el servidor del portal cautivo.

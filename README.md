@@ -1,5 +1,6 @@
 # ESP32_FakeAP
 Esto es un proyecto escolar que tiene como objetivo el descubrimiento y el uso de las funcionalidades de la placa `ESP32`.
+<br>
 
 ## Tabla de contenido
 
@@ -20,6 +21,7 @@ Las datos proporcionados serán transferidos a una segunda placa que actuará co
 
 > [!CAUTION]
 > Esto es únicamente a fines educativos. No se hará ningún uso ilícito de este código.
+<br>
 
 ### Estructura
 Para facilitar el mantenimiento, la legibilidad y la reusabilidad del código, se desarolló una librería que solo se tendrá que añadir a `Arduino IDE` y usarla en su sketch.
@@ -41,6 +43,7 @@ Como pueden ser los [iconos](/tools/icons) para las paginas web. <br>
 <img height= 50 src="/tools/icons/icons8-facebook-48.svg" width=50/> <img height= 50 src="/tools/icons/icons8-instagram-48.svg" width=50/> <img height= 50 src="/tools/icons/icons8-twitterx-48.svg" width=50/> <img height= 50 src="/tools/icons/icons8-google-48.svg" width=50/>
 
 > Pueden consultar el arbol del proyecto [aquí](#project-tree)
+<br>
 
 ## Componentes
 ### Físicos

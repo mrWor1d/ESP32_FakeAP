@@ -17,6 +17,7 @@
 //#include <HTTPResponse.hpp>
 //#include <memory>
 
+
 typedef enum
 {
     ADMINPAGE = 'A',
@@ -25,6 +26,7 @@ typedef enum
     INDEXPAGE = 'I'
     //LOGFILE   = 'l',
 }FileType_t;
+
 
 typedef enum
 {
@@ -47,7 +49,6 @@ public:
     static inline const String ServerIP        = "!{SERV_IP}";
     static inline const String ClientIP        = "!{CLIENT_IP}";
     static inline const String ServerMAC       = "!{SERV_MAC}";
-
 };
 
 
@@ -62,17 +63,8 @@ static String getCurrentTime()
     uint8_t seconds = secsRemaining%60;
 
     return String(hours) + ":" + String(minutes) + ":" + String(seconds);
-
 }
 
-
-/*static String IpAddressToString(const IPAddress& ipAddress)
-{
-    return String(ipAddress[0]) + String(".") +\
-           String(ipAddress[1]) + String(".") +\
-           String(ipAddress[2]) + String(".") +\
-           String(ipAddress[3]); 
-}*/
 
 #ifndef USE_GLOBAL_VAL
 #define USE_GLOBAL_VAL true
@@ -153,7 +145,8 @@ static String getCurrentTime()
         #define SUCCESS_SERVER_INIT "[SUCCESS] Servidor iniciado correctamente"
         #define SUCCESS_APSERVER_INIT "[SUCCESS] El servidor del punto de acceso cautivo iniciado correctamente"
         #define SUCCESS_LOG_EVENT "[LOGS] Evento guardado correctamente"
-        #define SUCCES_SAVE_CREDENTIALS "[SUCCESS] Credentials sent and stored correctly"
+        #define SUCCESS_SAVE_CREDENTIALS "[SUCCESS] Credentials sent and stored correctly"
+        #define SUCCESS_GENERATE_JSON "[SUCCESS] El archivo JSON se generó correctamente"
         //#define SUCCESS_SD_CARD_TYPE "[SUCCESS] El tipo de tarjeta es incompatible"
         //#define SUCCESS_SD_CARD_READ "[SUCCESS] en la lectura de la tarjeta"
     #endif

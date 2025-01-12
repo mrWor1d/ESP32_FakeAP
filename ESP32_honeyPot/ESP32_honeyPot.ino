@@ -11,7 +11,6 @@ const char* WIFI_PSW  = "SECUREhash9361";
 const char* AUTH_PAGE  = "/webpages/index.html";
 
 IPAddress* apip = new IPAddress(192,168,1,1);
-IPAddress* serverip = new IPAddress(10,10,10,1);
 //byte apmac[6];
 
 FakeAP* accessPoint = new FakeAP(80);
@@ -25,8 +24,6 @@ void setup()
 
   Serial.println("Loading....");
   delay(1000);
-
-  Serial.println("File dir test: ");
   
   accessPoint->setPath(AUTH_PAGE,  INDEXPAGE);
 
