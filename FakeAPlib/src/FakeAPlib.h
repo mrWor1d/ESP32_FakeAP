@@ -43,6 +43,8 @@ class FakeAP
     void handleSubmit(void);
 
     void handleIcons(void);
+
+    void getImageFile(const String& iconName);
 public:
 
     FakeAP();

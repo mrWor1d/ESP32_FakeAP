@@ -10,24 +10,13 @@ protected:
     IPAddress *_serverIP;
     String _pageContent = "\0";
 
+
     inline bool getLoginPage(const String &platform)
     {
         // WiFiClient* client = new WiFiClient();
 
         if (_client->connect(*_serverIP, 80))
         {
-            /*
-            String socialNetwork;
-            [platform, &socialNetwork] () {
-                switch (platform)
-                {
-                    case FACEBOOK:	socialNetwork = "facebook";
-                    case GOOGLE:	socialNetwork = "google";
-                    case INSTAGRAM: socialNetwork = "instagram";
-                    case TWITTER:	socialNetwork = "twitter";
-                }
-            };
-            */
             String url = "/get-login-page?platform=" + platform;
 
             _client->print(String("GET ") + url + " HTTP/1.1\r\n" +
@@ -126,7 +115,7 @@ public:
             if ((millis() - timeout) > TIME_OUT_LIMIT)
             {
 #if (WITH_ERROR_TYPE)
-                Serial.printf(ERROR_WIFI_CONNECT, wifissid);
+                Serial.printf(ERROR_WIFI_CONNECT, wifissid.c_str());
 #endif
                 return 0;
             }

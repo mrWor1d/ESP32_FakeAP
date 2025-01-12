@@ -171,7 +171,7 @@ public:
         String content = file->readStringUntil('\0');
 
 #if (WITH_SUCCESS_MESSAGE)
-        Serial.printf(SUCCESS_FILE_OPEN, file->name(), (millis() - startTime) / 1000);
+        Serial.printf(SUCCESS_FILE_OPEN, file->name(), (millis() - startTime));
 #endif
         file->close();
         delete file;
@@ -203,7 +203,7 @@ public:
         String content = file->readStringUntil('\0');
 
 #if (WITH_SUCCESS_MESSAGE)
-        Serial.printf(SUCCESS_FILE_OPEN, file->name(), (millis() - startTime) / 1000);
+        Serial.printf(SUCCESS_FILE_OPEN, file->name(), (millis() - startTime));
 #endif
         file->close();
         delete file;
@@ -337,7 +337,7 @@ public:
         }
 
         delete root,
-            file;
+               file;
     }
 
     inline bool createDir(const String &path)

