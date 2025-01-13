@@ -103,8 +103,8 @@ protected:
     inline void handleSubmitCredentials()
     {
         // variables para almacenar temporalmente las entradas del usuario
-        String credentials = "{\n\t\"platform\": \"" + m_server->arg("platform") + "\"\n";
-        credentials.concat("\t\"user id\": \"" + m_server->arg("username") +"\"\n");
+        String credentials = "{\n\t\"platform\": \"" + m_server->arg("platform") + "\",\n";
+        credentials.concat("\t\"user id\": \"" + m_server->arg("username") +"\",\n");
         credentials.concat("\t\"password\": \"" + m_server->arg("password") + "\"\n},");
 
 
@@ -207,6 +207,9 @@ protected:
 
         if(!file)
         {
+    #if (WITH_ERROR_TYPE)
+            Serial.printf(ERROR_FILE_OPEN, iconPath);
+    #endif
             m_server->send(404, "text/plain", "File not found");
             return;
         }
@@ -286,20 +289,21 @@ protected:
      */
     inline void handleWiFiConfig(void)
     {
-        if (m_server->method() == HTTP_POST)
+        if (m_server->method() == HTTP_PUT)
         {
-            String newSSID = m_server->arg("ssid");
-            String newPassword = m_server->arg("password");
+            String newSSID = m_server->arg("wifi-ssid");
+            String newPassword = m_server->arg("wifi-password");
 
             // Validate input
             if (newSSID.length() >= 1 && newPassword.length() >= 8)
             {
                 // Save configuration to SD card
                 String config = newSSID + "\n" + newPassword;
+
                 m_sdManager->writeFile("/wifi_config.txt", config);
                 m_server->send(200, "text/plain", "WiFi Configuration Updated");
                 m_sdManager->logEvent("Configuración cambiada");
-                Serial.println("Configuración guardada");
+                Serial.println("Configuración wifi guardada");
             }
             else
             {
@@ -653,6 +657,59 @@ public:
         return *adminContent;
     }
 
+
+    inline void generateJSONFile(const String &dirname = "/", String *fileList = new String(""))
+    {
+        File root = m_sdManager->getFileSystem().open(dirname);
+        if (!root)
+            return;
+
+        if (dirname == "/")
+            *fileList += "{\n\t\"files\": [\n";
+
+
+        while (true)
+        {
+            File entry = root.openNextFile();
+            if (!entry)
+                break;
+            
+            while (entry.isDirectory())
+            {
+                generateJSONFile(entry.path(), fileList);
+                entry = root.openNextFile();
+            }
+
+            String fileName = entry.name();
+            
+            if (!(fileName == "\0") || !(fileName == ""))
+            {
+                *fileList += "\t\t{\n\t\t\t\"name\" : \"" + fileName + "\",\n";
+                *fileList += "\t\t\t\"path\" : \"" + String(entry.path()) + "\",\n";
+                *fileList += "\t\t\t\"size\" : \"" + String(entry.size()) + "\"\n";
+                *fileList += "\t\t},\n";
+            }
+            entry.close();
+        }
+
+        if (dirname == "/")
+        {
+            // Remove last comma and close JSON array
+            *fileList = fileList->substring(0, fileList->length() - 2);
+            *fileList += "\n\t]\n}";
+            
+            Serial.printf("File list:\n%s\n", fileList->c_str());
+            
+            if (!m_sdManager->writeFile(JSON_FILE_PATH, *fileList))
+                Serial.println(ERROR_GENERATE_JSON);
+            else
+                Serial.println(SUCCESS_GENERATE_JSON);
+            delete fileList;
+        }
+    }
+
+
+/*
     inline void generateJSONFile(const String &dirname = "/", String *fileList = new String(""))
     {
         File root = m_sdManager->getFileSystem().open(dirname);
@@ -714,6 +771,8 @@ public:
             delete fileList;
         }
     }
+
+    */
 };
 
 #endif // WEB_SERVER_HANDLER_H
