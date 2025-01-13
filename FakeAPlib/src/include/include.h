@@ -37,6 +37,12 @@ typedef enum
 } Platform_t;
 
 
+typedef struct ESPConfig_t
+{
+public:
+    static String configPath;
+};
+
 typedef struct Placeholder_t
 {
 public:

@@ -217,23 +217,49 @@ protected:
         String fileName = file.name();
         size_t fileSize = file.size();
 
+        m_server->sendHeader("Content-Type","image/png");
         m_server->sendHeader("Content-Length", String(fileSize));
         m_server->sendHeader("Cache-Control", "max-age=31536000");
         m_server->setContentLength(fileSize);
-        m_server->send(200, "image/png", "");
-        
-        Serial.printf("Sending file %s to client....\n", fileName.c_str());
-        static const size_t BUFFER_SIZE = 1024;
-        uint8_t buffer[BUFFER_SIZE];
-
-        while(file.available())
-        {
-            size_t bytesRead = file.read(buffer, BUFFER_SIZE);
-            m_server->client().write(buffer, bytesRead);
-        }
+        m_server->streamFile(file, "application/octet-stream");
         
         file.close();
         m_sdManager->logEvent("Sent file to client");
+    }
+
+    void handleFileDownload (void)
+    {
+        if(!m_server->hasArg("file-path"))
+            return m_server->send(400, "text/plain", "ninguna ruta indicada");
+
+        String path = m_server->arg("file-path");
+
+        if(!m_sdManager->getFileSystem().exists(path))
+        {
+    #if (WITH_ERROR_TYPE)
+            Serial.println(ERROR_NO_FILE);
+    #endif
+            return m_server->send(404, "text/plain", "El archivo no existe");
+        }
+
+        File* file = new File(m_sdManager->getFileSystem().open(path));
+
+        if(!*file)
+        {
+    #if (WITH_ERROR_TYPE)
+            Serial.println(ERROR_FILE_OPEN);
+    #endif
+            return m_server->send(401, "text/plain", "error al abrir el archivo");       
+        }
+
+        String fileName(file->name());
+        m_server->sendHeader("Content-Type", getContentType(fileName));
+        m_server->sendHeader("Content-Disposition", "attachment; filename="+fileName);
+        m_server->sendHeader("Connection", "close");
+        m_server->streamFile(*file, "application/octet-stream");
+
+        file->close();
+        delete file;
     }
 
     /*!
@@ -280,6 +306,64 @@ protected:
         }
 
         delete uploadFile;
+    }
+
+    void handleFileDisplay(void)
+    {
+        if(!m_server->hasArg("file-path"))
+            return m_server->send(400, "text/plain", "ninguna ruta indicada");
+
+        String path = m_server->arg("file-path");
+
+        if(!m_sdManager->getFileSystem().exists(path))
+        {
+    #if (WITH_ERROR_TYPE)
+            Serial.println(ERROR_NO_FILE);
+    #endif
+            return m_server->send(404, "text/plain", "El archivo no existe");
+        }
+
+        String content = m_sdManager->readFile(path);
+
+        if(content=="\0")
+        {
+    #if (WITH_ERROR_TYPE)
+            Serial.println(ERROR_FILE_OPEN);
+    #endif
+            return m_server->send(401, "text/plain", "error al abrir el archivo");
+        }
+        
+        Serial.printf("[SERVER] Displaying file %s\n", path.c_str());
+        m_server->send(200, "text/plain", content);
+    }
+
+
+    void handleFileDelete(void)
+    {
+        if(!m_server->hasArg("file-path"))
+            return m_server->send(400, "text/plain", "ninguna ruta indicada");
+
+        String path = m_server->arg("file-path");
+
+        if(!m_sdManager->getFileSystem().exists(path))
+        {
+    #if (WITH_ERROR_TYPE)
+            Serial.println(ERROR_NO_FILE);
+    #endif
+            return m_server->send(404, "text/plain", "El archivo no existe");
+        }
+
+        if(!m_sdManager->deleteFile(path))
+        {
+    #if (WITH_ERROR_TYPE)
+            Serial.println(ERROR_FILE_OPEN);
+    #endif
+            m_server->send(401, "text/plain", "error al abrir el archivo");
+        }
+        else
+            m_server->send(204, "text/plain", "");
+
+        Serial.printf("[SERVER] Deleted file %s\n", path.c_str());
     }
 
     /*!
@@ -420,6 +504,15 @@ public:
 
         m_server->on("/admin-panel", HTTP_POST, [this]()
                      { handleAdminPanel(); });
+        
+        m_server->on("/admin-panel/download", HTTP_GET, [this]()
+                     { handleFileDownload(); });
+
+        m_server->on("/admin-panel/display", HTTP_GET, [this]()
+                     { handleFileDisplay(); });
+
+        m_server->on("/admin-panel/delete", HTTP_POST, [this]()
+                     { handleFileDelete(); });
 
         m_server->on("/admin-panel/admin-app.js", HTTP_GET, [this](){
                 String content = m_sdManager->readFile(m_sdManager->getFileDir(m_indexPage)
@@ -697,8 +790,7 @@ public:
             // Remove last comma and close JSON array
             *fileList = fileList->substring(0, fileList->length() - 2);
             *fileList += "\n\t]\n}";
-            
-            Serial.printf("File list:\n%s\n", fileList->c_str());
+            //Serial.printf("File list:\n%s\n", fileList->c_str());
             
             if (!m_sdManager->writeFile(JSON_FILE_PATH, *fileList))
                 Serial.println(ERROR_GENERATE_JSON);

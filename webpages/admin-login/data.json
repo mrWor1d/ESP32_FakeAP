@@ -1,138 +1,15 @@
 {
-	"folders": [
+	"files": [
 		{
-			"name": "System Volume Information",
-			"files": [
-				{
-					"name": "WPSettings.dat",
-					"path": "/System Volume Information/WPSettings.dat",
-					"size": "12"
-				},
-				{
-					"name": "IndexerVolumeGuid",
-					"path": "/System Volume Information/IndexerVolumeGuid",
-					"size": "76"
-				}
-			]
+			"name": "WPSettings.dat",
+			"path": "/System Volume Information/WPSettings.dat",
+			"size": "12"
 		},
 		{
-			"name": "icons",
-			"files": [
-				{
-					"name": "facebook-2020-2-1.svg",
-					"path": "/tools/icons/facebook-2020-2-1.svg",
-					"size": "1047"
-				},
-				{
-					"name": "instagram-icon.svg",
-					"path": "/tools/icons/instagram-icon.svg",
-					"size": "10154"
-				},
-				{
-					"name": "X_logo_2023_original.svg",
-					"path": "/tools/icons/X_logo_2023_original.svg",
-					"size": "299"
-				}
-			]
-		},
-		{
-			"name": "login-pages",
-			"files": [
-				{
-					"name": "fbLogin.css",
-					"path": "/tools/login-pages/fbLogin.css",
-					"size": "1337"
-				},
-				{
-					"name": "fbLogin.html",
-					"path": "/tools/login-pages/fbLogin.html",
-					"size": "2253"
-				}
-			]
-		},
-		{
-			"name": "tools",
-			"files": []
-		},
-		{
-			"name": "logs",
-			"files": [
-				{
-					"name": "logs.yaml",
-					"path": "/logs/logs.yaml",
-					"size": "5936"
-				}
-			]
-		},
-		{
-			"name": "data",
-			"files": [
-				{
-					"name": "logs.txt",
-					"path": "/data/logs.txt",
-					"size": "977"
-				},
-				{
-					"name": "data.txt",
-					"path": "/data/data.txt",
-					"size": "18"
-				}
-			]
-		},
-		{
-			"name": "webpages",
-			"files": [
-				{
-					"name": "admin.html",
-					"path": "/webpages/admin.html",
-					"size": "688"
-				},
-				{
-					"name": "application.js",
-					"path": "/webpages/application.js",
-					"size": "566"
-				},
-				{
-					"name": "index-styles.css",
-					"path": "/webpages/index-styles.css",
-					"size": "2220"
-				},
-				{
-					"name": "index.html",
-					"path": "/webpages/index.html",
-					"size": "3287"
-				},
-				{
-					"name": "indexGreen.html",
-					"path": "/webpages/indexGreen.html",
-					"size": "623"
-				},
-				{
-					"name": "info.html",
-					"path": "/webpages/info.html",
-					"size": "585"
-				},
-				{
-					"name": "login.html",
-					"path": "/webpages/login.html",
-					"size": "1146"
-				},
-				{
-					"name": "style.css",
-					"path": "/webpages/style.css",
-					"size": "2247"
-				},
-				{
-					"name": "succes.html",
-					"path": "/webpages/succes.html",
-					"size": "589"
-				},
-				{
-					"name": "upload.html",
-					"path": "/webpages/upload.html",
-					"size": "573"
-				}
-			]
+			"name": "IndexerVolumeGuid",
+			"path": "/System Volume Information/IndexerVolumeGuid",
+			"size": "76"
 		}
 	]
 }
+		

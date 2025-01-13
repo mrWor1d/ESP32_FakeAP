@@ -21,11 +21,31 @@
                         console.log(element);
                         let newDiv = document.createElement("div");
                         newDiv.className = "file-item";
-                        newDiv.innerHTML = `<span> ${item.name}</span>
+                        newDiv.innerHTML = `<span> <a href="/admin-panel/display?file-path=${item.path}">
+                                                        ${item.name}
+                                                    </a>
+                                            </span>
                                 <div class="file-actions">
-                                <button class="btn btn-small btn-primary">Descargar</button>
-                                <button class="btn btn-small btn-primary" >Editar</button>
-                                <button class="btn btn-small btn-primary">Borrar</button>`;
+                                    <form
+                                        action="/admin-panel/download?file-path=${item.path}"
+                                        method="get"
+                                    >
+                                        <button
+                                            type="submit"
+                                            class="btn btn-small btn-primary"
+                                        >Descargar
+                                        </button>
+                                    </form>
+                                    <form
+                                        action="/admin-panel/delete?file-path=${item.path}"
+                                        method="post"
+                                    >
+                                        <button
+                                            type="submit"
+                                            class="btn btn-small btn-primary"
+                                        >Borrar
+                                        </button>
+                                    </form>`;
                         frame.appendChild(newDiv);
                     });
                 }
@@ -167,16 +187,8 @@
                         <input type="file" id="file-upload" multiple>
                     </div>
                 </label>
-                <div id="folders-container"></div>
                 <div class="file-list">
-                    <div class="file-item">
-                        <span>!{FILE_NAME}</span>
-                        <div class="file-actions">
-                            <button class="btn btn-small btn-primary">Descargar</button>
-                            <button class="btn btn-small btn-primary">Editar</button>
-                            <button class="btn btn-small btn-primary">Borrar</button>
-                        </div>
-                    </div>
+                    <div class="file-item"></div>
                 </div>
                 </div>
                 

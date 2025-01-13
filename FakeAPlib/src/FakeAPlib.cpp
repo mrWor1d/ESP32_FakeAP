@@ -76,9 +76,6 @@ void FakeAP::handleIcons(void)
 	}
 	int platform = m_server->arg("icon-name").charAt(0);
 
-	Serial.println("Server icon argument: " + m_server->arg("icon-name"));
-	Serial.println("Plarform value: " + String(platform));
-
 	String temp;
 	switch (platform)
 	{
@@ -99,34 +96,29 @@ void FakeAP::handleIcons(void)
 		break;
 	}
 
-	Serial.println("Temp var value: " + temp);
-
 	File file = m_sdManager->getFileSystem().open(
 					m_sdManager->getFileDir(m_indexPage) + temp);
 
 	if(!file)
 	{
-		m_server->send(404, "text/plain", "File not found");
-		return;
+#if (WITH_ERROR_TYPE)
+		Serial.println(ERROR_FILE_OPEN);
+#endif
+		return m_server->send(404, "text/plain", "File not found");
 	}
 	String fileName = file.name();
 	size_t fileSize = file.size();
 
+	Serial.printf("Sending file %s to client\n", fileName.c_str());
+
+	m_server->sendHeader("Content-Type", fileName.endsWith(".svg")? 
+							"image/svg+xml" : "image/gif");
 	m_server->sendHeader("Content-Length", String(fileSize));
+	m_server->sendHeader("Connection", "close");
 	m_server->sendHeader("Cache-Control", "max-age=31536000");
 	m_server->setContentLength(fileSize);
-	m_server->send(200, fileName.endsWith(".svg")? 
-						"image/svg+xml" : "image/gif", "");
-	
-	static const size_t BUFFER_SIZE = 1024;
-    uint8_t buffer[BUFFER_SIZE];
+	m_server->streamFile(*file, "application/octet-stream");
 
-	while(file.available())
-	{
-        size_t bytesRead = file.read(buffer, BUFFER_SIZE);
-        m_server->client().write(buffer, bytesRead);
-    }
-    
     file.close();
 }
 
@@ -223,7 +215,8 @@ void FakeAP::getImageFile(const String& iconName)
 		while (_client->available() && totalRead < contentLength)
 		{
 			int buffSize = sizeof(buffer);
-			int bytesRead = _client->read(buffer, min(buffSize , contentLength - totalRead));
+			//int bytesRead = _client->read(buffer, min(buffSize , contentLength - totalRead));
+			int bytesRead = _client->read(buffer, min(buffSize, contentLength - totalRead));
 			if (bytesRead > 0)
 			{	
 				m_server->client().write(buffer, bytesRead);

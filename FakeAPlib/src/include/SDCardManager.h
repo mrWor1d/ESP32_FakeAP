@@ -532,6 +532,33 @@ public:
         return 1;
     }
 
+
+    inline bool deleteFile(const String& path)
+    {
+        if (!_sdInitialized)
+        {
+#if (WITH_ERROR_TYPE)
+            Serial.println(ERROR_SD_NOT_INIT);
+#endif
+            return 0;
+        }
+
+        Serial.printf("Deleting file: %s\n", path.c_str());
+        if (!_fileSystem.remove(path))
+        {
+#if (WITH_ERROR_TYPE)
+            Serial.printf(ERROR_FILE_DELETE, path);
+#endif
+            return 0;
+        }
+#if (WITH_SUCCESS_MESSAGE)
+        Serial.printf(SUCCESS_FILE_DELETE, path);
+#endif
+
+        return 1;
+    }
+
+
     inline bool deleteRecursive(const String &path)
     {
         File *file = new File(_fileSystem.open(path));
