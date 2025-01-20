@@ -34,7 +34,7 @@ void setup()
   accessPoint->setPath(ADMIN_PAGE, ADMINPAGE);
   accessPoint->setPath(AUTH_PAGE,  INDEXPAGE);
   accessPoint->setPath(DATA_FILE,  DATAFILE);
-
+  
   accessPoint->setPath(FB_PATH, FACEBOOK);
   accessPoint->setPath(GL_PATH, GOOGLE);
   accessPoint->setPath(IS_PATH, INSTAGRAM);

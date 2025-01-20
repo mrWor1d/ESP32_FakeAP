@@ -16,6 +16,7 @@ IPAddress* apip = new IPAddress(192,168,1,1);
 FakeAP* accessPoint = new FakeAP(80);
 int printed = 0;
 
+
 void setup()
 {
   Serial.begin(115200);
@@ -34,7 +35,7 @@ void setup()
     Serial.println("Error en la configuración del punto de acceso");
 
   Serial.println("Configuración acabada!");
-  
+
 }
 
 void loop()

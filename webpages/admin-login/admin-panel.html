@@ -28,7 +28,7 @@
                                 <div class="file-actions">
                                     <form
                                         action="/admin-panel/download?file-path=${item.path}"
-                                        method="get"
+                                        method="post"
                                     >
                                         <button
                                             type="submit"
@@ -116,8 +116,30 @@
                         <p id="signal-strength">!{WIFI_STATUS}</p>
                     </div>
                     <div class="info-item">
-                        <h3>MAC Address</h3>
-                        <p id="mac-address">!{SERV_MAC}</p>
+                        <h3>Fuerza del signal</h3>
+                        <p id="mac-address">!{WIFI_SIGNAL}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Almacenamiento</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>Espacio total</h3>
+                        <p id="wifi-ssid">!{SD_SIZE}</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Espacio usado</h3>
+                        <p id="ip-address">!{SD_USED}</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Espacio libre</h3>
+                        <p id="signal-strength">!{SD_FREE}</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Tipo de tarjeta</h3>
+                        <p id="mac-address">!{SD_TYPE}</p>
                     </div>
                 </div>
             </div>

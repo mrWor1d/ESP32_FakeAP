@@ -85,12 +85,6 @@ document
         alert("System settings saved");
     });
 
-// File upload handler
-document.getElementById("file-upload").addEventListener("change", function (e) {
-    // Add your ESP32 file upload logic here
-    alert("File upload started");
-});
-
 
 const ITEMS_PER_PAGE = 10; // Number of files to show per page
 let currentFolderData = {};
