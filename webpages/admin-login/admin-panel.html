@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -8,25 +8,69 @@
     <link rel="stylesheet" href="admin-style.css">
     <script type="text/javascript" defer src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
     <title>Admin Dashboard</title>
+    <script>
+        fetch("/admin-panel/data.json")
+            .then((response) => response.json())
+            .then((data) => {
+                let folders = data.folders;
+                console.log(folders);
+                console.log(data);
+                const frame = document.getElementById("files-page").getElementsByClassName("file-list")[0];
+                for (const element in data) {
+                    data[element].forEach(item => {
+                        console.log(element);
+                        let newDiv = document.createElement("div");
+                        newDiv.className = "file-item";
+                        newDiv.innerHTML = `<span> <a href="/admin-panel/display?file-path=${item.path}">
+                                                        ${item.name}
+                                                    </a>
+                                            </span>
+                                <div class="file-actions">
+                                    <form
+                                        action="/admin-panel/download?file-path=${item.path}"
+                                        method="post"
+                                    >
+                                        <button
+                                            type="submit"
+                                            class="btn btn-small btn-primary"
+                                        >Descargar
+                                        </button>
+                                    </form>
+                                    <form
+                                        action="/admin-panel/delete?file-path=${item.path}"
+                                        method="post"
+                                    >
+                                        <button
+                                            type="submit"
+                                            class="btn btn-small btn-primary"
+                                        >Borrar
+                                        </button>
+                                    </form>`;
+                        frame.appendChild(newDiv);
+                    });
+                }
+            })
+            .catch((error) => console.error("Error loading JSON file", error));
+    </script>
 </head>
 
 <body>
     <div class="overlay" id="overlay"></div>
     <nav class="navbar">
         <button id="menu-toggle">☰</button>
-        <div class="navbar-brand">Administrator panel</div>
-        <button class="logout-btn">Logout</button>
+        <div class="navbar-brand">Panel de administrador</div>
+        <button class="logout-btn">Cerrar sesión</button>
     </nav>
 
     <div class="sidebar" id="sidebar">
         <div class="nav-item active" data-page="info">
-            <span>📊</span> System Info
+            <span>📊</span> Info del sistema
         </div>
         <div class="nav-item" data-page="config">
-            <span>⚙️</span> Configuration
+            <span>⚙️</span> Configuración
         </div>
         <div class="nav-item" data-page="files">
-            <span>📁</span> File Management
+            <span>📁</span> Gestión de archivos
         </div>
     </div>
 
@@ -35,18 +79,18 @@
         <!----------------- Info Page ----------------->
         <div id="info-page">
             <div class="card">
-                <h2>System Information</h2>
+                <h2>Información del sistema</h2>
                 <div class="info-grid">
                     <div class="info-item">
                         <h3>SSID Punto de Acceso</h3>
                         <p id="device-name">!{AP_SSID}</p>
                     </div>
                     <div class="info-item">
-                        <h3>Dirección IP Local</h3>
+                        <h3>Dirección IP del Servidor</h3>
                         <p id="firmware-version">!{SERV_IP}</p>
                     </div>
                     <div class="info-item">
-                        <h3>Uptime</h3>
+                        <h3>Tiempo activo</h3>
                         <p id="uptime">2 days, 3 hours</p>
                     </div>
                     <div class="info-item">
@@ -57,23 +101,45 @@
             </div>
 
             <div class="card">
-                <h2>Network Status</h2>
+                <h2>Estado de la red</h2>
                 <div class="info-grid">
                     <div class="info-item">
                         <h3>WiFi SSID</h3>
                         <p id="wifi-ssid">!{WIFI_SSID}</p>
                     </div>
                     <div class="info-item">
-                        <h3>Client IP Address</h3>
+                        <h3>Dirección IP de cliente</h3>
                         <p id="ip-address">!{CLIENT_IP}</p>
                     </div>
                     <div class="info-item">
-                        <h3>Status</h3>
+                        <h3>Estado</h3>
                         <p id="signal-strength">!{WIFI_STATUS}</p>
                     </div>
                     <div class="info-item">
-                        <h3>MAC Address</h3>
-                        <p id="mac-address">!{SERV_MAC}</p>
+                        <h3>Fuerza del signal</h3>
+                        <p id="mac-address">!{WIFI_SIGNAL}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Almacenamiento</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>Espacio total</h3>
+                        <p id="wifi-ssid">!{SD_SIZE}</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Espacio usado</h3>
+                        <p id="ip-address">!{SD_USED}</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Espacio libre</h3>
+                        <p id="signal-strength">!{SD_FREE}</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Tipo de tarjeta</h3>
+                        <p id="mac-address">!{SD_TYPE}</p>
                     </div>
                 </div>
             </div>
@@ -82,49 +148,70 @@
         <!----------------- Configuration Page ----------------->
         <div id="config-page" style="display: none;">
             <div class="card">
-                <h2>Network Configuration</h2>
+                <h2>Configuración del punto de acceso</h2>
                 <form id="network-config">
                     <div class="form-group">
-                        <label>WiFi SSID</label>
-                        <input type="text" name="wifi-ssid" placeholder="Enter WiFi name">
+                        <label>Nombre punto de acceso</label>
+                        <input type="text" name="ap-ssid" placeholder="Entrar el nombre del punto de acceso">
                     </div>
                     <div class="form-group">
-                        <label>WiFi Password</label>
-                        <input type="password" name="wifi-password" placeholder="Enter WiFi password">
+                        <label>Dirección IP</label>
+                        <input type="text" name="ap-address" placeholder="Entrar la dirección IP deseada">
                     </div>
-                    <button type="submit" class="btn btn-primary">Save Network Settings</button>
+                    <div class="form-group">
+                        <label>Clave WiFi</label>
+                        <input type="text" name="ap-password" placeholder="Entrar la clave del punto de acceso">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar configuración</button>
                 </form>
             </div>
 
             <div class="card">
-                <h2>System Configuration</h2>
-                <form id="system-config">
+                <h2>Configuración de la wifi</h2>
+                <form id="network-config">
                     <div class="form-group">
-                        <label>Device Name</label>
-                        <input type="text" name="deviceName" placeholder="Enter device name">
+                        <label>WiFi SSID</label>
+                        <input type="text" name="wifi-ssid" placeholder="Entrar el nombre de la WiFi">
                     </div>
                     <div class="form-group">
-                        <label>Session Timeout (milli seconds)</label>
-                        <input type="number" name="timeout" placeholder="Enter timeout in minutes">
+                        <label>Clave WiFi</label>
+                        <input type="text" name="wifi-password" placeholder="Entrar la clave de la WiFi">
                     </div>
-                    <button type="submit" class="btn btn-primary">Save System Settings</button>
+                    <div class="form-group">
+                        <label>Nombre del equipo</label>
+                        <input type="text" name="deviceName" placeholder="Entrar el nombre deseado">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar configuración</button>
                 </form>
             </div>
+
+            <div class="card">
+                <h2>Configuración del sistema</h2>
+                <form id="system-config">
+                    <div class="form-group">
+                        <label>Tiempo de espera sesión (segundos)</label>
+                        <input type="number" name="timeout" placeholder="Introduzca el tiempo de espera en segundos">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar configuración</button>
+                </form>
+            </div>
+            
         </div>
 
         <!----------------- File man Page ----------------->
         <div id="files-page" style="display: none;">
             <div class="card">
-                <h2>File Management</h2>
+                <h2>Gestión de archivos</h2>
                 <label class="upload-area" for="file-upload">
                     <div class="upload-icon">📁</div>
                     <div class="upload-message">
-                        <p>Drop files here or click to upload</p>
+                        <p>Suelte los archivos aquí o haga clic para cargarlos</p>
                         <input type="file" id="file-upload" multiple>
                     </div>
                 </label>
-
-                <div id="folders-container">
+                <div class="file-list">
+                    <div class="file-item"></div>
+                </div>
                 </div>
                 
             </div>

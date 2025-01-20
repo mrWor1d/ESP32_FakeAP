@@ -36,7 +36,6 @@ Para facilitar el mantenimiento, la legibilidad y la reusabilidad del código, s
     - [index-styles.css](/webpages/index-styles.css): para el formato de la página [index.html](/webpages/index.html) 
     - [index.html](/webpages/index.html): página de inicio del punto de acceso
 > Las carpetas con un nombre `****-login`contienen los códigos de las páginas de redes sociales. Consultar las fuentes [aquí](#fuentes-y-recursos-adicionales)
-* Archivo fuente de la página submit [thanksPage.html](/thanksPage.html) 
 * En la caperta [tools](/tools) estarán todos los recursos externos utiles. <br>
 Como pueden ser los [iconos](/tools/icons) para las paginas web. <br>
 
@@ -49,7 +48,7 @@ Como pueden ser los [iconos](/tools/icons) para las paginas web. <br>
 ### Físicos
 * Dos placas ESP32 (un punto de acceso y un servidor)
 > [!IMPORTANT]
-> La place debe de tener un lector de tarjeta integrado. Utilizamos placas ESP32-WROVER-E,
+> La placa debe de tener un lector de tarjeta integrado. Utilizamos placas ESP32-WROVER-E,
 > pero recomendamos comprar una `ESP32-CAM` o `ESP32-WROVER-IE` que viene con conector para antena wifi,
 > aunque debería valer cualquiera placa con lector tarjeta integrado. 
 * Tarjeta SD formateada previamente con el sistemas de archivos `FAT32`
@@ -136,7 +135,6 @@ ESP32_FakeAP/
 │   │
 │   ├── src/
 │   │   ├── include/
-│   │   │   ├── Authentication.h
 │   │   │   ├── include.h
 │   │   │   ├── SDCardManager.h
 │   │   │   ├── WebServerHandler.h
@@ -162,46 +160,51 @@ ESP32_FakeAP/
 │       └── 
 │ 
 ├── webpages/
+│   ├── admin-login/
+│   │   ├── admin-app.js
+│   │   ├── admin-panel.html
+│   │   ├── admin-style.css
+│   │   ├── data.json
+│   │   ├── index-app.js
+│   │   ├── index-login.html
+│   │   └── index-styles.css
+│   │
 │   ├── facebook-login/
 │   │   ├── index.html
 │   │   └── styles.css
 │   │
 │   ├── google-login/
 │   │   ├── index.html
-│   │   └── style.css
+│   │   └── styles.css
 │   │
 │   ├── icons/
-│   │   ├── facebook-2020-2-1.svg
+│   │   ├── appstore.png
+│   │   ├── facebook.png
+│   │   ├── googlepay.png
+│   │   ├── icons8-facebook-48.svg
+│   │   ├── icons8-google-48.svg
+│   │   ├── icons8-instagram-48.svg
+│   │   ├── icons8-twitterx-48.svg
+│   │   ├── instagram.png
 │   │   ├── instagram-icon.svg
+│   │   ├── public-wifi-5403_128.gif
 │   │   └── X_logo_2023_original.svg
 │   │
 │   ├── instagram-login/
-│   │   ├── appstore.png
-│   │   ├── facebook.png
-│   │   ├── googleplay.png
 │   │   ├── index.html
-│   │   ├── instagram.png
 │   │   └── styles.css
 │   │
 │   ├── twitter-login/
 │   │   ├── index.html
 │   │   └── styles.css
 │   │
-│   ├── admin.html
+│   ├── application.js
 │   ├── index.html
-│   ├── info.html
-│   ├── login.html
-│   ├── style.css
-│   ├── success.html
-│   └── upload.html
+│   └── index-styles.css
 │
 ├── .gitignore
-├── admin.html
-├── authentication.html
-├── index.html
 ├── IP routes.txt
 ├── LICENSE
-├── README.md
-├── style.css
-└── thanksPage
+└── README.md
+
 ````

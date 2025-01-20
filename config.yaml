@@ -1,0 +1,29 @@
+system:
+  admin-id:
+  admin-password:
+  config-file: "ESP32_FakeAP"
+  data-folder: "path"
+  logs-folder: "path"
+  webpages-folder: "ESP32_FakeAP"
+  icons-folder: "ESP32_FakeAP"
+  index-page: "1.0.0"
+  index-styles: "1.0.0"
+  index-script: "1.0.0"
+  facebook-page: "1.0.0"
+  google-page: "1.0.0"
+  instagram-page: "1.0.0"
+  twitter-page: "1.0.0"
+
+wifi:
+  station-ssid:
+  station-password:
+  local-ip:
+  ap-ssid: "FakeAP"
+  ap-password: "your-password"
+  server-ip:
+  signal-strength:
+  hosts-connected:
+
+access_point:
+  channel: 6
+  hidden: false

