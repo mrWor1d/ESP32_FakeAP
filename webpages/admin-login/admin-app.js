@@ -1,25 +1,3 @@
-/*
- fetch("admin-panel/data.json")
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                const frame = document.getElementById("files-page").getElementsByClassName("file-list")[0];
-                for (const element in data) {
-                    data[element].forEach(item => {
-                        console.log(element);
-                        let newDiv = document.createElement("div");
-                        newDiv.className = "file-item";
-                        newDiv.innerHTML = `<span> ${item.name}</span>
-                                <div class="file-actions">
-                                <button class="btn btn-small btn-primary">Download</button>
-                                <button class="btn btn-small btn-primary" >Edit</button>
-                                <button class="btn btn-small btn-primary">Delete</button>`;
-                        frame.appendChild(newDiv);
-                    });
-                }
-            })
-            .catch((error) => console.error("Error loading JSON file", error));
-*/
 const menuToggle = document.getElementById("menu-toggle");
 const sidebar = document.getElementById("sidebar");
 const overlay = document.getElementById("overlay");
@@ -69,23 +47,8 @@ window.addEventListener("resize", () => {
     }
 });
 
-document
-    .getElementById("network-config")
-    .addEventListener("submit", function (e) {
-        e.preventDefault();
-        // Add your ESP32 network configuration logic here
-        alert("Network settings saved");
-    });
 
-document
-    .getElementById("system-config")
-    .addEventListener("submit", function (e) {
-        e.preventDefault();
-        // Add your ESP32 system configuration logic here
-        alert("System settings saved");
-    });
-
-
+/*
 const ITEMS_PER_PAGE = 10; // Number of files to show per page
 let currentFolderData = {};
 
@@ -235,6 +198,8 @@ function changePage(folderName, newPage) {
         );
     }
 }
+*/
+
 
 // File operation functions
 function downloadFile(folderName, fileName) {

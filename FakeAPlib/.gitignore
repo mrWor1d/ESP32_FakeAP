@@ -1,0 +1,16 @@
+#utility files/folders
+dump
+
+#IDE specific files
+#vscode
+.vscode
+CMakePresets.json
+out
+build
+
+#clion
+cmake-build-debug
+.idea
+
+#other files
+debug-output.yaml

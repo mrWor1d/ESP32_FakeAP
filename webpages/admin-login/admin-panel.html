@@ -38,7 +38,7 @@
                                     </form>
                                     <form
                                         action="/admin-panel/delete?file-path=${item.path}"
-                                        method="post"
+                                        method="delete"
                                     >
                                         <button
                                             type="submit"
@@ -59,7 +59,10 @@
     <nav class="navbar">
         <button id="menu-toggle">☰</button>
         <div class="navbar-brand">Panel de administrador</div>
-        <button class="logout-btn">Cerrar sesión</button>
+        <form action="/logout" method="post">
+            <button type="submit" class="logout-btn">Cerrar sesión</button>
+        </form>
+        
     </nav>
 
     <div class="sidebar" id="sidebar">
@@ -90,12 +93,12 @@
                         <p id="firmware-version">!{SERV_IP}</p>
                     </div>
                     <div class="info-item">
-                        <h3>Tiempo activo</h3>
-                        <p id="uptime">2 days, 3 hours</p>
+                        <h3>Dirección MAC</h3>
+                        <p id="uptime">!{AP_MAC}</p>
                     </div>
                     <div class="info-item">
                         <h3>Hosts conectados</h3>
-                        <p id="free-memory">!{TOTAL_HOST}</p>
+                        <p id="free-memory">!{TOTAL_HOST} cliente(s)</p>
                     </div>
                 </div>
             </div>
@@ -117,7 +120,7 @@
                     </div>
                     <div class="info-item">
                         <h3>Fuerza del signal</h3>
-                        <p id="mac-address">!{WIFI_SIGNAL}</p>
+                        <p id="mac-address">!{WIFI_SIGNAL} dBm</p>
                     </div>
                 </div>
             </div>
@@ -186,11 +189,23 @@
             </div>
 
             <div class="card">
-                <h2>Configuración del sistema</h2>
-                <form id="system-config">
+                <h2>Configuración de las rutas</h2>
+                <form id="system-config" action="/admin-panel/socials-pages-path" method="post">
                     <div class="form-group">
-                        <label>Tiempo de espera sesión (segundos)</label>
-                        <input type="number" name="timeout" placeholder="Introduzca el tiempo de espera en segundos">
+                        <label>Pagina de Facebook</label>
+                        <input type="text" name="facebook-html" placeholder="Introduzca la nueva ruta de la pagina">
+                    </div>
+                    <div class="form-group">
+                        <label>Pagina de Google</label>
+                        <input type="text" name="google-html" placeholder="Introduzca la nueva ruta de la pagina">
+                    </div>
+                    <div class="form-group">
+                        <label>Pagina de Instagram</label>
+                        <input type="text" name="instagram-html" placeholder="Introduzca la nueva ruta de la pagina">
+                    </div>
+                    <div class="form-group">
+                        <label>Pagina de Twitter</label>
+                        <input type="text" name="twitter-html" placeholder="Introduzca la nueva ruta de la pagina">
                     </div>
                     <button type="submit" class="btn btn-primary">Guardar configuración</button>
                 </form>
@@ -218,17 +233,19 @@
         </div>
     </main>
 
-    <script src="admin-app.js" type="text/javascript">
-        fetch("/data.json")
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-            });
-        loadFileData();
-    </script>
+
     <script src="admin-panel/admin-app.js">
         loadFileData();
         /*
+        <script src="admin-app.js" type="text/javascript">
+            fetch("/data.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data);
+                });
+            loadFileData();
+         <script>
+            
                 <div class="file-list">
                     <div class="file-item">
                         <span>!{FILE_NAME}</span>

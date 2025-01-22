@@ -1,0 +1,124 @@
+#######################################
+# Syntax Coloring Map For FakeAPlib
+#######################################
+
+
+#######################################
+#to be removed, depreciated
+#######################################
+
+handleSubmit	KEYWORD2
+testFileIO	KEYWORD2
+AuthenticationManager   KEYWORD1
+
+
+#######################################
+# Library (KEYWORD3)
+#######################################
+
+FakeAPlib	KEYWORD3
+
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+FileType_t  KEYWORD1
+FakeAp	KEYWORD1
+SDCardManager	KEYWORD1
+WebServerManager	KEYWORD1
+
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+# Comon methods/functions
+getCurrentTime  KEYWORD2
+
+# FakeAp class
+initialize	KEYWORD2
+setWifi KEYWORD2
+
+# WebServerManager class
+start   KEYWORD2
+process KEYWORD2
+setPath		KEYWORD2
+handleRoot	KEYWORD2
+handleLogin KEYWORD2
+handleFileList  KEYWORD2
+getContentType  KEYWORD2
+handleAdminPanel    KEYWORD2
+handleFileUpload    KEYWORD2
+setupCaptivePortal  KEYWORD2
+handleWiFiConfig    KEYWORD2
+
+# SDCardManager class
+initialize	KEYWORD2
+logEvent    KEYWORD2
+listDir		KEYWORD2
+createDir	KEYWORD2
+removeDir	KEYWORD2
+readFile	KEYWORD2
+writeFile	KEYWORD2
+appendFile	KEYWORD2
+renameFile	KEYWORD2
+deleteFile	KEYWORD2
+getCardType KEYWORD2
+getFileSystem   KEYWORD2
+
+# AuthenticationManager
+hashPassword    KEYWORD2
+validateSocialLogin KEYWORD2
+validateAdminCredentials    KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+# SD pins (integrated card reader)
+SD_MMC_D0	LITERAL1
+SD_MMC_CLK	LITERAL1
+SD_MMC_CMD	LITERAL1
+
+# ports
+DNS_PORT    LITERAL1
+SERVER_PORT LITERAL1
+
+# integer
+TIME_OUT_LIMIT  LITERAL1
+MAX_LOGIN_TIME  LITERAL1
+LOGIN_LOCKOUT_TIME  LITERAL1
+MAX_LOGIN_ATTEMPTS  LITERAL1
+
+# string
+LOG_FILE    LITERAL1
+ADMIN_USERNAME  LITERAL1
+ADMIN_PASSWORD  LITERAL1
+
+# Error messages
+ERROR_SD_NOT_INIT   LITERAL1
+ERROR_SD_CARD_TYPE  LITERAL1
+ERROR_SD_CARD_READ  LITERAL1
+ERROR_FILE_OPEN     LITERAL1
+ERROR_FILE_WRITE    LITERAL1
+ERROR_FILE_RENAME   LITERAL1
+ERROR_FILE_TYPE     LITERAL1
+ERROR_FILE_DELETE   LITERAL1
+ERROR_DIR_CREATE    LITERAL1
+ERROR_DIR_DELETE    LITERAL1
+ERROR_WIFIAP_CREATE LITERAL1
+
+# Success messages
+SUCCESS_SD_INIT LITERAL1
+SUCCESS_FILE_OPEN   LITERAL1
+SUCCESS_FILE_WRITE  LITERAL1
+SUCCESS_FILE_RENAME LITERAL1
+SUCCESS_FILE_DELETE LITERAL1
+SUCCESS_DIR_CREATE  LITERAL1
+SUCCESS_DIR_DELETE  LITERAL1
+SUCCESS_WIFIAP_INIT LITERAL1
+SUCCESS_WIFISTA_CONECT  LITERAL1
+SUCCESS_SERVER_INIT LITERAL1
+SUCCESS_LOG_EVENT   LITERAL1
