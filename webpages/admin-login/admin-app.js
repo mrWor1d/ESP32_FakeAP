@@ -1,7 +1,7 @@
 const menuToggle = document.getElementById("menu-toggle");
-const sidebar = document.getElementById("sidebar");
-const overlay = document.getElementById("overlay");
-const navItems = document.querySelectorAll(".nav-item");
+const sidebar    = document.getElementById("sidebar");
+const overlay    = document.getElementById("overlay");
+const navItems   = document.querySelectorAll(".nav-item");
 
 function toggleSidebar() {
     sidebar.classList.toggle("active");
@@ -47,6 +47,63 @@ window.addEventListener("resize", () => {
     }
 });
 
+
+
+// Initialize file management
+
+const uploadArea = document.getElementById('upload-area');
+const fileInput  = document.getElementById('file-upload');
+
+
+// Drag and drop handlers
+['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+    uploadArea.addEventListener(eventName, preventDefaults, false);
+});
+
+function preventDefaults(e) {
+    e.preventDefault();
+    e.stopPropagation();
+}
+
+['dragenter', 'dragover'].forEach(eventName => {
+    uploadArea.addEventListener(eventName, highlight, false);
+});
+
+['dragleave', 'drop'].forEach(eventName => {
+    uploadArea.addEventListener(eventName, unhighlight, false);
+});
+
+function highlight(e) {
+    uploadArea.classList.add('drag-over');
+}
+
+function unhighlight(e) {
+    uploadArea.classList.remove('drag-over');
+}
+
+uploadArea.addEventListener('drop', handleDrop, false);
+
+function handleDrop(e) {
+    const dt = e.dataTransfer;
+    const files = dt.files;
+    handleFiles(files);
+}
+
+fileInput.addEventListener('change', function(e) {
+    handleFiles(this.files);
+});
+
+function handleFiles(files) {
+    // Here you would implement your file upload logic
+    fetch("admin-panel/updload", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'multipart/form-data',
+        }
+    });
+    console.log('Files to upload:', files);
+    // You can send these files to your ESP32 server
+}
 
 /*
 const ITEMS_PER_PAGE = 10; // Number of files to show per page
@@ -199,77 +256,3 @@ function changePage(folderName, newPage) {
     }
 }
 */
-
-
-// File operation functions
-function downloadFile(folderName, fileName) {
-    // Implement your download logic here
-    console.log(`Downloading ${fileName} from ${folderName}`);
-}
-
-function editFile(folderName, fileName) {
-    // Implement your edit logic here
-    console.log(`Editing ${fileName} from ${folderName}`);
-}
-
-function deleteFile(folderName, fileName) {
-    // Implement your delete logic here
-    console.log(`Deleting ${fileName} from ${folderName}`);
-}
-
-// Initialize file management
-
-
-
-const uploadArea = document.getElementById('upload-area');
-const fileInput = document.getElementById('file-upload');
-
-// Drag and drop handlers
-['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-    uploadArea.addEventListener(eventName, preventDefaults, false);
-});
-
-function preventDefaults(e) {
-    e.preventDefault();
-    e.stopPropagation();
-}
-
-['dragenter', 'dragover'].forEach(eventName => {
-    uploadArea.addEventListener(eventName, highlight, false);
-});
-
-['dragleave', 'drop'].forEach(eventName => {
-    uploadArea.addEventListener(eventName, unhighlight, false);
-});
-
-function highlight(e) {
-    uploadArea.classList.add('drag-over');
-}
-
-function unhighlight(e) {
-    uploadArea.classList.remove('drag-over');
-}
-
-uploadArea.addEventListener('drop', handleDrop, false);
-
-function handleDrop(e) {
-    const dt = e.dataTransfer;
-    const files = dt.files;
-    handleFiles(files);
-}
-
-fileInput.addEventListener('change', function(e) {
-    handleFiles(this.files);
-});
-
-function handleFiles(files) {
-    // Here you would implement your file upload logic
-    fetch("admin-panel/updload", {
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'multipart/form-data',
-        }
-    });
-    console.log('Files to upload:', files);
-    // You can send these files to your ESP32 server
-}

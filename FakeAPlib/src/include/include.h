@@ -21,10 +21,10 @@
 
 namespace fakeAPLib
 {
-    typedef struct ESPConfig_t;
+    //typedef struct ESPConfig_t;
     typedef struct Placeholder_t;
     static inline String getCurrentTime(void);
-    static inline String getReadableSize(const size_t& bytes);
+    static inline String getReadableSize(const uint64_t& bytes);
 }
 
 typedef enum
@@ -50,11 +50,13 @@ typedef enum
  * La idea es tener un archivo de configuración
  * 
  */
+/*
 typedef struct fakeAPLib::ESPConfig_t
 {
 public:
     static String configPath;
 };
+*/
 
 
 typedef struct fakeAPLib::Placeholder_t
@@ -73,24 +75,28 @@ public:
     static inline const String sdFreeSpace     = "!{SD_FREE}";
     static inline const String sdSpaceUsed     = "!{SD_USED}";
     static inline const String sdCardType      = "!{SD_TYPE}";
+    static inline const String FacebookPath    = "!{FB_PATH}";
+    static inline const String GooglePath      = "!{GL_PATH}";
+    static inline const String InstagramPath   = "!{IS_PATH}";
+    static inline const String TwitterPath     = "!{TW_PATH}";
 };
 
 
 inline static String fakeAPLib::getCurrentTime()
 {
     unsigned long runMillis= millis();
-    unsigned long allSeconds= runMillis/1000;
-    int secsRemaining= allSeconds%3600;
+    unsigned long allSeconds= runMillis / 1000;
+    int secsRemaining= allSeconds % 3600;
 
-    uint8_t hours   = allSeconds/3600;
-    uint8_t minutes = secsRemaining/60;
-    uint8_t seconds = secsRemaining%60;
+    uint8_t hours   = allSeconds / 3600;
+    uint8_t minutes = secsRemaining / 60;
+    uint8_t seconds = secsRemaining % 60;
 
     return String(hours) + ":" + String(minutes) + ":" + String(seconds);
 }
 
 
-inline static String fakeAPLib::getReadableSize(const size_t& bytes)
+inline static String fakeAPLib::getReadableSize(const uint64_t& bytes)
 {
     if      (bytes < 1024)                 return String(bytes) + " B";
     else if (bytes < (1024 * 1024))        return String(bytes / 1024.0) + " KB";
@@ -197,6 +203,7 @@ using namespace fakeAPLib;
         #define NEW_WIFI_CONFIG    "[SERVER] Configuración wifi guardada"
         #define UPLOAD_STARTED     "[SERVER] Empieza la carga del archivo %s\n"
         #define NEW_ADMIN_LOGIN    "[SERVER] Nueva conexión de administrador"
+        #define NEW_SOCIALS_PATH   "[SERVER] Nuevas rutas indicadas para las paginas de redes sociales."
         #define NEW_FILE_CONTENT   "[SERVER] Displaying file %s\n"
         #define NEW_FILE_DELETED   "[SERVER] El archivo %s se ha borrado correctamente\n"
         #define NEW_FILE_UPLOADED  "[SERVER] El archivo %s se ha subido al servidor\n"

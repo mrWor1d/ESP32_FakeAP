@@ -116,6 +116,7 @@ public:
             if ((millis() - timeout) > TIME_OUT_LIMIT)
             {
 #if (WITH_ERROR_TYPE)
+                Serial.println();
                 Serial.printf(ERROR_WIFI_CONNECT, wifissid.c_str());
 #endif
                 return 0;

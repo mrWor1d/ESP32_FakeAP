@@ -38,7 +38,7 @@
                                     </form>
                                     <form
                                         action="/admin-panel/delete?file-path=${item.path}"
-                                        method="delete"
+                                        method="post"
                                     >
                                         <button
                                             type="submit"
@@ -152,7 +152,7 @@
         <div id="config-page" style="display: none;">
             <div class="card">
                 <h2>Configuración del punto de acceso</h2>
-                <form id="network-config">
+                <form id="access-point-config">
                     <div class="form-group">
                         <label>Nombre punto de acceso</label>
                         <input type="text" name="ap-ssid" placeholder="Entrar el nombre del punto de acceso">
@@ -171,7 +171,7 @@
 
             <div class="card">
                 <h2>Configuración de la wifi</h2>
-                <form id="network-config">
+                <form id="wifi-station-config" action="/admin-panel/wifi-configuration" method="post">
                     <div class="form-group">
                         <label>WiFi SSID</label>
                         <input type="text" name="wifi-ssid" placeholder="Entrar el nombre de la WiFi">
@@ -190,22 +190,22 @@
 
             <div class="card">
                 <h2>Configuración de las rutas</h2>
-                <form id="system-config" action="/admin-panel/socials-pages-path" method="post">
+                <form id="socials-pages-path" action="/admin-panel/socials-pages-path" method="post">
                     <div class="form-group">
                         <label>Pagina de Facebook</label>
-                        <input type="text" name="facebook-html" placeholder="Introduzca la nueva ruta de la pagina">
+                        <input type="text" name="facebook-html" value="!{FB_PATH}">
                     </div>
                     <div class="form-group">
                         <label>Pagina de Google</label>
-                        <input type="text" name="google-html" placeholder="Introduzca la nueva ruta de la pagina">
+                        <input type="text" name="google-html" value="!{GL_PATH}">
                     </div>
                     <div class="form-group">
                         <label>Pagina de Instagram</label>
-                        <input type="text" name="instagram-html" placeholder="Introduzca la nueva ruta de la pagina">
+                        <input type="text" name="instagram-html" value="!{IS_PATH}">
                     </div>
                     <div class="form-group">
                         <label>Pagina de Twitter</label>
-                        <input type="text" name="twitter-html" placeholder="Introduzca la nueva ruta de la pagina">
+                        <input type="text" name="twitter-html" value="!{TW_PATH}">
                     </div>
                     <button type="submit" class="btn btn-primary">Guardar configuración</button>
                 </form>
@@ -235,7 +235,7 @@
 
 
     <script src="admin-panel/admin-app.js">
-        loadFileData();
+        //loadFileData();
         /*
         <script src="admin-app.js" type="text/javascript">
             fetch("/data.json")

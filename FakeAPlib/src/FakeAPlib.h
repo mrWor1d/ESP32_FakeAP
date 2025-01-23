@@ -80,7 +80,7 @@ public:
     /**
      * @brief Imprime el contenido de los archivos de las variables path
      */
-    void printFilesContent();
+    void printFilesContent(void);
     
     /**
      * @brief Inicia el servidor del portal cautivo.
@@ -88,7 +88,7 @@ public:
      * Esta función inicializa y arranca el servidor del portal cautivo, que se utiliza
      * para interceptar y redirigir las solicitudes de los clientes a una página web específica.
      */
-    void startCaptiveServer();
+    void startCaptiveServer(void);
 
 };
 
