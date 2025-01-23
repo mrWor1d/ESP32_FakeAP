@@ -4,7 +4,7 @@
 
 
 //variable para el nombre del wifi
-const char* SSID   = "Elastic-cliente";
+const char* SSID      = "Elastic-cliente";
 const char* WIFI_SSID = "ESP.local-server";
 const char* WIFI_PSW  = "SECUREhash9361";
 
@@ -33,6 +33,9 @@ void setup()
   WiFi.softAPConfig(*apip, *apip, IPAddress(255, 255, 255, 0));
   if (!accessPoint->initialize(SSID, "", WIFI_SSID, WIFI_PSW))
     Serial.println("Error en la configuración del punto de acceso");
+
+  Serial.println(SD_MMC.cardSize());
+  Serial.println(SD_MMC.totalBytes());
 
   Serial.println("Configuración acabada!");
 

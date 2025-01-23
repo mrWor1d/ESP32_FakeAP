@@ -144,7 +144,7 @@ public:
 
         _sdInitialized = true;
 
-        Serial.printf("Total espacio disponible: %lluMB\r\n", getReadableSize(SD_MMC.totalBytes()));
+        Serial.printf("Total espacio disponible: %s\r\n", getReadableSize(SD_MMC.totalBytes()));
 
         listDir("/", 0);
 
@@ -556,7 +556,7 @@ public:
             return 0;
         }
 #if (WITH_SUCCESS_MESSAGE)
-        Serial.printf(SUCCESS_FILE_DELETE, path);
+        Serial.printf(SUCCESS_FILE_DELETE, path.c_str());
 #endif
 
         return 1;
