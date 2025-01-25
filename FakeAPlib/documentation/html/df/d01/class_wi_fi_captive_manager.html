@@ -1,0 +1,630 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FakeAPlib: Referencia de la clase WiFiCaptiveManager</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FakeAPlib
+   </div>
+   <div id="projectbrief">Librería arduino para ESP32 que permite crear un punto de acceso falso</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('df/d01/class_wi_fi_captive_manager.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pub-static-methods">Métodos públicos estáticos</a> &#124;
+<a href="#pro-methods">Métodos protegidos</a> &#124;
+<a href="#pro-attribs">Atributos protegidos</a> &#124;
+<a href="../../d1/d02/class_wi_fi_captive_manager-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle"><div class="title">Referencia de la clase WiFiCaptiveManager</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Gestor para la implementación de un punto de acceso con portal cautivo, conectarse a una red en modo estación, así como la interacción con un servidor para mostrar y enviar información de la página cautiva.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d7/d00/_wifi_captive_portal_8h_source.html">WifiCaptivePortal.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de herencia de WiFiCaptiveManager</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../df/d01/class_wi_fi_captive_manager.png" usemap="#WiFiCaptiveManager_map" alt=""/>
+  <map id="WiFiCaptiveManager_map" name="WiFiCaptiveManager_map">
+<area href="../../d5/d03/class_fake_a_p.html" title="Implementa la gestión del punto de acceso con portal cautivo y el servidor web." alt="FakeAP" shape="rect" coords="0,56,131,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a78d44377e4493e2aa02dbf5bc8a71ea4" id="r_a78d44377e4493e2aa02dbf5bc8a71ea4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78d44377e4493e2aa02dbf5bc8a71ea4">WiFiCaptiveManager</a> ()</td></tr>
+<tr class="memdesc:a78d44377e4493e2aa02dbf5bc8a71ea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto que crea un objeto WiFiClient y no asigna un IPAddress.  <br /></td></tr>
+<tr class="separator:a78d44377e4493e2aa02dbf5bc8a71ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc4680d6da10aa845c37f6a89cf1fff" id="r_a7bc4680d6da10aa845c37f6a89cf1fff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bc4680d6da10aa845c37f6a89cf1fff">WiFiCaptiveManager</a> (IPAddress &amp;ip)</td></tr>
+<tr class="memdesc:a7bc4680d6da10aa845c37f6a89cf1fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor que crea un objeto WiFiClient y asigna un IPAddress al servidor.  <br /></td></tr>
+<tr class="separator:a7bc4680d6da10aa845c37f6a89cf1fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a359ab36eb83082b77062aec5dc236088" id="r_a359ab36eb83082b77062aec5dc236088"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a359ab36eb83082b77062aec5dc236088">~WiFiCaptiveManager</a> ()</td></tr>
+<tr class="memdesc:a359ab36eb83082b77062aec5dc236088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor que libera la memoria asociada a _client y _serverIP.  <br /></td></tr>
+<tr class="separator:a359ab36eb83082b77062aec5dc236088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a784c595055365b7eb366af41f19b8a13" id="r_a784c595055365b7eb366af41f19b8a13"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a784c595055365b7eb366af41f19b8a13">WiFiCaptiveManager</a> (const <a class="el" href="../../df/d01/class_wi_fi_captive_manager.html">WiFiCaptiveManager</a> &amp;)=delete</td></tr>
+<tr class="separator:a784c595055365b7eb366af41f19b8a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad74ed371d6b96a2489f64047a4b10a9c" id="r_ad74ed371d6b96a2489f64047a4b10a9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d01/class_wi_fi_captive_manager.html">WiFiCaptiveManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad74ed371d6b96a2489f64047a4b10a9c">operator=</a> (const <a class="el" href="../../df/d01/class_wi_fi_captive_manager.html">WiFiCaptiveManager</a> &amp;)=delete</td></tr>
+<tr class="separator:ad74ed371d6b96a2489f64047a4b10a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65cec752a004af45b799ca36263fd468" id="r_a65cec752a004af45b799ca36263fd468"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65cec752a004af45b799ca36263fd468">setServerIP</a> (const IPAddress &amp;IP)</td></tr>
+<tr class="memdesc:a65cec752a004af45b799ca36263fd468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza la dirección IP del servidor donde se gestionan las solicitudes del portal cautivo.  <br /></td></tr>
+<tr class="separator:a65cec752a004af45b799ca36263fd468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ffcc34219685ca9e916ba5cb2c0ef40" id="r_a7ffcc34219685ca9e916ba5cb2c0ef40"><td class="memItemLeft" align="right" valign="top">String &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ffcc34219685ca9e916ba5cb2c0ef40">getPageContent</a> ()</td></tr>
+<tr class="memdesc:a7ffcc34219685ca9e916ba5cb2c0ef40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el contenido obtenido por getLoginPage.  <br /></td></tr>
+<tr class="separator:a7ffcc34219685ca9e916ba5cb2c0ef40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8764fe95f34df4a33f2cab0529f6ead9" id="r_a8764fe95f34df4a33f2cab0529f6ead9"><td class="memItemLeft" align="right" valign="top">IPAddress &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8764fe95f34df4a33f2cab0529f6ead9">getServerIp</a> ()</td></tr>
+<tr class="memdesc:a8764fe95f34df4a33f2cab0529f6ead9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la dirección IP almacenada para comunicación con el servidor.  <br /></td></tr>
+<tr class="separator:a8764fe95f34df4a33f2cab0529f6ead9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Métodos públicos estáticos</h2></td></tr>
+<tr class="memitem:a33bb6307a6046532e4fdf13c16e35783" id="r_a33bb6307a6046532e4fdf13c16e35783"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33bb6307a6046532e4fdf13c16e35783">setWifiStation</a> (const String &amp;wifissid, const String &amp;wifipsw=&quot;\0&quot;, const IPAddress &amp;apIp=IPAddress(192, 168, 1, 3))</td></tr>
+<tr class="memdesc:a33bb6307a6046532e4fdf13c16e35783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configura una conexión WiFi en modo estación.  <br /></td></tr>
+<tr class="separator:a33bb6307a6046532e4fdf13c16e35783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7be1e9b24d5cbe8114ff41036abcef3" id="r_ab7be1e9b24d5cbe8114ff41036abcef3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7be1e9b24d5cbe8114ff41036abcef3">setAccessPoint</a> (const String &amp;ssid, const String &amp;psw)</td></tr>
+<tr class="memdesc:ab7be1e9b24d5cbe8114ff41036abcef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configura el dispositivo en modo punto de acceso.  <br /></td></tr>
+<tr class="separator:ab7be1e9b24d5cbe8114ff41036abcef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Métodos protegidos</h2></td></tr>
+<tr class="memitem:a87a03fc06e9a07375631dcd26d0f0df1" id="r_a87a03fc06e9a07375631dcd26d0f0df1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87a03fc06e9a07375631dcd26d0f0df1">getLoginPage</a> (const String &amp;platform)</td></tr>
+<tr class="memdesc:a87a03fc06e9a07375631dcd26d0f0df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solicita al servidor la página de inicio de sesión para la plataforma dada y la almacena en _pageContent.  <br /></td></tr>
+<tr class="separator:a87a03fc06e9a07375631dcd26d0f0df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade69c1e9b697d3493652902bce86dcaa" id="r_ade69c1e9b697d3493652902bce86dcaa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade69c1e9b697d3493652902bce86dcaa">submitCredentials</a> (const String &amp;platform, const String &amp;username, const String &amp;password)</td></tr>
+<tr class="memdesc:ade69c1e9b697d3493652902bce86dcaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envía las credenciales al servidor para que sean almacenadas.  <br /></td></tr>
+<tr class="separator:ade69c1e9b697d3493652902bce86dcaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Atributos protegidos</h2></td></tr>
+<tr class="memitem:a16222d86b8c26b8f78982ab493303096" id="r_a16222d86b8c26b8f78982ab493303096"><td class="memItemLeft" align="right" valign="top">WiFiClient *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16222d86b8c26b8f78982ab493303096">_client</a></td></tr>
+<tr class="separator:a16222d86b8c26b8f78982ab493303096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7b7ce8a1a9869f0103f429e76e619db" id="r_ad7b7ce8a1a9869f0103f429e76e619db"><td class="memItemLeft" align="right" valign="top">IPAddress *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7b7ce8a1a9869f0103f429e76e619db">_serverIP</a></td></tr>
+<tr class="separator:ad7b7ce8a1a9869f0103f429e76e619db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cad13f122b1dff8c462b8e545251d87" id="r_a9cad13f122b1dff8c462b8e545251d87"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cad13f122b1dff8c462b8e545251d87">_pageContent</a> = &quot;\0&quot;</td></tr>
+<tr class="separator:a9cad13f122b1dff8c462b8e545251d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Gestor para la implementación de un punto de acceso con portal cautivo, conectarse a una red en modo estación, así como la interacción con un servidor para mostrar y enviar información de la página cautiva. </p>
+<p>Clase que facilita la configuración de WiFi en modo estación y punto de acceso, así como la interacción con un servidor para mostrar y enviar información de la página cautiva.</p>
+<p>Esta clase proporciona funcionalidades para crear y gestionar un portal cautivo WiFi, permitiendo la configuración tanto en modo punto de acceso como en modo estación. Facilita la obtención de páginas de inicio de sesión y el manejo de credenciales para diferentes plataformas sociales.</p>
+<p>Características principales:</p><ul>
+<li>Configuración de modo punto de acceso y estación WiFi</li>
+<li>Gestión de conexiones con servidor remoto</li>
+<li>Manejo de páginas de inicio de sesión para distintas plataformas</li>
+<li>Envío de credenciales para almacenamiento</li>
+</ul>
+<dl class="section warning"><dt>Atención</dt><dd>Es responsabilidad del usuario asegurar una correcta gestión de memoria al utilizar los punteros _client y _serverIP</dd></dl>
+<dl class="section see"><dt>Ver también</dt><dd>WiFiClient </dd></dl>
+</div><h2 class="groupheader">Documentación de constructores y destructores</h2>
+<a id="a78d44377e4493e2aa02dbf5bc8a71ea4" name="a78d44377e4493e2aa02dbf5bc8a71ea4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78d44377e4493e2aa02dbf5bc8a71ea4">&#9670;&#160;</a></span>WiFiCaptiveManager() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WiFiCaptiveManager::WiFiCaptiveManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor por defecto que crea un objeto WiFiClient y no asigna un IPAddress. </p>
+
+</div>
+</div>
+<a id="a7bc4680d6da10aa845c37f6a89cf1fff" name="a7bc4680d6da10aa845c37f6a89cf1fff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bc4680d6da10aa845c37f6a89cf1fff">&#9670;&#160;</a></span>WiFiCaptiveManager() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WiFiCaptiveManager::WiFiCaptiveManager </td>
+          <td>(</td>
+          <td class="paramtype">IPAddress &amp;</td>          <td class="paramname"><span class="paramname"><em>ip</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor que crea un objeto WiFiClient y asigna un IPAddress al servidor. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip</td><td>Dirección IP del servidor para la comunicación en el portal cautivo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a359ab36eb83082b77062aec5dc236088" name="a359ab36eb83082b77062aec5dc236088"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a359ab36eb83082b77062aec5dc236088">&#9670;&#160;</a></span>~WiFiCaptiveManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WiFiCaptiveManager::~WiFiCaptiveManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor que libera la memoria asociada a _client y _serverIP. </p>
+
+</div>
+</div>
+<a id="a784c595055365b7eb366af41f19b8a13" name="a784c595055365b7eb366af41f19b8a13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a784c595055365b7eb366af41f19b8a13">&#9670;&#160;</a></span>WiFiCaptiveManager() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WiFiCaptiveManager::WiFiCaptiveManager </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/d01/class_wi_fi_captive_manager.html">WiFiCaptiveManager</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones miembro</h2>
+<a id="a87a03fc06e9a07375631dcd26d0f0df1" name="a87a03fc06e9a07375631dcd26d0f0df1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87a03fc06e9a07375631dcd26d0f0df1">&#9670;&#160;</a></span>getLoginPage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WiFiCaptiveManager::getLoginPage </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>platform</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Solicita al servidor la página de inicio de sesión para la plataforma dada y la almacena en _pageContent. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">platform</td><td>Nombre o identificador de la plataforma para solicitar la página de login.<br  />
+ Posibles opciones: {<code>facebook</code>, <code>google</code>, <code>instagram</code>, <code>twitter</code>} </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve true si la conexión y lectura del contenido tuvo éxito, de lo contrario false. </dd></dl>
+
+</div>
+</div>
+<a id="a7ffcc34219685ca9e916ba5cb2c0ef40" name="a7ffcc34219685ca9e916ba5cb2c0ef40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ffcc34219685ca9e916ba5cb2c0ef40">&#9670;&#160;</a></span>getPageContent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String &amp; WiFiCaptiveManager::getPageContent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el contenido obtenido por getLoginPage. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Referencia a la cadena que contiene el contenido de la página. </dd></dl>
+
+</div>
+</div>
+<a id="a8764fe95f34df4a33f2cab0529f6ead9" name="a8764fe95f34df4a33f2cab0529f6ead9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8764fe95f34df4a33f2cab0529f6ead9">&#9670;&#160;</a></span>getServerIp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IPAddress &amp; WiFiCaptiveManager::getServerIp </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve la dirección IP almacenada para comunicación con el servidor. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Referencia al objeto IPAddress del servidor. </dd></dl>
+
+</div>
+</div>
+<a id="ad74ed371d6b96a2489f64047a4b10a9c" name="ad74ed371d6b96a2489f64047a4b10a9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad74ed371d6b96a2489f64047a4b10a9c">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d01/class_wi_fi_captive_manager.html">WiFiCaptiveManager</a> WiFiCaptiveManager::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/d01/class_wi_fi_captive_manager.html">WiFiCaptiveManager</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7be1e9b24d5cbe8114ff41036abcef3" name="ab7be1e9b24d5cbe8114ff41036abcef3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7be1e9b24d5cbe8114ff41036abcef3">&#9670;&#160;</a></span>setAccessPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WiFiCaptiveManager::setAccessPoint </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>ssid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>psw</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Configura el dispositivo en modo punto de acceso. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ssid</td><td>Nombre del punto de acceso. </td></tr>
+    <tr><td class="paramname">psw</td><td>Contraseña del punto de acceso (puede ser nulo). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve true si se creó el punto de acceso exitosamente, de lo contrario false. </dd></dl>
+
+</div>
+</div>
+<a id="a65cec752a004af45b799ca36263fd468" name="a65cec752a004af45b799ca36263fd468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65cec752a004af45b799ca36263fd468">&#9670;&#160;</a></span>setServerIP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WiFiCaptiveManager::setServerIP </td>
+          <td>(</td>
+          <td class="paramtype">const IPAddress &amp;</td>          <td class="paramname"><span class="paramname"><em>IP</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Actualiza la dirección IP del servidor donde se gestionan las solicitudes del portal cautivo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">IP</td><td>Objeto IPAddress con la dirección a asignar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a33bb6307a6046532e4fdf13c16e35783" name="a33bb6307a6046532e4fdf13c16e35783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33bb6307a6046532e4fdf13c16e35783">&#9670;&#160;</a></span>setWifiStation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WiFiCaptiveManager::setWifiStation </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>wifissid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>wifipsw</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;\0&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IPAddress &amp;</td>          <td class="paramname"><span class="paramname"><em>apIp</em></span><span class="paramdefsep"> = </span><span class="paramdefval">IPAddress(192,&#160;168,&#160;1,&#160;3)</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Configura una conexión WiFi en modo estación. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wifissid</td><td>Nombre de la red a la que se conectará. </td></tr>
+    <tr><td class="paramname">wifipsw</td><td>Contraseña de la red (opcional). </td></tr>
+    <tr><td class="paramname">apIp</td><td>Dirección IP opcional para configuración. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve true si la conexión fue exitosa, si no, false. </dd></dl>
+
+</div>
+</div>
+<a id="ade69c1e9b697d3493652902bce86dcaa" name="ade69c1e9b697d3493652902bce86dcaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade69c1e9b697d3493652902bce86dcaa">&#9670;&#160;</a></span>submitCredentials()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WiFiCaptiveManager::submitCredentials </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>platform</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>username</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>password</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Envía las credenciales al servidor para que sean almacenadas. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">platform</td><td>Identificador de la plataforma. </td></tr>
+    <tr><td class="paramname">username</td><td>Nombre de usuario o identificador. </td></tr>
+    <tr><td class="paramname">password</td><td>Contraseña asociada al usuario. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve true si el envío de credenciales fue exitoso, si no, false. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de datos miembro</h2>
+<a id="a16222d86b8c26b8f78982ab493303096" name="a16222d86b8c26b8f78982ab493303096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16222d86b8c26b8f78982ab493303096">&#9670;&#160;</a></span>_client</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WiFiClient* WiFiCaptiveManager::_client</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Puntero a objeto WiFiClient que maneja las conexiones salientes. </p>
+
+</div>
+</div>
+<a id="a9cad13f122b1dff8c462b8e545251d87" name="a9cad13f122b1dff8c462b8e545251d87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cad13f122b1dff8c462b8e545251d87">&#9670;&#160;</a></span>_pageContent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String WiFiCaptiveManager::_pageContent = &quot;\0&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Almacena el contenido HTML o texto que se recibe desde el servidor. </p>
+
+</div>
+</div>
+<a id="ad7b7ce8a1a9869f0103f429e76e619db" name="ad7b7ce8a1a9869f0103f429e76e619db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7b7ce8a1a9869f0103f429e76e619db">&#9670;&#160;</a></span>_serverIP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IPAddress* WiFiCaptiveManager::_serverIP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Puntero a la dirección IP del servidor que recibe y entrega datos. </p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li>src/include/<a class="el" href="../../d7/d00/_wifi_captive_portal_8h_source.html">WifiCaptivePortal.h</a></li>
+<li>src/include/<a class="el" href="../../d9/d00/_wifi_captive_portal_8cpp.html">WifiCaptivePortal.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../df/d01/class_wi_fi_captive_manager.html">WiFiCaptiveManager</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

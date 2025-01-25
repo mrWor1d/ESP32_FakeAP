@@ -1,605 +1,224 @@
+/**
+ * @file WifiCaptivePortal.h
+ * 
+ * @author NGUEYOU SIMO, Neil L.; MORENO ROMO, Lucas; RUBIO JIMÉNEZ, Mario
+ * 
+ * @brief Este archivo declara la clase SDCardManager, que se encarga de la gestión de archivos
+ *        y del sistema de archivos.
+ */
+
+
 #ifndef SD_CARD_MANAGER_H
 #define SD_CARD_MANAGER_H
 
 #include "include.h"
 
+
+/**
+ * @brief Clase que gestiona las operaciones con la tarjeta SD.
+ *        Actua como un wrapper para la clase fs::SDMMCFS y sus funciones
+ * 
+ * Esta clase proporciona una interfaz para realizar operaciones básicas de
+ * sistema de archivos en una tarjeta SD, incluyendo lectura, escritura,
+ * creación y eliminación de archivos y directorios.
+ * 
+ * @details La clase maneja:
+ * - Inicialización de la tarjeta SD
+ * - Operaciones de lectura/escritura de archivos
+ * - Gestión de directorios
+ * - Registro de eventos (logging)
+ * - Operaciones recursivas en el sistema de archivos
+ * 
+ * La clase utiliza el sistema de archivos SDMMCFS para todas sus operaciones
+ * y mantiene un estado interno que indica si la tarjeta está inicializada.
+ * 
+ * @note La clase implementa el patrón Singleton para evitar múltiples instancias
+ * que acceden simultáneamente a la tarjeta SD.
+ * 
+ * 
+ * @see fs::SDMMCFS
+ */
 class SDCardManager
 {
 protected:
-    fs::FS _fileSystem;
-    bool _sdInitialized;
+    fs::SDMMCFS& _fileSystem;    /**< Variable que representa el sistema de archivo usado */
+    bool         _sdInitialized; /**< Variable para comprobar que la tarjeta está inicializada antes de hacer cualquiera cosa */
     // String _logFile;
 
 public:
-    SDCardManager()
-        : _fileSystem{SD_MMC}, _sdInitialized{false}
-    {
-    }
+
+    /**
+     * @brief Constructor por defecto que inicializa los miembros de la clase.
+     *        Asigna el sistema de archivos por defecto y marca la SD como no inicializada.
+     */
+    SDCardManager();
 
     SDCardManager(const SDCardManager &) = delete;
 
     SDCardManager operator=(const SDCardManager &) = delete;
 
-    bool operator+(const String &path) { return writeFile(path.c_str()); }
-
-    bool operator-(const String &path) { return deleteFile(path.c_str()); }
-
-    inline bool isCardInit() const { return _sdInitialized; }
-
-    inline fs::FS &getFileSystem() { return _fileSystem; }
-    /*
-    inline void setPath(const char* path) { _logFile = path; }
-
-    inline void setPath(const String& path) { _logFile = path; }
-    */
-
-    static inline char *getCardType(uint8_t card)
-    {
-        switch (card)
-        {
-        case CARD_MMC:
-            return "MMC";
-            break;
-
-        case CARD_SD:
-            return "SD";
-            break;
-
-        case CARD_SDHC:
-            return "SDHC";
-            break;
-        }
-        return "Unknown";
-    }
-
-
-    static inline String getFileDir(const char *path)
-    {
-        String str = path;
-        uint8_t index = str.lastIndexOf("/");
-
-        return str.substring(0, index);
-    }
-
-
-    static inline String getFileDir(const String &path)
-    {
-        uint8_t index = path.lastIndexOf("/");
-
-        return path.substring(0, index);
-    }
-
-
-    inline bool logEvent(const String &event)
-    {
-        if (!_sdInitialized)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.println(ERROR_SD_NOT_INIT);
-#endif
-            return 0;
-        }
-
-        String logDir = getFileDir(LOG_FILE);
-        if (!_fileSystem.exists(logDir))
-        {
-            if (!createDir(logDir))
-                return 0;
-            return writeFile(LOG_FILE, getCurrentTime() + "-> " + event) ? 1 : 0;
-        }
-        else if (!_fileSystem.exists(LOG_FILE))
-        {
-            return writeFile(LOG_FILE, getCurrentTime() + "-> " + event) ? 1 : 0;
-        }
-
-        File *logFile = new File(_fileSystem.open(LOG_FILE, FILE_APPEND));
-        if (!*logFile)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.printf(ERROR_FILE_OPEN, LOG_FILE);
-#endif
-            delete logFile;
-            return 0;
-        }
-
-        logFile->println(getCurrentTime() + "-> " + event);
-        logFile->close();
-        delete logFile;
-#if (WITH_SUCCESS_MESSAGE)
-        Serial.println(SUCCESS_LOG_EVENT);
-#endif
-        return 1;
-    }
-
-
-    inline bool initialize()
-    {
-        Serial.println("Montando la tarjeta SD....");
-        SD_MMC.setPins(SD_MMC_CLK, SD_MMC_CMD, SD_MMC_D0);
-
-        if (!SD_MMC.begin("/sdcard", true, true, SDMMC_FREQ_DEFAULT, 5))
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.println(ERROR_SD_CARD_READ);
-#endif
-            return 0;
-        }
-
-        uint8_t cardType = SD_MMC.cardType();
-        if (cardType == CARD_NONE)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.println(ERROR_SD_CARD_TYPE);
-#endif
-            return 0;
-        }
-
-#if (WITH_SUCCESS_MESSAGE)
-        Serial.println(SUCCESS_SD_INIT);
-#endif
-        Serial.printf("Tipo de tarjeta: %s\n", getCardType(cardType));
-
-        //uint64_t cardSize = SD_MMC.cardSize() / (1024 * 1024);
-        Serial.printf("Tamaño de la tarjeta SD_MMC: %s\n", getReadableSize(SD_MMC.cardSize()));
-
-        _sdInitialized = true;
-
-        Serial.printf("Total espacio disponible: %s\r\n", getReadableSize(SD_MMC.totalBytes()));
-
-        listDir("/", 0);
-
-        return 1;
-    }
-
-    inline String readFile(const char *path)
-    {
-        unsigned long startTime = millis();
-        if (!_sdInitialized)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.println(ERROR_SD_NOT_INIT);
-#endif
-            return "\0";;
-        }
-
-        File *file = new File(_fileSystem.open(path));
-        if (!*file)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.printf(ERROR_FILE_OPEN, path);
-#endif
-            delete file;
-            return "\0";;
-        }
-
-        String content = file->readStringUntil('\0');
-
-#if (WITH_SUCCESS_MESSAGE)
-        Serial.printf(SUCCESS_FILE_OPEN, file->name(), (millis() - startTime));
-#endif
-        file->close();
-        delete file;
-
-        return content;
-    }
-
-    inline String readFile(const String &path)
-    {
-        unsigned long startTime = millis();
-        if (!_sdInitialized)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.println(ERROR_SD_NOT_INIT);
-#endif
-            return "\0";;
-        }
-
-        File *file = new File(_fileSystem.open(path));
-        if (!*file)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.printf(ERROR_FILE_OPEN, path.c_str());
-#endif
-            delete file;
-            return "\0";;
-        }
-
-        String content = file->readStringUntil('\0');
-
-#if (WITH_SUCCESS_MESSAGE)
-        Serial.printf(SUCCESS_FILE_OPEN, file->name(), (millis() - startTime));
-#endif
-        file->close();
-        delete file;
-
-        return content;
-    }
-
-
-    inline bool writeFile(const char *path, const String &content = "")
-    {
-        if (!_sdInitialized)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.println(ERROR_SD_NOT_INIT);
-#endif
-            return 0;
-        }
-
-        File *file = new File(_fileSystem.open(path, FILE_WRITE));
-        if (!*file)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.printf(ERROR_FILE_OPEN, path);
-#endif
-            delete file;
-            return 0;
-        }
-        else if (!file->println(content))
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.printf(ERROR_FILE_WRITE, path);
-#endif
-            delete file;
-            return 0;
-        }
-
-#if (WITH_SUCCESS_MESSAGE)
-        Serial.printf(SUCCESS_FILE_WRITE, file->name());
-#endif
-        file->close();
-        delete file;
-        return 1;
-    }
-
-
-    inline bool writeFile(const String &path, const String &content = "")
-    {
-        if (!_sdInitialized)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.println(ERROR_SD_NOT_INIT);
-#endif
-            return 0;
-        }
-
-        File *file = new File(_fileSystem.open(path, FILE_WRITE));
-        if (!*file)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.printf(ERROR_FILE_OPEN, path.c_str());
-#endif
-            delete file;
-            return 0;
-        }
-        else if (!file->println(content))
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.printf(ERROR_FILE_WRITE, path.c_str());
-#endif
-            delete file;
-            return 0;
-        }
-
-#if (WITH_SUCCESS_MESSAGE)
-        Serial.printf(SUCCESS_FILE_WRITE, file->name());
-#endif
-        file->close();
-        delete file;
-        return 1;
-    }
-
-
-    inline void listDir(const char *dirname, uint8_t levels)
-    {
-        if (!_sdInitialized)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.println(ERROR_SD_NOT_INIT);
-#endif
-            return;
-        }
-
-        Serial.printf("Listing directory: %s\n", dirname);
-        File *root = new File(_fileSystem.open(dirname));
-        if (!*root)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.printf(ERROR_FILE_OPEN, dirname);
-#endif
-            delete root;
-            return;
-        }
-        if (!root->isDirectory())
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.printf(ERROR_FILE_TYPE, dirname);
-#endif
-            delete root;
-            return;
-        }
-
-        File *file = new File(root->openNextFile());
-        String fileList = "";
-        while (*file)
-        {
-            if (file->isDirectory())
-            {
-                Serial.print("  DIR : ");
-                Serial.println(file->name());
-                if (!levels)
-                    listDir(file->name(), levels - 1);
-            }
-            else
-            {
-                Serial.print("  FILE: ");
-                Serial.print(file->name());
-                Serial.print("  SIZE: ");
-                Serial.println(file->size());
-            }
-            *file = root->openNextFile();
-        }
-
-        delete root,
-               file;
-    }
-
-    inline bool createDir(const String &path)
-    {
-        if (!_sdInitialized)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.println(ERROR_SD_NOT_INIT);
-#endif
-            return 0;
-        }
-
-        Serial.printf("Creating Dir: %s\n", path.c_str());
-        if (!_fileSystem.mkdir(path))
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.printf(ERROR_DIR_CREATE, path.c_str());
-#endif
-            return 0;
-        }
-
-#if (WITH_SUCCESS_MESSAGE)
-        Serial.printf(SUCCESS_DIR_CREATE, path.c_str());
-#endif
-        return 1;
-    }
-
-    inline bool createDir(const char *path)
-    {
-        if (!_sdInitialized)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.println(ERROR_SD_NOT_INIT);
-#endif
-            return 0;
-        }
-
-        Serial.printf("Creating Dir: %s\n", path);
-        if (!_fileSystem.mkdir(path))
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.printf(ERROR_DIR_CREATE, path);
-#endif
-            return 0;
-        }
-
-#if (WITH_SUCCESS_MESSAGE)
-        Serial.printf(SUCCESS_DIR_CREATE, path);
-#endif
-        return 1;
-    }
-
-    inline bool removeDir(const char *path)
-    {
-        if (!_sdInitialized)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.println(ERROR_SD_NOT_INIT);
-#endif
-            return 0;
-        }
-
-        Serial.printf("Removing Dir: %s\n", path);
-        if (!_fileSystem.rmdir(path))
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.printf(ERROR_DIR_DELETE, path);
-#endif
-            return 0;
-        }
-
-#if (WITH_SUCCESS_MESSAGE)
-        Serial.printf(SUCCESS_DIR_DELETE, path);
-#endif
-        return 1;
-    }
-
-    inline bool appendFile(const char *path, String &content)
-    {
-        if (!_sdInitialized)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.println(ERROR_SD_NOT_INIT);
-#endif
-            return 0;
-        }
-        File *file = new File(_fileSystem.open(path, FILE_APPEND));
-        if (!*file)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.printf(ERROR_FILE_OPEN, path);
-#endif
-            delete file;
-            return 0;
-        }
-        content = "\n" + content;
-        if (!file->print(content))
-        {
-            Serial.printf(ERROR_FILE_WRITE, path);
-            delete file;
-            return 0;
-        }
-
-#if (WITH_SUCCESS_MESSAGE)
-        Serial.printf(SUCCESS_FILE_WRITE, file->name());
-#endif
-        file->close();
-        delete file;
-
-        return 1;
-    }
-
-    inline bool appendFile(const String &path, String &content)
-    {
-        if (!_sdInitialized)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.println(ERROR_SD_NOT_INIT);
-#endif
-            return 0;
-        }
-        File *file = new File(_fileSystem.open(path, FILE_APPEND));
-        if (!*file)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.printf(ERROR_FILE_OPEN, path.c_str());
-#endif
-            delete file;
-            return 0;
-        }
-        content = "\n" + content;
-        if (!file->print(content))
-        {
-            Serial.printf(ERROR_FILE_WRITE, path.c_str());
-            delete file;
-            return 0;
-        }
-
-#if (WITH_SUCCESS_MESSAGE)
-        Serial.printf(SUCCESS_FILE_WRITE, file->name());
-#endif
-        file->close();
-        delete file;
-
-        return 1;
-    }
-
-    inline bool renameFile(const char *path1, const char *path2)
-    {
-        if (!_sdInitialized)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.println(ERROR_SD_NOT_INIT);
-#endif
-            return 0;
-        }
-
-        if (!_fileSystem.rename(path1, path2))
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.printf(ERROR_FILE_RENAME, path1);
-#endif
-            return 0;
-        }
-        Serial.printf(SUCCESS_FILE_RENAME, path1);
-
-        return 1;
-    }
-
-    inline bool deleteFile(const char *path)
-    {
-        if (!_sdInitialized)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.println(ERROR_SD_NOT_INIT);
-#endif
-            return 0;
-        }
-
-        Serial.printf("Deleting file: %s\n", path);
-        if (!_fileSystem.remove(path))
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.printf(ERROR_FILE_DELETE, path);
-#endif
-            return 0;
-        }
-#if (WITH_SUCCESS_MESSAGE)
-        Serial.printf(SUCCESS_FILE_DELETE, path);
-#endif
-
-        return 1;
-    }
-
-
-    inline bool deleteFile(const String& path)
-    {
-        if (!_sdInitialized)
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.println(ERROR_SD_NOT_INIT);
-#endif
-            return 0;
-        }
-
-        Serial.printf("Deleting file: %s\n", path.c_str());
-        if (!_fileSystem.remove(path))
-        {
-#if (WITH_ERROR_TYPE)
-            Serial.printf(ERROR_FILE_DELETE, path);
-#endif
-            return 0;
-        }
-#if (WITH_SUCCESS_MESSAGE)
-        Serial.printf(SUCCESS_FILE_DELETE, path.c_str());
-#endif
-
-        return 1;
-    }
-
-
-    inline bool deleteRecursive(const String &path)
-    {
-        File *file = new File(_fileSystem.open(path));
-        if (!file->isDirectory())
-        {
-            file->close();
-            _fileSystem.remove(path);
-            return 1;
-        }
-
-        file->rewindDirectory();
-        while (true)
-        {
-            File entry = file->openNextFile();
-            if (!entry)
-                break;
-
-            String entryPath = path + "/" + entry.name();
-            if (entry.isDirectory())
-            {
-                entry.close();
-                deleteRecursive(entryPath);
-            }
-            else
-            {
-                entry.close();
-                _fileSystem.remove(entryPath);
-            }
-            yield();
-        }
-
-        _fileSystem.rmdir(path);
-        file->close();
-        delete file;
-
-        return 1;
-    }
+    /**
+     * @brief Operador definido para escribir un archivo.
+     * @param path Ruta del archivo donde se escribirá.
+     * @return true si la operación tuvo éxito, false en caso contrario.
+     */
+    bool operator+(const String &path);
+
+    /**
+     * @brief Operador definido para eliminar un archivo.
+     * @param path Ruta del archivo a eliminar.
+     * @return true si la operación tuvo éxito, false en caso contrario.
+     */
+    bool operator-(const String &path);
+
+    /**
+     * @brief Indica si la tarjeta SD ha sido inicializada.
+     * @return true si está inicializada, false en caso contrario.
+     */
+    bool isCardInit() const;
+
+    /**
+     * @brief Devuelve la referencia al sistema de archivos asociado a la tarjeta SD.
+     * @return Referencia al objeto fs::FS utilizado para la operación con archivos.
+     */
+    fs::SDMMCFS& getFileSystem();
+
+    /**
+     * @brief Retorna una cadena con el tipo de tarjeta SD detectada.
+     * @param card Identificador del tipo de tarjeta devuelto por el hardware.
+     * @return Cadena con la descripción del tipo de tarjeta.
+     */
+    static char *getCardType(uint8_t card);
+
+    /**
+     * @brief Obtiene el directorio dado el camino absoluto de un archivo.
+     * @param path Ruta completa de un archivo, como cadena de caracteres.
+     * @return Cadena que representa el directorio del archivo.
+     */
+    static String getFileDir(const char *path);
+
+    /**
+     * @brief Sobrecarga para obtener el directorio de un archivo a partir de un String.
+     * @param path Ruta completa de un archivo, como objeto String.
+     * @return Cadena que representa el directorio del archivo.
+     */
+    static String getFileDir(const String &path);
+
+    /**
+     * @brief Registra un evento en el archivo de log designado.
+     * @param event Mensaje o información a ser registrada en el archivo de log.
+     * @return true si se logró registrar el evento, false de lo contrario.
+     */
+    bool logEvent(const String &event);
+
+    /**
+     * @brief Inicializa la tarjeta SD y muestra información sobre ella.
+     * @return true si la tarjeta se inicializó correctamente, false en caso de error.
+     */
+    bool initialize();
+
+    /**
+     * @brief Lee el contenido de un archivo en la tarjeta SD.
+     * @param path Ruta del archivo a leer.
+     * @return Contenido del archivo en formato String, o cadena vacía si ocurre un error.
+     */
+    String readFile(const char *path);
+
+    /**
+     * @brief Sobrecarga para leer el contenido de un archivo a partir de un String.
+     * @param path Ruta del archivo a leer.
+     * @return Contenido del archivo en formato String, o cadena vacía si ocurre un error.
+     */
+    String readFile(const String &path);
+
+    /**
+     * @brief Escribe contenido en un archivo (creándolo si no existe).
+     * @param path Ruta del archivo donde se va a escribir.
+     * @param content Contenido a escribir en el archivo. Por defecto es cadena vacía.
+     * @return true si se escribió correctamente, false en caso de error.
+     */
+    bool writeFile(const char *path, const String &content = "");
+
+    /**
+     * @brief Sobrecarga para escribir contenido en un archivo a partir de un String.
+     * @param path Ruta del archivo donde se va a escribir.
+     * @param content Contenido a escribir en el archivo. Por defecto es cadena vacía.
+     * @return true si se escribió correctamente, false en caso de error.
+     */
+    bool writeFile(const String &path, const String &content = "");
+
+    /**
+     * @brief Lista los archivos y directorios dentro de una ruta dada.
+     * @param dirname Directorio que se listará.
+     * @param levels Niveles de profundidad para listar recursivamente.
+     */
+    void listDir(const char *dirname, uint8_t levels);
+
+    /**
+     * @brief Crea un directorio en la tarjeta SD a partir de un String.
+     * @param path Ruta del directorio a crear.
+     * @return true si se crea correctamente, false en caso de error.
+     */
+    bool createDir(const String &path);
+
+    /**
+     * @brief Crea un directorio en la tarjeta SD a partir de una cadena tipo C.
+     * @param path Ruta del directorio a crear.
+     * @return true si se crea correctamente, false en caso de error.
+     */
+    bool createDir(const char *path);
+
+    /**
+     * @brief Elimina un directorio de la tarjeta SD.
+     * @param path Ruta del directorio a eliminar.
+     * @return true si se elimina correctamente, false en caso de error.
+     */
+        bool removeDir(const char *path);
+
+    /**
+     * @brief Agrega contenido a un archivo existente (sin eliminar su contenido previo).
+     * @param path Ruta del archivo en el que se agrega contenido.
+     * @param content Contenido que será anexado en el archivo.
+     * @return true si se anexa correctamente, false en caso de error.
+     */
+    bool appendFile(const char *path, String &content);
+
+    /**
+     * @brief Sobrecarga para anexar contenido a un archivo a partir de un String.
+     * @param path Ruta del archivo en el que se agrega contenido.
+     * @param content Contenido que será anexado en el archivo.
+     * @return true si se anexa correctamente, false en caso de error.
+     */
+    bool appendFile(const String &path, String &content);
+
+    /**
+     * @brief Cambia el nombre de un archivo o lo mueve a otra ruta.
+     * @param path1 Ruta o nombre original del archivo.
+     * @param path2 Nueva ruta o nombre para el archivo.
+     * @return true si se renombra correctamente, false en caso de error.
+     */
+    bool renameFile(const char *path1, const char *path2);
+
+    /**
+     * @brief Elimina un archivo de la tarjeta SD a partir de una cadena tipo C.
+     * @param path Ruta del archivo a eliminar.
+     * @return true si se elimina correctamente, false en caso de error.
+     */
+    bool deleteFile(const char *path);
+
+    /**
+     * @brief Sobrecarga para eliminar un archivo a partir de un String.
+     * @param path Ruta del archivo a eliminar.
+     * @return true si se elimina correctamente, false en caso de error.
+     */
+    bool deleteFile(const String& path);
+
+    /**
+     * @brief Elimina recursivamente un archivo o directorio de la tarjeta SD, incluyendo su contenido.
+     * @param path Ruta del archivo o directorio a eliminar.
+     * @return true si se elimina correctamente, false en caso de error.
+     */
+    bool deleteRecursive(const String &path);
 };
 
 #endif // SD_CARD_MANAGER_H

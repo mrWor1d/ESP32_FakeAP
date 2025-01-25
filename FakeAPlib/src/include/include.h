@@ -5,15 +5,15 @@
 #include <FS.h>
 #include <SD_MMC.h>
 #include <WiFi.h>
-#include <WiFiMulti.h>
 #include <WiFiAP.h>
 #include <WiFiSTA.h>
 #include <NetworkClient.h>
 #include <WebServer.h>
 #include <DNSServer.h>
-#include <UrlEncode.h>
 #include <base64.h>
 #include <String>
+//#include <WiFiMulti.h>
+//#include <UrlEncode.h>
 //#include <HTTPRequest.hpp>
 //#include <HTTPResponse.hpp>
 //#include <memory>
@@ -22,11 +22,32 @@
 namespace fakeAPLib
 {
     //typedef struct ESPConfig_t;
+
     typedef struct Placeholder_t;
+
+    /**
+     * @brief Obtener el valor del tiempo actual.
+     * 
+     * @note Hablamos del tiempo de actividad, es decir, el tiempo
+     *       desde que se ha iniciado/reinicializado el ESP32.
+     * 
+     * @return Una cadena HH:MM:SS que representa el tiempo actual
+     */
     static inline String getCurrentTime(void);
+
+    /**
+     * @brief Get the Readable Size object
+     * 
+     * @param bytes 
+     * @return una cadena que representa el tamaño convertido 
+     */
     static inline String getReadableSize(const uint64_t& bytes);
 }
 
+/**
+ * @brief 
+ * 
+ */
 typedef enum
 {
     ADMINPAGE = 'A',
@@ -36,7 +57,10 @@ typedef enum
     //LOGFILE   = 'l',
 } FileType_t;
 
-
+/**
+ * @brief 
+ * 
+ */
 typedef enum
 {
     FACEBOOK  = 'F',
@@ -45,40 +69,45 @@ typedef enum
     TWITTER   = 'T'
 } Platform_t;
 
+
+
 /**
- * * Esto se tiene que implementar más adelante
- * La idea es tener un archivo de configuración
+ * @struct Placeholder_t
+ * @brief Estructura que contiene marcadores de posición (placeholders) para la librería FakeAPlib
  * 
+ * Esta estructura define una colección de marcadores de posición estáticos utilizados para
+ * reemplazar valores dinámicos en plantillas HTML y otros contenidos. Los marcadores siguen
+ * el formato !{NOMBRE_MARCADOR}.
+ * 
+ * Los marcadores incluyen:
+ * - Información del punto de acceso WiFi (SSID, IP)
+ * - Estado y detalles de la conexión WiFi
+ * - Información de la tarjeta SD (espacio, tipo)
+ * - Rutas a archivos HTML de redes sociales
+ * 
+ * @note Todos los marcadores son constantes String estáticas inline
+ * @see fakeAPLib
  */
-/*
-typedef struct fakeAPLib::ESPConfig_t
-{
-public:
-    static String configPath;
-};
-*/
-
-
 typedef struct fakeAPLib::Placeholder_t
 {
 public:
-    static inline const String FileName        = "!{FILE_NAME}";
-    static inline const String FilePath        = "!{FILE_PATH}";
-    static inline const String AccessPointSSID = "!{AP_SSID}";
-    static inline const String WifiSSID        = "!{WIFI_SSID}";
-    static inline const String WifiStatus      = "!{WIFI_STATUS}";
-    static inline const String HostsConected   = "!{TOTAL_HOST}";
-    static inline const String ServerIP        = "!{SERV_IP}";
-    static inline const String ClientIP        = "!{CLIENT_IP}";
-    static inline const String WiFiStrength    = "!{WIFI_SIGNAL}";
-    static inline const String sdSize          = "!{SD_SIZE}";
-    static inline const String sdFreeSpace     = "!{SD_FREE}";
-    static inline const String sdSpaceUsed     = "!{SD_USED}";
-    static inline const String sdCardType      = "!{SD_TYPE}";
-    static inline const String FacebookPath    = "!{FB_PATH}";
-    static inline const String GooglePath      = "!{GL_PATH}";
-    static inline const String InstagramPath   = "!{IS_PATH}";
-    static inline const String TwitterPath     = "!{TW_PATH}";
+    //static inline const String FileName        = "!{FILE_NAME}";   /**< Marcador de posición para  */
+    //static inline const String FilePath        = "!{FILE_PATH}";   /**< Marcador de posición para  */
+    static inline const String AccessPointSSID = "!{AP_SSID}";     /**< Marcador de posición para el nombre del punto de acceso */
+    static inline const String WifiSSID        = "!{WIFI_SSID}";   /**< Marcador de posición para el nombre de la wifi */
+    static inline const String WifiStatus      = "!{WIFI_STATUS}"; /**< Marcador de posición para el estado de la wifi (conectado/no conectado)*/
+    static inline const String HostsConected   = "!{TOTAL_HOST}";  /**< Marcador de posición para el números de equipos conectados */
+    static inline const String ServerIP        = "!{SERV_IP}";     /**< Marcador de posición para la dirección IP del servidor */
+    static inline const String ClientIP        = "!{CLIENT_IP}";   /**< Marcador de posición para la dirección IP como estación wifi */
+    static inline const String WiFiStrength    = "!{WIFI_SIGNAL}"; /**< Marcador de posición para la fuerza del signal de la wifi */
+    static inline const String sdSize          = "!{SD_SIZE}";     /**< Marcador de posición para el tamaño de la tarjeta sd */
+    static inline const String sdFreeSpace     = "!{SD_FREE}";     /**< Marcador de posición para el espacio libre en la tarjeta */
+    static inline const String sdSpaceUsed     = "!{SD_USED}";     /**< Marcador de posición para el espacio utilizado en la tarjeta */
+    static inline const String sdCardType      = "!{SD_TYPE}";     /**< Marcador de posición para el tipo de tarjeta */
+    static inline const String FacebookPath    = "!{FB_PATH}";     /**< Marcador de posición para la ruta del archivo html de facebook */
+    static inline const String GooglePath      = "!{GL_PATH}";     /**< Marcador de posición para la ruta del archivo html de google */
+    static inline const String InstagramPath   = "!{IS_PATH}";     /**< Marcador de posición para la ruta del archivo html de instagram */
+    static inline const String TwitterPath     = "!{TW_PATH}";     /**< Marcador de posición para la ruta del archivo html de twitter */
 };
 
 
@@ -105,7 +134,21 @@ inline static String fakeAPLib::getReadableSize(const uint64_t& bytes)
 }
 
 
+/**
+ * * Esto se tiene que implementar más adelante
+ * La idea es tener un archivo de configuración
+ * 
+ */
+/*
+typedef struct fakeAPLib::ESPConfig_t
+{
+public:
+    static String configPath;
+};
+*/
+
 using namespace fakeAPLib;
+
 
 #ifndef USE_GLOBAL_VAL
 #define USE_GLOBAL_VAL true

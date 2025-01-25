@@ -51,10 +51,7 @@ void setup()
   WiFi.softAPConfig(*serverip, *serverip, IPAddress(255, 255, 255, 0));
   if (!accessPoint->initialize(SSID, PASS, WIFI_SSID, WIFI_PSW))
     Serial.println("Error en la configuración del servidor");
-
-  Serial.println(SD_MMC.cardSize());
-  Serial.println(SD_MMC.totalBytes());
-
+    
   Serial.println("Configuración acabada!");
   
 }

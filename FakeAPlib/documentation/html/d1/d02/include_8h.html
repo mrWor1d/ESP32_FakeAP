@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FakeAPlib: Referencia del archivo src/include/include.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FakeAPlib
+   </div>
+   <div id="projectbrief">Librería arduino para ESP32 que permite crear un punto de acceso falso</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('d1/d02/include_8h.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Clases</a> &#124;
+<a href="#namespaces">Espacios de nombres</a> &#124;
+<a href="#define-members">defines</a> &#124;
+<a href="#enum-members">Enumeraciones</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo include.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &lt;FS.h&gt;</code><br />
+<code>#include &lt;SD_MMC.h&gt;</code><br />
+<code>#include &lt;WiFi.h&gt;</code><br />
+<code>#include &lt;WiFiAP.h&gt;</code><br />
+<code>#include &lt;WiFiSTA.h&gt;</code><br />
+<code>#include &lt;NetworkClient.h&gt;</code><br />
+<code>#include &lt;WebServer.h&gt;</code><br />
+<code>#include &lt;DNSServer.h&gt;</code><br />
+<code>#include &lt;base64.h&gt;</code><br />
+<code>#include &lt;String&gt;</code><br />
+</div>
+<p><a href="../../d1/d02/include_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Clases</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html">fakeAPLib::Placeholder_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Espacios de nombres</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d01/namespacefake_a_p_lib.html">fakeAPLib</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a0c4eb76c013a69999029aca1a990e5ea" id="r_a0c4eb76c013a69999029aca1a990e5ea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c4eb76c013a69999029aca1a990e5ea">USE_GLOBAL_VAL</a>&#160;&#160;&#160;true</td></tr>
+<tr class="separator:a0c4eb76c013a69999029aca1a990e5ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:aa8298ffc203837d96d3c0013c0506fb3" id="r_aa8298ffc203837d96d3c0013c0506fb3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8298ffc203837d96d3c0013c0506fb3">FileType_t</a> { <a class="el" href="#aa8298ffc203837d96d3c0013c0506fb3af2fe22452b791e2585afaa5b9f41793f">ADMINPAGE</a> = 'A'
+, <a class="el" href="#aa8298ffc203837d96d3c0013c0506fb3a7db207cda2d286d6f20e427cf0aae786">DATAFILE</a> = 'D'
+, <a class="el" href="#aa8298ffc203837d96d3c0013c0506fb3a16ed535d183214749a1cc7c6bc0751ee">EXITPAGE</a> = 'E'
+, <a class="el" href="#aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844">INDEXPAGE</a> = 'I'
+ }</td></tr>
+<tr class="separator:aa8298ffc203837d96d3c0013c0506fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa027791d4c6bbda765e876c1bf8ddff6" id="r_aa027791d4c6bbda765e876c1bf8ddff6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa027791d4c6bbda765e876c1bf8ddff6">Platform_t</a> { <a class="el" href="#aa027791d4c6bbda765e876c1bf8ddff6a7d5f8c8379dcd2c8a94c15c72302586c">FACEBOOK</a> = 'F'
+, <a class="el" href="#aa027791d4c6bbda765e876c1bf8ddff6a14e1e9c8e5f5a807deef8ee2bf38974d">GOOGLE</a> = 'G'
+, <a class="el" href="#aa027791d4c6bbda765e876c1bf8ddff6afa07d9774ff62173c36267023c8e4390">INSTAGRAM</a> = 'I'
+, <a class="el" href="#aa027791d4c6bbda765e876c1bf8ddff6a6b09926d98e3d10888b34a57fff96ab8">TWITTER</a> = 'T'
+ }</td></tr>
+<tr class="separator:aa027791d4c6bbda765e876c1bf8ddff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:aff88dbab8f98a145a72d771bb288012d" id="r_aff88dbab8f98a145a72d771bb288012d"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d01/namespacefake_a_p_lib.html#aff88dbab8f98a145a72d771bb288012d">fakeAPLib::getCurrentTime</a> (void)</td></tr>
+<tr class="memdesc:aff88dbab8f98a145a72d771bb288012d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtener el valor del tiempo actual.  <br /></td></tr>
+<tr class="separator:aff88dbab8f98a145a72d771bb288012d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f444a5808e2a3501a4be791fafc5864" id="r_a7f444a5808e2a3501a4be791fafc5864"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d01/namespacefake_a_p_lib.html#a7f444a5808e2a3501a4be791fafc5864">fakeAPLib::getReadableSize</a> (const uint64_t &amp;bytes)</td></tr>
+<tr class="memdesc:a7f444a5808e2a3501a4be791fafc5864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Readable Size object.  <br /></td></tr>
+<tr class="separator:a7f444a5808e2a3501a4be791fafc5864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de «define»</h2>
+<a id="a0c4eb76c013a69999029aca1a990e5ea" name="a0c4eb76c013a69999029aca1a990e5ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c4eb76c013a69999029aca1a990e5ea">&#9670;&#160;</a></span>USE_GLOBAL_VAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define USE_GLOBAL_VAL&#160;&#160;&#160;true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de enumeraciones</h2>
+<a id="aa8298ffc203837d96d3c0013c0506fb3" name="aa8298ffc203837d96d3c0013c0506fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8298ffc203837d96d3c0013c0506fb3">&#9670;&#160;</a></span>FileType_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#aa8298ffc203837d96d3c0013c0506fb3">FileType_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="aa8298ffc203837d96d3c0013c0506fb3af2fe22452b791e2585afaa5b9f41793f" name="aa8298ffc203837d96d3c0013c0506fb3af2fe22452b791e2585afaa5b9f41793f"></a>ADMINPAGE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa8298ffc203837d96d3c0013c0506fb3a7db207cda2d286d6f20e427cf0aae786" name="aa8298ffc203837d96d3c0013c0506fb3a7db207cda2d286d6f20e427cf0aae786"></a>DATAFILE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa8298ffc203837d96d3c0013c0506fb3a16ed535d183214749a1cc7c6bc0751ee" name="aa8298ffc203837d96d3c0013c0506fb3a16ed535d183214749a1cc7c6bc0751ee"></a>EXITPAGE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844" name="aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844"></a>INDEXPAGE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="aa027791d4c6bbda765e876c1bf8ddff6" name="aa027791d4c6bbda765e876c1bf8ddff6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa027791d4c6bbda765e876c1bf8ddff6">&#9670;&#160;</a></span>Platform_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#aa027791d4c6bbda765e876c1bf8ddff6">Platform_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="aa027791d4c6bbda765e876c1bf8ddff6a7d5f8c8379dcd2c8a94c15c72302586c" name="aa027791d4c6bbda765e876c1bf8ddff6a7d5f8c8379dcd2c8a94c15c72302586c"></a>FACEBOOK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa027791d4c6bbda765e876c1bf8ddff6a14e1e9c8e5f5a807deef8ee2bf38974d" name="aa027791d4c6bbda765e876c1bf8ddff6a14e1e9c8e5f5a807deef8ee2bf38974d"></a>GOOGLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa027791d4c6bbda765e876c1bf8ddff6afa07d9774ff62173c36267023c8e4390" name="aa027791d4c6bbda765e876c1bf8ddff6afa07d9774ff62173c36267023c8e4390"></a>INSTAGRAM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa027791d4c6bbda765e876c1bf8ddff6a6b09926d98e3d10888b34a57fff96ab8" name="aa027791d4c6bbda765e876c1bf8ddff6a6b09926d98e3d10888b34a57fff96ab8"></a>TWITTER&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="../../d1/d02/include_8h.html">include.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

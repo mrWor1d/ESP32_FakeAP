@@ -34,9 +34,6 @@ void setup()
   if (!accessPoint->initialize(SSID, "", WIFI_SSID, WIFI_PSW))
     Serial.println("Error en la configuración del punto de acceso");
 
-  Serial.println(SD_MMC.cardSize());
-  Serial.println(SD_MMC.totalBytes());
-
   Serial.println("Configuración acabada!");
 
 }

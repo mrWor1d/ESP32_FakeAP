@@ -3,6 +3,7 @@ debug-output.yaml
 dump
 FakeAPlib/dump
 .zip
+FakeAPlib/latex
 
 #IDE specific files
 #vscode

@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FakeAPlib: Archivo de código fuente src/include/include.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FakeAPlib
+   </div>
+   <div id="projectbrief">Librería arduino para ESP32 que permite crear un punto de acceso falso</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('d1/d02/include_8h_source.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">include.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d1/d02/include_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef INCLUDE_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define INCLUDE_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;FS.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;SD_MMC.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;WiFi.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;WiFiAP.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;WiFiSTA.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;NetworkClient.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;WebServer.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;DNSServer.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;base64.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;String&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//#include &lt;WiFiMulti.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">//#include &lt;UrlEncode.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//#include &lt;HTTPRequest.hpp&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//#include &lt;HTTPResponse.hpp&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../da/d01/namespacefake_a_p_lib.html">   22</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../da/d01/namespacefake_a_p_lib.html">fakeAPLib</a></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">//typedef struct ESPConfig_t;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html">Placeholder_t</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">static</span> <span class="keyword">inline</span> String <a class="code hl_function" href="../../da/d01/namespacefake_a_p_lib.html#aff88dbab8f98a145a72d771bb288012d">getCurrentTime</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">static</span> <span class="keyword">inline</span> String <a class="code hl_function" href="../../da/d01/namespacefake_a_p_lib.html#a7f444a5808e2a3501a4be791fafc5864">getReadableSize</a>(<span class="keyword">const</span> uint64_t&amp; bytes);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="};">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3">   51</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>{</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3af2fe22452b791e2585afaa5b9f41793f">   53</a></span>    <a class="code hl_enumvalue" href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3af2fe22452b791e2585afaa5b9f41793f">ADMINPAGE</a> = <span class="charliteral">&#39;A&#39;</span>,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a7db207cda2d286d6f20e427cf0aae786">   54</a></span>    <a class="code hl_enumvalue" href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a7db207cda2d286d6f20e427cf0aae786">DATAFILE</a>  = <span class="charliteral">&#39;D&#39;</span>,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a16ed535d183214749a1cc7c6bc0751ee">   55</a></span>    <a class="code hl_enumvalue" href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a16ed535d183214749a1cc7c6bc0751ee">EXITPAGE</a>  = <span class="charliteral">&#39;E&#39;</span>,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844">   56</a></span>    <a class="code hl_enumvalue" href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844">INDEXPAGE</a> = <span class="charliteral">&#39;I&#39;</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">//LOGFILE   = &#39;l&#39;,</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>} <a class="code hl_enumeration" href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3">FileType_t</a>;</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="};">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6">   64</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>{</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a7d5f8c8379dcd2c8a94c15c72302586c">   66</a></span>    <a class="code hl_enumvalue" href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a7d5f8c8379dcd2c8a94c15c72302586c">FACEBOOK</a>  = <span class="charliteral">&#39;F&#39;</span>,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a14e1e9c8e5f5a807deef8ee2bf38974d">   67</a></span>    <a class="code hl_enumvalue" href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a14e1e9c8e5f5a807deef8ee2bf38974d">GOOGLE</a>    = <span class="charliteral">&#39;G&#39;</span>,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6afa07d9774ff62173c36267023c8e4390">   68</a></span>    <a class="code hl_enumvalue" href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6afa07d9774ff62173c36267023c8e4390">INSTAGRAM</a> = <span class="charliteral">&#39;I&#39;</span>,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a6b09926d98e3d10888b34a57fff96ab8">   69</a></span>    <a class="code hl_enumvalue" href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a6b09926d98e3d10888b34a57fff96ab8">TWITTER</a>   = <span class="charliteral">&#39;T&#39;</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>} <a class="code hl_enumeration" href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6">Platform_t</a>;</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="};">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html">   91</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html">fakeAPLib::Placeholder_t</a></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>{</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">//static inline const String FileName        = &quot;!{FILE_NAME}&quot;;   /**&lt; Marcador de posición para  */</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="comment">//static inline const String FilePath        = &quot;!{FILE_PATH}&quot;;   /**&lt; Marcador de posición para  */</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#ada4e83008657ed3dbc2531b52ad6d750">   96</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">const</span> String <a class="code hl_variable" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#ada4e83008657ed3dbc2531b52ad6d750">AccessPointSSID</a> = <span class="stringliteral">&quot;!{AP_SSID}&quot;</span>;     </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a2a5c4b8ea63a6655e4c296552f2a46c5">   97</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">const</span> String <a class="code hl_variable" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a2a5c4b8ea63a6655e4c296552f2a46c5">WifiSSID</a>        = <span class="stringliteral">&quot;!{WIFI_SSID}&quot;</span>;   </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#ae68ec1400ade62c1b0b92aa88c17eefe">   98</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">const</span> String <a class="code hl_variable" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#ae68ec1400ade62c1b0b92aa88c17eefe">WifiStatus</a>      = <span class="stringliteral">&quot;!{WIFI_STATUS}&quot;</span>; </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a1aa3fe576998faf13786e50ae3c2f561">   99</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">const</span> String <a class="code hl_variable" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a1aa3fe576998faf13786e50ae3c2f561">HostsConected</a>   = <span class="stringliteral">&quot;!{TOTAL_HOST}&quot;</span>;  </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a719d16a5a7204748e02a7cbacc00797b">  100</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">const</span> String <a class="code hl_variable" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a719d16a5a7204748e02a7cbacc00797b">ServerIP</a>        = <span class="stringliteral">&quot;!{SERV_IP}&quot;</span>;     </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a2ffdc077db24e986f948d9b39c3a2e25">  101</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">const</span> String <a class="code hl_variable" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a2ffdc077db24e986f948d9b39c3a2e25">ClientIP</a>        = <span class="stringliteral">&quot;!{CLIENT_IP}&quot;</span>;   </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a1757166ea0e7e9cb67e50dd076458624">  102</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">const</span> String <a class="code hl_variable" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a1757166ea0e7e9cb67e50dd076458624">WiFiStrength</a>    = <span class="stringliteral">&quot;!{WIFI_SIGNAL}&quot;</span>; </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a6355c82a62a58afc36cd568701eedbb9">  103</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">const</span> String <a class="code hl_variable" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a6355c82a62a58afc36cd568701eedbb9">sdSize</a>          = <span class="stringliteral">&quot;!{SD_SIZE}&quot;</span>;     </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#abb2efcc5072e7db6471f3b452c928d40">  104</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">const</span> String <a class="code hl_variable" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#abb2efcc5072e7db6471f3b452c928d40">sdFreeSpace</a>     = <span class="stringliteral">&quot;!{SD_FREE}&quot;</span>;     </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a87392259932c6800d5734ca8e118024f">  105</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">const</span> String <a class="code hl_variable" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a87392259932c6800d5734ca8e118024f">sdSpaceUsed</a>     = <span class="stringliteral">&quot;!{SD_USED}&quot;</span>;     </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a7cdcbcdb49ba30664029851cab5cd2ff">  106</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">const</span> String <a class="code hl_variable" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a7cdcbcdb49ba30664029851cab5cd2ff">sdCardType</a>      = <span class="stringliteral">&quot;!{SD_TYPE}&quot;</span>;     </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a96c3cd23d94b408186667d44f45c3917">  107</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">const</span> String <a class="code hl_variable" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a96c3cd23d94b408186667d44f45c3917">FacebookPath</a>    = <span class="stringliteral">&quot;!{FB_PATH}&quot;</span>;     </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a4a48970727d4de4854c7e50abc2cddce">  108</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">const</span> String <a class="code hl_variable" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a4a48970727d4de4854c7e50abc2cddce">GooglePath</a>      = <span class="stringliteral">&quot;!{GL_PATH}&quot;</span>;     </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#ae137bd798a5ab641e5a8ba53748d99f2">  109</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">const</span> String <a class="code hl_variable" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#ae137bd798a5ab641e5a8ba53748d99f2">InstagramPath</a>   = <span class="stringliteral">&quot;!{IS_PATH}&quot;</span>;     </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a5f177e3311655292b39e9ad2d2af5159">  110</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">const</span> String <a class="code hl_variable" href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a5f177e3311655292b39e9ad2d2af5159">TwitterPath</a>     = <span class="stringliteral">&quot;!{TW_PATH}&quot;</span>;     </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>};</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="foldopen" id="foldopen00114" data-start="{" data-end="}">
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="../../da/d01/namespacefake_a_p_lib.html#aff88dbab8f98a145a72d771bb288012d">  114</a></span><span class="keyword">inline</span> <span class="keyword">static</span> String <a class="code hl_function" href="../../da/d01/namespacefake_a_p_lib.html#aff88dbab8f98a145a72d771bb288012d">fakeAPLib::getCurrentTime</a>()</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>{</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> runMillis= millis();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> allSeconds= runMillis / 1000;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordtype">int</span> secsRemaining= allSeconds % 3600;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    uint8_t hours   = allSeconds / 3600;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    uint8_t minutes = secsRemaining / 60;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    uint8_t seconds = secsRemaining % 60;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">return</span> String(hours) + <span class="stringliteral">&quot;:&quot;</span> + String(minutes) + <span class="stringliteral">&quot;:&quot;</span> + String(seconds);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>}</div>
+</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="foldopen" id="foldopen00128" data-start="{" data-end="}">
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="../../da/d01/namespacefake_a_p_lib.html#a7f444a5808e2a3501a4be791fafc5864">  128</a></span><span class="keyword">inline</span> <span class="keyword">static</span> String <a class="code hl_function" href="../../da/d01/namespacefake_a_p_lib.html#a7f444a5808e2a3501a4be791fafc5864">fakeAPLib::getReadableSize</a>(<span class="keyword">const</span> uint64_t&amp; bytes)</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>{</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">if</span>      (bytes &lt; 1024)                 <span class="keywordflow">return</span> String(bytes) + <span class="stringliteral">&quot; B&quot;</span>;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (bytes &lt; (1024 * 1024))        <span class="keywordflow">return</span> String(bytes / 1024.0) + <span class="stringliteral">&quot; KB&quot;</span>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (bytes &lt; (1024 * 1024 * 1024)) <span class="keywordflow">return</span> String(bytes / (1024.0 * 1024.0)) + <span class="stringliteral">&quot; MB&quot;</span>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">else</span>                                   <span class="keywordflow">return</span> String(bytes / (1024.0 * 1024.0 * 1024.0)) + <span class="stringliteral">&quot; GB&quot;</span>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>}</div>
+</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment">typedef struct fakeAPLib::ESPConfig_t</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment">{</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment">public:</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="comment">    static String configPath;</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment">};</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../da/d01/namespacefake_a_p_lib.html">fakeAPLib</a>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="preprocessor">#ifndef USE_GLOBAL_VAL</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="../../d1/d02/include_8h.html#a0c4eb76c013a69999029aca1a990e5ea">  154</a></span><span class="preprocessor">#define USE_GLOBAL_VAL true</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="preprocessor">#if (USE_GLOBAL_VAL)</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="preprocessor">    #define TIME_OUT_LIMIT 20000</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="preprocessor">    #define MAX_LOGIN_TIME 150000</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="preprocessor">    #define LOGIN_LOCKOUT_TIME 300000</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor">    #ifndef MAX_LOGIN_ATTEMPTS</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="preprocessor">    #define MAX_LOGIN_ATTEMPTS 4</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="preprocessor">    #ifndef LOG_FILE</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">    #define LOG_FILE &quot;/logs/logs.yaml&quot;</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="preprocessor">    #ifndef JSON_FILE_PATH</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">    #define JSON_FILE_PATH &quot;/webpages/admin-login/filesdata.json&quot;</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="preprocessor">    #if !defined(ADMIN_USERNAME) &amp;&amp; !defined(ADMIN_PASSWORD)</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="preprocessor">    #define ADMIN_USERNAME &quot;admin&quot;</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="preprocessor">    #define ADMIN_PASSWORD &quot;@dmIn129&quot;</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="preprocessor">    #ifndef DNS_PORT</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="preprocessor">    #define DNS_PORT 53</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="preprocessor">    #ifndef SERVER_PORT</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="preprocessor">    #define SERVER_PORT 80</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="preprocessor">    #if !defined(SD_MMC_CMD) &amp;&amp; !defined(SD_MMC_CLK) &amp;&amp; !defined(SD_MMC_D0)</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="preprocessor">    #define SD_MMC_CMD 15</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="preprocessor">    #define SD_MMC_CLK 14</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="preprocessor">    #define SD_MMC_D0 2</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="preprocessor">    #ifndef WITH_ERROR_TYPE</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="preprocessor">    #define WITH_ERROR_TYPE true</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="preprocessor">    #ifndef WITH_SUCCESS_MESSAGE</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">    #define WITH_SUCCESS_MESSAGE true</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">    #ifndef SERVER_SCREEN_LOGS</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="preprocessor">    #define SERVER_SCREEN_LOGS true</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">    #if (WITH_ERROR_TYPE)</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">        #define ERROR_SD_NOT_INIT  &quot;[ERROR] La tarjeta SD no ha sido inicializada&quot;</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">        #define ERROR_SD_CARD_TYPE &quot;[ERROR] El tipo de tarjeta SD es incompatible&quot;</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">        #define ERROR_SD_CARD_READ &quot;[ERROR] error en la lectura de la tarjeta&quot;</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="preprocessor">        #define ERROR_FILE_OPEN &quot;[ERROR] Error al abrir el archivo: %s\n&quot;</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="preprocessor">        #define ERROR_NO_FILE &quot;[ERROR] El archivo %s no existe\n&quot;</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">        #define ERROR_FILE_WRITE &quot;[ERROR] Error al escribir en el archivo: %s\n&quot;</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="preprocessor">        #define ERROR_FILE_RENAME &quot;[ERROR] Error al renombrar archivo/carpeta: %s\n&quot;</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="preprocessor">        #define ERROR_FILE_TYPE &quot;[ERROR] Error de tipo de archivo/carpeta: %s\n&quot;</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="preprocessor">        #define ERROR_FILE_DELETE &quot;[ERROR] Error al borrar el archivo: %s\n&quot;</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="preprocessor">        #define ERROR_DIR_CREATE &quot;[ERROR] Error al crear la carpeta: %s\n&quot;</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="preprocessor">        #define ERROR_DIR_DELETE &quot;[ERROR] Error al borrar la carpeta: %s\n&quot;</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="preprocessor">        #define ERROR_WIFIAP_CREATE &quot;[ERROR] La creación del punto de acceso ha fallado&quot;</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="preprocessor">        #define ERROR_WIFI_CONNECT &quot;[ERROR] No se pudo conectar a la red wifi %s\n&quot;</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="preprocessor">        #define ERROR_SAVE_CREDENTIALS &quot;[ERROR] Error al guardar las credenciales&quot;</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="preprocessor">        #define ERROR_GENERATE_JSON &quot;[ERROR] Error al crear el fichero JSON&quot;</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="preprocessor">        #define ERROR_SERVER_IMAGE &quot;[ERROR] Respuesta del servidor erronea&quot;</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="preprocessor">    #if (WITH_SUCCESS_MESSAGE)</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="preprocessor">        #define SUCCESS_SD_INIT          &quot;[SUCCESS] Tarjeta SD inicializada correctamente&quot;</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="preprocessor">        #define SUCCESS_FILE_OPEN        &quot;[SUCCESS] El archivo: %s se ha leído correctamente. Tiempo: %dms\n&quot;</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="preprocessor">        #define SUCCESS_FILE_WRITE       &quot;[SUCCESS] El archivo: %s se ha guardado correctamente. Tiempo: %dms\n&quot;</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="preprocessor">        #define SUCCESS_FILE_RENAME      &quot;[SUCCESS] El archivo: %s se ha renombrado correctamente\n&quot;</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="preprocessor">        #define SUCCESS_FILE_DELETE      &quot;[SUCCESS] El archivo: %s se ha borrado correctamente\n&quot;</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="preprocessor">        #define SUCCESS_DIR_CREATE       &quot;[SUCCESS] La carpeta: %s se ha creado correctamente\n&quot;</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="preprocessor">        #define SUCCESS_DIR_DELETE       &quot;[SUCCESS] La carpeta: %s se ha borrado correctamente\n&quot;</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="preprocessor">        #define SUCCESS_WIFIAP_INIT      &quot;[SUCCESS] Punto de acceso iniciado correctamente&quot;</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="preprocessor">        #define SUCCESS_WIFISTA_CONECT   &quot;[SUCCESS] Se ha conectado correctamente a la red: %s\n&quot;</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="preprocessor">        #define SUCCESS_SERVER_INIT      &quot;[SUCCESS] Servidor iniciado correctamente&quot;</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="preprocessor">        #define SUCCESS_APSERVER_INIT    &quot;[SUCCESS] El servidor del punto de acceso cautivo iniciado correctamente&quot;</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="preprocessor">        #define SUCCESS_LOG_EVENT        &quot;[LOGS] Evento guardado correctamente&quot;</span></div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="preprocessor">        #define SUCCESS_SAVE_CREDENTIALS &quot;[SUCCESS] Credenciales enviadas y guardadas correctamente&quot;</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="preprocessor">        #define SUCCESS_GENERATE_JSON    &quot;[SUCCESS] El archivo JSON se generó correctamente&quot;</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        <span class="comment">//#define SUCCESS_SD_CARD_TYPE &quot;[SUCCESS] El tipo de tarjeta es incompatible&quot;</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        <span class="comment">//#define SUCCESS_SD_CARD_READ &quot;[SUCCESS] en la lectura de la tarjeta&quot;</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="preprocessor">    #if (SERVER_SCREEN_LOGS)</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="preprocessor">        #define NEW_PAGE_REQ       &quot;[SERVER] Nueva solicitud de pagina %s\n&quot;</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="preprocessor">        #define NEW_WIFI_CONFIG    &quot;[SERVER] Configuración wifi guardada&quot;</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="preprocessor">        #define UPLOAD_STARTED     &quot;[SERVER] Empieza la carga del archivo %s\n&quot;</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="preprocessor">        #define NEW_ADMIN_LOGIN    &quot;[SERVER] Nueva conexión de administrador&quot;</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="preprocessor">        #define NEW_SOCIALS_PATH   &quot;[SERVER] Nuevas rutas indicadas para las paginas de redes sociales.&quot;</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="preprocessor">        #define NEW_FILE_CONTENT   &quot;[SERVER] Displaying file %s\n&quot;</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="preprocessor">        #define NEW_FILE_DELETED   &quot;[SERVER] El archivo %s se ha borrado correctamente\n&quot;</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="preprocessor">        #define NEW_FILE_UPLOADED  &quot;[SERVER] El archivo %s se ha subido al servidor\n&quot;</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="preprocessor">        #define FAILED_FILE_UPLOAD &quot;[SERVER] El archivo %s no se pudo subir al servidor\n&quot;</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="preprocessor">        #define FAILED_ADMIN_LOGIN &quot;[SERVER] Intento de connexión como admin fallado.&quot;</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="preprocessor">        #define FAILED_CREDENTIALS &quot;[SERVER] Error al guardar las credenciales&quot;</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="preprocessor">#endif </span><span class="comment">//USE_GLOBAL_VAR</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="preprocessor">#endif </span><span class="comment">//INCLUDE_H</span></div>
+<div class="ttc" id="ainclude_8h_html_aa027791d4c6bbda765e876c1bf8ddff6"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6">Platform_t</a></div><div class="ttdeci">Platform_t</div><div class="ttdef"><b>Definition</b> include.h:65</div></div>
+<div class="ttc" id="ainclude_8h_html_aa027791d4c6bbda765e876c1bf8ddff6a14e1e9c8e5f5a807deef8ee2bf38974d"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a14e1e9c8e5f5a807deef8ee2bf38974d">GOOGLE</a></div><div class="ttdeci">@ GOOGLE</div><div class="ttdef"><b>Definition</b> include.h:67</div></div>
+<div class="ttc" id="ainclude_8h_html_aa027791d4c6bbda765e876c1bf8ddff6a6b09926d98e3d10888b34a57fff96ab8"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a6b09926d98e3d10888b34a57fff96ab8">TWITTER</a></div><div class="ttdeci">@ TWITTER</div><div class="ttdef"><b>Definition</b> include.h:69</div></div>
+<div class="ttc" id="ainclude_8h_html_aa027791d4c6bbda765e876c1bf8ddff6a7d5f8c8379dcd2c8a94c15c72302586c"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a7d5f8c8379dcd2c8a94c15c72302586c">FACEBOOK</a></div><div class="ttdeci">@ FACEBOOK</div><div class="ttdef"><b>Definition</b> include.h:66</div></div>
+<div class="ttc" id="ainclude_8h_html_aa027791d4c6bbda765e876c1bf8ddff6afa07d9774ff62173c36267023c8e4390"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6afa07d9774ff62173c36267023c8e4390">INSTAGRAM</a></div><div class="ttdeci">@ INSTAGRAM</div><div class="ttdef"><b>Definition</b> include.h:68</div></div>
+<div class="ttc" id="ainclude_8h_html_aa8298ffc203837d96d3c0013c0506fb3"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3">FileType_t</a></div><div class="ttdeci">FileType_t</div><div class="ttdef"><b>Definition</b> include.h:52</div></div>
+<div class="ttc" id="ainclude_8h_html_aa8298ffc203837d96d3c0013c0506fb3a16ed535d183214749a1cc7c6bc0751ee"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a16ed535d183214749a1cc7c6bc0751ee">EXITPAGE</a></div><div class="ttdeci">@ EXITPAGE</div><div class="ttdef"><b>Definition</b> include.h:55</div></div>
+<div class="ttc" id="ainclude_8h_html_aa8298ffc203837d96d3c0013c0506fb3a7db207cda2d286d6f20e427cf0aae786"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a7db207cda2d286d6f20e427cf0aae786">DATAFILE</a></div><div class="ttdeci">@ DATAFILE</div><div class="ttdef"><b>Definition</b> include.h:54</div></div>
+<div class="ttc" id="ainclude_8h_html_aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844">INDEXPAGE</a></div><div class="ttdeci">@ INDEXPAGE</div><div class="ttdef"><b>Definition</b> include.h:56</div></div>
+<div class="ttc" id="ainclude_8h_html_aa8298ffc203837d96d3c0013c0506fb3af2fe22452b791e2585afaa5b9f41793f"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3af2fe22452b791e2585afaa5b9f41793f">ADMINPAGE</a></div><div class="ttdeci">@ ADMINPAGE</div><div class="ttdef"><b>Definition</b> include.h:53</div></div>
+<div class="ttc" id="anamespacefake_a_p_lib_html"><div class="ttname"><a href="../../da/d01/namespacefake_a_p_lib.html">fakeAPLib</a></div><div class="ttdef"><b>Definition</b> include.h:23</div></div>
+<div class="ttc" id="anamespacefake_a_p_lib_html_a7f444a5808e2a3501a4be791fafc5864"><div class="ttname"><a href="../../da/d01/namespacefake_a_p_lib.html#a7f444a5808e2a3501a4be791fafc5864">fakeAPLib::getReadableSize</a></div><div class="ttdeci">static String getReadableSize(const uint64_t &amp;bytes)</div><div class="ttdoc">Get the Readable Size object.</div><div class="ttdef"><b>Definition</b> include.h:128</div></div>
+<div class="ttc" id="anamespacefake_a_p_lib_html_aff88dbab8f98a145a72d771bb288012d"><div class="ttname"><a href="../../da/d01/namespacefake_a_p_lib.html#aff88dbab8f98a145a72d771bb288012d">fakeAPLib::getCurrentTime</a></div><div class="ttdeci">static String getCurrentTime(void)</div><div class="ttdoc">Obtener el valor del tiempo actual.</div><div class="ttdef"><b>Definition</b> include.h:114</div></div>
+<div class="ttc" id="astructfake_a_p_lib_1_1_placeholder__t_html"><div class="ttname"><a href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html">fakeAPLib::Placeholder_t</a></div><div class="ttdef"><b>Definition</b> include.h:92</div></div>
+<div class="ttc" id="astructfake_a_p_lib_1_1_placeholder__t_html_a1757166ea0e7e9cb67e50dd076458624"><div class="ttname"><a href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a1757166ea0e7e9cb67e50dd076458624">fakeAPLib::Placeholder_t::WiFiStrength</a></div><div class="ttdeci">static const String WiFiStrength</div><div class="ttdef"><b>Definition</b> include.h:102</div></div>
+<div class="ttc" id="astructfake_a_p_lib_1_1_placeholder__t_html_a1aa3fe576998faf13786e50ae3c2f561"><div class="ttname"><a href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a1aa3fe576998faf13786e50ae3c2f561">fakeAPLib::Placeholder_t::HostsConected</a></div><div class="ttdeci">static const String HostsConected</div><div class="ttdef"><b>Definition</b> include.h:99</div></div>
+<div class="ttc" id="astructfake_a_p_lib_1_1_placeholder__t_html_a2a5c4b8ea63a6655e4c296552f2a46c5"><div class="ttname"><a href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a2a5c4b8ea63a6655e4c296552f2a46c5">fakeAPLib::Placeholder_t::WifiSSID</a></div><div class="ttdeci">static const String WifiSSID</div><div class="ttdef"><b>Definition</b> include.h:97</div></div>
+<div class="ttc" id="astructfake_a_p_lib_1_1_placeholder__t_html_a2ffdc077db24e986f948d9b39c3a2e25"><div class="ttname"><a href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a2ffdc077db24e986f948d9b39c3a2e25">fakeAPLib::Placeholder_t::ClientIP</a></div><div class="ttdeci">static const String ClientIP</div><div class="ttdef"><b>Definition</b> include.h:101</div></div>
+<div class="ttc" id="astructfake_a_p_lib_1_1_placeholder__t_html_a4a48970727d4de4854c7e50abc2cddce"><div class="ttname"><a href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a4a48970727d4de4854c7e50abc2cddce">fakeAPLib::Placeholder_t::GooglePath</a></div><div class="ttdeci">static const String GooglePath</div><div class="ttdef"><b>Definition</b> include.h:108</div></div>
+<div class="ttc" id="astructfake_a_p_lib_1_1_placeholder__t_html_a5f177e3311655292b39e9ad2d2af5159"><div class="ttname"><a href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a5f177e3311655292b39e9ad2d2af5159">fakeAPLib::Placeholder_t::TwitterPath</a></div><div class="ttdeci">static const String TwitterPath</div><div class="ttdef"><b>Definition</b> include.h:110</div></div>
+<div class="ttc" id="astructfake_a_p_lib_1_1_placeholder__t_html_a6355c82a62a58afc36cd568701eedbb9"><div class="ttname"><a href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a6355c82a62a58afc36cd568701eedbb9">fakeAPLib::Placeholder_t::sdSize</a></div><div class="ttdeci">static const String sdSize</div><div class="ttdef"><b>Definition</b> include.h:103</div></div>
+<div class="ttc" id="astructfake_a_p_lib_1_1_placeholder__t_html_a719d16a5a7204748e02a7cbacc00797b"><div class="ttname"><a href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a719d16a5a7204748e02a7cbacc00797b">fakeAPLib::Placeholder_t::ServerIP</a></div><div class="ttdeci">static const String ServerIP</div><div class="ttdef"><b>Definition</b> include.h:100</div></div>
+<div class="ttc" id="astructfake_a_p_lib_1_1_placeholder__t_html_a7cdcbcdb49ba30664029851cab5cd2ff"><div class="ttname"><a href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a7cdcbcdb49ba30664029851cab5cd2ff">fakeAPLib::Placeholder_t::sdCardType</a></div><div class="ttdeci">static const String sdCardType</div><div class="ttdef"><b>Definition</b> include.h:106</div></div>
+<div class="ttc" id="astructfake_a_p_lib_1_1_placeholder__t_html_a87392259932c6800d5734ca8e118024f"><div class="ttname"><a href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a87392259932c6800d5734ca8e118024f">fakeAPLib::Placeholder_t::sdSpaceUsed</a></div><div class="ttdeci">static const String sdSpaceUsed</div><div class="ttdef"><b>Definition</b> include.h:105</div></div>
+<div class="ttc" id="astructfake_a_p_lib_1_1_placeholder__t_html_a96c3cd23d94b408186667d44f45c3917"><div class="ttname"><a href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a96c3cd23d94b408186667d44f45c3917">fakeAPLib::Placeholder_t::FacebookPath</a></div><div class="ttdeci">static const String FacebookPath</div><div class="ttdef"><b>Definition</b> include.h:107</div></div>
+<div class="ttc" id="astructfake_a_p_lib_1_1_placeholder__t_html_abb2efcc5072e7db6471f3b452c928d40"><div class="ttname"><a href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#abb2efcc5072e7db6471f3b452c928d40">fakeAPLib::Placeholder_t::sdFreeSpace</a></div><div class="ttdeci">static const String sdFreeSpace</div><div class="ttdef"><b>Definition</b> include.h:104</div></div>
+<div class="ttc" id="astructfake_a_p_lib_1_1_placeholder__t_html_ada4e83008657ed3dbc2531b52ad6d750"><div class="ttname"><a href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#ada4e83008657ed3dbc2531b52ad6d750">fakeAPLib::Placeholder_t::AccessPointSSID</a></div><div class="ttdeci">static const String AccessPointSSID</div><div class="ttdef"><b>Definition</b> include.h:96</div></div>
+<div class="ttc" id="astructfake_a_p_lib_1_1_placeholder__t_html_ae137bd798a5ab641e5a8ba53748d99f2"><div class="ttname"><a href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#ae137bd798a5ab641e5a8ba53748d99f2">fakeAPLib::Placeholder_t::InstagramPath</a></div><div class="ttdeci">static const String InstagramPath</div><div class="ttdef"><b>Definition</b> include.h:109</div></div>
+<div class="ttc" id="astructfake_a_p_lib_1_1_placeholder__t_html_ae68ec1400ade62c1b0b92aa88c17eefe"><div class="ttname"><a href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#ae68ec1400ade62c1b0b92aa88c17eefe">fakeAPLib::Placeholder_t::WifiStatus</a></div><div class="ttdeci">static const String WifiStatus</div><div class="ttdef"><b>Definition</b> include.h:98</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="../../d1/d02/include_8h.html">include.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

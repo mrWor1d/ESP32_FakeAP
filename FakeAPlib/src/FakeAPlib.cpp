@@ -1,6 +1,6 @@
 /**
  * @file FakeAPlib.cpp
- * @author NGUEYOU SIMO, Neil L. (you@domain.com)
+ * @author NGUEYOU SIMO, Neil L.; MORENO ROMO, Lucas; RUBIO JIMÉNEZ, Mario
  * @brief
  * @version 0.1
  * @date 2024-12-08
@@ -21,6 +21,8 @@ FakeAP::FakeAP(const uint8_t &port)
 {
 }
 
+
+void FakeAP::setupCaptivePortal() { m_dnsServer->start(DNS_PORT, "*", WiFi.softAPIP()); }
 
 void FakeAP::handleRoot(void)
 {
@@ -160,19 +162,6 @@ bool FakeAP::initialize(const String &AP_SSID, const String &AP_PSW,
 	AP_PSW == NULL ? startCaptiveServer() : this->start();
 	m_sdManager->logEvent("Server started");
 	return 1;
-}
-
-void FakeAP::printFilesContent()
-{
-	if (m_indexPage != "\0")
-		Serial.println(m_sdManager->readFile(m_indexPage));
-	delay(1500);
-	if (m_exitPage != "\0")
-		Serial.println(m_sdManager->readFile(m_exitPage));
-	delay(1500);
-	if (m_indexPage != "\0")
-		Serial.println(m_sdManager->readFile(LOG_FILE));
-	delay(1500);
 }
 
 

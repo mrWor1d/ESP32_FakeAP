@@ -1,0 +1,987 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FakeAPlib: Referencia de la clase SDCardManager</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FakeAPlib
+   </div>
+   <div id="projectbrief">Librería arduino para ESP32 que permite crear un punto de acceso falso</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('d4/d02/class_s_d_card_manager.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pub-static-methods">Métodos públicos estáticos</a> &#124;
+<a href="#pro-attribs">Atributos protegidos</a> &#124;
+<a href="../../d0/d02/class_s_d_card_manager-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle"><div class="title">Referencia de la clase SDCardManager</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Clase que gestiona las operaciones con la tarjeta SD. Actua como un wrapper para la clase fs::SDMMCFS y sus funciones.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../df/d03/_s_d_card_manager_8h_source.html">SDCardManager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a997d7441c12b92a921181fd14dbaf286" id="r_a997d7441c12b92a921181fd14dbaf286"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a997d7441c12b92a921181fd14dbaf286">SDCardManager</a> ()</td></tr>
+<tr class="memdesc:a997d7441c12b92a921181fd14dbaf286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto que inicializa los miembros de la clase. Asigna el sistema de archivos por defecto y marca la SD como no inicializada.  <br /></td></tr>
+<tr class="separator:a997d7441c12b92a921181fd14dbaf286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55fc7fb249e018f51f01304fbf1c795c" id="r_a55fc7fb249e018f51f01304fbf1c795c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55fc7fb249e018f51f01304fbf1c795c">SDCardManager</a> (const <a class="el" href="../../d4/d02/class_s_d_card_manager.html">SDCardManager</a> &amp;)=delete</td></tr>
+<tr class="separator:a55fc7fb249e018f51f01304fbf1c795c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef1c13f7dfda7a1cb8932ef236131c0a" id="r_aef1c13f7dfda7a1cb8932ef236131c0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d02/class_s_d_card_manager.html">SDCardManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef1c13f7dfda7a1cb8932ef236131c0a">operator=</a> (const <a class="el" href="../../d4/d02/class_s_d_card_manager.html">SDCardManager</a> &amp;)=delete</td></tr>
+<tr class="separator:aef1c13f7dfda7a1cb8932ef236131c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9debc3fefc7127d4f762121e6fab1def" id="r_a9debc3fefc7127d4f762121e6fab1def"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9debc3fefc7127d4f762121e6fab1def">operator+</a> (const String &amp;path)</td></tr>
+<tr class="memdesc:a9debc3fefc7127d4f762121e6fab1def"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador definido para escribir un archivo.  <br /></td></tr>
+<tr class="separator:a9debc3fefc7127d4f762121e6fab1def"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c790f7b4552488e6ab85cf9b72dc383" id="r_a6c790f7b4552488e6ab85cf9b72dc383"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c790f7b4552488e6ab85cf9b72dc383">operator-</a> (const String &amp;path)</td></tr>
+<tr class="memdesc:a6c790f7b4552488e6ab85cf9b72dc383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador definido para eliminar un archivo.  <br /></td></tr>
+<tr class="separator:a6c790f7b4552488e6ab85cf9b72dc383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af000db216266d6d34f773611b0323edd" id="r_af000db216266d6d34f773611b0323edd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af000db216266d6d34f773611b0323edd">isCardInit</a> () const</td></tr>
+<tr class="memdesc:af000db216266d6d34f773611b0323edd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica si la tarjeta SD ha sido inicializada.  <br /></td></tr>
+<tr class="separator:af000db216266d6d34f773611b0323edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa14b7744093fcbec65697529cc96e9d6" id="r_aa14b7744093fcbec65697529cc96e9d6"><td class="memItemLeft" align="right" valign="top">fs::SDMMCFS &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa14b7744093fcbec65697529cc96e9d6">getFileSystem</a> ()</td></tr>
+<tr class="memdesc:aa14b7744093fcbec65697529cc96e9d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la referencia al sistema de archivos asociado a la tarjeta SD.  <br /></td></tr>
+<tr class="separator:aa14b7744093fcbec65697529cc96e9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6886e0afb44ce4dff05f2feae63250b0" id="r_a6886e0afb44ce4dff05f2feae63250b0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6886e0afb44ce4dff05f2feae63250b0">logEvent</a> (const String &amp;event)</td></tr>
+<tr class="memdesc:a6886e0afb44ce4dff05f2feae63250b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registra un evento en el archivo de log designado.  <br /></td></tr>
+<tr class="separator:a6886e0afb44ce4dff05f2feae63250b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad568b6cef69c1dbd80d8627b8aa8fe7e" id="r_ad568b6cef69c1dbd80d8627b8aa8fe7e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad568b6cef69c1dbd80d8627b8aa8fe7e">initialize</a> ()</td></tr>
+<tr class="memdesc:ad568b6cef69c1dbd80d8627b8aa8fe7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa la tarjeta SD y muestra información sobre ella.  <br /></td></tr>
+<tr class="separator:ad568b6cef69c1dbd80d8627b8aa8fe7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4a271ef43250a5df3be4ce521aab1ab" id="r_ae4a271ef43250a5df3be4ce521aab1ab"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4a271ef43250a5df3be4ce521aab1ab">readFile</a> (const char *path)</td></tr>
+<tr class="memdesc:ae4a271ef43250a5df3be4ce521aab1ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee el contenido de un archivo en la tarjeta SD.  <br /></td></tr>
+<tr class="separator:ae4a271ef43250a5df3be4ce521aab1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a737a38417c79cb4d3c80a9d8b82279" id="r_a1a737a38417c79cb4d3c80a9d8b82279"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a737a38417c79cb4d3c80a9d8b82279">readFile</a> (const String &amp;path)</td></tr>
+<tr class="memdesc:a1a737a38417c79cb4d3c80a9d8b82279"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga para leer el contenido de un archivo a partir de un String.  <br /></td></tr>
+<tr class="separator:a1a737a38417c79cb4d3c80a9d8b82279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f81bf685b9ad92a5f4a7806cf7cb19" id="r_ab8f81bf685b9ad92a5f4a7806cf7cb19"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8f81bf685b9ad92a5f4a7806cf7cb19">writeFile</a> (const char *path, const String &amp;content=&quot;&quot;)</td></tr>
+<tr class="memdesc:ab8f81bf685b9ad92a5f4a7806cf7cb19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe contenido en un archivo (creándolo si no existe).  <br /></td></tr>
+<tr class="separator:ab8f81bf685b9ad92a5f4a7806cf7cb19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02df436fe963b5c6ee5cb983d5e0886f" id="r_a02df436fe963b5c6ee5cb983d5e0886f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02df436fe963b5c6ee5cb983d5e0886f">writeFile</a> (const String &amp;path, const String &amp;content=&quot;&quot;)</td></tr>
+<tr class="memdesc:a02df436fe963b5c6ee5cb983d5e0886f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga para escribir contenido en un archivo a partir de un String.  <br /></td></tr>
+<tr class="separator:a02df436fe963b5c6ee5cb983d5e0886f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabaddfa5106212e4caa56fd77ee546a2" id="r_aabaddfa5106212e4caa56fd77ee546a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabaddfa5106212e4caa56fd77ee546a2">listDir</a> (const char *dirname, uint8_t levels)</td></tr>
+<tr class="memdesc:aabaddfa5106212e4caa56fd77ee546a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista los archivos y directorios dentro de una ruta dada.  <br /></td></tr>
+<tr class="separator:aabaddfa5106212e4caa56fd77ee546a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88c57a07ef536e0cadbb393feb95752e" id="r_a88c57a07ef536e0cadbb393feb95752e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88c57a07ef536e0cadbb393feb95752e">createDir</a> (const String &amp;path)</td></tr>
+<tr class="memdesc:a88c57a07ef536e0cadbb393feb95752e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un directorio en la tarjeta SD a partir de un String.  <br /></td></tr>
+<tr class="separator:a88c57a07ef536e0cadbb393feb95752e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2949245e0a5b38960d28aa07e58ae0f7" id="r_a2949245e0a5b38960d28aa07e58ae0f7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2949245e0a5b38960d28aa07e58ae0f7">createDir</a> (const char *path)</td></tr>
+<tr class="memdesc:a2949245e0a5b38960d28aa07e58ae0f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un directorio en la tarjeta SD a partir de una cadena tipo C.  <br /></td></tr>
+<tr class="separator:a2949245e0a5b38960d28aa07e58ae0f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5434b8826b693ccba93f3d0a1cf8bd4" id="r_ad5434b8826b693ccba93f3d0a1cf8bd4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5434b8826b693ccba93f3d0a1cf8bd4">removeDir</a> (const char *path)</td></tr>
+<tr class="memdesc:ad5434b8826b693ccba93f3d0a1cf8bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elimina un directorio de la tarjeta SD.  <br /></td></tr>
+<tr class="separator:ad5434b8826b693ccba93f3d0a1cf8bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab365c30d6d02044962fd11e590643d0b" id="r_ab365c30d6d02044962fd11e590643d0b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab365c30d6d02044962fd11e590643d0b">appendFile</a> (const char *path, String &amp;content)</td></tr>
+<tr class="memdesc:ab365c30d6d02044962fd11e590643d0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Agrega contenido a un archivo existente (sin eliminar su contenido previo).  <br /></td></tr>
+<tr class="separator:ab365c30d6d02044962fd11e590643d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33bd6e2c88f0977bd673c005217c454f" id="r_a33bd6e2c88f0977bd673c005217c454f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33bd6e2c88f0977bd673c005217c454f">appendFile</a> (const String &amp;path, String &amp;content)</td></tr>
+<tr class="memdesc:a33bd6e2c88f0977bd673c005217c454f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga para anexar contenido a un archivo a partir de un String.  <br /></td></tr>
+<tr class="separator:a33bd6e2c88f0977bd673c005217c454f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14e9fbc205cca0a7724df6c8347f66c5" id="r_a14e9fbc205cca0a7724df6c8347f66c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14e9fbc205cca0a7724df6c8347f66c5">renameFile</a> (const char *path1, const char *path2)</td></tr>
+<tr class="memdesc:a14e9fbc205cca0a7724df6c8347f66c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cambia el nombre de un archivo o lo mueve a otra ruta.  <br /></td></tr>
+<tr class="separator:a14e9fbc205cca0a7724df6c8347f66c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa897172ffe26c39c9333e08cfaae5d7f" id="r_aa897172ffe26c39c9333e08cfaae5d7f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa897172ffe26c39c9333e08cfaae5d7f">deleteFile</a> (const char *path)</td></tr>
+<tr class="memdesc:aa897172ffe26c39c9333e08cfaae5d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elimina un archivo de la tarjeta SD a partir de una cadena tipo C.  <br /></td></tr>
+<tr class="separator:aa897172ffe26c39c9333e08cfaae5d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24eb78d7ac434caeda40eb4736f90de1" id="r_a24eb78d7ac434caeda40eb4736f90de1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24eb78d7ac434caeda40eb4736f90de1">deleteFile</a> (const String &amp;path)</td></tr>
+<tr class="memdesc:a24eb78d7ac434caeda40eb4736f90de1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga para eliminar un archivo a partir de un String.  <br /></td></tr>
+<tr class="separator:a24eb78d7ac434caeda40eb4736f90de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83b9fcf51f6f6397253e73f4c743b791" id="r_a83b9fcf51f6f6397253e73f4c743b791"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83b9fcf51f6f6397253e73f4c743b791">deleteRecursive</a> (const String &amp;path)</td></tr>
+<tr class="memdesc:a83b9fcf51f6f6397253e73f4c743b791"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elimina recursivamente un archivo o directorio de la tarjeta SD, incluyendo su contenido.  <br /></td></tr>
+<tr class="separator:a83b9fcf51f6f6397253e73f4c743b791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Métodos públicos estáticos</h2></td></tr>
+<tr class="memitem:abf8bc426ced70237ea869c2b407e449d" id="r_abf8bc426ced70237ea869c2b407e449d"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf8bc426ced70237ea869c2b407e449d">getCardType</a> (uint8_t card)</td></tr>
+<tr class="memdesc:abf8bc426ced70237ea869c2b407e449d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna una cadena con el tipo de tarjeta SD detectada.  <br /></td></tr>
+<tr class="separator:abf8bc426ced70237ea869c2b407e449d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42e8876b66696fa091ee61a749c60e67" id="r_a42e8876b66696fa091ee61a749c60e67"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42e8876b66696fa091ee61a749c60e67">getFileDir</a> (const char *path)</td></tr>
+<tr class="memdesc:a42e8876b66696fa091ee61a749c60e67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el directorio dado el camino absoluto de un archivo.  <br /></td></tr>
+<tr class="separator:a42e8876b66696fa091ee61a749c60e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a257c43c5df2beeaab9fe62f4ea482d3b" id="r_a257c43c5df2beeaab9fe62f4ea482d3b"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a257c43c5df2beeaab9fe62f4ea482d3b">getFileDir</a> (const String &amp;path)</td></tr>
+<tr class="memdesc:a257c43c5df2beeaab9fe62f4ea482d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga para obtener el directorio de un archivo a partir de un String.  <br /></td></tr>
+<tr class="separator:a257c43c5df2beeaab9fe62f4ea482d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Atributos protegidos</h2></td></tr>
+<tr class="memitem:a827dd4b851b9792a0e5a396f0d38b4c3" id="r_a827dd4b851b9792a0e5a396f0d38b4c3"><td class="memItemLeft" align="right" valign="top">fs::SDMMCFS &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a827dd4b851b9792a0e5a396f0d38b4c3">_fileSystem</a></td></tr>
+<tr class="separator:a827dd4b851b9792a0e5a396f0d38b4c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bb93b954243a6f9edb15eaaa6482a4c" id="r_a2bb93b954243a6f9edb15eaaa6482a4c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bb93b954243a6f9edb15eaaa6482a4c">_sdInitialized</a></td></tr>
+<tr class="separator:a2bb93b954243a6f9edb15eaaa6482a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Clase que gestiona las operaciones con la tarjeta SD. Actua como un wrapper para la clase fs::SDMMCFS y sus funciones. </p>
+<p>Esta clase proporciona una interfaz para realizar operaciones básicas de sistema de archivos en una tarjeta SD, incluyendo lectura, escritura, creación y eliminación de archivos y directorios.</p>
+<p>La clase maneja:</p><ul>
+<li>Inicialización de la tarjeta SD</li>
+<li>Operaciones de lectura/escritura de archivos</li>
+<li>Gestión de directorios</li>
+<li>Registro de eventos (logging)</li>
+<li>Operaciones recursivas en el sistema de archivos</li>
+</ul>
+<p>La clase utiliza el sistema de archivos SDMMCFS para todas sus operaciones y mantiene un estado interno que indica si la tarjeta está inicializada.</p>
+<dl class="section note"><dt>Nota</dt><dd>La clase implementa el patrón Singleton para evitar múltiples instancias que acceden simultáneamente a la tarjeta SD.</dd></dl>
+<dl class="section see"><dt>Ver también</dt><dd>fs::SDMMCFS </dd></dl>
+</div><h2 class="groupheader">Documentación de constructores y destructores</h2>
+<a id="a997d7441c12b92a921181fd14dbaf286" name="a997d7441c12b92a921181fd14dbaf286"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a997d7441c12b92a921181fd14dbaf286">&#9670;&#160;</a></span>SDCardManager() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDCardManager::SDCardManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor por defecto que inicializa los miembros de la clase. Asigna el sistema de archivos por defecto y marca la SD como no inicializada. </p>
+
+</div>
+</div>
+<a id="a55fc7fb249e018f51f01304fbf1c795c" name="a55fc7fb249e018f51f01304fbf1c795c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55fc7fb249e018f51f01304fbf1c795c">&#9670;&#160;</a></span>SDCardManager() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDCardManager::SDCardManager </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/d02/class_s_d_card_manager.html">SDCardManager</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones miembro</h2>
+<a id="ab365c30d6d02044962fd11e590643d0b" name="ab365c30d6d02044962fd11e590643d0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab365c30d6d02044962fd11e590643d0b">&#9670;&#160;</a></span>appendFile() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDCardManager::appendFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String &amp;</td>          <td class="paramname"><span class="paramname"><em>content</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Agrega contenido a un archivo existente (sin eliminar su contenido previo). </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta del archivo en el que se agrega contenido. </td></tr>
+    <tr><td class="paramname">content</td><td>Contenido que será anexado en el archivo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si se anexa correctamente, false en caso de error. </dd></dl>
+
+</div>
+</div>
+<a id="a33bd6e2c88f0977bd673c005217c454f" name="a33bd6e2c88f0977bd673c005217c454f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33bd6e2c88f0977bd673c005217c454f">&#9670;&#160;</a></span>appendFile() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDCardManager::appendFile </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String &amp;</td>          <td class="paramname"><span class="paramname"><em>content</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sobrecarga para anexar contenido a un archivo a partir de un String. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta del archivo en el que se agrega contenido. </td></tr>
+    <tr><td class="paramname">content</td><td>Contenido que será anexado en el archivo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si se anexa correctamente, false en caso de error. </dd></dl>
+
+</div>
+</div>
+<a id="a2949245e0a5b38960d28aa07e58ae0f7" name="a2949245e0a5b38960d28aa07e58ae0f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2949245e0a5b38960d28aa07e58ae0f7">&#9670;&#160;</a></span>createDir() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDCardManager::createDir </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crea un directorio en la tarjeta SD a partir de una cadena tipo C. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta del directorio a crear. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si se crea correctamente, false en caso de error. </dd></dl>
+
+</div>
+</div>
+<a id="a88c57a07ef536e0cadbb393feb95752e" name="a88c57a07ef536e0cadbb393feb95752e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88c57a07ef536e0cadbb393feb95752e">&#9670;&#160;</a></span>createDir() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDCardManager::createDir </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crea un directorio en la tarjeta SD a partir de un String. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta del directorio a crear. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si se crea correctamente, false en caso de error. </dd></dl>
+
+</div>
+</div>
+<a id="aa897172ffe26c39c9333e08cfaae5d7f" name="aa897172ffe26c39c9333e08cfaae5d7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa897172ffe26c39c9333e08cfaae5d7f">&#9670;&#160;</a></span>deleteFile() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDCardManager::deleteFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Elimina un archivo de la tarjeta SD a partir de una cadena tipo C. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta del archivo a eliminar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si se elimina correctamente, false en caso de error. </dd></dl>
+
+</div>
+</div>
+<a id="a24eb78d7ac434caeda40eb4736f90de1" name="a24eb78d7ac434caeda40eb4736f90de1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24eb78d7ac434caeda40eb4736f90de1">&#9670;&#160;</a></span>deleteFile() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDCardManager::deleteFile </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sobrecarga para eliminar un archivo a partir de un String. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta del archivo a eliminar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si se elimina correctamente, false en caso de error. </dd></dl>
+
+</div>
+</div>
+<a id="a83b9fcf51f6f6397253e73f4c743b791" name="a83b9fcf51f6f6397253e73f4c743b791"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83b9fcf51f6f6397253e73f4c743b791">&#9670;&#160;</a></span>deleteRecursive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDCardManager::deleteRecursive </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Elimina recursivamente un archivo o directorio de la tarjeta SD, incluyendo su contenido. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta del archivo o directorio a eliminar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si se elimina correctamente, false en caso de error. </dd></dl>
+
+</div>
+</div>
+<a id="abf8bc426ced70237ea869c2b407e449d" name="abf8bc426ced70237ea869c2b407e449d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf8bc426ced70237ea869c2b407e449d">&#9670;&#160;</a></span>getCardType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * SDCardManager::getCardType </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>card</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retorna una cadena con el tipo de tarjeta SD detectada. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">card</td><td>Identificador del tipo de tarjeta devuelto por el hardware. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Cadena con la descripción del tipo de tarjeta. </dd></dl>
+
+</div>
+</div>
+<a id="a42e8876b66696fa091ee61a749c60e67" name="a42e8876b66696fa091ee61a749c60e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42e8876b66696fa091ee61a749c60e67">&#9670;&#160;</a></span>getFileDir() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String SDCardManager::getFileDir </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtiene el directorio dado el camino absoluto de un archivo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta completa de un archivo, como cadena de caracteres. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Cadena que representa el directorio del archivo. </dd></dl>
+
+</div>
+</div>
+<a id="a257c43c5df2beeaab9fe62f4ea482d3b" name="a257c43c5df2beeaab9fe62f4ea482d3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a257c43c5df2beeaab9fe62f4ea482d3b">&#9670;&#160;</a></span>getFileDir() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String SDCardManager::getFileDir </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sobrecarga para obtener el directorio de un archivo a partir de un String. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta completa de un archivo, como objeto String. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Cadena que representa el directorio del archivo. </dd></dl>
+
+</div>
+</div>
+<a id="aa14b7744093fcbec65697529cc96e9d6" name="aa14b7744093fcbec65697529cc96e9d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa14b7744093fcbec65697529cc96e9d6">&#9670;&#160;</a></span>getFileSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fs::SDMMCFS &amp; SDCardManager::getFileSystem </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve la referencia al sistema de archivos asociado a la tarjeta SD. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Referencia al objeto fs::FS utilizado para la operación con archivos. </dd></dl>
+
+</div>
+</div>
+<a id="ad568b6cef69c1dbd80d8627b8aa8fe7e" name="ad568b6cef69c1dbd80d8627b8aa8fe7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad568b6cef69c1dbd80d8627b8aa8fe7e">&#9670;&#160;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDCardManager::initialize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa la tarjeta SD y muestra información sobre ella. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>true si la tarjeta se inicializó correctamente, false en caso de error. </dd></dl>
+
+</div>
+</div>
+<a id="af000db216266d6d34f773611b0323edd" name="af000db216266d6d34f773611b0323edd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af000db216266d6d34f773611b0323edd">&#9670;&#160;</a></span>isCardInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDCardManager::isCardInit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indica si la tarjeta SD ha sido inicializada. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>true si está inicializada, false en caso contrario. </dd></dl>
+
+</div>
+</div>
+<a id="aabaddfa5106212e4caa56fd77ee546a2" name="aabaddfa5106212e4caa56fd77ee546a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabaddfa5106212e4caa56fd77ee546a2">&#9670;&#160;</a></span>listDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SDCardManager::listDir </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>dirname</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>levels</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lista los archivos y directorios dentro de una ruta dada. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dirname</td><td>Directorio que se listará. </td></tr>
+    <tr><td class="paramname">levels</td><td>Niveles de profundidad para listar recursivamente. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6886e0afb44ce4dff05f2feae63250b0" name="a6886e0afb44ce4dff05f2feae63250b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6886e0afb44ce4dff05f2feae63250b0">&#9670;&#160;</a></span>logEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDCardManager::logEvent </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Registra un evento en el archivo de log designado. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>Mensaje o información a ser registrada en el archivo de log. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si se logró registrar el evento, false de lo contrario. </dd></dl>
+
+</div>
+</div>
+<a id="a9debc3fefc7127d4f762121e6fab1def" name="a9debc3fefc7127d4f762121e6fab1def"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9debc3fefc7127d4f762121e6fab1def">&#9670;&#160;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDCardManager::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operador definido para escribir un archivo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta del archivo donde se escribirá. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si la operación tuvo éxito, false en caso contrario. </dd></dl>
+
+</div>
+</div>
+<a id="a6c790f7b4552488e6ab85cf9b72dc383" name="a6c790f7b4552488e6ab85cf9b72dc383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c790f7b4552488e6ab85cf9b72dc383">&#9670;&#160;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDCardManager::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operador definido para eliminar un archivo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta del archivo a eliminar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si la operación tuvo éxito, false en caso contrario. </dd></dl>
+
+</div>
+</div>
+<a id="aef1c13f7dfda7a1cb8932ef236131c0a" name="aef1c13f7dfda7a1cb8932ef236131c0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef1c13f7dfda7a1cb8932ef236131c0a">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d02/class_s_d_card_manager.html">SDCardManager</a> SDCardManager::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/d02/class_s_d_card_manager.html">SDCardManager</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4a271ef43250a5df3be4ce521aab1ab" name="ae4a271ef43250a5df3be4ce521aab1ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4a271ef43250a5df3be4ce521aab1ab">&#9670;&#160;</a></span>readFile() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String SDCardManager::readFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lee el contenido de un archivo en la tarjeta SD. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta del archivo a leer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Contenido del archivo en formato String, o cadena vacía si ocurre un error. </dd></dl>
+
+</div>
+</div>
+<a id="a1a737a38417c79cb4d3c80a9d8b82279" name="a1a737a38417c79cb4d3c80a9d8b82279"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a737a38417c79cb4d3c80a9d8b82279">&#9670;&#160;</a></span>readFile() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String SDCardManager::readFile </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sobrecarga para leer el contenido de un archivo a partir de un String. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta del archivo a leer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Contenido del archivo en formato String, o cadena vacía si ocurre un error. </dd></dl>
+
+</div>
+</div>
+<a id="ad5434b8826b693ccba93f3d0a1cf8bd4" name="ad5434b8826b693ccba93f3d0a1cf8bd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5434b8826b693ccba93f3d0a1cf8bd4">&#9670;&#160;</a></span>removeDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDCardManager::removeDir </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Elimina un directorio de la tarjeta SD. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta del directorio a eliminar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si se elimina correctamente, false en caso de error. </dd></dl>
+
+</div>
+</div>
+<a id="a14e9fbc205cca0a7724df6c8347f66c5" name="a14e9fbc205cca0a7724df6c8347f66c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14e9fbc205cca0a7724df6c8347f66c5">&#9670;&#160;</a></span>renameFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDCardManager::renameFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cambia el nombre de un archivo o lo mueve a otra ruta. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path1</td><td>Ruta o nombre original del archivo. </td></tr>
+    <tr><td class="paramname">path2</td><td>Nueva ruta o nombre para el archivo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si se renombra correctamente, false en caso de error. </dd></dl>
+
+</div>
+</div>
+<a id="ab8f81bf685b9ad92a5f4a7806cf7cb19" name="ab8f81bf685b9ad92a5f4a7806cf7cb19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8f81bf685b9ad92a5f4a7806cf7cb19">&#9670;&#160;</a></span>writeFile() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDCardManager::writeFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>content</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escribe contenido en un archivo (creándolo si no existe). </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta del archivo donde se va a escribir. </td></tr>
+    <tr><td class="paramname">content</td><td>Contenido a escribir en el archivo. Por defecto es cadena vacía. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si se escribió correctamente, false en caso de error. </dd></dl>
+
+</div>
+</div>
+<a id="a02df436fe963b5c6ee5cb983d5e0886f" name="a02df436fe963b5c6ee5cb983d5e0886f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02df436fe963b5c6ee5cb983d5e0886f">&#9670;&#160;</a></span>writeFile() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDCardManager::writeFile </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>content</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sobrecarga para escribir contenido en un archivo a partir de un String. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta del archivo donde se va a escribir. </td></tr>
+    <tr><td class="paramname">content</td><td>Contenido a escribir en el archivo. Por defecto es cadena vacía. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si se escribió correctamente, false en caso de error. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de datos miembro</h2>
+<a id="a827dd4b851b9792a0e5a396f0d38b4c3" name="a827dd4b851b9792a0e5a396f0d38b4c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a827dd4b851b9792a0e5a396f0d38b4c3">&#9670;&#160;</a></span>_fileSystem</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">fs::SDMMCFS&amp; SDCardManager::_fileSystem</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Variable que representa el sistema de archivo usado </p>
+
+</div>
+</div>
+<a id="a2bb93b954243a6f9edb15eaaa6482a4c" name="a2bb93b954243a6f9edb15eaaa6482a4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bb93b954243a6f9edb15eaaa6482a4c">&#9670;&#160;</a></span>_sdInitialized</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDCardManager::_sdInitialized</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Variable para comprobar que la tarjeta está inicializada antes de hacer cualquiera cosa </p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li>src/include/<a class="el" href="../../df/d03/_s_d_card_manager_8h_source.html">SDCardManager.h</a></li>
+<li>src/include/<a class="el" href="../../d9/d00/_s_d_card_manager_8cpp.html">SDCardManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d4/d02/class_s_d_card_manager.html">SDCardManager</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

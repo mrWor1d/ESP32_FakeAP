@@ -1,0 +1,1352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FakeAPlib: Referencia de la clase WebServerManager</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FakeAPlib
+   </div>
+   <div id="projectbrief">Librería arduino para ESP32 que permite crear un punto de acceso falso</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('df/d02/class_web_server_manager.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pro-methods">Métodos protegidos</a> &#124;
+<a href="#pro-attribs">Atributos protegidos</a> &#124;
+<a href="../../d7/d03/class_web_server_manager-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle"><div class="title">Referencia de la clase WebServerManager</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Clase que gestiona la configuración y operación de un servidor web y DNS, junto con el manejo de archivos por solicitudes HTTP.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d2/d00/_web_server_handler_8h_source.html">WebServerHandler.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de herencia de WebServerManager</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../df/d02/class_web_server_manager.png" usemap="#WebServerManager_map" alt=""/>
+  <map id="WebServerManager_map" name="WebServerManager_map">
+<area href="../../d5/d03/class_fake_a_p.html" title="Implementa la gestión del punto de acceso con portal cautivo y el servidor web." alt="FakeAP" shape="rect" coords="0,56,127,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a350cb5a01307bc23a6f7f3963d824c74" id="r_a350cb5a01307bc23a6f7f3963d824c74"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a350cb5a01307bc23a6f7f3963d824c74">WebServerManager</a> ()</td></tr>
+<tr class="memdesc:a350cb5a01307bc23a6f7f3963d824c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto que inicializa los apuntadores a nulo.  <br /></td></tr>
+<tr class="separator:a350cb5a01307bc23a6f7f3963d824c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd4a80e068013d92952df57161d39033" id="r_abd4a80e068013d92952df57161d39033"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd4a80e068013d92952df57161d39033">WebServerManager</a> (<a class="el" href="../../d4/d02/class_s_d_card_manager.html">SDCardManager</a> *sd, uint8_t port=SERVER_PORT)</td></tr>
+<tr class="memdesc:abd4a80e068013d92952df57161d39033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor que inicializa los servicios de servidor web y DNS con referencias a la tarjeta SD y autenticación.  <br /></td></tr>
+<tr class="separator:abd4a80e068013d92952df57161d39033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb10b79d4e8fc01e3e08d42462db49bc" id="r_acb10b79d4e8fc01e3e08d42462db49bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb10b79d4e8fc01e3e08d42462db49bc">WebServerManager</a> (const <a class="el" href="../../df/d02/class_web_server_manager.html">WebServerManager</a> &amp;)=delete</td></tr>
+<tr class="separator:acb10b79d4e8fc01e3e08d42462db49bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa049330442cf7f82d62d28c0c9295d59" id="r_aa049330442cf7f82d62d28c0c9295d59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d02/class_web_server_manager.html">WebServerManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa049330442cf7f82d62d28c0c9295d59">operator=</a> (const <a class="el" href="../../df/d02/class_web_server_manager.html">WebServerManager</a> &amp;)=delete</td></tr>
+<tr class="separator:aa049330442cf7f82d62d28c0c9295d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab67f19040ffec81746ff0be9d513b932" id="r_ab67f19040ffec81746ff0be9d513b932"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab67f19040ffec81746ff0be9d513b932">~WebServerManager</a> ()</td></tr>
+<tr class="memdesc:ab67f19040ffec81746ff0be9d513b932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor de la clase que libera la memoria asignada.  <br /></td></tr>
+<tr class="separator:ab67f19040ffec81746ff0be9d513b932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80f909d7a81b2bf4dbeeb71d8266c9f3" id="r_a80f909d7a81b2bf4dbeeb71d8266c9f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80f909d7a81b2bf4dbeeb71d8266c9f3">start</a> (void)</td></tr>
+<tr class="memdesc:a80f909d7a81b2bf4dbeeb71d8266c9f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia la lógica del DNS y configura las rutas (endpoints) principales del servidor web.  <br /></td></tr>
+<tr class="separator:a80f909d7a81b2bf4dbeeb71d8266c9f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acad523933eb6246769fa801f268dce1f" id="r_acad523933eb6246769fa801f268dce1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acad523933eb6246769fa801f268dce1f">process</a> (void)</td></tr>
+<tr class="memdesc:acad523933eb6246769fa801f268dce1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procesa las peticiones entrantes tanto del servidor DNS como del servidor web.  <br /></td></tr>
+<tr class="separator:acad523933eb6246769fa801f268dce1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a4cf819803219bce7963f39a8ce613" id="r_a79a4cf819803219bce7963f39a8ce613"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79a4cf819803219bce7963f39a8ce613">setPath</a> (const char *path, <a class="el" href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3">FileType_t</a> fileType)</td></tr>
+<tr class="memdesc:a79a4cf819803219bce7963f39a8ce613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asigna la ruta de archivo en la tarjeta SD a un tipo de archivo específico.  <br /></td></tr>
+<tr class="separator:a79a4cf819803219bce7963f39a8ce613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07308fe1328d0c2a2dd7963babeb6e33" id="r_a07308fe1328d0c2a2dd7963babeb6e33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07308fe1328d0c2a2dd7963babeb6e33">setPath</a> (const String &amp;path, <a class="el" href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3">FileType_t</a> fileType)</td></tr>
+<tr class="memdesc:a07308fe1328d0c2a2dd7963babeb6e33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga que recibe una cadena String para asignar la ruta a un tipo de archivo.  <br /></td></tr>
+<tr class="separator:a07308fe1328d0c2a2dd7963babeb6e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dfc33aef93dce6bbfe966296eeaf1a6" id="r_a1dfc33aef93dce6bbfe966296eeaf1a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1dfc33aef93dce6bbfe966296eeaf1a6">setPath</a> (const char *path, <a class="el" href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6">Platform_t</a> platform)</td></tr>
+<tr class="memdesc:a1dfc33aef93dce6bbfe966296eeaf1a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asigna la ruta o archivo correspondiente a una plataforma concreta (Facebook, Google, etc.).  <br /></td></tr>
+<tr class="separator:a1dfc33aef93dce6bbfe966296eeaf1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24b5eed12137bcbf32729f76fef72dff" id="r_a24b5eed12137bcbf32729f76fef72dff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24b5eed12137bcbf32729f76fef72dff">setPath</a> (const String &amp;path, <a class="el" href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6">Platform_t</a> platform)</td></tr>
+<tr class="memdesc:a24b5eed12137bcbf32729f76fef72dff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga que recibe una cadena String para asignar la ruta de la plataforma solicitada.  <br /></td></tr>
+<tr class="separator:a24b5eed12137bcbf32729f76fef72dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa50592f4b2f189d1add573e14e54ce34" id="r_aa50592f4b2f189d1add573e14e54ce34"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa50592f4b2f189d1add573e14e54ce34">getHTMLContent</a> (const String &amp;path)</td></tr>
+<tr class="memdesc:aa50592f4b2f189d1add573e14e54ce34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el contenido HTML del archivo especificado y modifica los <code>placeholders</code> con el valor correspondiente.  <br /></td></tr>
+<tr class="separator:aa50592f4b2f189d1add573e14e54ce34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac684e61c3042eb5241caa947ea3168b8" id="r_ac684e61c3042eb5241caa947ea3168b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac684e61c3042eb5241caa947ea3168b8">generateJSONFile</a> (const String &amp;dirname=&quot;/&quot;, String *fileList=new String(&quot;&quot;))</td></tr>
+<tr class="memdesc:ac684e61c3042eb5241caa947ea3168b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Genera un archivo JSON conteniendo la lista de todos los archivos que hay en la tarjeta SD.  <br /></td></tr>
+<tr class="separator:ac684e61c3042eb5241caa947ea3168b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Métodos protegidos</h2></td></tr>
+<tr class="memitem:aabdd1adbc53f4a7e54c33a0d4a59ceb8" id="r_aabdd1adbc53f4a7e54c33a0d4a59ceb8"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabdd1adbc53f4a7e54c33a0d4a59ceb8">getContentType</a> (const String &amp;filename)</td></tr>
+<tr class="memdesc:aabdd1adbc53f4a7e54c33a0d4a59ceb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determina el tipo de contenido (MIME) a partir de la extensión de un archivo.  <br /></td></tr>
+<tr class="separator:aabdd1adbc53f4a7e54c33a0d4a59ceb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7de3a3031b727a0a00fb785a3120ab8a" id="r_a7de3a3031b727a0a00fb785a3120ab8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7de3a3031b727a0a00fb785a3120ab8a">handleSubmitCredentials</a> (void)</td></tr>
+<tr class="memdesc:a7de3a3031b727a0a00fb785a3120ab8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manejador para la ruta que recibe credenciales de formulario ("/submit-credentials").  <br /></td></tr>
+<tr class="separator:a7de3a3031b727a0a00fb785a3120ab8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c39e94b8a4f587813e8e5576f249829" id="r_a3c39e94b8a4f587813e8e5576f249829"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c39e94b8a4f587813e8e5576f249829">handleAdminPanel</a> (void)</td></tr>
+<tr class="memdesc:a3c39e94b8a4f587813e8e5576f249829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manejador para la ruta del panel de administración ("/admin-panel").  <br /></td></tr>
+<tr class="separator:a3c39e94b8a4f587813e8e5576f249829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c2490e1976cacfc7ba1563a655ca317" id="r_a3c2490e1976cacfc7ba1563a655ca317"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c2490e1976cacfc7ba1563a655ca317">handleLoginPages</a> (void)</td></tr>
+<tr class="memdesc:a3c2490e1976cacfc7ba1563a655ca317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maneja las páginas relacionadas con el inicio de sesión.  <br /></td></tr>
+<tr class="separator:a3c2490e1976cacfc7ba1563a655ca317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dd9d3612ac9b571e6d304a922fca862" id="r_a2dd9d3612ac9b571e6d304a922fca862"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dd9d3612ac9b571e6d304a922fca862">handlePageIcons</a> (void)</td></tr>
+<tr class="memdesc:a2dd9d3612ac9b571e6d304a922fca862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maneja las solicitudes de iconos de las páginas web.  <br /></td></tr>
+<tr class="separator:a2dd9d3612ac9b571e6d304a922fca862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7f493ed6ded5b0500fb2e3850149930" id="r_ad7f493ed6ded5b0500fb2e3850149930"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7f493ed6ded5b0500fb2e3850149930">handleFileDownload</a> (void)</td></tr>
+<tr class="memdesc:ad7f493ed6ded5b0500fb2e3850149930"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maneja la descarga de archivos desde el servidor web.  <br /></td></tr>
+<tr class="separator:ad7f493ed6ded5b0500fb2e3850149930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dd4026ec22ab5d193d9967cdce6b2be" id="r_a4dd4026ec22ab5d193d9967cdce6b2be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dd4026ec22ab5d193d9967cdce6b2be">handleFileUpload</a> (void)</td></tr>
+<tr class="memdesc:a4dd4026ec22ab5d193d9967cdce6b2be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manejador para la subida de archivos al servidor (vía formulario o HTTP POST).  <br /></td></tr>
+<tr class="separator:a4dd4026ec22ab5d193d9967cdce6b2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e9e5dcc277f2069b773144fe54f566a" id="r_a3e9e5dcc277f2069b773144fe54f566a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e9e5dcc277f2069b773144fe54f566a">handleFileDisplay</a> (void)</td></tr>
+<tr class="memdesc:a3e9e5dcc277f2069b773144fe54f566a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maneja la visualización de archivos en el servidor web.  <br /></td></tr>
+<tr class="separator:a3e9e5dcc277f2069b773144fe54f566a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a896c0cfd261b129f57a792a422f5e664" id="r_a896c0cfd261b129f57a792a422f5e664"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a896c0cfd261b129f57a792a422f5e664">handleFileDelete</a> (void)</td></tr>
+<tr class="memdesc:a896c0cfd261b129f57a792a422f5e664"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maneja la eliminación de archivos en el servidor web.  <br /></td></tr>
+<tr class="separator:a896c0cfd261b129f57a792a422f5e664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeec627c2fed8f9bc9d991f86a455243a" id="r_aeec627c2fed8f9bc9d991f86a455243a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeec627c2fed8f9bc9d991f86a455243a">handleWiFiConfig</a> (void)</td></tr>
+<tr class="memdesc:aeec627c2fed8f9bc9d991f86a455243a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manejador para configurar la red WiFi vía formulario.  <br /></td></tr>
+<tr class="separator:aeec627c2fed8f9bc9d991f86a455243a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bca840d75d94d1b3dfc912115714846" id="r_a3bca840d75d94d1b3dfc912115714846"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bca840d75d94d1b3dfc912115714846">handlePagesPath</a> (void)</td></tr>
+<tr class="memdesc:a3bca840d75d94d1b3dfc912115714846"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maneja las solicitudes HTTP para las páginas web almacenadas.  <br /></td></tr>
+<tr class="separator:a3bca840d75d94d1b3dfc912115714846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af861bc08e12b53cc0f5897e480908a5b" id="r_af861bc08e12b53cc0f5897e480908a5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af861bc08e12b53cc0f5897e480908a5b">handleAccessPoint</a> (void)</td></tr>
+<tr class="memdesc:af861bc08e12b53cc0f5897e480908a5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maneja la configuración y funcionamiento del punto de acceso WiFi.  <br /></td></tr>
+<tr class="separator:af861bc08e12b53cc0f5897e480908a5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a6fb26c8e684ec6d230170154e057a9" id="r_a5a6fb26c8e684ec6d230170154e057a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a6fb26c8e684ec6d230170154e057a9">saveToDataFile</a> (String data)</td></tr>
+<tr class="memdesc:a5a6fb26c8e684ec6d230170154e057a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función auxiliar para guardar de forma confiable datos recibidos, creando el directorio si no existe.  <br /></td></tr>
+<tr class="separator:a5a6fb26c8e684ec6d230170154e057a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a6606ec70a4ca3fcf345be86ca0a872" id="r_a6a6606ec70a4ca3fcf345be86ca0a872"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a6606ec70a4ca3fcf345be86ca0a872">validateAdminCredentials</a> (const String &amp;username, const String &amp;password)</td></tr>
+<tr class="memdesc:a6a6606ec70a4ca3fcf345be86ca0a872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valida las credenciales del administrador.  <br /></td></tr>
+<tr class="separator:a6a6606ec70a4ca3fcf345be86ca0a872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Atributos protegidos</h2></td></tr>
+<tr class="memitem:a9b8629fc6b36a6f19a01c759c904fbaf" id="r_a9b8629fc6b36a6f19a01c759c904fbaf"><td class="memItemLeft" align="right" valign="top">WebServer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b8629fc6b36a6f19a01c759c904fbaf">m_server</a></td></tr>
+<tr class="separator:a9b8629fc6b36a6f19a01c759c904fbaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d5c12ab8c2435ad14bfecdb3ae43f78" id="r_a0d5c12ab8c2435ad14bfecdb3ae43f78"><td class="memItemLeft" align="right" valign="top">DNSServer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d5c12ab8c2435ad14bfecdb3ae43f78">m_dnsServer</a></td></tr>
+<tr class="separator:a0d5c12ab8c2435ad14bfecdb3ae43f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28c84ce9218f960fdf30c2f7e378dd05" id="r_a28c84ce9218f960fdf30c2f7e378dd05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d02/class_s_d_card_manager.html">SDCardManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28c84ce9218f960fdf30c2f7e378dd05">m_sdManager</a></td></tr>
+<tr class="separator:a28c84ce9218f960fdf30c2f7e378dd05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85523b6c29a359fb378d0a02505997f2" id="r_a85523b6c29a359fb378d0a02505997f2"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85523b6c29a359fb378d0a02505997f2">m_indexPage</a> = &quot;\0&quot;</td></tr>
+<tr class="separator:a85523b6c29a359fb378d0a02505997f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4543c2b9e5659d7a097fccb128b40209" id="r_a4543c2b9e5659d7a097fccb128b40209"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4543c2b9e5659d7a097fccb128b40209">m_exitPage</a> = &quot;\0&quot;</td></tr>
+<tr class="separator:a4543c2b9e5659d7a097fccb128b40209"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4712d85f4df512e6ca3222216f51af02" id="r_a4712d85f4df512e6ca3222216f51af02"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4712d85f4df512e6ca3222216f51af02">m_adminPage</a> = &quot;\0&quot;</td></tr>
+<tr class="separator:a4712d85f4df512e6ca3222216f51af02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad840d0e0721b8c3e2e5e5414059f7a6" id="r_aad840d0e0721b8c3e2e5e5414059f7a6"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad840d0e0721b8c3e2e5e5414059f7a6">m_datafile</a> = &quot;\0&quot;</td></tr>
+<tr class="separator:aad840d0e0721b8c3e2e5e5414059f7a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6762d92003b1569d434909e5fa9e677" id="r_af6762d92003b1569d434909e5fa9e677"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6762d92003b1569d434909e5fa9e677">m_facebook</a> = &quot;\0&quot;</td></tr>
+<tr class="separator:af6762d92003b1569d434909e5fa9e677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7453668115b815ba830643345f40dcbc" id="r_a7453668115b815ba830643345f40dcbc"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7453668115b815ba830643345f40dcbc">m_google</a> = &quot;\0&quot;</td></tr>
+<tr class="separator:a7453668115b815ba830643345f40dcbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a006cce6f8fec98d21d61204b3dd1a471" id="r_a006cce6f8fec98d21d61204b3dd1a471"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a006cce6f8fec98d21d61204b3dd1a471">m_instagram</a> = &quot;\0&quot;</td></tr>
+<tr class="separator:a006cce6f8fec98d21d61204b3dd1a471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa04431910d5e4b717017e5150e5c36e6" id="r_aa04431910d5e4b717017e5150e5c36e6"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa04431910d5e4b717017e5150e5c36e6">m_twitter</a> = &quot;\0&quot;</td></tr>
+<tr class="separator:aa04431910d5e4b717017e5150e5c36e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bfc326cebd0b15ba49ead3f2fe36c62" id="r_a6bfc326cebd0b15ba49ead3f2fe36c62"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bfc326cebd0b15ba49ead3f2fe36c62">_loginAttempts</a> = 0</td></tr>
+<tr class="separator:a6bfc326cebd0b15ba49ead3f2fe36c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb4270d2772f60e23be64ce5be13a2db" id="r_abb4270d2772f60e23be64ce5be13a2db"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb4270d2772f60e23be64ce5be13a2db">_lastAttemptTime</a> = 0</td></tr>
+<tr class="separator:abb4270d2772f60e23be64ce5be13a2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Clase que gestiona la configuración y operación de un servidor web y DNS, junto con el manejo de archivos por solicitudes HTTP. </p>
+<p>Esta clase ofrece funcionalidades para:</p><ul>
+<li>Iniciar un portal cautivo mediante DNS y redirigir peticiones.</li>
+<li>Registrar rutas (endpoints) personalizados en el servidor web (p.ej. /admin-panel, /submit-credentials, etc.).</li>
+<li>Validar credenciales de administrador para acceso restringido.</li>
+<li>Cargar, crear y modificar contenido HTML para distintas plataformas sociales.</li>
+<li>Subir, descargar, eliminar y mostrar archivos a través de la tarjeta SD.</li>
+<li>Configurar la red WiFi mediante un formulario, guardando los ajustes de forma persistente.</li>
+</ul>
+<p>Métodos principales:</p><ul>
+<li><a class="el" href="#a80f909d7a81b2bf4dbeeb71d8266c9f3" title="Inicia la lógica del DNS y configura las rutas (endpoints) principales del servidor web.">start()</a>: Inicializa el servidor web y define sus rutas principales.</li>
+<li><a class="el" href="#acad523933eb6246769fa801f268dce1f" title="Procesa las peticiones entrantes tanto del servidor DNS como del servidor web.">process()</a>: Procesa las peticiones entrantes de DNS y HTTP.</li>
+<li><a class="el" href="#a79a4cf819803219bce7963f39a8ce613" title="Asigna la ruta de archivo en la tarjeta SD a un tipo de archivo específico.">setPath()</a>: Asigna rutas de archivo o directorio en la SD para diferentes tipos (p.ej. índice, admin, redes sociales, etc.).</li>
+<li><a class="el" href="#aa50592f4b2f189d1add573e14e54ce34" title="Obtiene el contenido HTML del archivo especificado y modifica los placeholders con el valor correspon...">getHTMLContent()</a>: Lee el contenido de un archivo HTML desde la SD y reemplaza marcadores con valores dinámicos.</li>
+<li><a class="el" href="#ac684e61c3042eb5241caa947ea3168b8" title="Genera un archivo JSON conteniendo la lista de todos los archivos que hay en la tarjeta SD.">generateJSONFile()</a>: Genera un archivo JSON con la lista de archivos presentes en la tarjeta SD.</li>
+</ul>
+<p>Atributos relevantes:</p><ul>
+<li>m_server, m_dnsServer, m_sdManager: Punteros para manejar el servidor web, DNS y la tarjeta SD, respectivamente.</li>
+<li>m_indexPage, m_exitPage, m_adminPage, etc.: Variables para almacenar rutas de archivos específicos.</li>
+<li>_loginAttempts, _lastAttemptTime: Controlan el número de intentos de acceso y el tiempo entre ellos.</li>
+</ul>
+<p>Uso:</p><ul>
+<li>Crear una instancia de <a class="el" href="../../df/d02/class_web_server_manager.html" title="Clase que gestiona la configuración y operación de un servidor web y DNS, junto con el manejo de arch...">WebServerManager</a>, luego invocar <a class="el" href="#a80f909d7a81b2bf4dbeeb71d8266c9f3" title="Inicia la lógica del DNS y configura las rutas (endpoints) principales del servidor web.">start()</a> para configurar y llamar periódicamente <a class="el" href="#acad523933eb6246769fa801f268dce1f" title="Procesa las peticiones entrantes tanto del servidor DNS como del servidor web.">process()</a> dentro de la función <code>loop()</code>.</li>
+</ul>
+<dl class="section warning"><dt>Atención</dt><dd>Es responsabilidad del usuario asegurar una correcta gestión de memoria al utilizar los punteros m_server, m_dnsServer y m_sdManager</dd></dl>
+<dl class="section see"><dt>Ver también</dt><dd>WebServer, DNSServer, <a class="el" href="../../d4/d02/class_s_d_card_manager.html" title="Clase que gestiona las operaciones con la tarjeta SD. Actua como un wrapper para la clase fs::SDMMCFS...">SDCardManager</a> </dd></dl>
+</div><h2 class="groupheader">Documentación de constructores y destructores</h2>
+<a id="a350cb5a01307bc23a6f7f3963d824c74" name="a350cb5a01307bc23a6f7f3963d824c74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a350cb5a01307bc23a6f7f3963d824c74">&#9670;&#160;</a></span>WebServerManager() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WebServerManager::WebServerManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor por defecto que inicializa los apuntadores a nulo. </p>
+<p>Crea un objeto de tipo <a class="el" href="../../df/d02/class_web_server_manager.html" title="Clase que gestiona la configuración y operación de un servidor web y DNS, junto con el manejo de arch...">WebServerManager</a>, pero no establece la configuración de la red ni la lógica del servidor. </p>
+
+</div>
+</div>
+<a id="abd4a80e068013d92952df57161d39033" name="abd4a80e068013d92952df57161d39033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd4a80e068013d92952df57161d39033">&#9670;&#160;</a></span>WebServerManager() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WebServerManager::WebServerManager </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d02/class_s_d_card_manager.html">SDCardManager</a> *</td>          <td class="paramname"><span class="paramname"><em>sd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>port</em></span><span class="paramdefsep"> = </span><span class="paramdefval">SERVER_PORT</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor que inicializa los servicios de servidor web y DNS con referencias a la tarjeta SD y autenticación. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sd</td><td>Puntero a la clase <a class="el" href="../../d4/d02/class_s_d_card_manager.html" title="Clase que gestiona las operaciones con la tarjeta SD. Actua como un wrapper para la clase fs::SDMMCFS...">SDCardManager</a> para manejar archivos. </td></tr>
+    <tr><td class="paramname">auth</td><td>Puntero a la clase AuthenticationManager para validar credenciales de administrador. </td></tr>
+    <tr><td class="paramname">port</td><td>Puerto en el que se iniciará el servidor web. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acb10b79d4e8fc01e3e08d42462db49bc" name="acb10b79d4e8fc01e3e08d42462db49bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb10b79d4e8fc01e3e08d42462db49bc">&#9670;&#160;</a></span>WebServerManager() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WebServerManager::WebServerManager </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/d02/class_web_server_manager.html">WebServerManager</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab67f19040ffec81746ff0be9d513b932" name="ab67f19040ffec81746ff0be9d513b932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab67f19040ffec81746ff0be9d513b932">&#9670;&#160;</a></span>~WebServerManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WebServerManager::~WebServerManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor de la clase que libera la memoria asignada. </p>
+<p>Destruye los objetos creados dinámicamente, incluyendo el servidor web, el servidor DNS, el manejador de SD y el manejador de autenticación. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones miembro</h2>
+<a id="ac684e61c3042eb5241caa947ea3168b8" name="ac684e61c3042eb5241caa947ea3168b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac684e61c3042eb5241caa947ea3168b8">&#9670;&#160;</a></span>generateJSONFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServerManager::generateJSONFile </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>dirname</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;/&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String *</td>          <td class="paramname"><span class="paramname"><em>fileList</em></span><span class="paramdefsep"> = </span><span class="paramdefval">new&#160;String(&quot;&quot;)</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Genera un archivo JSON conteniendo la lista de todos los archivos que hay en la tarjeta SD. </p>
+<p>Los parametros de esta función sirven únicamente para las llamadas recursivas. Esta función toma una ruta de directorio y un puntero a un objeto String que contendrá la lista de archivos para procesar y volcar en el archivo JSON.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dirname</td><td>Ruta del directorio donde se ubicarán o buscarán los archivos. </td></tr>
+    <tr><td class="paramname">fileList</td><td>Puntero a un String que guardará los nombres y/o información de los archivos relevantes para generar el archivo JSON.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>Si no se especifica, dirname se establece en "/" (raiz), mientras que fileList se inicializa con un String vacío. </dd></dl>
+
+</div>
+</div>
+<a id="aabdd1adbc53f4a7e54c33a0d4a59ceb8" name="aabdd1adbc53f4a7e54c33a0d4a59ceb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabdd1adbc53f4a7e54c33a0d4a59ceb8">&#9670;&#160;</a></span>getContentType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String WebServerManager::getContentType </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determina el tipo de contenido (MIME) a partir de la extensión de un archivo. </p>
+<p>Retorna diferentes MIME types (text/html, image/png, etc.) o "application/octet-stream" si no se reconoce la extensión.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>un string que representa el tipo de MIME </dd></dl>
+
+</div>
+</div>
+<a id="aa50592f4b2f189d1add573e14e54ce34" name="aa50592f4b2f189d1add573e14e54ce34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa50592f4b2f189d1add573e14e54ce34">&#9670;&#160;</a></span>getHTMLContent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String WebServerManager::getHTMLContent </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene el contenido HTML del archivo especificado y modifica los <code>placeholders</code> con el valor correspondiente. </p>
+<p>Lee el contenido del archivo ubicado en la ruta indicada y lo retorna como una cadena con la información actualizada de la placa.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta del archivo HTML </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Cadena con el contenido HTML del archivo. </dd></dl>
+
+</div>
+</div>
+<a id="af861bc08e12b53cc0f5897e480908a5b" name="af861bc08e12b53cc0f5897e480908a5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af861bc08e12b53cc0f5897e480908a5b">&#9670;&#160;</a></span>handleAccessPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServerManager::handleAccessPoint </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maneja la configuración y funcionamiento del punto de acceso WiFi. </p>
+<p>Esta función se encarga de gestionar el punto de acceso WiFi, incluyendo la configuración inicial, el manejo de clientes conectados y el mantenimiento del estado del punto de acceso. </p>
+
+</div>
+</div>
+<a id="a3c39e94b8a4f587813e8e5576f249829" name="a3c39e94b8a4f587813e8e5576f249829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c39e94b8a4f587813e8e5576f249829">&#9670;&#160;</a></span>handleAdminPanel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServerManager::handleAdminPanel </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Manejador para la ruta del panel de administración ("/admin-panel"). </p>
+<p>Carga la página HTML correspondiente al panel de administración desde la SD y la envía al cliente. </p>
+
+</div>
+</div>
+<a id="a896c0cfd261b129f57a792a422f5e664" name="a896c0cfd261b129f57a792a422f5e664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a896c0cfd261b129f57a792a422f5e664">&#9670;&#160;</a></span>handleFileDelete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServerManager::handleFileDelete </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maneja la eliminación de archivos en el servidor web. </p>
+<p>Este método procesa las solicitudes de eliminación de archivos recibidas a través del servidor web. Se encarga de validar la solicitud, eliminar el archivo especificado si existe y devolver una respuesta apropiada al cliente.</p>
+<dl class="section note"><dt>Nota</dt><dd>Se debe verificar que el cliente tiene los permisos adecuados antes de permitir la eliminación del archivo. </dd></dl>
+
+</div>
+</div>
+<a id="a3e9e5dcc277f2069b773144fe54f566a" name="a3e9e5dcc277f2069b773144fe54f566a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e9e5dcc277f2069b773144fe54f566a">&#9670;&#160;</a></span>handleFileDisplay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServerManager::handleFileDisplay </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maneja la visualización de archivos en el servidor web. </p>
+<p>Esta función procesa las solicitudes para mostrar archivos en el servidor web incorporado. Se encarga de leer y enviar el contenido del archivo solicitado al cliente.</p>
+<dl class="section warning"><dt>Atención</dt><dd>Asegúrese de que los archivos solicitados existan y sean accesibles antes de llamar a esta función. </dd></dl>
+
+</div>
+</div>
+<a id="ad7f493ed6ded5b0500fb2e3850149930" name="ad7f493ed6ded5b0500fb2e3850149930"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7f493ed6ded5b0500fb2e3850149930">&#9670;&#160;</a></span>handleFileDownload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServerManager::handleFileDownload </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maneja la descarga de archivos desde el servidor web. </p>
+<p>Procesa las solicitudes de descarga de archivos realizadas al servidor web. Verifica la existencia del archivo solicitado y gestiona su transferencia al cliente. </p>
+
+</div>
+</div>
+<a id="a4dd4026ec22ab5d193d9967cdce6b2be" name="a4dd4026ec22ab5d193d9967cdce6b2be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dd4026ec22ab5d193d9967cdce6b2be">&#9670;&#160;</a></span>handleFileUpload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServerManager::handleFileUpload </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Manejador para la subida de archivos al servidor (vía formulario o HTTP POST). </p>
+<p>Permite recibir un archivo en trozos (porciones) y guardarlo en la tarjeta SD. Al finalizar, notifica el éxito o el fallo. </p>
+
+</div>
+</div>
+<a id="a3c2490e1976cacfc7ba1563a655ca317" name="a3c2490e1976cacfc7ba1563a655ca317"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c2490e1976cacfc7ba1563a655ca317">&#9670;&#160;</a></span>handleLoginPages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServerManager::handleLoginPages </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maneja las páginas relacionadas con el inicio de sesión. </p>
+<p>Esta función se encarga de procesar y gestionar las páginas web relacionadas con la autenticación de usuarios, incluyendo el formulario de inicio de sesión y sus respuestas.</p>
+<dl class="section note"><dt>Nota</dt><dd>Esta función debe ser llamada cuando se requiera manejar solicitudes relacionadas con la autenticación de usuarios.</dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>void No devuelve ningún valor </dd></dl>
+
+</div>
+</div>
+<a id="a2dd9d3612ac9b571e6d304a922fca862" name="a2dd9d3612ac9b571e6d304a922fca862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dd9d3612ac9b571e6d304a922fca862">&#9670;&#160;</a></span>handlePageIcons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServerManager::handlePageIcons </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maneja las solicitudes de iconos de las páginas web. </p>
+<p>Esta función se encarga de procesar y responder a las peticiones de iconos (favicon, etc.) que llegan al servidor web. </p>
+
+</div>
+</div>
+<a id="a3bca840d75d94d1b3dfc912115714846" name="a3bca840d75d94d1b3dfc912115714846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bca840d75d94d1b3dfc912115714846">&#9670;&#160;</a></span>handlePagesPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServerManager::handlePagesPath </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maneja las solicitudes HTTP para las páginas web almacenadas. </p>
+<p>Esta función gestiona las rutas y respuestas para las páginas web que están configuradas en el servidor web. Se encarga de procesar las peticiones y enviar el contenido correspondiente al cliente. </p>
+
+</div>
+</div>
+<a id="a7de3a3031b727a0a00fb785a3120ab8a" name="a7de3a3031b727a0a00fb785a3120ab8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7de3a3031b727a0a00fb785a3120ab8a">&#9670;&#160;</a></span>handleSubmitCredentials()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServerManager::handleSubmitCredentials </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Manejador para la ruta que recibe credenciales de formulario ("/submit-credentials"). </p>
+<p>Captura la plataforma, usuario y contraseña enviados por POST, los almacena (o registra en log) y devuelve respuesta al cliente. </p>
+
+</div>
+</div>
+<a id="aeec627c2fed8f9bc9d991f86a455243a" name="aeec627c2fed8f9bc9d991f86a455243a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeec627c2fed8f9bc9d991f86a455243a">&#9670;&#160;</a></span>handleWiFiConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServerManager::handleWiFiConfig </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Manejador para configurar la red WiFi vía formulario. </p>
+<p>Permite al usuario introducir un SSID y contraseña; si son válidos, se guarda el contenido en la tarjeta SD e informa de la actualización. </p>
+
+</div>
+</div>
+<a id="aa049330442cf7f82d62d28c0c9295d59" name="aa049330442cf7f82d62d28c0c9295d59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa049330442cf7f82d62d28c0c9295d59">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d02/class_web_server_manager.html">WebServerManager</a> WebServerManager::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/d02/class_web_server_manager.html">WebServerManager</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acad523933eb6246769fa801f268dce1f" name="acad523933eb6246769fa801f268dce1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acad523933eb6246769fa801f268dce1f">&#9670;&#160;</a></span>process()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServerManager::process </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procesa las peticiones entrantes tanto del servidor DNS como del servidor web. </p>
+<p>Debe llamarse de forma frecuente dentro del loop principal de Arduino para manejar solicitudes DNS y HTTP. </p>
+
+</div>
+</div>
+<a id="a5a6fb26c8e684ec6d230170154e057a9" name="a5a6fb26c8e684ec6d230170154e057a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a6fb26c8e684ec6d230170154e057a9">&#9670;&#160;</a></span>saveToDataFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WebServerManager::saveToDataFile </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Función auxiliar para guardar de forma confiable datos recibidos, creando el directorio si no existe. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Contenido que se escribirá en el archivo configurado como archivo de datos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><code>true</code> si la operación fue satisfactoria, <code>false</code> en caso contrario. </dd></dl>
+
+</div>
+</div>
+<a id="a79a4cf819803219bce7963f39a8ce613" name="a79a4cf819803219bce7963f39a8ce613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79a4cf819803219bce7963f39a8ce613">&#9670;&#160;</a></span>setPath() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServerManager::setPath </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3">FileType_t</a></td>          <td class="paramname"><span class="paramname"><em>fileType</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Asigna la ruta de archivo en la tarjeta SD a un tipo de archivo específico. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta o nombre del archivo (o directorio) a asignar. </td></tr>
+    <tr><td class="paramname">fileType</td><td>Tipo de archivo que se configura (p.ej. página de índice, archivo de datos, etc.). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1dfc33aef93dce6bbfe966296eeaf1a6" name="a1dfc33aef93dce6bbfe966296eeaf1a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dfc33aef93dce6bbfe966296eeaf1a6">&#9670;&#160;</a></span>setPath() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServerManager::setPath </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6">Platform_t</a></td>          <td class="paramname"><span class="paramname"><em>platform</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Asigna la ruta o archivo correspondiente a una plataforma concreta (Facebook, Google, etc.). </p>
+<p>Abre el archivo para verificar si es un directorio e internamente ajusta la ruta final necesaria.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ruta o nombre del archivo (o directorio) que contiene la plataforma. </td></tr>
+    <tr><td class="paramname">platform</td><td>Plataforma social a asignar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a07308fe1328d0c2a2dd7963babeb6e33" name="a07308fe1328d0c2a2dd7963babeb6e33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07308fe1328d0c2a2dd7963babeb6e33">&#9670;&#160;</a></span>setPath() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServerManager::setPath </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3">FileType_t</a></td>          <td class="paramname"><span class="paramname"><em>fileType</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sobrecarga que recibe una cadena String para asignar la ruta a un tipo de archivo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Cadena con la ruta o nombre del archivo (o directorio). </td></tr>
+    <tr><td class="paramname">fileType</td><td>Tipo de archivo que se configura. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a24b5eed12137bcbf32729f76fef72dff" name="a24b5eed12137bcbf32729f76fef72dff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24b5eed12137bcbf32729f76fef72dff">&#9670;&#160;</a></span>setPath() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServerManager::setPath </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6">Platform_t</a></td>          <td class="paramname"><span class="paramname"><em>platform</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sobrecarga que recibe una cadena String para asignar la ruta de la plataforma solicitada. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Cadena con la ruta o nombre del archivo (o directorio) de la plataforma. </td></tr>
+    <tr><td class="paramname">platform</td><td>Plataforma social a asignar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a80f909d7a81b2bf4dbeeb71d8266c9f3" name="a80f909d7a81b2bf4dbeeb71d8266c9f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80f909d7a81b2bf4dbeeb71d8266c9f3">&#9670;&#160;</a></span>start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServerManager::start </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicia la lógica del DNS y configura las rutas (endpoints) principales del servidor web. </p>
+<p>Inicializa y arranca el servidor web, preparándolo para recibir y manejar peticiones HTTP. Define las rutas para la pantalla de administración, la recepción de credenciales...etc.</p>
+<dl class="section note"><dt>Nota</dt><dd>Este método debe ser llamado después de configurar todos los parámetros necesarios del servidor. </dd></dl>
+
+</div>
+</div>
+<a id="a6a6606ec70a4ca3fcf345be86ca0a872" name="a6a6606ec70a4ca3fcf345be86ca0a872"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a6606ec70a4ca3fcf345be86ca0a872">&#9670;&#160;</a></span>validateAdminCredentials()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WebServerManager::validateAdminCredentials </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>username</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>password</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Valida las credenciales del administrador. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">username</td><td>El nombre de usuario a validar. </td></tr>
+    <tr><td class="paramname">password</td><td>La contraseña a validar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true Si las credenciales son válidas. </dd>
+<dd>
+false Si las credenciales son inválidas. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de datos miembro</h2>
+<a id="abb4270d2772f60e23be64ce5be13a2db" name="abb4270d2772f60e23be64ce5be13a2db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb4270d2772f60e23be64ce5be13a2db">&#9670;&#160;</a></span>_lastAttemptTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long WebServerManager::_lastAttemptTime = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Tiempo del ultimo intento, sirve tambien para el timeout </p>
+
+</div>
+</div>
+<a id="a6bfc326cebd0b15ba49ead3f2fe36c62" name="a6bfc326cebd0b15ba49ead3f2fe36c62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bfc326cebd0b15ba49ead3f2fe36c62">&#9670;&#160;</a></span>_loginAttempts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t WebServerManager::_loginAttempts = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Numéro de intentos de acceso al panel de administrador </p>
+
+</div>
+</div>
+<a id="a4712d85f4df512e6ca3222216f51af02" name="a4712d85f4df512e6ca3222216f51af02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4712d85f4df512e6ca3222216f51af02">&#9670;&#160;</a></span>m_adminPage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String WebServerManager::m_adminPage = &quot;\0&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ruta de la pagina HTML del panel de administrador </p>
+
+</div>
+</div>
+<a id="aad840d0e0721b8c3e2e5e5414059f7a6" name="aad840d0e0721b8c3e2e5e5414059f7a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad840d0e0721b8c3e2e5e5414059f7a6">&#9670;&#160;</a></span>m_datafile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String WebServerManager::m_datafile = &quot;\0&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ruta del archivo donde se almacenan la credenciales </p>
+
+</div>
+</div>
+<a id="a0d5c12ab8c2435ad14bfecdb3ae43f78" name="a0d5c12ab8c2435ad14bfecdb3ae43f78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d5c12ab8c2435ad14bfecdb3ae43f78">&#9670;&#160;</a></span>m_dnsServer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DNSServer* WebServerManager::m_dnsServer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Variable para configurar el redireccionamiento de las solicitudes </p>
+
+</div>
+</div>
+<a id="a4543c2b9e5659d7a097fccb128b40209" name="a4543c2b9e5659d7a097fccb128b40209"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4543c2b9e5659d7a097fccb128b40209">&#9670;&#160;</a></span>m_exitPage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String WebServerManager::m_exitPage = &quot;\0&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ruta de la pagina HTML </p>
+
+</div>
+</div>
+<a id="af6762d92003b1569d434909e5fa9e677" name="af6762d92003b1569d434909e5fa9e677"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6762d92003b1569d434909e5fa9e677">&#9670;&#160;</a></span>m_facebook</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String WebServerManager::m_facebook = &quot;\0&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ruta de la pagina HTML de facebook </p>
+
+</div>
+</div>
+<a id="a7453668115b815ba830643345f40dcbc" name="a7453668115b815ba830643345f40dcbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7453668115b815ba830643345f40dcbc">&#9670;&#160;</a></span>m_google</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String WebServerManager::m_google = &quot;\0&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ruta de la pagina HTML de google </p>
+
+</div>
+</div>
+<a id="a85523b6c29a359fb378d0a02505997f2" name="a85523b6c29a359fb378d0a02505997f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85523b6c29a359fb378d0a02505997f2">&#9670;&#160;</a></span>m_indexPage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String WebServerManager::m_indexPage = &quot;\0&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ruta de la pagina HTML de entrada </p>
+
+</div>
+</div>
+<a id="a006cce6f8fec98d21d61204b3dd1a471" name="a006cce6f8fec98d21d61204b3dd1a471"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a006cce6f8fec98d21d61204b3dd1a471">&#9670;&#160;</a></span>m_instagram</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String WebServerManager::m_instagram = &quot;\0&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ruta de la pagina HTML de instagram </p>
+
+</div>
+</div>
+<a id="a28c84ce9218f960fdf30c2f7e378dd05" name="a28c84ce9218f960fdf30c2f7e378dd05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28c84ce9218f960fdf30c2f7e378dd05">&#9670;&#160;</a></span>m_sdManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d02/class_s_d_card_manager.html">SDCardManager</a>* WebServerManager::m_sdManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Variable para gestionar la interacción con los archivos </p>
+
+</div>
+</div>
+<a id="a9b8629fc6b36a6f19a01c759c904fbaf" name="a9b8629fc6b36a6f19a01c759c904fbaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b8629fc6b36a6f19a01c759c904fbaf">&#9670;&#160;</a></span>m_server</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WebServer* WebServerManager::m_server</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Variable para gestionar las comunicaciones por HTTP </p>
+
+</div>
+</div>
+<a id="aa04431910d5e4b717017e5150e5c36e6" name="aa04431910d5e4b717017e5150e5c36e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa04431910d5e4b717017e5150e5c36e6">&#9670;&#160;</a></span>m_twitter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String WebServerManager::m_twitter = &quot;\0&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ruta de la pagina HTML de twitter </p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li>src/include/<a class="el" href="../../d2/d00/_web_server_handler_8h_source.html">WebServerHandler.h</a></li>
+<li>src/include/<a class="el" href="../../d5/d00/_web_server_handler_8cpp.html">WebServerHandler.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../df/d02/class_web_server_manager.html">WebServerManager</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>
