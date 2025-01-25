@@ -95,7 +95,7 @@ fileInput.addEventListener('change', function(e) {
 
 function handleFiles(files) {
     // Here you would implement your file upload logic
-    fetch("admin-panel/updload", {
+    fetch("/admin-panel/updload", {
         method: 'POST',
         headers: {
             'Content-Type': 'multipart/form-data',

@@ -217,13 +217,16 @@
         <div id="files-page" style="display: none;">
             <div class="card">
                 <h2>Gestión de archivos</h2>
-                <label class="upload-area" for="file-upload">
-                    <div class="upload-icon">📁</div>
-                    <div class="upload-message">
-                        <p>Suelte los archivos aquí o haga clic para cargarlos</p>
-                        <input type="file" id="file-upload" multiple>
-                    </div>
-                </label>
+                <form action="/admin-panel/updload" method="post" enctype="multipart/form-data">
+                    <label class="upload-area" for="file-upload">
+                        <div class="upload-icon">📁</div>
+                        <div class="upload-message">
+                            <p>Suelte los archivos aquí o haga clic para cargarlos</p>
+                            <input type="file" id="file-upload" multiple/>
+                        </div>
+                    </label>
+                    <input class="btn" type="submit" name="upload" value="Subir archivos"/>
+                </form>
                 <div class="file-list">
                     <div class="file-item"></div>
                 </div>
@@ -233,7 +236,7 @@
         </div>
     </main>
 
-
+    <script src="admin-app.js"></script>
     <script src="admin-panel/admin-app.js">
         //loadFileData();
         /*
