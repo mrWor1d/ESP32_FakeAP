@@ -137,7 +137,7 @@ protected:
      * Al finalizar, notifica el éxito o el fallo.
      * 
      */
-    void handleFileUpload(void);
+    void handleFileUpload(const HTTPUpload& upload);
 
 
     /*!

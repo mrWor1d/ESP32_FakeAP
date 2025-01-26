@@ -147,12 +147,12 @@ public:
      */
     bool writeFile(const String &path, const String &content = "");
 
-    /**
+    /*
      * @brief Lista los archivos y directorios dentro de una ruta dada.
      * @param[in] dirname Directorio que se listará.
      * @param[in] levels Niveles de profundidad para listar recursivamente.
      */
-    void listDir(const char *dirname, uint8_t levels);
+    //void listDir(const char *dirname, uint8_t levels);
 
     /**
      * @brief Crea un directorio en la tarjeta SD a partir de un String.

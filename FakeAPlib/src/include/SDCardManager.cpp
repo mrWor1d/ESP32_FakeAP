@@ -66,14 +66,17 @@ bool SDCardManager::logEvent(const String &event)
     }
 
     String logDir = getFileDir(LOG_FILE);
+
     if (!_fileSystem.exists(logDir))
     {
+         //crear la carpeta y el archivo de los logs en caso de que no exista
         if (!createDir(logDir))
             return 0;
         return writeFile(LOG_FILE, getCurrentTime() + "-> " + event) ? 1 : 0;
     }
     else if (!_fileSystem.exists(LOG_FILE))
     {
+        //crear solo el archivo en caso de que no exista
         return writeFile(LOG_FILE, getCurrentTime() + "-> " + event) ? 1 : 0;
     }
 
@@ -87,6 +90,7 @@ bool SDCardManager::logEvent(const String &event)
         return 0;
     }
 
+    //añadir el log en una nueva linea del archivo existente
     logFile->println(getCurrentTime() + "-> " + event);
     logFile->close();
     delete logFile;
@@ -100,6 +104,13 @@ bool SDCardManager::logEvent(const String &event)
 bool SDCardManager::initialize()
 {
     Serial.println("Montando la tarjeta SD....");
+
+    /**
+     * configurar los pines para una placa con lector integrado
+     * 
+     * ! Solo cambiar los pines si se usa un tipo de tarjeta diferente
+     * ! Que no tiene lector integrado 
+     */
     SD_MMC.setPins(SD_MMC_CLK, SD_MMC_CMD, SD_MMC_D0);
 
     if (!SD_MMC.begin("/sdcard", true, true, SDMMC_FREQ_DEFAULT, 5))
@@ -124,14 +135,13 @@ bool SDCardManager::initialize()
 #endif
     Serial.printf("Tipo de tarjeta: %s\n", getCardType(cardType));
 
-    //uint64_t cardSize = SD_MMC.cardSize() / (1024 * 1024);
     Serial.printf("Tamaño de la tarjeta SD_MMC: %s\n", getReadableSize(SD_MMC.cardSize()));
-
-    _sdInitialized = true;
 
     Serial.printf("Total espacio disponible: %s\r\n", getReadableSize(SD_MMC.totalBytes()));
 
-    listDir("/", 0);
+    //listDir("/", 0);
+
+    _sdInitialized = true;
 
     return 1;
 }
@@ -145,7 +155,7 @@ String SDCardManager::readFile(const char *path)
 #if (WITH_ERROR_TYPE)
         Serial.println(ERROR_SD_NOT_INIT);
 #endif
-        return "\0";;
+        return "\0";
     }
 
     File *file = new File(_fileSystem.open(path));
@@ -155,7 +165,7 @@ String SDCardManager::readFile(const char *path)
         Serial.printf(ERROR_FILE_OPEN, path);
 #endif
         delete file;
-        return "\0";;
+        return "\0";
     }
 
     String content = file->readStringUntil('\0');
@@ -177,7 +187,7 @@ String SDCardManager::readFile(const String &path)
 #if (WITH_ERROR_TYPE)
         Serial.println(ERROR_SD_NOT_INIT);
 #endif
-        return "\0";;
+        return "\0";
     }
 
     File *file = new File(_fileSystem.open(path));
@@ -187,9 +197,10 @@ String SDCardManager::readFile(const String &path)
         Serial.printf(ERROR_FILE_OPEN, path.c_str());
 #endif
         delete file;
-        return "\0";;
+        return "\0";
     }
 
+    //leer el archivo hasta el final
     String content = file->readStringUntil('\0');
 
 #if (WITH_SUCCESS_MESSAGE)
@@ -275,7 +286,7 @@ bool SDCardManager::writeFile(const String &path, const String &content)
     return 1;
 }
 
-
+/*
 void SDCardManager::listDir(const char *dirname, uint8_t levels)
 {
     if (!_sdInitialized)
@@ -329,6 +340,7 @@ void SDCardManager::listDir(const char *dirname, uint8_t levels)
     delete root,
             file;
 }
+*/
 
 
 bool SDCardManager::createDir(const String &path)
