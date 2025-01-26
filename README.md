@@ -25,6 +25,7 @@ El Servidor tiene diferentes funcionalidades como:
 * Gestión de archivos (carga/descarga, borrar)
 * Gestión de algunas configuración basicas como conexión wifi y rutas de algunos archivos
 <br>
+
 > [!CAUTION]
 > Esto es únicamente a fines educativos. No se hará ningún uso ilícito de este código.
 <br>
