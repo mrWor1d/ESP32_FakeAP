@@ -51,6 +51,28 @@ window.addEventListener("resize", () => {
 
 // Initialize file management
 
+
+document.getElementById('file-upload').addEventListener('change', function(event) {
+    const fileList = document.getElementById('file-preview');
+    fileList.innerHTML = ''; // Clear previous selections
+
+    Array.from(this.files).forEach(file => {
+        const fileItem = document.createElement('div');
+        fileItem.className = 'file-item';
+        fileItem.innerHTML = `
+            <span>${file.name}</span>
+            <input 
+                type="text" 
+                name="uploadfile-name" 
+                placeholder="Ruta/Nombre personalizado" 
+                value="${file.name}"
+            >
+        `;
+        fileList.appendChild(fileItem);
+    });
+});
+
+/*
 const uploadArea = document.getElementById('upload-area');
 const fileInput  = document.getElementById('file-upload');
 
@@ -104,6 +126,9 @@ function handleFiles(files) {
     console.log('Files to upload:', files);
     // You can send these files to your ESP32 server
 }
+*/
+
+
 
 /*
 const ITEMS_PER_PAGE = 10; // Number of files to show per page

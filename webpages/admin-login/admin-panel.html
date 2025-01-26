@@ -217,16 +217,31 @@
         <div id="files-page" style="display: none;">
             <div class="card">
                 <h2>Gestión de archivos</h2>
-                <form action="/admin-panel/updload" method="post" enctype="multipart/form-data">
-                    <label class="upload-area" for="file-upload">
-                        <div class="upload-icon">📁</div>
-                        <div class="upload-message">
-                            <p>Suelte los archivos aquí o haga clic para cargarlos</p>
-                            <input type="file" id="file-upload" multiple/>
-                        </div>
-                    </label>
-                    <input class="btn" type="submit" name="upload" value="Subir archivos"/>
+                <form method="POST" action="/admin-panel/upload" enctype="multipart/form-data">
+                    <div class="file-upload-container">
+                        <input 
+                            type="file" 
+                            name="files" 
+                            id="file-upload" 
+                            multiple 
+                            accept="*/*" 
+                            class="file-input"
+                        >
+                        <label for="file-upload" class="btn btn-primary">
+                            Elegir archivos
+                        </label>
+                        <input 
+                            type="submit" 
+                            value="Subir archivos" 
+                            class="btn btn-primary"
+                        >
+                    </div>
+                    <div class="selected-files-preview" id="file-preview">
+
+                    </div>
                 </form>
+                
+
                 <div class="file-list">
                     <div class="file-item"></div>
                 </div>
