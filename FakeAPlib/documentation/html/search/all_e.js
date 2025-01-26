@@ -10,11 +10,11 @@ var searchData=
   ['sdsize_7',['sdSize',['../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a6355c82a62a58afc36cd568701eedbb9',1,'fakeAPLib::Placeholder_t']]],
   ['sdspaceused_8',['sdSpaceUsed',['../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a87392259932c6800d5734ca8e118024f',1,'fakeAPLib::Placeholder_t']]],
   ['serverip_9',['ServerIP',['../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a719d16a5a7204748e02a7cbacc00797b',1,'fakeAPLib::Placeholder_t']]],
-  ['setaccesspoint_10',['setAccessPoint',['../df/d01/class_wi_fi_captive_manager.html#ab7be1e9b24d5cbe8114ff41036abcef3',1,'WiFiCaptiveManager']]],
+  ['setaccesspoint_10',['setAccessPoint',['../df/d01/class_wi_fi_captive_manager.html#afb1bd9a6158aed7afa4233bb35acd4c9',1,'WiFiCaptiveManager']]],
   ['setpath_11',['setPath',['../df/d02/class_web_server_manager.html#a79a4cf819803219bce7963f39a8ce613',1,'WebServerManager::setPath(const char *path, FileType_t fileType)'],['../df/d02/class_web_server_manager.html#a07308fe1328d0c2a2dd7963babeb6e33',1,'WebServerManager::setPath(const String &amp;path, FileType_t fileType)'],['../df/d02/class_web_server_manager.html#a1dfc33aef93dce6bbfe966296eeaf1a6',1,'WebServerManager::setPath(const char *path, Platform_t platform)'],['../df/d02/class_web_server_manager.html#a24b5eed12137bcbf32729f76fef72dff',1,'WebServerManager::setPath(const String &amp;path, Platform_t platform)']]],
   ['setserverip_12',['setServerIP',['../df/d01/class_wi_fi_captive_manager.html#a65cec752a004af45b799ca36263fd468',1,'WiFiCaptiveManager']]],
   ['setupcaptiveportal_13',['setupCaptivePortal',['../d5/d03/class_fake_a_p.html#ac955737319d6c30924292c26b15bdadc',1,'FakeAP']]],
-  ['setwifistation_14',['setWifiStation',['../df/d01/class_wi_fi_captive_manager.html#a33bb6307a6046532e4fdf13c16e35783',1,'WiFiCaptiveManager']]],
+  ['setwifistation_14',['setWifiStation',['../df/d01/class_wi_fi_captive_manager.html#a3cc466f9f92e5ec33e31510e3af75560',1,'WiFiCaptiveManager']]],
   ['start_15',['start',['../df/d02/class_web_server_manager.html#a80f909d7a81b2bf4dbeeb71d8266c9f3',1,'WebServerManager']]],
   ['startcaptiveserver_16',['startCaptiveServer',['../d5/d03/class_fake_a_p.html#aa42b8e0e93969142e63e0d65e8926bc6',1,'FakeAP']]],
   ['submitcredentials_17',['submitCredentials',['../df/d01/class_wi_fi_captive_manager.html#ade69c1e9b697d3493652902bce86dcaa',1,'WiFiCaptiveManager']]]

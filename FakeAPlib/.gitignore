@@ -1,6 +1,8 @@
 #utility files/folders
 dump
-latex
+dox_ouput
+doxygen_log.txt
+debugoutput.yaml
 
 #IDE specific files
 #vscode

@@ -1,0 +1,58 @@
+\doxysection{Fake\+APlib.\+h}
+\hypertarget{_fake_a_plib_8h_source}{}\label{_fake_a_plib_8h_source}\index{src/FakeAPlib.h@{src/FakeAPlib.h}}
+\mbox{\hyperlink{_fake_a_plib_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#ifndef\ FAKEAPLIB\_LIB}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ FAKEAPLIB\_LIB}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{include_8h}{./include/include.h}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_s_d_card_manager_8h}{./include/SDCardManager.h}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_wifi_captive_portal_8h}{./include/WifiCaptivePortal.h}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_web_server_handler_8h}{./include/WebServerHandler.h}}"{}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00116\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_fake_a_p_a52f5b2c936f62efb5733abdb9b71826e}{FakeAP}}}
+\DoxyCodeLine{00117\ \ \ \ \ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_web_server_manager_a350cb5a01307bc23a6f7f3963d824c74}{WebServerManager}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_wi_fi_captive_manager_a78d44377e4493e2aa02dbf5bc8a71ea4}{WiFiCaptiveManager}}}
+\DoxyCodeLine{00118\ \{}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_fake_a_p_ac955737319d6c30924292c26b15bdadc}{setupCaptivePortal}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_fake_a_p_a2f783ea8623fdcfb2a8a601d5dc402ba}{handleRoot}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_fake_a_p_a048d06af8ab517a41d819bafcaf953a1}{handleLogin}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_fake_a_p_a1e6be7d111efd8ce66eb7c19b1a33ffb}{handleSubmit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_fake_a_p_aa6276373aeb7a5d158ac01045315932c}{handleIcons}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_fake_a_p_aa3a8eb30ccab86cf34d11e00841145bd}{getImageFile}}(\textcolor{keyword}{const}\ String\&\ iconName);}
+\DoxyCodeLine{00167\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00177\ \ \ \ \ \mbox{\hyperlink{class_fake_a_p_a52f5b2c936f62efb5733abdb9b71826e}{FakeAP}}();}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00184\ \ \ \ \ \mbox{\hyperlink{class_fake_a_p_a52f5b2c936f62efb5733abdb9b71826e}{FakeAP}}(\textcolor{keyword}{const}\ uint8\_t\&\ port);}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \mbox{\hyperlink{class_fake_a_p_ab0872965f34c3374ae4694a975525b2e}{FakeAP}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_fake_a_p_a52f5b2c936f62efb5733abdb9b71826e}{FakeAP}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \mbox{\hyperlink{class_fake_a_p_a52f5b2c936f62efb5733abdb9b71826e}{FakeAP}}\ \mbox{\hyperlink{class_fake_a_p_abcfee90aaf34268cfa8c3ae9df9d77c1}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_fake_a_p_a52f5b2c936f62efb5733abdb9b71826e}{FakeAP}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_fake_a_p_a938352e763c34554d39f3420a926411f}{initialize}}(\textcolor{keyword}{const}\ String\ \&AP\_SSID,\ \textcolor{keyword}{const}\ String\ \&AP\_PSW\ =\ \textcolor{stringliteral}{"{}\(\backslash\)0"{}},\ }
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ String\ \&WIFI\_SSID\ =\ \textcolor{stringliteral}{"{}\(\backslash\)0"{}},\ \textcolor{keyword}{const}\ String\ \&WIFI\_PSW\ =\ \textcolor{stringliteral}{"{}\(\backslash\)0"{}});}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \ \ \ \ }
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_fake_a_p_aa42b8e0e93969142e63e0d65e8926bc6}{startCaptiveServer}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \};}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \textcolor{preprocessor}{\#ifndef\ FAKEAP\_NO\_GLOBALS}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//FAKEAP\_NO\_GLOBALS}}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//FAKEAPLIB\_LIB}}
+
+\end{DoxyCode}

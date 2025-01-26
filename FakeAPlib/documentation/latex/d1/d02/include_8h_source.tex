@@ -1,0 +1,224 @@
+\doxysection{include.\+h}
+\hypertarget{include_8h_source}{}\label{include_8h_source}\index{src/include/include.h@{src/include/include.h}}
+\mbox{\hyperlink{include_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ INCLUDE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ INCLUDE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <FS.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <SD\_MMC.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <WiFi.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <WiFiAP.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <WiFiSTA.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <NetworkClient.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <WebServer.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <DNSServer.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <String>}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\#include\ <WiFiMulti.h>}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\#include\ <UrlEncode.h>}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\#include\ <HTTPRequest.hpp>}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\#include\ <HTTPResponse.hpp>}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\#include\ <memory>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacefake_a_p_lib}{fakeAPLib}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//typedef\ struct\ ESPConfig\_t;}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t}{Placeholder\_t}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ String\ \mbox{\hyperlink{namespacefake_a_p_lib_aff88dbab8f98a145a72d771bb288012d}{getCurrentTime}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ String\ \mbox{\hyperlink{namespacefake_a_p_lib_a7f444a5808e2a3501a4be791fafc5864}{getReadableSize}}(\textcolor{keyword}{const}\ uint64\_t\&\ bytes);}
+\DoxyCodeLine{00049\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00056\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{include_8h_aa8298ffc203837d96d3c0013c0506fb3af2fe22452b791e2585afaa5b9f41793f}{ADMINPAGE}}\ =\ \textcolor{charliteral}{'A'},}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{include_8h_aa8298ffc203837d96d3c0013c0506fb3a7db207cda2d286d6f20e427cf0aae786}{DATAFILE}}\ \ =\ \textcolor{charliteral}{'D'},}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{include_8h_aa8298ffc203837d96d3c0013c0506fb3a16ed535d183214749a1cc7c6bc0751ee}{EXITPAGE}}\ \ =\ \textcolor{charliteral}{'E'},}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{include_8h_aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844}{INDEXPAGE}}\ =\ \textcolor{charliteral}{'I'}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//LOGFILE\ \ \ =\ 'l',}}
+\DoxyCodeLine{00062\ \}\ \mbox{\hyperlink{include_8h_aa8298ffc203837d96d3c0013c0506fb3}{FileType\_t}};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00069\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{include_8h_aa027791d4c6bbda765e876c1bf8ddff6a7d5f8c8379dcd2c8a94c15c72302586c}{FACEBOOK}}\ \ =\ \textcolor{charliteral}{'F'},}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{include_8h_aa027791d4c6bbda765e876c1bf8ddff6a14e1e9c8e5f5a807deef8ee2bf38974d}{GOOGLE}}\ \ \ \ =\ \textcolor{charliteral}{'G'},}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{include_8h_aa027791d4c6bbda765e876c1bf8ddff6afa07d9774ff62173c36267023c8e4390}{INSTAGRAM}}\ =\ \textcolor{charliteral}{'I'},}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{include_8h_aa027791d4c6bbda765e876c1bf8ddff6a6b09926d98e3d10888b34a57fff96ab8}{TWITTER}}\ \ \ =\ \textcolor{charliteral}{'T'}}
+\DoxyCodeLine{00074\ \}\ \mbox{\hyperlink{include_8h_aa027791d4c6bbda765e876c1bf8ddff6}{Platform\_t}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00095\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t}{fakeAPLib::Placeholder\_t}}}
+\DoxyCodeLine{00096\ \{}
+\DoxyCodeLine{00097\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//static\ inline\ const\ String\ FileName\ \ \ \ \ \ \ \ =\ "{}!\{FILE\_NAME\}"{};\ \ \ /**<\ Marcador\ de\ posición\ para\ \ */}}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//static\ inline\ const\ String\ FilePath\ \ \ \ \ \ \ \ =\ "{}!\{FILE\_PATH\}"{};\ \ \ /**<\ Marcador\ de\ posición\ para\ \ */}}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t_ada4e83008657ed3dbc2531b52ad6d750}{AccessPointSSID}}\ =\ \textcolor{stringliteral}{"{}!\{AP\_SSID\}"{}};\ \ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t_a2a5c4b8ea63a6655e4c296552f2a46c5}{WifiSSID}}\ \ \ \ \ \ \ \ =\ \textcolor{stringliteral}{"{}!\{WIFI\_SSID\}"{}};\ \ \ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t_ae68ec1400ade62c1b0b92aa88c17eefe}{WifiStatus}}\ \ \ \ \ \ =\ \textcolor{stringliteral}{"{}!\{WIFI\_STATUS\}"{}};\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t_a1aa3fe576998faf13786e50ae3c2f561}{HostsConected}}\ \ \ =\ \textcolor{stringliteral}{"{}!\{TOTAL\_HOST\}"{}};\ \ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t_a719d16a5a7204748e02a7cbacc00797b}{ServerIP}}\ \ \ \ \ \ \ \ =\ \textcolor{stringliteral}{"{}!\{SERV\_IP\}"{}};\ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t_a2ffdc077db24e986f948d9b39c3a2e25}{ClientIP}}\ \ \ \ \ \ \ \ =\ \textcolor{stringliteral}{"{}!\{CLIENT\_IP\}"{}};\ \ \ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t_a1757166ea0e7e9cb67e50dd076458624}{WiFiStrength}}\ \ \ \ =\ \textcolor{stringliteral}{"{}!\{WIFI\_SIGNAL\}"{}};\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t_a6355c82a62a58afc36cd568701eedbb9}{sdSize}}\ \ \ \ \ \ \ \ \ \ =\ \textcolor{stringliteral}{"{}!\{SD\_SIZE\}"{}};\ \ \ \ \ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t_abb2efcc5072e7db6471f3b452c928d40}{sdFreeSpace}}\ \ \ \ \ =\ \textcolor{stringliteral}{"{}!\{SD\_FREE\}"{}};\ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t_a87392259932c6800d5734ca8e118024f}{sdSpaceUsed}}\ \ \ \ \ =\ \textcolor{stringliteral}{"{}!\{SD\_USED\}"{}};\ \ \ \ \ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t_a7cdcbcdb49ba30664029851cab5cd2ff}{sdCardType}}\ \ \ \ \ \ =\ \textcolor{stringliteral}{"{}!\{SD\_TYPE\}"{}};\ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t_a96c3cd23d94b408186667d44f45c3917}{FacebookPath}}\ \ \ \ =\ \textcolor{stringliteral}{"{}!\{FB\_PATH\}"{}};\ \ \ \ \ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t_a4a48970727d4de4854c7e50abc2cddce}{GooglePath}}\ \ \ \ \ \ =\ \textcolor{stringliteral}{"{}!\{GL\_PATH\}"{}};\ \ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t_ae137bd798a5ab641e5a8ba53748d99f2}{InstagramPath}}\ \ \ =\ \textcolor{stringliteral}{"{}!\{IS\_PATH\}"{}};\ \ \ \ \ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ String\ \mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t_a5f177e3311655292b39e9ad2d2af5159}{TwitterPath}}\ \ \ \ \ =\ \textcolor{stringliteral}{"{}!\{TW\_PATH\}"{}};\ \ \ \ \ }
+\DoxyCodeLine{00115\ \};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{namespacefake_a_p_lib_aff88dbab8f98a145a72d771bb288012d}{fakeAPLib::getCurrentTime}}()}
+\DoxyCodeLine{00119\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ runMillis=\ millis();}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ allSeconds=\ runMillis\ /\ 1000;}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ secsRemaining=\ allSeconds\ \%\ 3600;}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ uint8\_t\ hours\ \ \ =\ allSeconds\ /\ 3600;}
+\DoxyCodeLine{00125\ \ \ \ \ uint8\_t\ minutes\ =\ secsRemaining\ /\ 60;}
+\DoxyCodeLine{00126\ \ \ \ \ uint8\_t\ seconds\ =\ secsRemaining\ \%\ 60;}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordflow}{return}\ String(hours)\ +\ \textcolor{stringliteral}{"{}:"{}}\ +\ String(minutes)\ +\ \textcolor{stringliteral}{"{}:"{}}\ +\ String(seconds);}
+\DoxyCodeLine{00129\ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{namespacefake_a_p_lib_a7f444a5808e2a3501a4be791fafc5864}{fakeAPLib::getReadableSize}}(\textcolor{keyword}{const}\ uint64\_t\&\ bytes)}
+\DoxyCodeLine{00133\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordflow}{if}\ \ \ \ \ \ (bytes\ <\ 1024)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String(bytes)\ +\ \textcolor{stringliteral}{"{}\ B"{}};}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (bytes\ <\ (1024\ *\ 1024))\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String(bytes\ /\ 1024.0)\ +\ \textcolor{stringliteral}{"{}\ KB"{}};}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (bytes\ <\ (1024\ *\ 1024\ *\ 1024))\ \textcolor{keywordflow}{return}\ String(bytes\ /\ (1024.0\ *\ 1024.0))\ +\ \textcolor{stringliteral}{"{}\ MB"{}};}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordflow}{else}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String(bytes\ /\ (1024.0\ *\ 1024.0\ *\ 1024.0))\ +\ \textcolor{stringliteral}{"{}\ GB"{}};}
+\DoxyCodeLine{00138\ \}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00146\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00147\ \textcolor{comment}{typedef\ struct\ fakeAPLib::ESPConfig\_t}}
+\DoxyCodeLine{00148\ \textcolor{comment}{\{}}
+\DoxyCodeLine{00149\ \textcolor{comment}{public:}}
+\DoxyCodeLine{00150\ \textcolor{comment}{\ \ \ \ static\ String\ configPath;}}
+\DoxyCodeLine{00151\ \textcolor{comment}{\};}}
+\DoxyCodeLine{00152\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespacefake_a_p_lib}{fakeAPLib}};}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#ifndef\ USE\_GLOBAL\_VAL}}
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#define\ USE\_GLOBAL\_VAL\ true}}
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#if\ (USE\_GLOBAL\_VAL)}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\ \ \ \ \#define\ TIME\_OUT\_LIMIT\ 20000}}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\ \ \ \ \#define\ MAX\_LOGIN\_TIME\ 150000}}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\ \ \ \ \#define\ LOGIN\_LOCKOUT\_TIME\ 300000}}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \textcolor{preprocessor}{\ \ \ \ \#ifndef\ MAX\_LOGIN\_ATTEMPTS}}
+\DoxyCodeLine{00168\ \textcolor{preprocessor}{\ \ \ \ \#define\ MAX\_LOGIN\_ATTEMPTS\ 4}}
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\ \ \ \ \#ifndef\ LOG\_FILE}}
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\ \ \ \ \#define\ LOG\_FILE\ "{}/logs/logs.log"{}}}
+\DoxyCodeLine{00173\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \textcolor{preprocessor}{\ \ \ \ \#ifndef\ JSON\_FILE\_PATH}}
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\ \ \ \ \#define\ JSON\_FILE\_PATH\ "{}/webpages/admin-\/login/filesdata.json"{}}}
+\DoxyCodeLine{00177\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\ \ \ \ \#if\ !defined(ADMIN\_USERNAME)\ \&\&\ !defined(ADMIN\_PASSWORD)}}
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\ \ \ \ \#define\ ADMIN\_USERNAME\ "{}admin"{}}}
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\ \ \ \ \#define\ ADMIN\_PASSWORD\ "{}@dmIn129"{}}}
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\ \ \ \ \#ifndef\ DNS\_PORT}}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\ \ \ \ \#define\ DNS\_PORT\ 53}}
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\ \ \ \ \#ifndef\ SERVER\_PORT}}
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\ \ \ \ \#define\ SERVER\_PORT\ 80}}
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\ \ \ \ \#if\ !defined(SD\_MMC\_CMD)\ \&\&\ !defined(SD\_MMC\_CLK)\ \&\&\ !defined(SD\_MMC\_D0)}}
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\ \ \ \ \#define\ SD\_MMC\_CMD\ 15}}
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\ \ \ \ \#define\ SD\_MMC\_CLK\ 14}}
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\ \ \ \ \#define\ SD\_MMC\_D0\ 2}}
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \textcolor{preprocessor}{\ \ \ \ \#ifndef\ WITH\_ERROR\_TYPE}}
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\ \ \ \ \#define\ WITH\_ERROR\_TYPE\ true}}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\ \ \ \ \#ifndef\ WITH\_SUCCESS\_MESSAGE}}
+\DoxyCodeLine{00203\ \textcolor{preprocessor}{\ \ \ \ \#define\ WITH\_SUCCESS\_MESSAGE\ true}}
+\DoxyCodeLine{00204\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\ \ \ \ \#ifndef\ SERVER\_SCREEN\_LOGS}}
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\ \ \ \ \#define\ SERVER\_SCREEN\_LOGS\ true}}
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \textcolor{preprocessor}{\ \ \ \ \#if\ (WITH\_ERROR\_TYPE)}}
+\DoxyCodeLine{00211\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ ERROR\_SD\_NOT\_INIT\ \ \ \ \ \ "{}[ERROR]\ La\ tarjeta\ SD\ no\ ha\ sido\ inicializada"{}}}
+\DoxyCodeLine{00212\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ ERROR\_SD\_CARD\_TYPE\ \ \ \ \ "{}[ERROR]\ El\ tipo\ de\ tarjeta\ SD\ es\ incompatible"{}}}
+\DoxyCodeLine{00213\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ ERROR\_SD\_CARD\_READ\ \ \ \ \ "{}[ERROR]\ error\ en\ la\ lectura\ de\ la\ tarjeta"{}}}
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ ERROR\_FILE\_OPEN\ \ \ \ \ \ \ \ "{}[ERROR]\ Error\ al\ abrir\ el\ archivo:\ \%s\(\backslash\)n"{}}}
+\DoxyCodeLine{00215\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ ERROR\_NO\_FILE\ \ \ \ \ \ \ \ \ \ "{}[ERROR]\ El\ archivo\ \%s\ no\ existe\(\backslash\)n"{}}}
+\DoxyCodeLine{00216\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ ERROR\_FILE\_WRITE\ \ \ \ \ \ \ "{}[ERROR]\ Error\ al\ escribir\ en\ el\ archivo:\ \%s\(\backslash\)n"{}}}
+\DoxyCodeLine{00217\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ ERROR\_FILE\_RENAME\ \ \ \ \ \ "{}[ERROR]\ Error\ al\ renombrar\ archivo/carpeta:\ \%s\(\backslash\)n"{}}}
+\DoxyCodeLine{00218\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ ERROR\_FILE\_TYPE\ \ \ \ \ \ \ \ "{}[ERROR]\ Error\ de\ tipo\ de\ archivo/carpeta:\ \%s\(\backslash\)n"{}}}
+\DoxyCodeLine{00219\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ ERROR\_FILE\_DELETE\ \ \ \ \ \ "{}[ERROR]\ Error\ al\ borrar\ el\ archivo:\ \%s\(\backslash\)n"{}}}
+\DoxyCodeLine{00220\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ ERROR\_DIR\_CREATE\ \ \ \ \ \ \ "{}[ERROR]\ Error\ al\ crear\ la\ carpeta:\ \%s\(\backslash\)n"{}}}
+\DoxyCodeLine{00221\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ ERROR\_DIR\_DELETE\ \ \ \ \ \ \ "{}[ERROR]\ Error\ al\ borrar\ la\ carpeta:\ \%s\(\backslash\)n"{}}}
+\DoxyCodeLine{00222\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ ERROR\_WIFIAP\_CREATE\ \ \ \ "{}[ERROR]\ La\ creación\ del\ punto\ de\ acceso\ ha\ fallado"{}}}
+\DoxyCodeLine{00223\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ ERROR\_WIFI\_CONNECT\ \ \ \ \ "{}[ERROR]\ No\ se\ pudo\ conectar\ a\ la\ red\ wifi\ \%s\(\backslash\)n"{}}}
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ ERROR\_SAVE\_CREDENTIALS\ "{}[ERROR]\ Error\ al\ guardar\ las\ credenciales"{}}}
+\DoxyCodeLine{00225\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ ERROR\_GENERATE\_JSON\ \ \ \ "{}[ERROR]\ Error\ al\ crear\ el\ fichero\ JSON"{}}}
+\DoxyCodeLine{00226\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ ERROR\_SERVER\_IMAGE\ \ \ \ \ "{}[ERROR]\ Respuesta\ del\ servidor\ erronea"{}}}
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \textcolor{preprocessor}{\ \ \ \ \#if\ (WITH\_SUCCESS\_MESSAGE)}}
+\DoxyCodeLine{00230\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ SUCCESS\_SD\_INIT\ \ \ \ \ \ \ \ \ \ "{}[SUCCESS]\ Tarjeta\ SD\ inicializada\ correctamente"{}}}
+\DoxyCodeLine{00231\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ SUCCESS\_FILE\_OPEN\ \ \ \ \ \ \ \ "{}[SUCCESS]\ El\ archivo:\ \%s\ se\ ha\ leído\ correctamente.\ Tiempo:\ \%dms\(\backslash\)n"{}}}
+\DoxyCodeLine{00232\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ SUCCESS\_FILE\_WRITE\ \ \ \ \ \ \ "{}[SUCCESS]\ El\ archivo:\ \%s\ se\ ha\ guardado\ correctamente.\ Tiempo:\ \%dms\(\backslash\)n"{}}}
+\DoxyCodeLine{00233\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ SUCCESS\_FILE\_RENAME\ \ \ \ \ \ "{}[SUCCESS]\ El\ archivo:\ \%s\ se\ ha\ renombrado\ correctamente\(\backslash\)n"{}}}
+\DoxyCodeLine{00234\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ SUCCESS\_FILE\_DELETE\ \ \ \ \ \ "{}[SUCCESS]\ El\ archivo:\ \%s\ se\ ha\ borrado\ correctamente\(\backslash\)n"{}}}
+\DoxyCodeLine{00235\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ SUCCESS\_DIR\_CREATE\ \ \ \ \ \ \ "{}[SUCCESS]\ La\ carpeta:\ \%s\ se\ ha\ creado\ correctamente\(\backslash\)n"{}}}
+\DoxyCodeLine{00236\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ SUCCESS\_DIR\_DELETE\ \ \ \ \ \ \ "{}[SUCCESS]\ La\ carpeta:\ \%s\ se\ ha\ borrado\ correctamente\(\backslash\)n"{}}}
+\DoxyCodeLine{00237\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ SUCCESS\_WIFIAP\_INIT\ \ \ \ \ \ "{}[SUCCESS]\ Punto\ de\ acceso\ iniciado\ correctamente"{}}}
+\DoxyCodeLine{00238\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ SUCCESS\_WIFISTA\_CONECT\ \ \ "{}[SUCCESS]\ Se\ ha\ conectado\ correctamente\ a\ la\ red:\ \%s\(\backslash\)n"{}}}
+\DoxyCodeLine{00239\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ SUCCESS\_SERVER\_INIT\ \ \ \ \ \ "{}[SUCCESS]\ Servidor\ iniciado\ correctamente"{}}}
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ SUCCESS\_APSERVER\_INIT\ \ \ \ "{}[SUCCESS]\ El\ servidor\ del\ punto\ de\ acceso\ cautivo\ iniciado\ correctamente"{}}}
+\DoxyCodeLine{00241\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ SUCCESS\_LOG\_EVENT\ \ \ \ \ \ \ \ "{}[LOGS]\ Evento\ guardado\ correctamente"{}}}
+\DoxyCodeLine{00242\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ SUCCESS\_SAVE\_CREDENTIALS\ "{}[SUCCESS]\ Credenciales\ enviadas\ y\ guardadas\ correctamente"{}}}
+\DoxyCodeLine{00243\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ SUCCESS\_GENERATE\_JSON\ \ \ \ "{}[SUCCESS]\ El\ archivo\ JSON\ se\ generó\ correctamente"{}}}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\#define\ SUCCESS\_SD\_CARD\_TYPE\ "{}[SUCCESS]\ El\ tipo\ de\ tarjeta\ es\ incompatible"{}}}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\#define\ SUCCESS\_SD\_CARD\_READ\ "{}[SUCCESS]\ en\ la\ lectura\ de\ la\ tarjeta"{}}}
+\DoxyCodeLine{00246\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \textcolor{preprocessor}{\ \ \ \ \#if\ (SERVER\_SCREEN\_LOGS)}}
+\DoxyCodeLine{00249\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ NEW\_PAGE\_REQ\ \ \ \ \ \ \ "{}[SERVER]\ Nueva\ solicitud\ de\ pagina\ \%s\(\backslash\)n"{}}}
+\DoxyCodeLine{00250\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ NEW\_WIFI\_CONFIG\ \ \ \ "{}[SERVER]\ Configuración\ wifi\ guardada"{}}}
+\DoxyCodeLine{00251\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ UPLOAD\_STARTED\ \ \ \ \ "{}[SERVER]\ Empieza\ la\ carga\ del\ archivo\ \%s\(\backslash\)n"{}}}
+\DoxyCodeLine{00252\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ NEW\_ADMIN\_LOGIN\ \ \ \ "{}[SERVER]\ Nueva\ conexión\ de\ administrador"{}}}
+\DoxyCodeLine{00253\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ NEW\_SOCIALS\_PATH\ \ \ "{}[SERVER]\ Nuevas\ rutas\ indicadas\ para\ las\ paginas\ de\ redes\ sociales."{}}}
+\DoxyCodeLine{00254\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ NEW\_FILE\_CONTENT\ \ \ "{}[SERVER]\ Displaying\ file\ \%s\(\backslash\)n"{}}}
+\DoxyCodeLine{00255\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ NEW\_FILE\_DELETED\ \ \ "{}[SERVER]\ El\ archivo\ \%s\ se\ ha\ borrado\ correctamente\(\backslash\)n"{}}}
+\DoxyCodeLine{00256\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ NEW\_FILE\_UPLOADED\ \ "{}[SERVER]\ El\ archivo\ \%s\ se\ ha\ subido\ al\ servidor\(\backslash\)n"{}}}
+\DoxyCodeLine{00257\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ FAILED\_FILE\_UPLOAD\ "{}[SERVER]\ El\ archivo\ \%s\ no\ se\ pudo\ subir\ al\ servidor\(\backslash\)n"{}}}
+\DoxyCodeLine{00258\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ FAILED\_ADMIN\_LOGIN\ "{}[SERVER]\ Intento\ de\ connexión\ como\ admin\ fallado."{}}}
+\DoxyCodeLine{00259\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ FAILED\_CREDENTIALS\ "{}[SERVER]\ Error\ al\ guardar\ las\ credenciales"{}}}
+\DoxyCodeLine{00260\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ FAILED\_UNEXPECTED\ \ "{}[SERVER]\ Ha\ occurido\ un\ error\ inesperado\ al\ subir\ el\ archivo"{}}}
+\DoxyCodeLine{00261\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//USE\_GLOBAL\_VAR}}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//INCLUDE\_H}}
+
+\end{DoxyCode}

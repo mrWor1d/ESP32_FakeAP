@@ -1,0 +1,50 @@
+\doxysection{Wifi\+Captive\+Portal.\+h}
+\hypertarget{_wifi_captive_portal_8h_source}{}\label{_wifi_captive_portal_8h_source}\index{src/include/WifiCaptivePortal.h@{src/include/WifiCaptivePortal.h}}
+\mbox{\hyperlink{_wifi_captive_portal_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ WIFI\_CAPTIVE\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ WIFI\_CAPTIVE\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{include_8h}{include.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_wi_fi_captive_manager_a78d44377e4493e2aa02dbf5bc8a71ea4}{WiFiCaptiveManager}}}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00048\ \ \ \ \ WiFiClient\ *\mbox{\hyperlink{class_wi_fi_captive_manager_a16222d86b8c26b8f78982ab493303096}{\_client}};\ }
+\DoxyCodeLine{00049\ \ \ \ \ IPAddress\ \ *\mbox{\hyperlink{class_wi_fi_captive_manager_ad7b7ce8a1a9869f0103f429e76e619db}{\_serverIP}};\ }
+\DoxyCodeLine{00050\ \ \ \ \ String\ \ \ \ \ \ \mbox{\hyperlink{class_wi_fi_captive_manager_a9cad13f122b1dff8c462b8e545251d87}{\_pageContent}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)0"{}};\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_wi_fi_captive_manager_a87a03fc06e9a07375631dcd26d0f0df1}{getLoginPage}}(\textcolor{keyword}{const}\ String\ \&platform);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_wi_fi_captive_manager_ade69c1e9b697d3493652902bce86dcaa}{submitCredentials}}(\textcolor{keyword}{const}\ String\ \&platform,\ \textcolor{keyword}{const}\ String\ \&username,\ \textcolor{keyword}{const}\ String\ \&password);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{class_wi_fi_captive_manager_a78d44377e4493e2aa02dbf5bc8a71ea4}{WiFiCaptiveManager}}();}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{class_wi_fi_captive_manager_a78d44377e4493e2aa02dbf5bc8a71ea4}{WiFiCaptiveManager}}(IPAddress\ \&ip);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_wi_fi_captive_manager_a359ab36eb83082b77062aec5dc236088}{\string~WiFiCaptiveManager}}();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{class_wi_fi_captive_manager_a784c595055365b7eb366af41f19b8a13}{WiFiCaptiveManager}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_wi_fi_captive_manager_a78d44377e4493e2aa02dbf5bc8a71ea4}{WiFiCaptiveManager}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00103\ \ \ \ \ \mbox{\hyperlink{class_wi_fi_captive_manager_a78d44377e4493e2aa02dbf5bc8a71ea4}{WiFiCaptiveManager}}\ \mbox{\hyperlink{class_wi_fi_captive_manager_ad74ed371d6b96a2489f64047a4b10a9c}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_wi_fi_captive_manager_a78d44377e4493e2aa02dbf5bc8a71ea4}{WiFiCaptiveManager}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_wi_fi_captive_manager_a65cec752a004af45b799ca36263fd468}{setServerIP}}(\textcolor{keyword}{const}\ IPAddress\ \&IP);}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00118\ \ \ \ \ String\ \&\mbox{\hyperlink{class_wi_fi_captive_manager_a7ffcc34219685ca9e916ba5cb2c0ef40}{getPageContent}}();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00125\ \ \ \ \ IPAddress\ \&\mbox{\hyperlink{class_wi_fi_captive_manager_a8764fe95f34df4a33f2cab0529f6ead9}{getServerIp}}();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_wi_fi_captive_manager_a3cc466f9f92e5ec33e31510e3af75560}{setWifiStation}}(\textcolor{keyword}{const}\ String\ \&wifissid,\ \textcolor{keyword}{const}\ String\ \&wifipsw\ =\ \textcolor{stringliteral}{"{}\(\backslash\)0"{}});}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_wi_fi_captive_manager_afb1bd9a6158aed7afa4233bb35acd4c9}{setAccessPoint}}(\textcolor{keyword}{const}\ String\ \&ssid,\ \textcolor{keyword}{const}\ String\ \&psw\ =\ \textcolor{stringliteral}{"{}\(\backslash\)0"{}}\ );}
+\DoxyCodeLine{00144\ \};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

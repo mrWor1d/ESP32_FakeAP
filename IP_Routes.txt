@@ -1,0 +1,45 @@
+#####################################################################################
+################################## server's routes ##################################
+#####################################################################################
+##################################   IP 10.10.1.1  ##################################
+#####################################################################################
+
+## Description ### Method ###  IP route ### Handler function ##
+root page:          GET  http://10.10.1.1/ -> lambda
+
+- require credentials
+## Description ### Method ###           IP route                    ###  Handler function  ##
+get admin page:     POST  http://10.10.1.1/admin-panel                    -> handleAdminPanel
+get admin script:   GET   http://10.10.1.1/admin-panel/admin-app.js       -> lambda
+get admin styles:   GET   http://10.10.1.1/admin-panel/admin-style.css    -> lambda
+get SD files list:  GET   http://10.10.1.1/admin-panel/data.json          -> lambda
+show file content:  GET   http://10.10.1.1/admin-panel/display            -> handleFileDisplay
+file download:      POST  http://10.10.1.1/admin-panel/download           -> handleFileDownload
+file upload:        PUT   http://10.10.1.1/admin-panel/upload             -> handleFileUpload
+delete file:        POST  http://10.10.1.1/admin-panel/delete             -> handleFileDelete
+change wifi config: POST  http://10.10.1.1/admin-panel/wifi-configuration -> handleWiFiConfig
+change files path:  POST  http://10.10.1.1/admin-panel/socials-pages-path -> handlePagesPath
+
+- network comunication responses
+## Description ### Method ###             IP route              ###  Handler function  ##
+credentials saving: POST  http://10.10.1.1/submit-credentials -> handleSubmitCredentials
+f/t/i/g content:    GET   http://10.10.1.1/get-login-page     -> handleLoginPages
+send img icons:     GET   http://10.10.1.1/get-page-icons     -> handlePageIcons
+
+
+#########################################################################################
+################################## access point routes ##################################
+#########################################################################################
+##################################    IP 192.168.1.1   ##################################
+#########################################################################################
+
+## Description ### Method ###            IP route       ###  Handler function  ##
+root page:         GET  http://192.168.1.1/                        -> lambda
+index page styles: GET  http://192.168.1.1/index/index-styles.css  -> lambda
+index page icons:  GET  http://192.168.1.1/login                   -> handleIcons
+
+- network comunication requests
+##  Description  ### Method ###            IP route         ###  Handler function  ##
+send credentials:     POST http://192.168.1.1/submit            -> handleSubmit
+request page content: GET  http://192.168.1.1/login             -> lambda
+request page icons:   GET  http://192.168.1.1//index/page-icon  -> getImageFile

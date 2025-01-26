@@ -1,0 +1,613 @@
+\doxysection{Referencia de la clase Web\+Server\+Manager}
+\hypertarget{class_web_server_manager}{}\label{class_web_server_manager}\index{WebServerManager@{WebServerManager}}
+
+
+Clase que gestiona la configuración y operación de un servidor web y DNS, junto con el manejo de archivos por solicitudes HTTP.  
+
+
+
+
+{\ttfamily \#include $<$Web\+Server\+Handler.\+h$>$}
+
+Diagrama de herencia de Web\+Server\+Manager\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{df/d02/class_web_server_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_web_server_manager_a350cb5a01307bc23a6f7f3963d824c74}{Web\+Server\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto que inicializa los apuntadores a nulo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_web_server_manager_abd4a80e068013d92952df57161d39033}{Web\+Server\+Manager}} (\mbox{\hyperlink{class_s_d_card_manager}{SDCard\+Manager}} \texorpdfstring{$\ast$}{*}sd, uint8\+\_\+t port=SERVER\+\_\+\+PORT)
+\begin{DoxyCompactList}\small\item\em Constructor que inicializa los servicios de servidor web y DNS con referencias a la tarjeta SD y autenticación. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_web_server_manager_acb10b79d4e8fc01e3e08d42462db49bc}{Web\+Server\+Manager}} (const \mbox{\hyperlink{class_web_server_manager}{Web\+Server\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Borrado para prevenir copias del objeto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_web_server_manager}{Web\+Server\+Manager}} \mbox{\hyperlink{class_web_server_manager_aa049330442cf7f82d62d28c0c9295d59}{operator=}} (const \mbox{\hyperlink{class_web_server_manager}{Web\+Server\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Borrado para prevenir copias del objeto. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_web_server_manager_ab67f19040ffec81746ff0be9d513b932}{\texorpdfstring{$\sim$}{\string~}\+Web\+Server\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase que libera la memoria asignada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_a80f909d7a81b2bf4dbeeb71d8266c9f3}{start}} (void)
+\begin{DoxyCompactList}\small\item\em Inicia la lógica del DNS y configura las rutas (endpoints) principales del servidor web. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_acad523933eb6246769fa801f268dce1f}{process}} (void)
+\begin{DoxyCompactList}\small\item\em Procesa las peticiones entrantes tanto del servidor DNS como del servidor web. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_a79a4cf819803219bce7963f39a8ce613}{set\+Path}} (const char \texorpdfstring{$\ast$}{*}path, \mbox{\hyperlink{include_8h_aa8298ffc203837d96d3c0013c0506fb3}{File\+Type\+\_\+t}} file\+Type)
+\begin{DoxyCompactList}\small\item\em Asigna la ruta de archivo en la tarjeta SD a un tipo de archivo específico. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_a07308fe1328d0c2a2dd7963babeb6e33}{set\+Path}} (const String \&path, \mbox{\hyperlink{include_8h_aa8298ffc203837d96d3c0013c0506fb3}{File\+Type\+\_\+t}} file\+Type)
+\begin{DoxyCompactList}\small\item\em Sobrecarga que recibe una cadena String para asignar la ruta a un tipo de archivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_a1dfc33aef93dce6bbfe966296eeaf1a6}{set\+Path}} (const char \texorpdfstring{$\ast$}{*}path, \mbox{\hyperlink{include_8h_aa027791d4c6bbda765e876c1bf8ddff6}{Platform\+\_\+t}} platform)
+\begin{DoxyCompactList}\small\item\em Asigna la ruta o archivo correspondiente a una plataforma concreta (Facebook, Google, etc.). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_a24b5eed12137bcbf32729f76fef72dff}{set\+Path}} (const String \&path, \mbox{\hyperlink{include_8h_aa027791d4c6bbda765e876c1bf8ddff6}{Platform\+\_\+t}} platform)
+\begin{DoxyCompactList}\small\item\em Sobrecarga que recibe una cadena String para asignar la ruta de la plataforma solicitada. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_web_server_manager_aa50592f4b2f189d1add573e14e54ce34}{get\+HTMLContent}} (const String \&path)
+\begin{DoxyCompactList}\small\item\em Obtiene el contenido HTML del archivo especificado y modifica los {\ttfamily placeholders} con el valor correspondiente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_ac684e61c3042eb5241caa947ea3168b8}{generate\+JSONFile}} (const String \&dirname="{}/"{}, String \texorpdfstring{$\ast$}{*}file\+List=new String("{}"{}))
+\begin{DoxyCompactList}\small\item\em Genera un archivo JSON conteniendo la lista de todos los archivos que hay en la tarjeta SD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{class_web_server_manager_aabdd1adbc53f4a7e54c33a0d4a59ceb8}{get\+Content\+Type}} (const String \&filename)
+\begin{DoxyCompactList}\small\item\em Determina el tipo de contenido (MIME) a partir de la extensión de un archivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_a7de3a3031b727a0a00fb785a3120ab8a}{handle\+Submit\+Credentials}} (void)
+\begin{DoxyCompactList}\small\item\em Manejador para la ruta que recibe credenciales de formulario ("{}/submit-\/credentials"{}). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_a3c39e94b8a4f587813e8e5576f249829}{handle\+Admin\+Panel}} (void)
+\begin{DoxyCompactList}\small\item\em Manejador para la ruta del panel de administración ("{}/admin-\/panel"{}). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_a3c2490e1976cacfc7ba1563a655ca317}{handle\+Login\+Pages}} (void)
+\begin{DoxyCompactList}\small\item\em Maneja las páginas relacionadas con el inicio de sesión. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_a2dd9d3612ac9b571e6d304a922fca862}{handle\+Page\+Icons}} (void)
+\begin{DoxyCompactList}\small\item\em Maneja las solicitudes de iconos de las páginas web. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_ad7f493ed6ded5b0500fb2e3850149930}{handle\+File\+Download}} (void)
+\begin{DoxyCompactList}\small\item\em Maneja la descarga de archivos desde el servidor web. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_a4dd4026ec22ab5d193d9967cdce6b2be}{handle\+File\+Upload}} (void)
+\begin{DoxyCompactList}\small\item\em Manejador para la subida de archivos al servidor (vía formulario o HTTP POST). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_a3e9e5dcc277f2069b773144fe54f566a}{handle\+File\+Display}} (void)
+\begin{DoxyCompactList}\small\item\em Maneja la visualización de archivos en el servidor web. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_a896c0cfd261b129f57a792a422f5e664}{handle\+File\+Delete}} (void)
+\begin{DoxyCompactList}\small\item\em Maneja la eliminación de archivos en el servidor web. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_aeec627c2fed8f9bc9d991f86a455243a}{handle\+Wi\+Fi\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em Manejador para configurar la red Wi\+Fi vía formulario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_a3bca840d75d94d1b3dfc912115714846}{handle\+Pages\+Path}} (void)
+\begin{DoxyCompactList}\small\item\em Maneja las solicitudes HTTP para las páginas web almacenadas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_af861bc08e12b53cc0f5897e480908a5b}{handle\+Access\+Point}} (void)
+\begin{DoxyCompactList}\small\item\em Maneja la configuración y funcionamiento del punto de acceso Wi\+Fi. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_manager_a434e87700735fe3c0584d6673ffd3464}{refresh\+Admin\+Page}} (void)
+\item 
+bool \mbox{\hyperlink{class_web_server_manager_a5a6fb26c8e684ec6d230170154e057a9}{save\+To\+Data\+File}} (String data)
+\begin{DoxyCompactList}\small\item\em Función auxiliar para guardar de forma confiable datos recibidos, creando el directorio si no existe. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_web_server_manager_a6a6606ec70a4ca3fcf345be86ca0a872}{validate\+Admin\+Credentials}} (const String \&username, const String \&password)
+\begin{DoxyCompactList}\small\item\em Valida las credenciales del administrador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+Web\+Server \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_web_server_manager_a9b8629fc6b36a6f19a01c759c904fbaf}{m\+\_\+server}}
+\item 
+DNSServer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_web_server_manager_a0d5c12ab8c2435ad14bfecdb3ae43f78}{m\+\_\+dns\+Server}}
+\item 
+\mbox{\hyperlink{class_s_d_card_manager}{SDCard\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_web_server_manager_a28c84ce9218f960fdf30c2f7e378dd05}{m\+\_\+sd\+Manager}}
+\item 
+String \mbox{\hyperlink{class_web_server_manager_a85523b6c29a359fb378d0a02505997f2}{m\+\_\+index\+Page}} = "{}\textbackslash{}0"{}
+\item 
+String \mbox{\hyperlink{class_web_server_manager_a4543c2b9e5659d7a097fccb128b40209}{m\+\_\+exit\+Page}} = "{}\textbackslash{}0"{}
+\item 
+String \mbox{\hyperlink{class_web_server_manager_a4712d85f4df512e6ca3222216f51af02}{m\+\_\+admin\+Page}} = "{}\textbackslash{}0"{}
+\item 
+String \mbox{\hyperlink{class_web_server_manager_aad840d0e0721b8c3e2e5e5414059f7a6}{m\+\_\+datafile}} = "{}\textbackslash{}0"{}
+\item 
+String \mbox{\hyperlink{class_web_server_manager_af6762d92003b1569d434909e5fa9e677}{m\+\_\+facebook}} = "{}\textbackslash{}0"{}
+\item 
+String \mbox{\hyperlink{class_web_server_manager_a7453668115b815ba830643345f40dcbc}{m\+\_\+google}} = "{}\textbackslash{}0"{}
+\item 
+String \mbox{\hyperlink{class_web_server_manager_a006cce6f8fec98d21d61204b3dd1a471}{m\+\_\+instagram}} = "{}\textbackslash{}0"{}
+\item 
+String \mbox{\hyperlink{class_web_server_manager_aa04431910d5e4b717017e5150e5c36e6}{m\+\_\+twitter}} = "{}\textbackslash{}0"{}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_web_server_manager_a6bfc326cebd0b15ba49ead3f2fe36c62}{\+\_\+login\+Attempts}} = 0
+\item 
+unsigned long \mbox{\hyperlink{class_web_server_manager_abb4270d2772f60e23be64ce5be13a2db}{\+\_\+last\+Attempt\+Time}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase que gestiona la configuración y operación de un servidor web y DNS, junto con el manejo de archivos por solicitudes HTTP. 
+
+Esta clase ofrece funcionalidades para\+:
+\begin{DoxyItemize}
+\item Iniciar un portal cautivo mediante DNS y redirigir peticiones.
+\item Registrar rutas (endpoints) personalizados en el servidor web (p.\+ej. /admin-\/panel, /submit-\/credentials, etc.).
+\item Validar credenciales de administrador para acceso restringido.
+\item Cargar, crear y modificar contenido HTML para distintas plataformas sociales.
+\item Subir, descargar, eliminar y mostrar archivos a través de la tarjeta SD.
+\item Configurar la red Wi\+Fi mediante un formulario, guardando los ajustes de forma persistente.
+\end{DoxyItemize}
+
+Métodos principales\+:
+\begin{DoxyItemize}
+\item \doxylink{class_web_server_manager_a80f909d7a81b2bf4dbeeb71d8266c9f3}{start()}\+: Inicializa el servidor web y define sus rutas principales.
+\item \doxylink{class_web_server_manager_acad523933eb6246769fa801f268dce1f}{process()}\+: Procesa las peticiones entrantes de DNS y HTTP.
+\item \doxylink{class_web_server_manager_a79a4cf819803219bce7963f39a8ce613}{set\+Path()}\+: Asigna rutas de archivo o directorio en la SD para diferentes tipos (p.\+ej. índice, admin, redes sociales, etc.).
+\item \doxylink{class_web_server_manager_aa50592f4b2f189d1add573e14e54ce34}{get\+HTMLContent()}\+: Lee el contenido de un archivo HTML desde la SD y reemplaza marcadores con valores dinámicos.
+\item \doxylink{class_web_server_manager_ac684e61c3042eb5241caa947ea3168b8}{generate\+JSONFile()}\+: Genera un archivo JSON con la lista de archivos presentes en la tarjeta SD.
+\end{DoxyItemize}
+
+Atributos relevantes\+:
+\begin{DoxyItemize}
+\item m\+\_\+server, m\+\_\+dns\+Server, m\+\_\+sd\+Manager\+: Punteros para manejar el servidor web, DNS y la tarjeta SD, respectivamente.
+\item m\+\_\+index\+Page, m\+\_\+exit\+Page, m\+\_\+admin\+Page, etc.\+: Variables para almacenar rutas de archivos específicos.
+\item \+\_\+login\+Attempts, \+\_\+last\+Attempt\+Time\+: Controlan el número de intentos de acceso y el tiempo entre ellos.
+\end{DoxyItemize}
+
+Uso\+:
+\begin{DoxyItemize}
+\item Crear una instancia de \doxylink{class_web_server_manager}{Web\+Server\+Manager}, luego invocar \doxylink{class_web_server_manager_a80f909d7a81b2bf4dbeeb71d8266c9f3}{start()} para configurar y llamar \doxylink{class_web_server_manager_acad523933eb6246769fa801f268dce1f}{process()} dentro de la función {\ttfamily loop()}.
+\end{DoxyItemize}
+
+\begin{DoxyWarning}{Atención}
+Es responsabilidad del usuario asegurar una correcta gestión de memoria al utilizar los punteros m\+\_\+server, m\+\_\+dns\+Server y m\+\_\+sd\+Manager
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{Ver también}
+Web\+Server, DNSServer, \doxylink{class_s_d_card_manager}{SDCard\+Manager} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_web_server_manager_a350cb5a01307bc23a6f7f3963d824c74}\index{WebServerManager@{WebServerManager}!WebServerManager@{WebServerManager}}
+\index{WebServerManager@{WebServerManager}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{WebServerManager()}{WebServerManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a350cb5a01307bc23a6f7f3963d824c74} 
+Web\+Server\+Manager\+::\+Web\+Server\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor por defecto que inicializa los apuntadores a nulo. 
+
+Crea un objeto de tipo \doxylink{class_web_server_manager}{Web\+Server\+Manager}, pero no establece la configuración de la red ni la lógica del servidor. \Hypertarget{class_web_server_manager_abd4a80e068013d92952df57161d39033}\index{WebServerManager@{WebServerManager}!WebServerManager@{WebServerManager}}
+\index{WebServerManager@{WebServerManager}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{WebServerManager()}{WebServerManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_web_server_manager_abd4a80e068013d92952df57161d39033} 
+Web\+Server\+Manager\+::\+Web\+Server\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_d_card_manager}{SDCard\+Manager}} \texorpdfstring{$\ast$}{*}}]{sd}{, }\item[{uint8\+\_\+t}]{port}{ = {\ttfamily SERVER\+\_\+PORT}}\end{DoxyParamCaption})}
+
+
+
+Constructor que inicializa los servicios de servidor web y DNS con referencias a la tarjeta SD y autenticación. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em sd} & Puntero a la clase \doxylink{class_s_d_card_manager}{SDCard\+Manager} para manejar archivos. \\
+\hline
+\mbox{\texttt{ in}}  & {\em port} & Puerto en el que se iniciará el servidor web. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_web_server_manager_acb10b79d4e8fc01e3e08d42462db49bc}\index{WebServerManager@{WebServerManager}!WebServerManager@{WebServerManager}}
+\index{WebServerManager@{WebServerManager}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{WebServerManager()}{WebServerManager()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_web_server_manager_acb10b79d4e8fc01e3e08d42462db49bc} 
+Web\+Server\+Manager\+::\+Web\+Server\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_web_server_manager}{Web\+Server\+Manager}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Borrado para prevenir copias del objeto. 
+
+\Hypertarget{class_web_server_manager_ab67f19040ffec81746ff0be9d513b932}\index{WebServerManager@{WebServerManager}!````~WebServerManager@{\texorpdfstring{$\sim$}{\string~}WebServerManager}}
+\index{````~WebServerManager@{\texorpdfstring{$\sim$}{\string~}WebServerManager}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}WebServerManager()}{\string~WebServerManager()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_ab67f19040ffec81746ff0be9d513b932} 
+Web\+Server\+Manager\+::\texorpdfstring{$\sim$}{\string~}\+Web\+Server\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor de la clase que libera la memoria asignada. 
+
+Destruye los objetos creados dinámicamente, incluyendo el servidor web, el servidor DNS, el manejador de SD y el manejador de autenticación. 
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_web_server_manager_ac684e61c3042eb5241caa947ea3168b8}\index{WebServerManager@{WebServerManager}!generateJSONFile@{generateJSONFile}}
+\index{generateJSONFile@{generateJSONFile}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{generateJSONFile()}{generateJSONFile()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_ac684e61c3042eb5241caa947ea3168b8} 
+void Web\+Server\+Manager\+::generate\+JSONFile (\begin{DoxyParamCaption}\item[{const String \&}]{dirname}{ = {\ttfamily "{}/"{}}, }\item[{String \texorpdfstring{$\ast$}{*}}]{file\+List}{ = {\ttfamily new~String("{}"{})}}\end{DoxyParamCaption})}
+
+
+
+Genera un archivo JSON conteniendo la lista de todos los archivos que hay en la tarjeta SD. 
+
+Los parametros de esta función sirven únicamente para las llamadas recursivas. Esta función toma una ruta de directorio y un puntero a un objeto String que contendrá la lista de archivos para procesar y volcar en el archivo JSON.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em dirname} & Ruta del directorio donde se ubicarán o buscarán los archivos. (opcional) \\
+\hline
+\mbox{\texttt{ out}}  & {\em file\+List} & Puntero a un String que guardará los nombres y/o información de los archivos relevantes para generar el archivo JSON. (opcional)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+Si no se especifica, dirname se establece en "{}/"{} (raiz), mientras que file\+List se inicializa con un String vacío. 
+\end{DoxyNote}
+\Hypertarget{class_web_server_manager_aabdd1adbc53f4a7e54c33a0d4a59ceb8}\index{WebServerManager@{WebServerManager}!getContentType@{getContentType}}
+\index{getContentType@{getContentType}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{getContentType()}{getContentType()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_aabdd1adbc53f4a7e54c33a0d4a59ceb8} 
+String Web\+Server\+Manager\+::get\+Content\+Type (\begin{DoxyParamCaption}\item[{const String \&}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Determina el tipo de contenido (MIME) a partir de la extensión de un archivo. 
+
+Retorna diferentes MIME types (text/html, image/png, etc.) o "{}application/octet-\/stream"{} si no se reconoce la extensión.
+
+\begin{DoxyReturn}{Devuelve}
+un string que representa el tipo de MIME 
+\end{DoxyReturn}
+\Hypertarget{class_web_server_manager_aa50592f4b2f189d1add573e14e54ce34}\index{WebServerManager@{WebServerManager}!getHTMLContent@{getHTMLContent}}
+\index{getHTMLContent@{getHTMLContent}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{getHTMLContent()}{getHTMLContent()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_aa50592f4b2f189d1add573e14e54ce34} 
+String Web\+Server\+Manager\+::get\+HTMLContent (\begin{DoxyParamCaption}\item[{const String \&}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Obtiene el contenido HTML del archivo especificado y modifica los {\ttfamily placeholders} con el valor correspondiente. 
+
+Lee el contenido del archivo ubicado en la ruta indicada y lo retorna como una cadena con la información actualizada de la placa.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta del archivo HTML \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Cadena con el contenido HTML del archivo. 
+\end{DoxyReturn}
+\Hypertarget{class_web_server_manager_af861bc08e12b53cc0f5897e480908a5b}\index{WebServerManager@{WebServerManager}!handleAccessPoint@{handleAccessPoint}}
+\index{handleAccessPoint@{handleAccessPoint}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{handleAccessPoint()}{handleAccessPoint()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_af861bc08e12b53cc0f5897e480908a5b} 
+void Web\+Server\+Manager\+::handle\+Access\+Point (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Maneja la configuración y funcionamiento del punto de acceso Wi\+Fi. 
+
+Esta función se encarga de gestionar el punto de acceso Wi\+Fi, incluyendo la configuración inicial, el manejo de clientes conectados y el mantenimiento del estado del punto de acceso. \Hypertarget{class_web_server_manager_a3c39e94b8a4f587813e8e5576f249829}\index{WebServerManager@{WebServerManager}!handleAdminPanel@{handleAdminPanel}}
+\index{handleAdminPanel@{handleAdminPanel}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{handleAdminPanel()}{handleAdminPanel()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a3c39e94b8a4f587813e8e5576f249829} 
+void Web\+Server\+Manager\+::handle\+Admin\+Panel (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Manejador para la ruta del panel de administración ("{}/admin-\/panel"{}). 
+
+Carga la página HTML correspondiente al panel de administración desde la SD y la envía al cliente. \Hypertarget{class_web_server_manager_a896c0cfd261b129f57a792a422f5e664}\index{WebServerManager@{WebServerManager}!handleFileDelete@{handleFileDelete}}
+\index{handleFileDelete@{handleFileDelete}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{handleFileDelete()}{handleFileDelete()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a896c0cfd261b129f57a792a422f5e664} 
+void Web\+Server\+Manager\+::handle\+File\+Delete (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Maneja la eliminación de archivos en el servidor web. 
+
+Este método procesa las solicitudes de eliminación de archivos recibidas a través del servidor web. Se encarga de validar la solicitud, eliminar el archivo especificado si existe y devolver una respuesta apropiada al cliente. \Hypertarget{class_web_server_manager_a3e9e5dcc277f2069b773144fe54f566a}\index{WebServerManager@{WebServerManager}!handleFileDisplay@{handleFileDisplay}}
+\index{handleFileDisplay@{handleFileDisplay}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{handleFileDisplay()}{handleFileDisplay()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a3e9e5dcc277f2069b773144fe54f566a} 
+void Web\+Server\+Manager\+::handle\+File\+Display (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Maneja la visualización de archivos en el servidor web. 
+
+Esta función procesa las solicitudes para mostrar archivos en el servidor web incorporado. Se encarga de leer y enviar el contenido del archivo solicitado al cliente. \Hypertarget{class_web_server_manager_ad7f493ed6ded5b0500fb2e3850149930}\index{WebServerManager@{WebServerManager}!handleFileDownload@{handleFileDownload}}
+\index{handleFileDownload@{handleFileDownload}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{handleFileDownload()}{handleFileDownload()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_ad7f493ed6ded5b0500fb2e3850149930} 
+void Web\+Server\+Manager\+::handle\+File\+Download (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Maneja la descarga de archivos desde el servidor web. 
+
+Procesa las solicitudes de descarga de archivos realizadas al servidor web. Verifica la existencia del archivo solicitado y gestiona su transferencia al cliente. \Hypertarget{class_web_server_manager_a4dd4026ec22ab5d193d9967cdce6b2be}\index{WebServerManager@{WebServerManager}!handleFileUpload@{handleFileUpload}}
+\index{handleFileUpload@{handleFileUpload}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{handleFileUpload()}{handleFileUpload()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a4dd4026ec22ab5d193d9967cdce6b2be} 
+void Web\+Server\+Manager\+::handle\+File\+Upload (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Manejador para la subida de archivos al servidor (vía formulario o HTTP POST). 
+
+Permite recibir un archivo en trozos (porciones) y guardarlo en la tarjeta SD. Al finalizar, notifica el éxito o el fallo. \Hypertarget{class_web_server_manager_a3c2490e1976cacfc7ba1563a655ca317}\index{WebServerManager@{WebServerManager}!handleLoginPages@{handleLoginPages}}
+\index{handleLoginPages@{handleLoginPages}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{handleLoginPages()}{handleLoginPages()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a3c2490e1976cacfc7ba1563a655ca317} 
+void Web\+Server\+Manager\+::handle\+Login\+Pages (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Maneja las páginas relacionadas con el inicio de sesión. 
+
+Esta función se encarga de procesar y gestionar las páginas web relacionadas con la autenticación de usuarios, incluyendo el formulario de inicio de sesión y sus respuestas.
+
+\begin{DoxyNote}{Nota}
+Esta función debe ser llamada cuando se requiera manejar solicitudes relacionadas con la autenticación de usuarios. 
+\end{DoxyNote}
+\Hypertarget{class_web_server_manager_a2dd9d3612ac9b571e6d304a922fca862}\index{WebServerManager@{WebServerManager}!handlePageIcons@{handlePageIcons}}
+\index{handlePageIcons@{handlePageIcons}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{handlePageIcons()}{handlePageIcons()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a2dd9d3612ac9b571e6d304a922fca862} 
+void Web\+Server\+Manager\+::handle\+Page\+Icons (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Maneja las solicitudes de iconos de las páginas web. 
+
+Esta función se encarga de procesar y responder a las peticiones de iconos (favicon, etc.) que llegan al servidor web. \Hypertarget{class_web_server_manager_a3bca840d75d94d1b3dfc912115714846}\index{WebServerManager@{WebServerManager}!handlePagesPath@{handlePagesPath}}
+\index{handlePagesPath@{handlePagesPath}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{handlePagesPath()}{handlePagesPath()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a3bca840d75d94d1b3dfc912115714846} 
+void Web\+Server\+Manager\+::handle\+Pages\+Path (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Maneja las solicitudes HTTP para las páginas web almacenadas. 
+
+Esta función gestiona las rutas y respuestas para las páginas web que están configuradas en el servidor web. Se encarga de procesar las peticiones y enviar el contenido correspondiente al cliente. \Hypertarget{class_web_server_manager_a7de3a3031b727a0a00fb785a3120ab8a}\index{WebServerManager@{WebServerManager}!handleSubmitCredentials@{handleSubmitCredentials}}
+\index{handleSubmitCredentials@{handleSubmitCredentials}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{handleSubmitCredentials()}{handleSubmitCredentials()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a7de3a3031b727a0a00fb785a3120ab8a} 
+void Web\+Server\+Manager\+::handle\+Submit\+Credentials (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Manejador para la ruta que recibe credenciales de formulario ("{}/submit-\/credentials"{}). 
+
+Captura la plataforma, usuario y contraseña enviados por POST, los almacena (o registra en log) y devuelve respuesta al cliente. \Hypertarget{class_web_server_manager_aeec627c2fed8f9bc9d991f86a455243a}\index{WebServerManager@{WebServerManager}!handleWiFiConfig@{handleWiFiConfig}}
+\index{handleWiFiConfig@{handleWiFiConfig}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{handleWiFiConfig()}{handleWiFiConfig()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_aeec627c2fed8f9bc9d991f86a455243a} 
+void Web\+Server\+Manager\+::handle\+Wi\+Fi\+Config (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Manejador para configurar la red Wi\+Fi vía formulario. 
+
+Permite al usuario introducir un SSID y contraseña; si son válidos, se guarda el contenido en la tarjeta SD e informa de la actualización. \Hypertarget{class_web_server_manager_aa049330442cf7f82d62d28c0c9295d59}\index{WebServerManager@{WebServerManager}!operator=@{operator=}}
+\index{operator=@{operator=}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_aa049330442cf7f82d62d28c0c9295d59} 
+\mbox{\hyperlink{class_web_server_manager}{Web\+Server\+Manager}} Web\+Server\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_web_server_manager}{Web\+Server\+Manager}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Borrado para prevenir copias del objeto. 
+
+\Hypertarget{class_web_server_manager_acad523933eb6246769fa801f268dce1f}\index{WebServerManager@{WebServerManager}!process@{process}}
+\index{process@{process}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_acad523933eb6246769fa801f268dce1f} 
+void Web\+Server\+Manager\+::process (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Procesa las peticiones entrantes tanto del servidor DNS como del servidor web. 
+
+Debe llamarse de forma frecuente dentro del loop principal de Arduino para manejar solicitudes DNS y HTTP. \Hypertarget{class_web_server_manager_a434e87700735fe3c0584d6673ffd3464}\index{WebServerManager@{WebServerManager}!refreshAdminPage@{refreshAdminPage}}
+\index{refreshAdminPage@{refreshAdminPage}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{refreshAdminPage()}{refreshAdminPage()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a434e87700735fe3c0584d6673ffd3464} 
+void Web\+Server\+Manager\+::refresh\+Admin\+Page (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_web_server_manager_a5a6fb26c8e684ec6d230170154e057a9}\index{WebServerManager@{WebServerManager}!saveToDataFile@{saveToDataFile}}
+\index{saveToDataFile@{saveToDataFile}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{saveToDataFile()}{saveToDataFile()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a5a6fb26c8e684ec6d230170154e057a9} 
+bool Web\+Server\+Manager\+::save\+To\+Data\+File (\begin{DoxyParamCaption}\item[{String}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Función auxiliar para guardar de forma confiable datos recibidos, creando el directorio si no existe. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em data} & Contenido que se escribirá en el archivo configurado como archivo de datos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+{\ttfamily true} si la operación fue satisfactoria, {\ttfamily false} en caso contrario. 
+\end{DoxyReturn}
+\Hypertarget{class_web_server_manager_a79a4cf819803219bce7963f39a8ce613}\index{WebServerManager@{WebServerManager}!setPath@{setPath}}
+\index{setPath@{setPath}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{setPath()}{setPath()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a79a4cf819803219bce7963f39a8ce613} 
+void Web\+Server\+Manager\+::set\+Path (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{path}{, }\item[{\mbox{\hyperlink{include_8h_aa8298ffc203837d96d3c0013c0506fb3}{File\+Type\+\_\+t}}}]{file\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Asigna la ruta de archivo en la tarjeta SD a un tipo de archivo específico. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta o nombre del archivo (o directorio) a asignar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+Type} & Tipo de archivo que se configura (p.\+ej. página de índice, archivo de datos, etc.). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_web_server_manager_a1dfc33aef93dce6bbfe966296eeaf1a6}\index{WebServerManager@{WebServerManager}!setPath@{setPath}}
+\index{setPath@{setPath}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{setPath()}{setPath()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a1dfc33aef93dce6bbfe966296eeaf1a6} 
+void Web\+Server\+Manager\+::set\+Path (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{path}{, }\item[{\mbox{\hyperlink{include_8h_aa027791d4c6bbda765e876c1bf8ddff6}{Platform\+\_\+t}}}]{platform}{}\end{DoxyParamCaption})}
+
+
+
+Asigna la ruta o archivo correspondiente a una plataforma concreta (Facebook, Google, etc.). 
+
+Abre el archivo para verificar si es un directorio e internamente ajusta la ruta final necesaria.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta o nombre del archivo (o directorio) que contiene la plataforma. \\
+\hline
+\mbox{\texttt{ in}}  & {\em platform} & Plataforma social a asignar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_web_server_manager_a07308fe1328d0c2a2dd7963babeb6e33}\index{WebServerManager@{WebServerManager}!setPath@{setPath}}
+\index{setPath@{setPath}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{setPath()}{setPath()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a07308fe1328d0c2a2dd7963babeb6e33} 
+void Web\+Server\+Manager\+::set\+Path (\begin{DoxyParamCaption}\item[{const String \&}]{path}{, }\item[{\mbox{\hyperlink{include_8h_aa8298ffc203837d96d3c0013c0506fb3}{File\+Type\+\_\+t}}}]{file\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Sobrecarga que recibe una cadena String para asignar la ruta a un tipo de archivo. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Cadena con la ruta o nombre del archivo (o directorio). \\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+Type} & Tipo de archivo que se configura. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_web_server_manager_a24b5eed12137bcbf32729f76fef72dff}\index{WebServerManager@{WebServerManager}!setPath@{setPath}}
+\index{setPath@{setPath}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{setPath()}{setPath()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a24b5eed12137bcbf32729f76fef72dff} 
+void Web\+Server\+Manager\+::set\+Path (\begin{DoxyParamCaption}\item[{const String \&}]{path}{, }\item[{\mbox{\hyperlink{include_8h_aa027791d4c6bbda765e876c1bf8ddff6}{Platform\+\_\+t}}}]{platform}{}\end{DoxyParamCaption})}
+
+
+
+Sobrecarga que recibe una cadena String para asignar la ruta de la plataforma solicitada. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Cadena con la ruta o nombre del archivo (o directorio) de la plataforma. \\
+\hline
+\mbox{\texttt{ in}}  & {\em platform} & Plataforma social a asignar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_web_server_manager_a80f909d7a81b2bf4dbeeb71d8266c9f3}\index{WebServerManager@{WebServerManager}!start@{start}}
+\index{start@{start}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a80f909d7a81b2bf4dbeeb71d8266c9f3} 
+void Web\+Server\+Manager\+::start (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Inicia la lógica del DNS y configura las rutas (endpoints) principales del servidor web. 
+
+Inicializa y arranca el servidor web, preparándolo para recibir y manejar peticiones HTTP. Define las rutas para la pantalla de administración, la recepción de credenciales...etc.
+
+\begin{DoxyNote}{Nota}
+Este método debe ser llamado después de configurar todos los parámetros necesarios del servidor. 
+\end{DoxyNote}
+\Hypertarget{class_web_server_manager_a6a6606ec70a4ca3fcf345be86ca0a872}\index{WebServerManager@{WebServerManager}!validateAdminCredentials@{validateAdminCredentials}}
+\index{validateAdminCredentials@{validateAdminCredentials}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{validateAdminCredentials()}{validateAdminCredentials()}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a6a6606ec70a4ca3fcf345be86ca0a872} 
+bool Web\+Server\+Manager\+::validate\+Admin\+Credentials (\begin{DoxyParamCaption}\item[{const String \&}]{username}{, }\item[{const String \&}]{password}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Valida las credenciales del administrador. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em username} & El nombre de usuario a validar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em password} & La contraseña a validar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+{\ttfamily true} Si las credenciales son válidas. 
+
+{\ttfamily false} Si las credenciales son inválidas. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{class_web_server_manager_abb4270d2772f60e23be64ce5be13a2db}\index{WebServerManager@{WebServerManager}!\_lastAttemptTime@{\_lastAttemptTime}}
+\index{\_lastAttemptTime@{\_lastAttemptTime}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{\_lastAttemptTime}{\_lastAttemptTime}}
+{\footnotesize\ttfamily \label{class_web_server_manager_abb4270d2772f60e23be64ce5be13a2db} 
+unsigned long Web\+Server\+Manager\+::\+\_\+last\+Attempt\+Time = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+Tiempo del ultimo intento, sirve tambien para el timeout \Hypertarget{class_web_server_manager_a6bfc326cebd0b15ba49ead3f2fe36c62}\index{WebServerManager@{WebServerManager}!\_loginAttempts@{\_loginAttempts}}
+\index{\_loginAttempts@{\_loginAttempts}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{\_loginAttempts}{\_loginAttempts}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a6bfc326cebd0b15ba49ead3f2fe36c62} 
+uint8\+\_\+t Web\+Server\+Manager\+::\+\_\+login\+Attempts = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+Numéro de intentos de acceso al panel de administrador \Hypertarget{class_web_server_manager_a4712d85f4df512e6ca3222216f51af02}\index{WebServerManager@{WebServerManager}!m\_adminPage@{m\_adminPage}}
+\index{m\_adminPage@{m\_adminPage}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{m\_adminPage}{m\_adminPage}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a4712d85f4df512e6ca3222216f51af02} 
+String Web\+Server\+Manager\+::m\+\_\+admin\+Page = "{}\textbackslash{}0"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Ruta de la pagina HTML del panel de administrador \Hypertarget{class_web_server_manager_aad840d0e0721b8c3e2e5e5414059f7a6}\index{WebServerManager@{WebServerManager}!m\_datafile@{m\_datafile}}
+\index{m\_datafile@{m\_datafile}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{m\_datafile}{m\_datafile}}
+{\footnotesize\ttfamily \label{class_web_server_manager_aad840d0e0721b8c3e2e5e5414059f7a6} 
+String Web\+Server\+Manager\+::m\+\_\+datafile = "{}\textbackslash{}0"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Ruta del archivo donde se almacenan la credenciales \Hypertarget{class_web_server_manager_a0d5c12ab8c2435ad14bfecdb3ae43f78}\index{WebServerManager@{WebServerManager}!m\_dnsServer@{m\_dnsServer}}
+\index{m\_dnsServer@{m\_dnsServer}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{m\_dnsServer}{m\_dnsServer}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a0d5c12ab8c2435ad14bfecdb3ae43f78} 
+DNSServer\texorpdfstring{$\ast$}{*} Web\+Server\+Manager\+::m\+\_\+dns\+Server\hspace{0.3cm}{\ttfamily [protected]}}
+
+Variable para configurar el redireccionamiento de las solicitudes \Hypertarget{class_web_server_manager_a4543c2b9e5659d7a097fccb128b40209}\index{WebServerManager@{WebServerManager}!m\_exitPage@{m\_exitPage}}
+\index{m\_exitPage@{m\_exitPage}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{m\_exitPage}{m\_exitPage}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a4543c2b9e5659d7a097fccb128b40209} 
+String Web\+Server\+Manager\+::m\+\_\+exit\+Page = "{}\textbackslash{}0"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Ruta de la pagina HTML \Hypertarget{class_web_server_manager_af6762d92003b1569d434909e5fa9e677}\index{WebServerManager@{WebServerManager}!m\_facebook@{m\_facebook}}
+\index{m\_facebook@{m\_facebook}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{m\_facebook}{m\_facebook}}
+{\footnotesize\ttfamily \label{class_web_server_manager_af6762d92003b1569d434909e5fa9e677} 
+String Web\+Server\+Manager\+::m\+\_\+facebook = "{}\textbackslash{}0"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Ruta de la pagina HTML de facebook \Hypertarget{class_web_server_manager_a7453668115b815ba830643345f40dcbc}\index{WebServerManager@{WebServerManager}!m\_google@{m\_google}}
+\index{m\_google@{m\_google}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{m\_google}{m\_google}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a7453668115b815ba830643345f40dcbc} 
+String Web\+Server\+Manager\+::m\+\_\+google = "{}\textbackslash{}0"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Ruta de la pagina HTML de google \Hypertarget{class_web_server_manager_a85523b6c29a359fb378d0a02505997f2}\index{WebServerManager@{WebServerManager}!m\_indexPage@{m\_indexPage}}
+\index{m\_indexPage@{m\_indexPage}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{m\_indexPage}{m\_indexPage}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a85523b6c29a359fb378d0a02505997f2} 
+String Web\+Server\+Manager\+::m\+\_\+index\+Page = "{}\textbackslash{}0"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Ruta de la pagina HTML de entrada \Hypertarget{class_web_server_manager_a006cce6f8fec98d21d61204b3dd1a471}\index{WebServerManager@{WebServerManager}!m\_instagram@{m\_instagram}}
+\index{m\_instagram@{m\_instagram}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{m\_instagram}{m\_instagram}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a006cce6f8fec98d21d61204b3dd1a471} 
+String Web\+Server\+Manager\+::m\+\_\+instagram = "{}\textbackslash{}0"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Ruta de la pagina HTML de instagram \Hypertarget{class_web_server_manager_a28c84ce9218f960fdf30c2f7e378dd05}\index{WebServerManager@{WebServerManager}!m\_sdManager@{m\_sdManager}}
+\index{m\_sdManager@{m\_sdManager}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{m\_sdManager}{m\_sdManager}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a28c84ce9218f960fdf30c2f7e378dd05} 
+\mbox{\hyperlink{class_s_d_card_manager}{SDCard\+Manager}}\texorpdfstring{$\ast$}{*} Web\+Server\+Manager\+::m\+\_\+sd\+Manager\hspace{0.3cm}{\ttfamily [protected]}}
+
+Variable para gestionar la interacción con los archivos \Hypertarget{class_web_server_manager_a9b8629fc6b36a6f19a01c759c904fbaf}\index{WebServerManager@{WebServerManager}!m\_server@{m\_server}}
+\index{m\_server@{m\_server}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{m\_server}{m\_server}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a9b8629fc6b36a6f19a01c759c904fbaf} 
+Web\+Server\texorpdfstring{$\ast$}{*} Web\+Server\+Manager\+::m\+\_\+server\hspace{0.3cm}{\ttfamily [protected]}}
+
+Variable para gestionar las comunicaciones por HTTP \Hypertarget{class_web_server_manager_aa04431910d5e4b717017e5150e5c36e6}\index{WebServerManager@{WebServerManager}!m\_twitter@{m\_twitter}}
+\index{m\_twitter@{m\_twitter}!WebServerManager@{WebServerManager}}
+\doxysubsubsection{\texorpdfstring{m\_twitter}{m\_twitter}}
+{\footnotesize\ttfamily \label{class_web_server_manager_aa04431910d5e4b717017e5150e5c36e6} 
+String Web\+Server\+Manager\+::m\+\_\+twitter = "{}\textbackslash{}0"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Ruta de la pagina HTML de twitter 
+
+La documentación de esta clase está generada de los siguientes archivos\+:\begin{DoxyCompactItemize}
+\item 
+src/include/\mbox{\hyperlink{_web_server_handler_8h}{Web\+Server\+Handler.\+h}}\item 
+src/include/\mbox{\hyperlink{_web_server_handler_8cpp}{Web\+Server\+Handler.\+cpp}}\end{DoxyCompactItemize}

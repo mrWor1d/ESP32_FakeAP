@@ -61,7 +61,6 @@ String WebServerManager::getContentType(const String &filename)
 
 void WebServerManager::handleSubmitCredentials(void)
 {
-    // variables para almacenar temporalmente las entradas del usuario
     String passPhrase = m_server->arg("password");
     passPhrase.replace("\r", "");
     passPhrase.replace("\n", "");
@@ -70,7 +69,7 @@ void WebServerManager::handleSubmitCredentials(void)
     credentials.concat("\t\"password\": \"" + passPhrase+ "\"\n},");
 
 
-    // guarda las entradas en un archivo de texto
+    // guarda las entradas en un archivo
     if (!saveToDataFile(credentials))
     {
         m_sdManager->logEvent(FAILED_CREDENTIALS);
@@ -91,12 +90,10 @@ void WebServerManager::handleSubmitCredentials(void)
 
 void WebServerManager::handleAdminPanel(void)
 {
-    generateJSONFile();
-
     if (validateAdminCredentials(m_server->arg("username"), m_server->arg("password")))
     {
-        m_server->send(200, "text/html", getHTMLContent(m_adminPage));
         Serial.println(NEW_ADMIN_LOGIN);
+        return refreshAdminPage();
     }
     else
     {
@@ -205,42 +202,52 @@ void WebServerManager::handleFileDownload(void)
 void WebServerManager::handleFileUpload(void)
 {
     HTTPUpload &upload = m_server->upload();
-    File *uploadFile;
+    File *uploadFile = nullptr;
 
-    if (upload.status == UPLOAD_FILE_START)
+    if(upload.status == UPLOAD_FILE_START)
     {
-        String filename = upload.filename;
-        if (!filename.startsWith("/"))
+        String filename = m_server->arg("uploadfile-name");
+        if (filename.indexOf("/") < 0)
             filename = "/uploads/" + filename;
-
-        m_sdManager->createDir("/uploads");
+        else if(!filename.startsWith("/"))
+            filename = "/" + filename;
+ 
+        m_sdManager->createDir(SDCardManager::getFileDir(filename));
         m_sdManager->logEvent("Empieza la carga del archivo " + filename);
-        Serial.printf(UPLOAD_STARTED, filename);
+        Serial.printf(UPLOAD_STARTED, filename.c_str());
 
+        m_sdManager->deleteFile(filename);
         uploadFile = new File(m_sdManager->getFileSystem().open(filename, FILE_WRITE));
     }
     else if (upload.status == UPLOAD_FILE_WRITE)
     {
-        if (*uploadFile)
+        if (uploadFile !=  nullptr)
             uploadFile->write(upload.buf, upload.currentSize);
     }
     else if (upload.status == UPLOAD_FILE_END)
     {
-        if (*uploadFile)
+
+        if (uploadFile !=  nullptr)
         {
             uploadFile->close();
             m_sdManager->logEvent("Archivo subido al servidor: " + upload.filename);
             Serial.printf(NEW_FILE_UPLOADED, upload.filename.c_str());
 
-            m_server->send(200, "text/plain", "File Uploaded Successfully");
+            m_server->send(200, "text/plain", "Archivo subido correctamente");
+            refreshAdminPage();
         }
         else
         {
             m_sdManager->logEvent("Error al subir el archivo " + upload.filename);
             Serial.printf(FAILED_FILE_UPLOAD, upload.filename.c_str());
 
-            m_server->send(500, "text/plain", "Upload Failed");
+            m_server->send(500, "text/plain", "Carga de archivo fallado");
         }
+    }
+    else
+    {
+        m_server->send(500, "text/plain", "No se ha podido crear el archivo");
+        Serial.println(FAILED_UNEXPECTED);
     }
 
     delete uploadFile;
@@ -267,7 +274,7 @@ void WebServerManager::handleFileDisplay(void)
     if(content=="\0")
     {
 #if (WITH_ERROR_TYPE)
-        Serial.println(ERROR_FILE_OPEN);
+        Serial.printf(ERROR_FILE_OPEN, path.c_str());
 #endif
         return m_server->send(401, "text/plain", "error al abrir el archivo");
     }
@@ -304,6 +311,7 @@ void WebServerManager::handleFileDelete(void)
 
     m_sdManager->logEvent("Archivo borrado: " + path);
     Serial.printf(NEW_FILE_DELETED, path.c_str());
+    return refreshAdminPage();
 }
 
 
@@ -328,6 +336,7 @@ void WebServerManager::handleWiFiConfig(void)
             m_sdManager->logEvent("Configuración wifi cambiada:\n\tNuevo SSID: "+ newSSID +
                                     "\n\tNuevo contraseña: "+ newPassword);
             Serial.println(NEW_WIFI_CONFIG);
+            return refreshAdminPage();
         }
         else
             m_server->send(400, "text/plain", "Configuración invalida");
@@ -353,7 +362,7 @@ void WebServerManager::handlePagesPath(void)
                             "\n\tinstagram: " + m_instagram +
                             "\n\ttwitter: "   + m_twitter);
     Serial.println(NEW_SOCIALS_PATH);
-    m_server->send(200, "text/plain", "");
+    return refreshAdminPage();
 }
 
 
@@ -370,21 +379,30 @@ void WebServerManager::handleAccessPoint(void)
     {
         WiFiCaptiveManager::setAccessPoint(newSSID, newPassword);
 
-        m_server->send(200, "text/plain", "WiFi Configuration Updated");
         m_sdManager->logEvent("Configuración cambiada");
         Serial.println("Configuración wifi guardada");
+        m_server->send(200, "text/plain", "WiFi Configuration Updated");
     }
     else
     {
         m_server->send(400, "text/plain", "Invalid Configuration");
     }
+}
 
+void WebServerManager::refreshAdminPage(void)
+{
+    //generar el archivo con la información del los archivos almacenados en la tarjeta
+    generateJSONFile();
+
+    //enviar la info al cliente
+    return m_server->send(200, "text/html", getHTMLContent(m_adminPage));
 }
 
 
 bool WebServerManager::saveToDataFile(String data)
 {
     String dir = m_sdManager->getFileDir(m_datafile);
+    //crear el directorio y el archivo de datos en caso de que no existan
     if (!m_sdManager->getFileSystem().exists(dir))
     {
         if (!m_sdManager->createDir(dir))
@@ -397,23 +415,21 @@ bool WebServerManager::saveToDataFile(String data)
 
 bool WebServerManager::validateAdminCredentials(const String &username, const String &password)
 {
-    // Check login attempts and lockout
+    // comprobar si el número de intentos y el tiempo de lockout
     if (_loginAttempts >= MAX_LOGIN_ATTEMPTS &&
         (millis() - _lastAttemptTime) < LOGIN_LOCKOUT_TIME)
     {
         return 0;
     }
 
-    // bool validCredentials = m_server->authenticate(ADMIN_USERNAME, ADMIN_PASSWORD);
     bool validCredentials = (username == ADMIN_USERNAME &&
-                                password == ADMIN_PASSWORD);
+                             password == ADMIN_PASSWORD);
 
     if (!validCredentials)
     {
         _loginAttempts++;
         _lastAttemptTime = millis();
         m_sdManager->logEvent("Intento de connexión como admin fallado. Número de intentos: " + String(_loginAttempts));
-        // m_server->requestAuthentication();
     }
     else
     {
@@ -427,6 +443,7 @@ bool WebServerManager::validateAdminCredentials(const String &username, const St
 
 void WebServerManager::start(void)
 {
+    //definir todas las rutas del servidor
     m_server->on("/", HTTP_GET, [this](){
                     String content = m_sdManager->readFile(m_indexPage);
                     m_server->send(200, "text/html", content); });
@@ -447,9 +464,9 @@ void WebServerManager::start(void)
     m_server->on("/admin-panel/download", HTTP_POST, [this]()
                     { handleFileDownload(); });
 
-    m_server->on("/admin-panel/upload", HTTP_POST, [this]()
-                    { m_server->send(200); }, [this]()
-                    { handleFileUpload(); } );
+    m_server->on("/admin-panel/upload", HTTP_POST, [this](){m_server->send(200); },[this]()
+                    { handleFileUpload(); });
+                    //this->handleFileUpload()
 
     m_server->on("/admin-panel/display", HTTP_GET, [this]()
                     { handleFileDisplay(); });
@@ -480,11 +497,12 @@ void WebServerManager::start(void)
     m_server->on("/get-page-icons", HTTP_GET, [this]()
                     { handlePageIcons(); });
 
+    //lleva a la pagina de inicio en caso de que sea una ruta desconocida
     m_server->onNotFound([this](){
         m_server->sendHeader("Location", "/");
         m_server->send(302, "text/plain", "redirect to captive portal"); });
 
-    // Start servers
+    //iniciar el servidor web
     m_server->begin();
 #if (WITH_SUCCESS_MESSAGE)
     Serial.println(SUCCESS_SERVER_INIT);
@@ -647,27 +665,31 @@ void WebServerManager::setPath(const String &path, Platform_t platform)
 
 String WebServerManager::getHTMLContent(const String &path)
 {
+    //leer el archivo html fuente
     String *adminContent = new String(m_sdManager->readFile(path));
+
+    //reemplazar los marcadores con la info del punto de acceso
     adminContent->replace(Placeholder_t::AccessPointSSID, WiFi.softAPSSID());
     adminContent->replace(Placeholder_t::ServerIP, WiFi.softAPIP().toString());
     adminContent->replace(Placeholder_t::HostsConected, String(WiFi.softAPgetStationNum()));
 
-
+    //reemplazar los marcadores con las información actualizada de la tarjeta
     adminContent->replace(Placeholder_t::sdCardType, SDCardManager::getCardType(
-                        SD_MMC.cardType()));
-    adminContent->replace(Placeholder_t::sdSize, getReadableSize(m_sdManager->
-                        getFileSystem().cardSize()));
-    adminContent->replace(Placeholder_t::sdSpaceUsed, getReadableSize(m_sdManager->
-                        getFileSystem().usedBytes()));
-    adminContent->replace(Placeholder_t::sdFreeSpace, getReadableSize(m_sdManager->
-                        getFileSystem().totalBytes()));
+                        m_sdManager->getFileSystem().cardType()));
+    adminContent->replace(Placeholder_t::sdSize, getReadableSize(
+                        m_sdManager->getFileSystem().cardSize()));
+    adminContent->replace(Placeholder_t::sdSpaceUsed, getReadableSize(
+                        m_sdManager->getFileSystem().usedBytes()));
+    adminContent->replace(Placeholder_t::sdFreeSpace, getReadableSize(
+                        m_sdManager->getFileSystem().totalBytes()));
 
+    //reemplazar los marcadores con las rutas de las paginas html
     adminContent->replace(Placeholder_t::FacebookPath, m_facebook);
     adminContent->replace(Placeholder_t::GooglePath, m_google);
     adminContent->replace(Placeholder_t::InstagramPath, m_instagram);
     adminContent->replace(Placeholder_t::TwitterPath, m_twitter);
     
-
+    //reemplazar los marcadores con la información de la red wifi
     if (WiFi.status() == WL_CONNECTED)
     {
         adminContent->replace(Placeholder_t::WifiSSID, WiFi.SSID());
@@ -695,7 +717,6 @@ void WebServerManager::generateJSONFile(const String &dirname, String *fileList)
 
     if (dirname == "/")
         *fileList += "{\n\t\"files\": [\n";
-
 
     while (true)
     {
@@ -726,7 +747,6 @@ void WebServerManager::generateJSONFile(const String &dirname, String *fileList)
         // Remove last comma and close JSON array
         *fileList = fileList->substring(0, fileList->length() - 2);
         *fileList += "\n\t]\n}";
-        //Serial.printf("File list:\n%s\n", fileList->c_str());
         
         if (!m_sdManager->writeFile(JSON_FILE_PATH, *fileList))
             Serial.println(ERROR_GENERATE_JSON);

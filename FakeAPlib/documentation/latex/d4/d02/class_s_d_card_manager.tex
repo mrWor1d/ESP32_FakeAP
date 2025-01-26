@@ -1,0 +1,557 @@
+\doxysection{Referencia de la clase SDCard\+Manager}
+\hypertarget{class_s_d_card_manager}{}\label{class_s_d_card_manager}\index{SDCardManager@{SDCardManager}}
+
+
+Clase que gestiona las operaciones con la tarjeta SD. Actua como un wrapper para la clase fs\+::\+SDMMCFS y sus funciones.  
+
+
+
+
+{\ttfamily \#include $<$SDCard\+Manager.\+h$>$}
+
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_d_card_manager_a997d7441c12b92a921181fd14dbaf286}{SDCard\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto que inicializa los miembros de la clase. Asigna el sistema de archivos por defecto y marca la SD como no inicializada. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_d_card_manager_a55fc7fb249e018f51f01304fbf1c795c}{SDCard\+Manager}} (const \mbox{\hyperlink{class_s_d_card_manager}{SDCard\+Manager}} \&)=delete
+\item 
+\mbox{\hyperlink{class_s_d_card_manager}{SDCard\+Manager}} \mbox{\hyperlink{class_s_d_card_manager_aef1c13f7dfda7a1cb8932ef236131c0a}{operator=}} (const \mbox{\hyperlink{class_s_d_card_manager}{SDCard\+Manager}} \&)=delete
+\item 
+bool \mbox{\hyperlink{class_s_d_card_manager_a9debc3fefc7127d4f762121e6fab1def}{operator+}} (const String \&path)
+\begin{DoxyCompactList}\small\item\em Operador definido para escribir un archivo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_d_card_manager_a6c790f7b4552488e6ab85cf9b72dc383}{operator-\/}} (const String \&path)
+\begin{DoxyCompactList}\small\item\em Operador definido para eliminar un archivo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_d_card_manager_af000db216266d6d34f773611b0323edd}{is\+Card\+Init}} () const
+\begin{DoxyCompactList}\small\item\em Indica si la tarjeta SD ha sido inicializada. \end{DoxyCompactList}\item 
+fs\+::\+SDMMCFS \& \mbox{\hyperlink{class_s_d_card_manager_aa14b7744093fcbec65697529cc96e9d6}{get\+File\+System}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve la referencia al sistema de archivos asociado a la tarjeta SD. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_d_card_manager_a6886e0afb44ce4dff05f2feae63250b0}{log\+Event}} (const String \&event)
+\begin{DoxyCompactList}\small\item\em Registra un evento en el archivo de log designado. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_d_card_manager_ad568b6cef69c1dbd80d8627b8aa8fe7e}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa la tarjeta SD y muestra información sobre ella. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_s_d_card_manager_ae4a271ef43250a5df3be4ce521aab1ab}{read\+File}} (const char \texorpdfstring{$\ast$}{*}path)
+\begin{DoxyCompactList}\small\item\em Lee el contenido de un archivo en la tarjeta SD. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_s_d_card_manager_a1a737a38417c79cb4d3c80a9d8b82279}{read\+File}} (const String \&path)
+\begin{DoxyCompactList}\small\item\em Sobrecarga para leer el contenido de un archivo a partir de un String. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_d_card_manager_ab8f81bf685b9ad92a5f4a7806cf7cb19}{write\+File}} (const char \texorpdfstring{$\ast$}{*}path, const String \&content="{}"{})
+\begin{DoxyCompactList}\small\item\em Escribe contenido en un archivo (creándolo si no existe). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_d_card_manager_a02df436fe963b5c6ee5cb983d5e0886f}{write\+File}} (const String \&path, const String \&content="{}"{})
+\begin{DoxyCompactList}\small\item\em Sobrecarga para escribir contenido en un archivo a partir de un String. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_d_card_manager_aabaddfa5106212e4caa56fd77ee546a2}{list\+Dir}} (const char \texorpdfstring{$\ast$}{*}dirname, uint8\+\_\+t levels)
+\begin{DoxyCompactList}\small\item\em Lista los archivos y directorios dentro de una ruta dada. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_d_card_manager_a88c57a07ef536e0cadbb393feb95752e}{create\+Dir}} (const String \&path)
+\begin{DoxyCompactList}\small\item\em Crea un directorio en la tarjeta SD a partir de un String. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_d_card_manager_a2949245e0a5b38960d28aa07e58ae0f7}{create\+Dir}} (const char \texorpdfstring{$\ast$}{*}path)
+\begin{DoxyCompactList}\small\item\em Crea un directorio en la tarjeta SD a partir de una cadena tipo C. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_d_card_manager_ad5434b8826b693ccba93f3d0a1cf8bd4}{remove\+Dir}} (const char \texorpdfstring{$\ast$}{*}path)
+\begin{DoxyCompactList}\small\item\em Elimina un directorio de la tarjeta SD. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_d_card_manager_ab365c30d6d02044962fd11e590643d0b}{append\+File}} (const char \texorpdfstring{$\ast$}{*}path, String \&content)
+\begin{DoxyCompactList}\small\item\em Agrega contenido a un archivo existente (sin eliminar su contenido previo). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_d_card_manager_a33bd6e2c88f0977bd673c005217c454f}{append\+File}} (const String \&path, String \&content)
+\begin{DoxyCompactList}\small\item\em Sobrecarga para anexar contenido a un archivo a partir de un String. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_d_card_manager_a14e9fbc205cca0a7724df6c8347f66c5}{rename\+File}} (const char \texorpdfstring{$\ast$}{*}path1, const char \texorpdfstring{$\ast$}{*}path2)
+\begin{DoxyCompactList}\small\item\em Cambia el nombre de un archivo o lo mueve a otra ruta. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_d_card_manager_aa897172ffe26c39c9333e08cfaae5d7f}{delete\+File}} (const char \texorpdfstring{$\ast$}{*}path)
+\begin{DoxyCompactList}\small\item\em Elimina un archivo de la tarjeta SD a partir de una cadena tipo C. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_d_card_manager_a24eb78d7ac434caeda40eb4736f90de1}{delete\+File}} (const String \&path)
+\begin{DoxyCompactList}\small\item\em Sobrecarga para eliminar un archivo a partir de un String. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_d_card_manager_a83b9fcf51f6f6397253e73f4c743b791}{delete\+Recursive}} (const String \&path)
+\begin{DoxyCompactList}\small\item\em Elimina recursivamente un archivo o directorio de la tarjeta SD, incluyendo su contenido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_s_d_card_manager_abf8bc426ced70237ea869c2b407e449d}{get\+Card\+Type}} (uint8\+\_\+t card)
+\begin{DoxyCompactList}\small\item\em Retorna una cadena con el tipo de tarjeta SD detectada. \end{DoxyCompactList}\item 
+static String \mbox{\hyperlink{class_s_d_card_manager_a42e8876b66696fa091ee61a749c60e67}{get\+File\+Dir}} (const char \texorpdfstring{$\ast$}{*}path)
+\begin{DoxyCompactList}\small\item\em Obtiene el directorio dado el camino absoluto de un archivo. \end{DoxyCompactList}\item 
+static String \mbox{\hyperlink{class_s_d_card_manager_a257c43c5df2beeaab9fe62f4ea482d3b}{get\+File\+Dir}} (const String \&path)
+\begin{DoxyCompactList}\small\item\em Sobrecarga para obtener el directorio de un archivo a partir de un String. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+fs\+::\+SDMMCFS \& \mbox{\hyperlink{class_s_d_card_manager_a827dd4b851b9792a0e5a396f0d38b4c3}{\+\_\+file\+System}}
+\item 
+bool \mbox{\hyperlink{class_s_d_card_manager_a2bb93b954243a6f9edb15eaaa6482a4c}{\+\_\+sd\+Initialized}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase que gestiona las operaciones con la tarjeta SD. Actua como un wrapper para la clase fs\+::\+SDMMCFS y sus funciones. 
+
+Esta clase proporciona una interfaz para realizar operaciones básicas de sistema de archivos en una tarjeta SD, incluyendo lectura, escritura, creación y eliminación de archivos y directorios.
+
+La clase maneja\+:
+\begin{DoxyItemize}
+\item Inicialización de la tarjeta SD
+\item Operaciones de lectura/escritura de archivos
+\item Gestión de directorios
+\item Registro de eventos (logging)
+\item Operaciones recursivas en el sistema de archivos
+\end{DoxyItemize}
+
+La clase utiliza el sistema de archivos SDMMCFS para todas sus operaciones y mantiene un estado interno que indica si la tarjeta está inicializada.
+
+\begin{DoxyNote}{Nota}
+La clase implementa el patrón Singleton para evitar múltiples instancias que acceden simultáneamente a la tarjeta SD.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{Ver también}
+fs\+::\+SDMMCFS 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_s_d_card_manager_a997d7441c12b92a921181fd14dbaf286}\index{SDCardManager@{SDCardManager}!SDCardManager@{SDCardManager}}
+\index{SDCardManager@{SDCardManager}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{SDCardManager()}{SDCardManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_a997d7441c12b92a921181fd14dbaf286} 
+SDCard\+Manager\+::\+SDCard\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor por defecto que inicializa los miembros de la clase. Asigna el sistema de archivos por defecto y marca la SD como no inicializada. 
+
+\Hypertarget{class_s_d_card_manager_a55fc7fb249e018f51f01304fbf1c795c}\index{SDCardManager@{SDCardManager}!SDCardManager@{SDCardManager}}
+\index{SDCardManager@{SDCardManager}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{SDCardManager()}{SDCardManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_a55fc7fb249e018f51f01304fbf1c795c} 
+SDCard\+Manager\+::\+SDCard\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_d_card_manager}{SDCard\+Manager}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_s_d_card_manager_ab365c30d6d02044962fd11e590643d0b}\index{SDCardManager@{SDCardManager}!appendFile@{appendFile}}
+\index{appendFile@{appendFile}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{appendFile()}{appendFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_ab365c30d6d02044962fd11e590643d0b} 
+bool SDCard\+Manager\+::append\+File (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{path}{, }\item[{String \&}]{content}{}\end{DoxyParamCaption})}
+
+
+
+Agrega contenido a un archivo existente (sin eliminar su contenido previo). 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta del archivo en el que se agrega contenido. \\
+\hline
+\mbox{\texttt{ in}}  & {\em content} & Contenido que será anexado en el archivo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si se anexa correctamente, false en caso de error. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_a33bd6e2c88f0977bd673c005217c454f}\index{SDCardManager@{SDCardManager}!appendFile@{appendFile}}
+\index{appendFile@{appendFile}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{appendFile()}{appendFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_a33bd6e2c88f0977bd673c005217c454f} 
+bool SDCard\+Manager\+::append\+File (\begin{DoxyParamCaption}\item[{const String \&}]{path}{, }\item[{String \&}]{content}{}\end{DoxyParamCaption})}
+
+
+
+Sobrecarga para anexar contenido a un archivo a partir de un String. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta del archivo en el que se agrega contenido. \\
+\hline
+\mbox{\texttt{ in}}  & {\em content} & Contenido que será anexado en el archivo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si se anexa correctamente, false en caso de error. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_a2949245e0a5b38960d28aa07e58ae0f7}\index{SDCardManager@{SDCardManager}!createDir@{createDir}}
+\index{createDir@{createDir}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{createDir()}{createDir()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_a2949245e0a5b38960d28aa07e58ae0f7} 
+bool SDCard\+Manager\+::create\+Dir (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Crea un directorio en la tarjeta SD a partir de una cadena tipo C. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta del directorio a crear. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si se crea correctamente, false en caso de error. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_a88c57a07ef536e0cadbb393feb95752e}\index{SDCardManager@{SDCardManager}!createDir@{createDir}}
+\index{createDir@{createDir}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{createDir()}{createDir()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_a88c57a07ef536e0cadbb393feb95752e} 
+bool SDCard\+Manager\+::create\+Dir (\begin{DoxyParamCaption}\item[{const String \&}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Crea un directorio en la tarjeta SD a partir de un String. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta del directorio a crear. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si se crea correctamente, false en caso de error. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_aa897172ffe26c39c9333e08cfaae5d7f}\index{SDCardManager@{SDCardManager}!deleteFile@{deleteFile}}
+\index{deleteFile@{deleteFile}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{deleteFile()}{deleteFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_aa897172ffe26c39c9333e08cfaae5d7f} 
+bool SDCard\+Manager\+::delete\+File (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Elimina un archivo de la tarjeta SD a partir de una cadena tipo C. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta del archivo a eliminar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si se elimina correctamente, false en caso de error. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_a24eb78d7ac434caeda40eb4736f90de1}\index{SDCardManager@{SDCardManager}!deleteFile@{deleteFile}}
+\index{deleteFile@{deleteFile}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{deleteFile()}{deleteFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_a24eb78d7ac434caeda40eb4736f90de1} 
+bool SDCard\+Manager\+::delete\+File (\begin{DoxyParamCaption}\item[{const String \&}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Sobrecarga para eliminar un archivo a partir de un String. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta del archivo a eliminar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si se elimina correctamente, false en caso de error. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_a83b9fcf51f6f6397253e73f4c743b791}\index{SDCardManager@{SDCardManager}!deleteRecursive@{deleteRecursive}}
+\index{deleteRecursive@{deleteRecursive}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{deleteRecursive()}{deleteRecursive()}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_a83b9fcf51f6f6397253e73f4c743b791} 
+bool SDCard\+Manager\+::delete\+Recursive (\begin{DoxyParamCaption}\item[{const String \&}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Elimina recursivamente un archivo o directorio de la tarjeta SD, incluyendo su contenido. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta del archivo o directorio a eliminar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si se elimina correctamente, false en caso de error. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_abf8bc426ced70237ea869c2b407e449d}\index{SDCardManager@{SDCardManager}!getCardType@{getCardType}}
+\index{getCardType@{getCardType}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{getCardType()}{getCardType()}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_abf8bc426ced70237ea869c2b407e449d} 
+char \texorpdfstring{$\ast$}{*} SDCard\+Manager\+::get\+Card\+Type (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{card}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retorna una cadena con el tipo de tarjeta SD detectada. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em card} & Identificador del tipo de tarjeta devuelto por el hardware. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Cadena con la descripción del tipo de tarjeta. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_a42e8876b66696fa091ee61a749c60e67}\index{SDCardManager@{SDCardManager}!getFileDir@{getFileDir}}
+\index{getFileDir@{getFileDir}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{getFileDir()}{getFileDir()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_a42e8876b66696fa091ee61a749c60e67} 
+String SDCard\+Manager\+::get\+File\+Dir (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obtiene el directorio dado el camino absoluto de un archivo. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta completa de un archivo, como cadena de caracteres. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Cadena que representa el directorio del archivo. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_a257c43c5df2beeaab9fe62f4ea482d3b}\index{SDCardManager@{SDCardManager}!getFileDir@{getFileDir}}
+\index{getFileDir@{getFileDir}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{getFileDir()}{getFileDir()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_a257c43c5df2beeaab9fe62f4ea482d3b} 
+String SDCard\+Manager\+::get\+File\+Dir (\begin{DoxyParamCaption}\item[{const String \&}]{path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sobrecarga para obtener el directorio de un archivo a partir de un String. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta completa de un archivo, como objeto String. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Cadena que representa el directorio del archivo. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_aa14b7744093fcbec65697529cc96e9d6}\index{SDCardManager@{SDCardManager}!getFileSystem@{getFileSystem}}
+\index{getFileSystem@{getFileSystem}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{getFileSystem()}{getFileSystem()}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_aa14b7744093fcbec65697529cc96e9d6} 
+fs\+::\+SDMMCFS \& SDCard\+Manager\+::get\+File\+System (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Devuelve la referencia al sistema de archivos asociado a la tarjeta SD. 
+
+\begin{DoxyReturn}{Devuelve}
+Referencia al objeto utilizado para la operación con archivos. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_ad568b6cef69c1dbd80d8627b8aa8fe7e}\index{SDCardManager@{SDCardManager}!initialize@{initialize}}
+\index{initialize@{initialize}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_ad568b6cef69c1dbd80d8627b8aa8fe7e} 
+bool SDCard\+Manager\+::initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Inicializa la tarjeta SD y muestra información sobre ella. 
+
+\begin{DoxyReturn}{Devuelve}
+true si la tarjeta se inicializó correctamente, false en caso de error. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_af000db216266d6d34f773611b0323edd}\index{SDCardManager@{SDCardManager}!isCardInit@{isCardInit}}
+\index{isCardInit@{isCardInit}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{isCardInit()}{isCardInit()}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_af000db216266d6d34f773611b0323edd} 
+bool SDCard\+Manager\+::is\+Card\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Indica si la tarjeta SD ha sido inicializada. 
+
+\begin{DoxyReturn}{Devuelve}
+true si está inicializada, false en caso contrario. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_aabaddfa5106212e4caa56fd77ee546a2}\index{SDCardManager@{SDCardManager}!listDir@{listDir}}
+\index{listDir@{listDir}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{listDir()}{listDir()}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_aabaddfa5106212e4caa56fd77ee546a2} 
+void SDCard\+Manager\+::list\+Dir (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{dirname}{, }\item[{uint8\+\_\+t}]{levels}{}\end{DoxyParamCaption})}
+
+
+
+Lista los archivos y directorios dentro de una ruta dada. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em dirname} & Directorio que se listará. \\
+\hline
+\mbox{\texttt{ in}}  & {\em levels} & Niveles de profundidad para listar recursivamente. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_d_card_manager_a6886e0afb44ce4dff05f2feae63250b0}\index{SDCardManager@{SDCardManager}!logEvent@{logEvent}}
+\index{logEvent@{logEvent}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{logEvent()}{logEvent()}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_a6886e0afb44ce4dff05f2feae63250b0} 
+bool SDCard\+Manager\+::log\+Event (\begin{DoxyParamCaption}\item[{const String \&}]{event}{}\end{DoxyParamCaption})}
+
+
+
+Registra un evento en el archivo de log designado. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em event} & Mensaje o información a ser registrada en el archivo de log. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si se logró registrar el evento, false de lo contrario. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_a9debc3fefc7127d4f762121e6fab1def}\index{SDCardManager@{SDCardManager}!operator+@{operator+}}
+\index{operator+@{operator+}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_a9debc3fefc7127d4f762121e6fab1def} 
+bool SDCard\+Manager\+::operator+ (\begin{DoxyParamCaption}\item[{const String \&}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Operador definido para escribir un archivo. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta del archivo donde se escribirá. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si la operación tuvo éxito, false en caso contrario. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_a6c790f7b4552488e6ab85cf9b72dc383}\index{SDCardManager@{SDCardManager}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_a6c790f7b4552488e6ab85cf9b72dc383} 
+bool SDCard\+Manager\+::operator-\/ (\begin{DoxyParamCaption}\item[{const String \&}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Operador definido para eliminar un archivo. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta del archivo a eliminar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si la operación tuvo éxito, false en caso contrario. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_aef1c13f7dfda7a1cb8932ef236131c0a}\index{SDCardManager@{SDCardManager}!operator=@{operator=}}
+\index{operator=@{operator=}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_aef1c13f7dfda7a1cb8932ef236131c0a} 
+\mbox{\hyperlink{class_s_d_card_manager}{SDCard\+Manager}} SDCard\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_s_d_card_manager}{SDCard\+Manager}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{class_s_d_card_manager_ae4a271ef43250a5df3be4ce521aab1ab}\index{SDCardManager@{SDCardManager}!readFile@{readFile}}
+\index{readFile@{readFile}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{readFile()}{readFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_ae4a271ef43250a5df3be4ce521aab1ab} 
+String SDCard\+Manager\+::read\+File (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Lee el contenido de un archivo en la tarjeta SD. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta del archivo a leer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Contenido del archivo en formato String, o cadena vacía si ocurre un error. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_a1a737a38417c79cb4d3c80a9d8b82279}\index{SDCardManager@{SDCardManager}!readFile@{readFile}}
+\index{readFile@{readFile}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{readFile()}{readFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_a1a737a38417c79cb4d3c80a9d8b82279} 
+String SDCard\+Manager\+::read\+File (\begin{DoxyParamCaption}\item[{const String \&}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Sobrecarga para leer el contenido de un archivo a partir de un String. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta del archivo a leer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Contenido del archivo en formato String, o cadena vacía si ocurre un error. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_ad5434b8826b693ccba93f3d0a1cf8bd4}\index{SDCardManager@{SDCardManager}!removeDir@{removeDir}}
+\index{removeDir@{removeDir}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{removeDir()}{removeDir()}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_ad5434b8826b693ccba93f3d0a1cf8bd4} 
+bool SDCard\+Manager\+::remove\+Dir (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Elimina un directorio de la tarjeta SD. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta del directorio a eliminar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si se elimina correctamente, false en caso de error. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_a14e9fbc205cca0a7724df6c8347f66c5}\index{SDCardManager@{SDCardManager}!renameFile@{renameFile}}
+\index{renameFile@{renameFile}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{renameFile()}{renameFile()}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_a14e9fbc205cca0a7724df6c8347f66c5} 
+bool SDCard\+Manager\+::rename\+File (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{path1}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{path2}{}\end{DoxyParamCaption})}
+
+
+
+Cambia el nombre de un archivo o lo mueve a otra ruta. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path1} & Ruta o nombre original del archivo. \\
+\hline
+\mbox{\texttt{ in}}  & {\em path2} & Nueva ruta o nombre para el archivo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si se renombra correctamente, false en caso de error. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_ab8f81bf685b9ad92a5f4a7806cf7cb19}\index{SDCardManager@{SDCardManager}!writeFile@{writeFile}}
+\index{writeFile@{writeFile}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{writeFile()}{writeFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_ab8f81bf685b9ad92a5f4a7806cf7cb19} 
+bool SDCard\+Manager\+::write\+File (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{path}{, }\item[{const String \&}]{content}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+
+Escribe contenido en un archivo (creándolo si no existe). 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta del archivo donde se va a escribir. \\
+\hline
+\mbox{\texttt{ in}}  & {\em content} & Contenido a escribir en el archivo. Por defecto es cadena vacía. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si se escribió correctamente, false en caso de error. 
+\end{DoxyReturn}
+\Hypertarget{class_s_d_card_manager_a02df436fe963b5c6ee5cb983d5e0886f}\index{SDCardManager@{SDCardManager}!writeFile@{writeFile}}
+\index{writeFile@{writeFile}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{writeFile()}{writeFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_a02df436fe963b5c6ee5cb983d5e0886f} 
+bool SDCard\+Manager\+::write\+File (\begin{DoxyParamCaption}\item[{const String \&}]{path}{, }\item[{const String \&}]{content}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+
+Sobrecarga para escribir contenido en un archivo a partir de un String. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em path} & Ruta del archivo donde se va a escribir. \\
+\hline
+\mbox{\texttt{ in}}  & {\em content} & Contenido a escribir en el archivo. Por defecto es cadena vacía. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si se escribió correctamente, false en caso de error. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{class_s_d_card_manager_a827dd4b851b9792a0e5a396f0d38b4c3}\index{SDCardManager@{SDCardManager}!\_fileSystem@{\_fileSystem}}
+\index{\_fileSystem@{\_fileSystem}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{\_fileSystem}{\_fileSystem}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_a827dd4b851b9792a0e5a396f0d38b4c3} 
+fs\+::\+SDMMCFS\& SDCard\+Manager\+::\+\_\+file\+System\hspace{0.3cm}{\ttfamily [protected]}}
+
+Variable que representa el sistema de archivo usado \Hypertarget{class_s_d_card_manager_a2bb93b954243a6f9edb15eaaa6482a4c}\index{SDCardManager@{SDCardManager}!\_sdInitialized@{\_sdInitialized}}
+\index{\_sdInitialized@{\_sdInitialized}!SDCardManager@{SDCardManager}}
+\doxysubsubsection{\texorpdfstring{\_sdInitialized}{\_sdInitialized}}
+{\footnotesize\ttfamily \label{class_s_d_card_manager_a2bb93b954243a6f9edb15eaaa6482a4c} 
+bool SDCard\+Manager\+::\+\_\+sd\+Initialized\hspace{0.3cm}{\ttfamily [protected]}}
+
+Variable para comprobar que la tarjeta está inicializada antes de hacer cualquiera cosa 
+
+La documentación de esta clase está generada de los siguientes archivos\+:\begin{DoxyCompactItemize}
+\item 
+src/include/\mbox{\hyperlink{_s_d_card_manager_8h}{SDCard\+Manager.\+h}}\item 
+src/include/\mbox{\hyperlink{_s_d_card_manager_8cpp}{SDCard\+Manager.\+cpp}}\end{DoxyCompactItemize}

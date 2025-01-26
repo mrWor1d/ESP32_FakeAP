@@ -1,8 +1,8 @@
 # FakeAPlib
 
-Librerría personal donde se incluirán todas las dependecias y librerías externas para el desarollo de un punto de acceso falso con un`ESP32-WROVER-E`.<br>
+Librerría personal donde se incluirán todas las dependecias y librerías externas para el desarollo de un punto de acceso falso y un servidor web utilizando la arquitectura del `ESP32`. Pueden mirar ejemplos de uso en la carpeta [examples](examples).<br>
 
-Les invitamos a consultar la [documentación](./documentation/html/index.html) del código completo para obtener más detalles sobre el mismo.<br>
+Les invitamos a consultar la [documentación](documentation/latex/refman.pdf) del código completo para obtener más detalles sobre el mismo.<br>
 
 
 ## Configurar el entorno
@@ -21,6 +21,5 @@ Encontrarán ejemplos de uso de esta libreria en la carpeta [examples](./example
 Las siguientes librerías se tienen que descargar previamente a la compilicación del cógigo:
 * SD_MMC.h
 * FS.h
-* UrlEncode.h
 
 Se han selecionado librerias que están disponibles en el gestor de librería del `Arduino IDE`. Solo se tendrán que buscar y descargar.

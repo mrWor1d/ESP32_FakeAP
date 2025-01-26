@@ -1,0 +1,102 @@
+\doxysection{Web\+Server\+Handler.\+h}
+\hypertarget{_web_server_handler_8h_source}{}\label{_web_server_handler_8h_source}\index{src/include/WebServerHandler.h@{src/include/WebServerHandler.h}}
+\mbox{\hyperlink{_web_server_handler_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ WEB\_SERVER\_HANDLER\_H}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ WEB\_SERVER\_HANDLER\_H}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{include_8h}{include.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_s_d_card_manager_8h}{SDCardManager.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_wifi_captive_portal_8h}{WifiCaptivePortal.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_web_server_manager_a350cb5a01307bc23a6f7f3963d824c74}{WebServerManager}}}
+\DoxyCodeLine{00055\ \{}
+\DoxyCodeLine{00056\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00057\ \ \ \ \ WebServer\ \ \ \ \ *\mbox{\hyperlink{class_web_server_manager_a9b8629fc6b36a6f19a01c759c904fbaf}{m\_server}};\ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ DNSServer\ \ \ \ \ *\mbox{\hyperlink{class_web_server_manager_a0d5c12ab8c2435ad14bfecdb3ae43f78}{m\_dnsServer}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_s_d_card_manager}{SDCardManager}}\ *\mbox{\hyperlink{class_web_server_manager_a28c84ce9218f960fdf30c2f7e378dd05}{m\_sdManager}};\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ String\ \mbox{\hyperlink{class_web_server_manager_a85523b6c29a359fb378d0a02505997f2}{m\_indexPage}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)0"{}};\ }
+\DoxyCodeLine{00062\ \ \ \ \ String\ \mbox{\hyperlink{class_web_server_manager_a4543c2b9e5659d7a097fccb128b40209}{m\_exitPage}}\ \ =\ \textcolor{stringliteral}{"{}\(\backslash\)0"{}};\ }
+\DoxyCodeLine{00063\ \ \ \ \ String\ \mbox{\hyperlink{class_web_server_manager_a4712d85f4df512e6ca3222216f51af02}{m\_adminPage}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)0"{}};\ }
+\DoxyCodeLine{00064\ \ \ \ \ String\ \mbox{\hyperlink{class_web_server_manager_aad840d0e0721b8c3e2e5e5414059f7a6}{m\_datafile}}\ \ =\ \textcolor{stringliteral}{"{}\(\backslash\)0"{}};\ }
+\DoxyCodeLine{00065\ \ \ \ \ String\ \mbox{\hyperlink{class_web_server_manager_af6762d92003b1569d434909e5fa9e677}{m\_facebook}}\ \ =\ \textcolor{stringliteral}{"{}\(\backslash\)0"{}};\ }
+\DoxyCodeLine{00066\ \ \ \ \ String\ \mbox{\hyperlink{class_web_server_manager_a7453668115b815ba830643345f40dcbc}{m\_google}}\ \ \ \ =\ \textcolor{stringliteral}{"{}\(\backslash\)0"{}};\ }
+\DoxyCodeLine{00067\ \ \ \ \ String\ \mbox{\hyperlink{class_web_server_manager_a006cce6f8fec98d21d61204b3dd1a471}{m\_instagram}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)0"{}};\ }
+\DoxyCodeLine{00068\ \ \ \ \ String\ \mbox{\hyperlink{class_web_server_manager_aa04431910d5e4b717017e5150e5c36e6}{m\_twitter}}\ \ \ =\ \textcolor{stringliteral}{"{}\(\backslash\)0"{}};\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ uint8\_t\ \ \ \ \ \ \ \mbox{\hyperlink{class_web_server_manager_a6bfc326cebd0b15ba49ead3f2fe36c62}{\_loginAttempts}}\ \ \ =\ 0;\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_web_server_manager_abb4270d2772f60e23be64ce5be13a2db}{\_lastAttemptTime}}\ =\ 0;\ }
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00081\ \ \ \ \ String\ \mbox{\hyperlink{class_web_server_manager_aabdd1adbc53f4a7e54c33a0d4a59ceb8}{getContentType}}(\textcolor{keyword}{const}\ String\ \&filename);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_a7de3a3031b727a0a00fb785a3120ab8a}{handleSubmitCredentials}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_a3c39e94b8a4f587813e8e5576f249829}{handleAdminPanel}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_a3c2490e1976cacfc7ba1563a655ca317}{handleLoginPages}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_a2dd9d3612ac9b571e6d304a922fca862}{handlePageIcons}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_ad7f493ed6ded5b0500fb2e3850149930}{handleFileDownload}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_a4dd4026ec22ab5d193d9967cdce6b2be}{handleFileUpload}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_a3e9e5dcc277f2069b773144fe54f566a}{handleFileDisplay}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_a896c0cfd261b129f57a792a422f5e664}{handleFileDelete}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_aeec627c2fed8f9bc9d991f86a455243a}{handleWiFiConfig}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_a3bca840d75d94d1b3dfc912115714846}{handlePagesPath}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_af861bc08e12b53cc0f5897e480908a5b}{handleAccessPoint}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_a434e87700735fe3c0584d6673ffd3464}{refreshAdminPage}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_web_server_manager_a5a6fb26c8e684ec6d230170154e057a9}{saveToDataFile}}(String\ data);}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_web_server_manager_a6a6606ec70a4ca3fcf345be86ca0a872}{validateAdminCredentials}}(\textcolor{keyword}{const}\ String\ \&username,\ \textcolor{keyword}{const}\ String\ \&password);}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00218\ \ \ \ \ \mbox{\hyperlink{class_web_server_manager_a350cb5a01307bc23a6f7f3963d824c74}{WebServerManager}}();}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00226\ \ \ \ \ \mbox{\hyperlink{class_web_server_manager_a350cb5a01307bc23a6f7f3963d824c74}{WebServerManager}}(\mbox{\hyperlink{class_s_d_card_manager}{SDCardManager}}\ *sd,\ uint8\_t\ port\ =\ SERVER\_PORT);}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00232\ \ \ \ \ \mbox{\hyperlink{class_web_server_manager_acb10b79d4e8fc01e3e08d42462db49bc}{WebServerManager}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_web_server_manager_a350cb5a01307bc23a6f7f3963d824c74}{WebServerManager}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00238\ \ \ \ \ \mbox{\hyperlink{class_web_server_manager_a350cb5a01307bc23a6f7f3963d824c74}{WebServerManager}}\ \mbox{\hyperlink{class_web_server_manager_aa049330442cf7f82d62d28c0c9295d59}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_web_server_manager_a350cb5a01307bc23a6f7f3963d824c74}{WebServerManager}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_web_server_manager_ab67f19040ffec81746ff0be9d513b932}{\string~WebServerManager}}();}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_a80f909d7a81b2bf4dbeeb71d8266c9f3}{start}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00264\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_acad523933eb6246769fa801f268dce1f}{process}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_a79a4cf819803219bce7963f39a8ce613}{setPath}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *path,\ \mbox{\hyperlink{include_8h_aa8298ffc203837d96d3c0013c0506fb3}{FileType\_t}}\ fileType);}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00280\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_a79a4cf819803219bce7963f39a8ce613}{setPath}}(\textcolor{keyword}{const}\ String\ \&path,\ \mbox{\hyperlink{include_8h_aa8298ffc203837d96d3c0013c0506fb3}{FileType\_t}}\ fileType);}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_a79a4cf819803219bce7963f39a8ce613}{setPath}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *path,\ \mbox{\hyperlink{include_8h_aa027791d4c6bbda765e876c1bf8ddff6}{Platform\_t}}\ platform);}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00298\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_a79a4cf819803219bce7963f39a8ce613}{setPath}}(\textcolor{keyword}{const}\ String\ \&path,\ \mbox{\hyperlink{include_8h_aa027791d4c6bbda765e876c1bf8ddff6}{Platform\_t}}\ platform);}
+\DoxyCodeLine{00299\ }
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00311\ \ \ \ \ String\ \mbox{\hyperlink{class_web_server_manager_aa50592f4b2f189d1add573e14e54ce34}{getHTMLContent}}(\textcolor{keyword}{const}\ String\ \&path);}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00329\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_web_server_manager_ac684e61c3042eb5241caa947ea3168b8}{generateJSONFile}}(\textcolor{keyword}{const}\ String\ \&dirname\ =\ \textcolor{stringliteral}{"{}/"{}},\ String\ *fileList\ =\ \textcolor{keyword}{new}\ String(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00331\ \};}
+\DoxyCodeLine{00332\ }
+\DoxyCodeLine{00333\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WEB\_SERVER\_HANDLER\_H}}
+
+\end{DoxyCode}

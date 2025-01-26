@@ -43,7 +43,7 @@
  *  - _loginAttempts, _lastAttemptTime: Controlan el número de intentos de acceso y el tiempo entre ellos.
  *
  * Uso:
- *  - Crear una instancia de WebServerManager, luego invocar start() para configurar y llamar periódicamente process()
+ *  - Crear una instancia de WebServerManager, luego invocar start() para configurar y llamar process()
  *    dentro de la función `loop()`.
  * 
  * @warning Es responsabilidad del usuario asegurar una correcta gestión de memoria
@@ -73,7 +73,8 @@ protected:
     /*!
      * @brief Determina el tipo de contenido (MIME) a partir de la extensión de un archivo.
      *
-     * Retorna diferentes MIME types (text/html, image/png, etc.) o "application/octet-stream" si no se reconoce la extensión.
+     * Retorna diferentes MIME types (text/html, image/png, etc.) o "application/octet-stream"
+     * si no se reconoce la extensión.
      * 
      * @return un string que representa el tipo de MIME
      */
@@ -83,7 +84,8 @@ protected:
     /*!
      * @brief Manejador para la ruta que recibe credenciales de formulario ("/submit-credentials").
      *
-     * Captura la plataforma, usuario y contraseña enviados por POST, los almacena (o registra en log) y devuelve respuesta al cliente.
+     * Captura la plataforma, usuario y contraseña enviados por POST, los almacena (o registra en log)
+     * y devuelve respuesta al cliente.
      */
     void handleSubmitCredentials(void);
 
@@ -106,7 +108,6 @@ protected:
      * @note Esta función debe ser llamada cuando se requiera manejar 
      * solicitudes relacionadas con la autenticación de usuarios.
      * 
-     * @return void No devuelve ningún valor
      */
     void handleLoginPages(void);
 
@@ -132,7 +133,9 @@ protected:
     /*!
      * @brief Manejador para la subida de archivos al servidor (vía formulario o HTTP POST).
      *
-     * Permite recibir un archivo en trozos (porciones) y guardarlo en la tarjeta SD. Al finalizar, notifica el éxito o el fallo.
+     * Permite recibir un archivo en trozos (porciones) y guardarlo en la tarjeta SD.
+     * Al finalizar, notifica el éxito o el fallo.
+     * 
      */
     void handleFileUpload(void);
 
@@ -144,9 +147,6 @@ protected:
      * en el servidor web incorporado. Se encarga de leer y enviar 
      * el contenido del archivo solicitado al cliente.
      * 
-     * 
-     * @warning Asegúrese de que los archivos solicitados existan y 
-     * sean accesibles antes de llamar a esta función.
      */
     void handleFileDisplay(void);
 
@@ -157,10 +157,7 @@ protected:
      * recibidas a través del servidor web. Se encarga de validar la solicitud,
      * eliminar el archivo especificado si existe y devolver una respuesta
      * apropiada al cliente.
-     * 
-     * @note Se debe verificar que el cliente tiene los permisos adecuados
-     * antes de permitir la eliminación del archivo.
-     * 
+     *  
      */
     void handleFileDelete(void);
 
@@ -191,10 +188,12 @@ protected:
      */
     void handleAccessPoint(void);
 
+    void refreshAdminPage(void);
+
     /*!
      * @brief Función auxiliar para guardar de forma confiable datos recibidos, creando el directorio si no existe.
      *
-     * @param data Contenido que se escribirá en el archivo configurado como archivo de datos.
+     * @param[in] data Contenido que se escribirá en el archivo configurado como archivo de datos.
      * @return `true` si la operación fue satisfactoria, `false` en caso contrario.
      */
     bool saveToDataFile(String data);
@@ -203,10 +202,10 @@ protected:
     /*!
      * @brief Valida las credenciales del administrador.
      * 
-     * @param username El nombre de usuario a validar.
-     * @param password La contraseña a validar.
-     * @return true Si las credenciales son válidas.
-     * @return false Si las credenciales son inválidas.
+     * @param[in] username El nombre de usuario a validar.
+     * @param[in] password La contraseña a validar.
+     * @return `true` Si las credenciales son válidas.
+     * @return `false` Si las credenciales son inválidas.
      */
     bool validateAdminCredentials(const String &username, const String &password);
 
@@ -221,15 +220,21 @@ public:
     /*!
      * @brief Constructor que inicializa los servicios de servidor web y DNS con referencias a la tarjeta SD y autenticación.
      *
-     * @param sd Puntero a la clase SDCardManager para manejar archivos.
-     * @param auth Puntero a la clase AuthenticationManager para validar credenciales de administrador.
-     * @param port Puerto en el que se iniciará el servidor web.
+     * @param[in] sd Puntero a la clase SDCardManager para manejar archivos.
+     * @param[in] port Puerto en el que se iniciará el servidor web.
      */
     WebServerManager(SDCardManager *sd, uint8_t port = SERVER_PORT);
 
-
+     /**
+     * @brief Borrado para prevenir copias del objeto
+     * 
+     */
     WebServerManager(const WebServerManager &) = delete;
 
+     /**
+     * @brief Borrado para prevenir copias del objeto
+     * 
+     */
     WebServerManager operator=(const WebServerManager &) = delete;
 
     /*!
@@ -261,16 +266,16 @@ public:
     /*!
      * @brief Asigna la ruta de archivo en la tarjeta SD a un tipo de archivo específico.
      *
-     * @param path Ruta o nombre del archivo (o directorio) a asignar.
-     * @param fileType Tipo de archivo que se configura (p.ej. página de índice, archivo de datos, etc.).
+     * @param[in] path Ruta o nombre del archivo (o directorio) a asignar.
+     * @param[in] fileType Tipo de archivo que se configura (p.ej. página de índice, archivo de datos, etc.).
      */
     void setPath(const char *path, FileType_t fileType);
 
     /*!
      * @brief Sobrecarga que recibe una cadena String para asignar la ruta a un tipo de archivo.
      *
-     * @param path Cadena con la ruta o nombre del archivo (o directorio).
-     * @param fileType Tipo de archivo que se configura.
+     * @param[in] path Cadena con la ruta o nombre del archivo (o directorio).
+     * @param[in] fileType Tipo de archivo que se configura.
      */
     void setPath(const String &path, FileType_t fileType);
 
@@ -279,16 +284,16 @@ public:
      *
      * Abre el archivo para verificar si es un directorio e internamente ajusta la ruta final necesaria.
      *
-     * @param path Ruta o nombre del archivo (o directorio) que contiene la plataforma.
-     * @param platform Plataforma social a asignar.
+     * @param[in] path Ruta o nombre del archivo (o directorio) que contiene la plataforma.
+     * @param[in] platform Plataforma social a asignar.
      */
     void setPath(const char *path, Platform_t platform);
 
     /*!
      * @brief Sobrecarga que recibe una cadena String para asignar la ruta de la plataforma solicitada.
      *
-     * @param path Cadena con la ruta o nombre del archivo (o directorio) de la plataforma.
-     * @param platform Plataforma social a asignar.
+     * @param[in] path Cadena con la ruta o nombre del archivo (o directorio) de la plataforma.
+     * @param[in] platform Plataforma social a asignar.
      */
     void setPath(const String &path, Platform_t platform);
 
@@ -300,7 +305,7 @@ public:
      * Lee el contenido del archivo ubicado en la ruta indicada y lo retorna
      * como una cadena con la información actualizada de la placa.
      *
-     * @param path Ruta del archivo HTML
+     * @param[in] path Ruta del archivo HTML
      * @return Cadena con el contenido HTML del archivo.
      */
     String getHTMLContent(const String &path);
@@ -314,9 +319,9 @@ public:
      * que contendrá la lista de archivos para procesar y volcar en el archivo JSON.
      * 
      *
-     * @param dirname Ruta del directorio donde se ubicarán o buscarán los archivos.
-     * @param fileList Puntero a un String que guardará los nombres 
-     *        y/o información de los archivos relevantes para generar el archivo JSON.
+     * @param[in] dirname Ruta del directorio donde se ubicarán o buscarán los archivos. (opcional)
+     * @param[out] fileList Puntero a un String que guardará los nombres y/o información
+     *                      de los archivos relevantes para generar el archivo JSON. (opcional)
      *
      * @note Si no se especifica, dirname se establece en "/" (raiz), mientras que fileList 
      *       se inicializa con un String vacío.

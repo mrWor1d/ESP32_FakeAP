@@ -29,7 +29,7 @@ void setup()
   accessPoint->setPath(AUTH_PAGE,  INDEXPAGE);
 
   WiFi.mode(WIFI_AP);
-  WiFi.hostname("ESP.server");
+  WiFi.hostname("ESP.accesspoint");
   WiFi.softAPConfig(*apip, *apip, IPAddress(255, 255, 255, 0));
   if (!accessPoint->initialize(SSID, "", WIFI_SSID, WIFI_PSW))
     Serial.println("Error en la configuración del punto de acceso");

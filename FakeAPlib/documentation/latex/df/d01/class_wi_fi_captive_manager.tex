@@ -1,0 +1,292 @@
+\doxysection{Referencia de la clase Wi\+Fi\+Captive\+Manager}
+\hypertarget{class_wi_fi_captive_manager}{}\label{class_wi_fi_captive_manager}\index{WiFiCaptiveManager@{WiFiCaptiveManager}}
+
+
+Gestor para la implementación de un punto de acceso con portal cautivo, conectarse a una red en modo estación, así como la interacción con un servidor para mostrar y enviar información de la página cautiva.  
+
+
+
+
+{\ttfamily \#include $<$Wifi\+Captive\+Portal.\+h$>$}
+
+Diagrama de herencia de Wi\+Fi\+Captive\+Manager\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{df/d01/class_wi_fi_captive_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_wi_fi_captive_manager_a78d44377e4493e2aa02dbf5bc8a71ea4}{Wi\+Fi\+Captive\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto que crea un objeto Wi\+Fi\+Client y no asigna un IPAddress. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_wi_fi_captive_manager_a7bc4680d6da10aa845c37f6a89cf1fff}{Wi\+Fi\+Captive\+Manager}} (IPAddress \&ip)
+\begin{DoxyCompactList}\small\item\em Constructor que crea un objeto Wi\+Fi\+Client y asigna un IPAddress al servidor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_wi_fi_captive_manager_a359ab36eb83082b77062aec5dc236088}{\texorpdfstring{$\sim$}{\string~}\+Wi\+Fi\+Captive\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor que libera la memoria asociada a \+\_\+client y \+\_\+server\+IP. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_wi_fi_captive_manager_a784c595055365b7eb366af41f19b8a13}{Wi\+Fi\+Captive\+Manager}} (const \mbox{\hyperlink{class_wi_fi_captive_manager}{Wi\+Fi\+Captive\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Borrado para prevenir copias del objeto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_wi_fi_captive_manager}{Wi\+Fi\+Captive\+Manager}} \mbox{\hyperlink{class_wi_fi_captive_manager_ad74ed371d6b96a2489f64047a4b10a9c}{operator=}} (const \mbox{\hyperlink{class_wi_fi_captive_manager}{Wi\+Fi\+Captive\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Borrado para prevenir copias del objeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_wi_fi_captive_manager_a65cec752a004af45b799ca36263fd468}{set\+Server\+IP}} (const IPAddress \&IP)
+\begin{DoxyCompactList}\small\item\em Actualiza la dirección IP del servidor donde se gestionan las solicitudes del portal cautivo. \end{DoxyCompactList}\item 
+String \& \mbox{\hyperlink{class_wi_fi_captive_manager_a7ffcc34219685ca9e916ba5cb2c0ef40}{get\+Page\+Content}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el contenido obtenido por get\+Login\+Page. \end{DoxyCompactList}\item 
+IPAddress \& \mbox{\hyperlink{class_wi_fi_captive_manager_a8764fe95f34df4a33f2cab0529f6ead9}{get\+Server\+Ip}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve la dirección IP almacenada para comunicación con el servidor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_wi_fi_captive_manager_a3cc466f9f92e5ec33e31510e3af75560}{set\+Wifi\+Station}} (const String \&wifissid, const String \&wifipsw="{}\textbackslash{}0"{})
+\begin{DoxyCompactList}\small\item\em Configura una conexión Wi\+Fi en modo estación. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_wi_fi_captive_manager_afb1bd9a6158aed7afa4233bb35acd4c9}{set\+Access\+Point}} (const String \&ssid, const String \&psw="{}\textbackslash{}0"{})
+\begin{DoxyCompactList}\small\item\em Configura el dispositivo en modo punto de acceso. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_wi_fi_captive_manager_a87a03fc06e9a07375631dcd26d0f0df1}{get\+Login\+Page}} (const String \&platform)
+\begin{DoxyCompactList}\small\item\em Solicita al servidor la página de inicio de sesión para la plataforma dada y la almacena en \+\_\+page\+Content. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_wi_fi_captive_manager_ade69c1e9b697d3493652902bce86dcaa}{submit\+Credentials}} (const String \&platform, const String \&username, const String \&password)
+\begin{DoxyCompactList}\small\item\em Envía las credenciales al servidor para que sean almacenadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+Wi\+Fi\+Client \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_wi_fi_captive_manager_a16222d86b8c26b8f78982ab493303096}{\+\_\+client}}
+\item 
+IPAddress \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_wi_fi_captive_manager_ad7b7ce8a1a9869f0103f429e76e619db}{\+\_\+server\+IP}}
+\item 
+String \mbox{\hyperlink{class_wi_fi_captive_manager_a9cad13f122b1dff8c462b8e545251d87}{\+\_\+page\+Content}} = "{}\textbackslash{}0"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Gestor para la implementación de un punto de acceso con portal cautivo, conectarse a una red en modo estación, así como la interacción con un servidor para mostrar y enviar información de la página cautiva. 
+
+Clase que facilita la configuración de Wi\+Fi en modo estación y punto de acceso, así como la interacción con un servidor para mostrar y enviar información de la página cautiva.
+
+Esta clase proporciona funcionalidades para crear y gestionar un portal cautivo Wi\+Fi, permitiendo la configuración tanto en modo punto de acceso como en modo estación. Facilita la obtención de páginas de inicio de sesión y el manejo de credenciales para diferentes plataformas sociales.
+
+Características principales\+:
+\begin{DoxyItemize}
+\item Configuración de modo punto de acceso y estación Wi\+Fi
+\item Gestión de conexiones con servidor remoto
+\item Manejo de páginas de inicio de sesión para distintas plataformas
+\item Envío de credenciales para almacenamiento
+\end{DoxyItemize}
+
+\begin{DoxyWarning}{Atención}
+Es responsabilidad del usuario asegurar una correcta gestión de memoria al utilizar los punteros \+\_\+client y \+\_\+server\+IP
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{Ver también}
+Wi\+Fi\+Client 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_wi_fi_captive_manager_a78d44377e4493e2aa02dbf5bc8a71ea4}\index{WiFiCaptiveManager@{WiFiCaptiveManager}!WiFiCaptiveManager@{WiFiCaptiveManager}}
+\index{WiFiCaptiveManager@{WiFiCaptiveManager}!WiFiCaptiveManager@{WiFiCaptiveManager}}
+\doxysubsubsection{\texorpdfstring{WiFiCaptiveManager()}{WiFiCaptiveManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_wi_fi_captive_manager_a78d44377e4493e2aa02dbf5bc8a71ea4} 
+Wi\+Fi\+Captive\+Manager\+::\+Wi\+Fi\+Captive\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor por defecto que crea un objeto Wi\+Fi\+Client y no asigna un IPAddress. 
+
+\Hypertarget{class_wi_fi_captive_manager_a7bc4680d6da10aa845c37f6a89cf1fff}\index{WiFiCaptiveManager@{WiFiCaptiveManager}!WiFiCaptiveManager@{WiFiCaptiveManager}}
+\index{WiFiCaptiveManager@{WiFiCaptiveManager}!WiFiCaptiveManager@{WiFiCaptiveManager}}
+\doxysubsubsection{\texorpdfstring{WiFiCaptiveManager()}{WiFiCaptiveManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_wi_fi_captive_manager_a7bc4680d6da10aa845c37f6a89cf1fff} 
+Wi\+Fi\+Captive\+Manager\+::\+Wi\+Fi\+Captive\+Manager (\begin{DoxyParamCaption}\item[{IPAddress \&}]{ip}{}\end{DoxyParamCaption})}
+
+
+
+Constructor que crea un objeto Wi\+Fi\+Client y asigna un IPAddress al servidor. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em ip} & Dirección IP del servidor para la comunicación en el portal cautivo. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_wi_fi_captive_manager_a359ab36eb83082b77062aec5dc236088}\index{WiFiCaptiveManager@{WiFiCaptiveManager}!````~WiFiCaptiveManager@{\texorpdfstring{$\sim$}{\string~}WiFiCaptiveManager}}
+\index{````~WiFiCaptiveManager@{\texorpdfstring{$\sim$}{\string~}WiFiCaptiveManager}!WiFiCaptiveManager@{WiFiCaptiveManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}WiFiCaptiveManager()}{\string~WiFiCaptiveManager()}}
+{\footnotesize\ttfamily \label{class_wi_fi_captive_manager_a359ab36eb83082b77062aec5dc236088} 
+Wi\+Fi\+Captive\+Manager\+::\texorpdfstring{$\sim$}{\string~}\+Wi\+Fi\+Captive\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor que libera la memoria asociada a \+\_\+client y \+\_\+server\+IP. 
+
+\Hypertarget{class_wi_fi_captive_manager_a784c595055365b7eb366af41f19b8a13}\index{WiFiCaptiveManager@{WiFiCaptiveManager}!WiFiCaptiveManager@{WiFiCaptiveManager}}
+\index{WiFiCaptiveManager@{WiFiCaptiveManager}!WiFiCaptiveManager@{WiFiCaptiveManager}}
+\doxysubsubsection{\texorpdfstring{WiFiCaptiveManager()}{WiFiCaptiveManager()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_wi_fi_captive_manager_a784c595055365b7eb366af41f19b8a13} 
+Wi\+Fi\+Captive\+Manager\+::\+Wi\+Fi\+Captive\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_wi_fi_captive_manager}{Wi\+Fi\+Captive\+Manager}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Borrado para prevenir copias del objeto. 
+
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_wi_fi_captive_manager_a87a03fc06e9a07375631dcd26d0f0df1}\index{WiFiCaptiveManager@{WiFiCaptiveManager}!getLoginPage@{getLoginPage}}
+\index{getLoginPage@{getLoginPage}!WiFiCaptiveManager@{WiFiCaptiveManager}}
+\doxysubsubsection{\texorpdfstring{getLoginPage()}{getLoginPage()}}
+{\footnotesize\ttfamily \label{class_wi_fi_captive_manager_a87a03fc06e9a07375631dcd26d0f0df1} 
+bool Wi\+Fi\+Captive\+Manager\+::get\+Login\+Page (\begin{DoxyParamCaption}\item[{const String \&}]{platform}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Solicita al servidor la página de inicio de sesión para la plataforma dada y la almacena en \+\_\+page\+Content. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em platform} & Nombre o identificador de la plataforma para solicitar la página de login.~\newline
+ Posibles opciones\+: \{{\ttfamily facebook}, {\ttfamily google}, {\ttfamily instagram}, {\ttfamily twitter}\} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve true si la conexión y lectura del contenido tuvo éxito, de lo contrario false. 
+\end{DoxyReturn}
+\Hypertarget{class_wi_fi_captive_manager_a7ffcc34219685ca9e916ba5cb2c0ef40}\index{WiFiCaptiveManager@{WiFiCaptiveManager}!getPageContent@{getPageContent}}
+\index{getPageContent@{getPageContent}!WiFiCaptiveManager@{WiFiCaptiveManager}}
+\doxysubsubsection{\texorpdfstring{getPageContent()}{getPageContent()}}
+{\footnotesize\ttfamily \label{class_wi_fi_captive_manager_a7ffcc34219685ca9e916ba5cb2c0ef40} 
+String \& Wi\+Fi\+Captive\+Manager\+::get\+Page\+Content (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Devuelve el contenido obtenido por get\+Login\+Page. 
+
+\begin{DoxyReturn}{Devuelve}
+Referencia a {\ttfamily \+\_\+page\+Conetent} que contiene el contenido de la página solicita al servidor con {\ttfamily \doxylink{class_wi_fi_captive_manager_a87a03fc06e9a07375631dcd26d0f0df1}{get\+Login\+Page()}} 
+\end{DoxyReturn}
+\Hypertarget{class_wi_fi_captive_manager_a8764fe95f34df4a33f2cab0529f6ead9}\index{WiFiCaptiveManager@{WiFiCaptiveManager}!getServerIp@{getServerIp}}
+\index{getServerIp@{getServerIp}!WiFiCaptiveManager@{WiFiCaptiveManager}}
+\doxysubsubsection{\texorpdfstring{getServerIp()}{getServerIp()}}
+{\footnotesize\ttfamily \label{class_wi_fi_captive_manager_a8764fe95f34df4a33f2cab0529f6ead9} 
+IPAddress \& Wi\+Fi\+Captive\+Manager\+::get\+Server\+Ip (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Devuelve la dirección IP almacenada para comunicación con el servidor. 
+
+\begin{DoxyReturn}{Devuelve}
+Referencia al objeto IPAddress del servidor. 
+\end{DoxyReturn}
+\Hypertarget{class_wi_fi_captive_manager_ad74ed371d6b96a2489f64047a4b10a9c}\index{WiFiCaptiveManager@{WiFiCaptiveManager}!operator=@{operator=}}
+\index{operator=@{operator=}!WiFiCaptiveManager@{WiFiCaptiveManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_wi_fi_captive_manager_ad74ed371d6b96a2489f64047a4b10a9c} 
+\mbox{\hyperlink{class_wi_fi_captive_manager}{Wi\+Fi\+Captive\+Manager}} Wi\+Fi\+Captive\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_wi_fi_captive_manager}{Wi\+Fi\+Captive\+Manager}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Borrado para prevenir copias del objeto. 
+
+\Hypertarget{class_wi_fi_captive_manager_afb1bd9a6158aed7afa4233bb35acd4c9}\index{WiFiCaptiveManager@{WiFiCaptiveManager}!setAccessPoint@{setAccessPoint}}
+\index{setAccessPoint@{setAccessPoint}!WiFiCaptiveManager@{WiFiCaptiveManager}}
+\doxysubsubsection{\texorpdfstring{setAccessPoint()}{setAccessPoint()}}
+{\footnotesize\ttfamily \label{class_wi_fi_captive_manager_afb1bd9a6158aed7afa4233bb35acd4c9} 
+bool Wi\+Fi\+Captive\+Manager\+::set\+Access\+Point (\begin{DoxyParamCaption}\item[{const String \&}]{ssid}{, }\item[{const String \&}]{psw}{ = {\ttfamily "{}\textbackslash{}0"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Configura el dispositivo en modo punto de acceso. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em ssid} & Nombre del punto de acceso. \\
+\hline
+\mbox{\texttt{ in}}  & {\em psw} & Contraseña del punto de acceso (optional). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve true si se creó el punto de acceso exitosamente, de lo contrario false. 
+\end{DoxyReturn}
+\Hypertarget{class_wi_fi_captive_manager_a65cec752a004af45b799ca36263fd468}\index{WiFiCaptiveManager@{WiFiCaptiveManager}!setServerIP@{setServerIP}}
+\index{setServerIP@{setServerIP}!WiFiCaptiveManager@{WiFiCaptiveManager}}
+\doxysubsubsection{\texorpdfstring{setServerIP()}{setServerIP()}}
+{\footnotesize\ttfamily \label{class_wi_fi_captive_manager_a65cec752a004af45b799ca36263fd468} 
+void Wi\+Fi\+Captive\+Manager\+::set\+Server\+IP (\begin{DoxyParamCaption}\item[{const IPAddress \&}]{IP}{}\end{DoxyParamCaption})}
+
+
+
+Actualiza la dirección IP del servidor donde se gestionan las solicitudes del portal cautivo. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em IP} & Objeto IPAddress con la dirección a asignar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_wi_fi_captive_manager_a3cc466f9f92e5ec33e31510e3af75560}\index{WiFiCaptiveManager@{WiFiCaptiveManager}!setWifiStation@{setWifiStation}}
+\index{setWifiStation@{setWifiStation}!WiFiCaptiveManager@{WiFiCaptiveManager}}
+\doxysubsubsection{\texorpdfstring{setWifiStation()}{setWifiStation()}}
+{\footnotesize\ttfamily \label{class_wi_fi_captive_manager_a3cc466f9f92e5ec33e31510e3af75560} 
+bool Wi\+Fi\+Captive\+Manager\+::set\+Wifi\+Station (\begin{DoxyParamCaption}\item[{const String \&}]{wifissid}{, }\item[{const String \&}]{wifipsw}{ = {\ttfamily "{}\textbackslash{}0"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Configura una conexión Wi\+Fi en modo estación. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em wifissid} & Nombre de la red a la que se conectará. \\
+\hline
+\mbox{\texttt{ in}}  & {\em wifipsw} & Contraseña de la red (opcional). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve true si la conexión fue exitosa, si no, false. 
+\end{DoxyReturn}
+\Hypertarget{class_wi_fi_captive_manager_ade69c1e9b697d3493652902bce86dcaa}\index{WiFiCaptiveManager@{WiFiCaptiveManager}!submitCredentials@{submitCredentials}}
+\index{submitCredentials@{submitCredentials}!WiFiCaptiveManager@{WiFiCaptiveManager}}
+\doxysubsubsection{\texorpdfstring{submitCredentials()}{submitCredentials()}}
+{\footnotesize\ttfamily \label{class_wi_fi_captive_manager_ade69c1e9b697d3493652902bce86dcaa} 
+bool Wi\+Fi\+Captive\+Manager\+::submit\+Credentials (\begin{DoxyParamCaption}\item[{const String \&}]{platform}{, }\item[{const String \&}]{username}{, }\item[{const String \&}]{password}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Envía las credenciales al servidor para que sean almacenadas. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\texttt{ in}}  & {\em platform} & Identificador de la plataforma. \\
+\hline
+\mbox{\texttt{ in}}  & {\em username} & Nombre de usuario o identificador. \\
+\hline
+\mbox{\texttt{ in}}  & {\em password} & Contraseña asociada al usuario. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve true si el envío de credenciales fue exitoso, si no, false. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{class_wi_fi_captive_manager_a16222d86b8c26b8f78982ab493303096}\index{WiFiCaptiveManager@{WiFiCaptiveManager}!\_client@{\_client}}
+\index{\_client@{\_client}!WiFiCaptiveManager@{WiFiCaptiveManager}}
+\doxysubsubsection{\texorpdfstring{\_client}{\_client}}
+{\footnotesize\ttfamily \label{class_wi_fi_captive_manager_a16222d86b8c26b8f78982ab493303096} 
+Wi\+Fi\+Client\texorpdfstring{$\ast$}{*} Wi\+Fi\+Captive\+Manager\+::\+\_\+client\hspace{0.3cm}{\ttfamily [protected]}}
+
+Puntero a objeto Wi\+Fi\+Client que maneja las conexiones salientes. \Hypertarget{class_wi_fi_captive_manager_a9cad13f122b1dff8c462b8e545251d87}\index{WiFiCaptiveManager@{WiFiCaptiveManager}!\_pageContent@{\_pageContent}}
+\index{\_pageContent@{\_pageContent}!WiFiCaptiveManager@{WiFiCaptiveManager}}
+\doxysubsubsection{\texorpdfstring{\_pageContent}{\_pageContent}}
+{\footnotesize\ttfamily \label{class_wi_fi_captive_manager_a9cad13f122b1dff8c462b8e545251d87} 
+String Wi\+Fi\+Captive\+Manager\+::\+\_\+page\+Content = "{}\textbackslash{}0"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Almacena el contenido HTML o texto que se recibe desde el servidor. \Hypertarget{class_wi_fi_captive_manager_ad7b7ce8a1a9869f0103f429e76e619db}\index{WiFiCaptiveManager@{WiFiCaptiveManager}!\_serverIP@{\_serverIP}}
+\index{\_serverIP@{\_serverIP}!WiFiCaptiveManager@{WiFiCaptiveManager}}
+\doxysubsubsection{\texorpdfstring{\_serverIP}{\_serverIP}}
+{\footnotesize\ttfamily \label{class_wi_fi_captive_manager_ad7b7ce8a1a9869f0103f429e76e619db} 
+IPAddress\texorpdfstring{$\ast$}{*} Wi\+Fi\+Captive\+Manager\+::\+\_\+server\+IP\hspace{0.3cm}{\ttfamily [protected]}}
+
+Puntero a la dirección IP del servidor que recibe y entrega datos. 
+
+La documentación de esta clase está generada de los siguientes archivos\+:\begin{DoxyCompactItemize}
+\item 
+src/include/\mbox{\hyperlink{_wifi_captive_portal_8h}{Wifi\+Captive\+Portal.\+h}}\item 
+src/include/\mbox{\hyperlink{_wifi_captive_portal_8cpp}{Wifi\+Captive\+Portal.\+cpp}}\end{DoxyCompactItemize}

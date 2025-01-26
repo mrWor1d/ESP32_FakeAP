@@ -95,7 +95,7 @@ String& WiFiCaptiveManager::getPageContent() { return _pageContent; }
 IPAddress& WiFiCaptiveManager::getServerIp() { return *_serverIP; }
 
 
-bool WiFiCaptiveManager::setWifiStation(const String &wifissid, const String &wifipsw, const IPAddress &apIp)
+bool WiFiCaptiveManager::setWifiStation(const String &wifissid, const String &wifipsw)
 {
     WiFi.disconnect(true);
     if (wifissid == NULL)

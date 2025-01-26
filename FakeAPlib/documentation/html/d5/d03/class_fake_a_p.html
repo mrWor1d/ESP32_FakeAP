@@ -9,20 +9,8 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
-<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
 <script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../cookie.js"></script>
-<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../search/searchdata.js"></script>
-<script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
-/* @license-end */
-</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -36,18 +24,6 @@
    </div>
    <div id="projectbrief">Librería arduino para ESP32 que permite crear un punto de acceso falso</div>
   </td>
-    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
-          </span>
-        </div>
-</td>
  </tr>
  </tbody>
 </table>
@@ -56,52 +32,16 @@
 <!-- Generado por Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() { codefold.init(1); });
 /* @license-end */
 </script>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('d5/d03/class_fake_a_p.html','../../'); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
+</div><!-- top -->
 <div id="doc-content">
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
-</div>
-
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Métodos públicos</a> &#124;
@@ -152,8 +92,10 @@ Métodos públicos</h2></td></tr>
 <tr class="memdesc:abd4a80e068013d92952df57161d39033 inherit pub_methods_class_web_server_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor que inicializa los servicios de servidor web y DNS con referencias a la tarjeta SD y autenticación.  <br /></td></tr>
 <tr class="separator:abd4a80e068013d92952df57161d39033 inherit pub_methods_class_web_server_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb10b79d4e8fc01e3e08d42462db49bc inherit pub_methods_class_web_server_manager" id="r_acb10b79d4e8fc01e3e08d42462db49bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d02/class_web_server_manager.html#acb10b79d4e8fc01e3e08d42462db49bc">WebServerManager</a> (const <a class="el" href="../../df/d02/class_web_server_manager.html">WebServerManager</a> &amp;)=delete</td></tr>
+<tr class="memdesc:acb10b79d4e8fc01e3e08d42462db49bc inherit pub_methods_class_web_server_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Borrado para prevenir copias del objeto.  <br /></td></tr>
 <tr class="separator:acb10b79d4e8fc01e3e08d42462db49bc inherit pub_methods_class_web_server_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa049330442cf7f82d62d28c0c9295d59 inherit pub_methods_class_web_server_manager" id="r_aa049330442cf7f82d62d28c0c9295d59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d02/class_web_server_manager.html">WebServerManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d02/class_web_server_manager.html#aa049330442cf7f82d62d28c0c9295d59">operator=</a> (const <a class="el" href="../../df/d02/class_web_server_manager.html">WebServerManager</a> &amp;)=delete</td></tr>
+<tr class="memdesc:aa049330442cf7f82d62d28c0c9295d59 inherit pub_methods_class_web_server_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Borrado para prevenir copias del objeto.  <br /></td></tr>
 <tr class="separator:aa049330442cf7f82d62d28c0c9295d59 inherit pub_methods_class_web_server_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab67f19040ffec81746ff0be9d513b932 inherit pub_methods_class_web_server_manager" id="r_ab67f19040ffec81746ff0be9d513b932"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d02/class_web_server_manager.html#ab67f19040ffec81746ff0be9d513b932">~WebServerManager</a> ()</td></tr>
 <tr class="memdesc:ab67f19040ffec81746ff0be9d513b932 inherit pub_methods_class_web_server_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor de la clase que libera la memoria asignada.  <br /></td></tr>
@@ -193,8 +135,10 @@ Métodos públicos</h2></td></tr>
 <tr class="memdesc:a359ab36eb83082b77062aec5dc236088 inherit pub_methods_class_wi_fi_captive_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor que libera la memoria asociada a _client y _serverIP.  <br /></td></tr>
 <tr class="separator:a359ab36eb83082b77062aec5dc236088 inherit pub_methods_class_wi_fi_captive_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a784c595055365b7eb366af41f19b8a13 inherit pub_methods_class_wi_fi_captive_manager" id="r_a784c595055365b7eb366af41f19b8a13"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d01/class_wi_fi_captive_manager.html#a784c595055365b7eb366af41f19b8a13">WiFiCaptiveManager</a> (const <a class="el" href="../../df/d01/class_wi_fi_captive_manager.html">WiFiCaptiveManager</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a784c595055365b7eb366af41f19b8a13 inherit pub_methods_class_wi_fi_captive_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Borrado para prevenir copias del objeto.  <br /></td></tr>
 <tr class="separator:a784c595055365b7eb366af41f19b8a13 inherit pub_methods_class_wi_fi_captive_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad74ed371d6b96a2489f64047a4b10a9c inherit pub_methods_class_wi_fi_captive_manager" id="r_ad74ed371d6b96a2489f64047a4b10a9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d01/class_wi_fi_captive_manager.html">WiFiCaptiveManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d01/class_wi_fi_captive_manager.html#ad74ed371d6b96a2489f64047a4b10a9c">operator=</a> (const <a class="el" href="../../df/d01/class_wi_fi_captive_manager.html">WiFiCaptiveManager</a> &amp;)=delete</td></tr>
+<tr class="memdesc:ad74ed371d6b96a2489f64047a4b10a9c inherit pub_methods_class_wi_fi_captive_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Borrado para prevenir copias del objeto.  <br /></td></tr>
 <tr class="separator:ad74ed371d6b96a2489f64047a4b10a9c inherit pub_methods_class_wi_fi_captive_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65cec752a004af45b799ca36263fd468 inherit pub_methods_class_wi_fi_captive_manager" id="r_a65cec752a004af45b799ca36263fd468"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d01/class_wi_fi_captive_manager.html#a65cec752a004af45b799ca36263fd468">setServerIP</a> (const IPAddress &amp;IP)</td></tr>
 <tr class="memdesc:a65cec752a004af45b799ca36263fd468 inherit pub_methods_class_wi_fi_captive_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza la dirección IP del servidor donde se gestionan las solicitudes del portal cautivo.  <br /></td></tr>
@@ -221,7 +165,7 @@ Métodos privados</h2></td></tr>
 <tr class="memdesc:a1e6be7d111efd8ce66eb7c19b1a33ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maneja el evento de envío de credenciales (después del inicio de sesión).  <br /></td></tr>
 <tr class="separator:a1e6be7d111efd8ce66eb7c19b1a33ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6276373aeb7a5d158ac01045315932c" id="r_aa6276373aeb7a5d158ac01045315932c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6276373aeb7a5d158ac01045315932c">handleIcons</a> (void)</td></tr>
-<tr class="memdesc:aa6276373aeb7a5d158ac01045315932c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maneja el envio de iconos/imagenes por respuestas HTTP.  <br /></td></tr>
+<tr class="memdesc:aa6276373aeb7a5d158ac01045315932c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maneja el envio de iconos/imagenes por respuesta HTTP.  <br /></td></tr>
 <tr class="separator:aa6276373aeb7a5d158ac01045315932c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3a8eb30ccab86cf34d11e00841145bd" id="r_aa3a8eb30ccab86cf34d11e00841145bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3a8eb30ccab86cf34d11e00841145bd">getImageFile</a> (const String &amp;iconName)</td></tr>
 <tr class="memdesc:aa3a8eb30ccab86cf34d11e00841145bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solicita los iconos/imagenes usadas en las paginas de redes sociales al servidor.  <br /></td></tr>
@@ -230,12 +174,12 @@ Métodos privados</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Otros miembros heredados</h2></td></tr>
 <tr class="inherit_header pub_static_methods_class_wi_fi_captive_manager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_wi_fi_captive_manager')"><img src="../../closed.png" alt="-"/>&#160;Métodos públicos estáticos heredados de <a class="el" href="../../df/d01/class_wi_fi_captive_manager.html">WiFiCaptiveManager</a></td></tr>
-<tr class="memitem:a33bb6307a6046532e4fdf13c16e35783 inherit pub_static_methods_class_wi_fi_captive_manager" id="r_a33bb6307a6046532e4fdf13c16e35783"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d01/class_wi_fi_captive_manager.html#a33bb6307a6046532e4fdf13c16e35783">setWifiStation</a> (const String &amp;wifissid, const String &amp;wifipsw=&quot;\0&quot;, const IPAddress &amp;apIp=IPAddress(192, 168, 1, 3))</td></tr>
-<tr class="memdesc:a33bb6307a6046532e4fdf13c16e35783 inherit pub_static_methods_class_wi_fi_captive_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configura una conexión WiFi en modo estación.  <br /></td></tr>
-<tr class="separator:a33bb6307a6046532e4fdf13c16e35783 inherit pub_static_methods_class_wi_fi_captive_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7be1e9b24d5cbe8114ff41036abcef3 inherit pub_static_methods_class_wi_fi_captive_manager" id="r_ab7be1e9b24d5cbe8114ff41036abcef3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d01/class_wi_fi_captive_manager.html#ab7be1e9b24d5cbe8114ff41036abcef3">setAccessPoint</a> (const String &amp;ssid, const String &amp;psw)</td></tr>
-<tr class="memdesc:ab7be1e9b24d5cbe8114ff41036abcef3 inherit pub_static_methods_class_wi_fi_captive_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configura el dispositivo en modo punto de acceso.  <br /></td></tr>
-<tr class="separator:ab7be1e9b24d5cbe8114ff41036abcef3 inherit pub_static_methods_class_wi_fi_captive_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cc466f9f92e5ec33e31510e3af75560 inherit pub_static_methods_class_wi_fi_captive_manager" id="r_a3cc466f9f92e5ec33e31510e3af75560"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d01/class_wi_fi_captive_manager.html#a3cc466f9f92e5ec33e31510e3af75560">setWifiStation</a> (const String &amp;wifissid, const String &amp;wifipsw=&quot;\0&quot;)</td></tr>
+<tr class="memdesc:a3cc466f9f92e5ec33e31510e3af75560 inherit pub_static_methods_class_wi_fi_captive_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configura una conexión WiFi en modo estación.  <br /></td></tr>
+<tr class="separator:a3cc466f9f92e5ec33e31510e3af75560 inherit pub_static_methods_class_wi_fi_captive_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb1bd9a6158aed7afa4233bb35acd4c9 inherit pub_static_methods_class_wi_fi_captive_manager" id="r_afb1bd9a6158aed7afa4233bb35acd4c9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d01/class_wi_fi_captive_manager.html#afb1bd9a6158aed7afa4233bb35acd4c9">setAccessPoint</a> (const String &amp;ssid, const String &amp;psw=&quot;\0&quot;)</td></tr>
+<tr class="memdesc:afb1bd9a6158aed7afa4233bb35acd4c9 inherit pub_static_methods_class_wi_fi_captive_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configura el dispositivo en modo punto de acceso.  <br /></td></tr>
+<tr class="separator:afb1bd9a6158aed7afa4233bb35acd4c9 inherit pub_static_methods_class_wi_fi_captive_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_web_server_manager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_web_server_manager')"><img src="../../closed.png" alt="-"/>&#160;Métodos protegidos heredados de <a class="el" href="../../df/d02/class_web_server_manager.html">WebServerManager</a></td></tr>
 <tr class="memitem:aabdd1adbc53f4a7e54c33a0d4a59ceb8 inherit pro_methods_class_web_server_manager" id="r_aabdd1adbc53f4a7e54c33a0d4a59ceb8"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d02/class_web_server_manager.html#aabdd1adbc53f4a7e54c33a0d4a59ceb8">getContentType</a> (const String &amp;filename)</td></tr>
 <tr class="memdesc:aabdd1adbc53f4a7e54c33a0d4a59ceb8 inherit pro_methods_class_web_server_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determina el tipo de contenido (MIME) a partir de la extensión de un archivo.  <br /></td></tr>
@@ -273,6 +217,8 @@ Otros miembros heredados</h2></td></tr>
 <tr class="memitem:af861bc08e12b53cc0f5897e480908a5b inherit pro_methods_class_web_server_manager" id="r_af861bc08e12b53cc0f5897e480908a5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d02/class_web_server_manager.html#af861bc08e12b53cc0f5897e480908a5b">handleAccessPoint</a> (void)</td></tr>
 <tr class="memdesc:af861bc08e12b53cc0f5897e480908a5b inherit pro_methods_class_web_server_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maneja la configuración y funcionamiento del punto de acceso WiFi.  <br /></td></tr>
 <tr class="separator:af861bc08e12b53cc0f5897e480908a5b inherit pro_methods_class_web_server_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a434e87700735fe3c0584d6673ffd3464 inherit pro_methods_class_web_server_manager" id="r_a434e87700735fe3c0584d6673ffd3464"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d02/class_web_server_manager.html#a434e87700735fe3c0584d6673ffd3464">refreshAdminPage</a> (void)</td></tr>
+<tr class="separator:a434e87700735fe3c0584d6673ffd3464 inherit pro_methods_class_web_server_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a6fb26c8e684ec6d230170154e057a9 inherit pro_methods_class_web_server_manager" id="r_a5a6fb26c8e684ec6d230170154e057a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d02/class_web_server_manager.html#a5a6fb26c8e684ec6d230170154e057a9">saveToDataFile</a> (String data)</td></tr>
 <tr class="memdesc:a5a6fb26c8e684ec6d230170154e057a9 inherit pro_methods_class_web_server_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función auxiliar para guardar de forma confiable datos recibidos, creando el directorio si no existe.  <br /></td></tr>
 <tr class="separator:a5a6fb26c8e684ec6d230170154e057a9 inherit pro_methods_class_web_server_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -331,8 +277,73 @@ Otros miembros heredados</h2></td></tr>
 </ol>
 <dl class="section warning"><dt>Atención</dt><dd>Es importante inicializar la tarjeta SD mediante el método <code><a class="el" href="#a938352e763c34554d39f3420a926411f" title="Inicializa la biblioteca FakeAP configurando el punto de acceso y la conexión WiFi.">initialize()</a></code> antes de realizar cualquier operación.</dd></dl>
 <dl class="section note"><dt>Nota</dt><dd>Todas las clases de este proyecto restringen la copia al eliminar constructores de copia y el operadores de asignación.</dd></dl>
-<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="../../df/d02/class_web_server_manager.html" title="Clase que gestiona la configuración y operación de un servidor web y DNS, junto con el manejo de arch...">WebServerManager</a>, <a class="el" href="../../df/d01/class_wi_fi_captive_manager.html" title="Gestor para la implementación de un punto de acceso con portal cautivo, conectarse a una red en modo ...">WiFiCaptiveManager</a> </dd></dl>
-</div><h2 class="groupheader">Documentación de constructores y destructores</h2>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="../../df/d02/class_web_server_manager.html" title="Clase que gestiona la configuración y operación de un servidor web y DNS, junto con el manejo de arch...">WebServerManager</a>, <a class="el" href="../../df/d01/class_wi_fi_captive_manager.html" title="Gestor para la implementación de un punto de acceso con portal cautivo, conectarse a una red en modo ...">WiFiCaptiveManager</a></dd></dl>
+<p>Ejemplo de uso para crear un punto de acceso falso: </p><div class="fragment"><div class="line"><a class="code hl_function" href="#a52f5b2c936f62efb5733abdb9b71826e">FakeAP</a> fakeAP; <span class="comment">// se va a llamar al constructor por defecto e</span></div>
+<div class="line">               <span class="comment">// inicar el servidor en el puerto 80 (por defecto)</span></div>
+<div class="line"><a class="code hl_function" href="#a52f5b2c936f62efb5733abdb9b71826e">FakeAP</a> fakeAP(8080); <span class="comment">// o inicia el servidor en el puerto indicado: 8080</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setup()</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// your setup...</span></div>
+<div class="line"> </div>
+<div class="line">    fakeAP.<a class="code hl_function" href="../../df/d02/class_web_server_manager.html#a79a4cf819803219bce7963f39a8ce613">setPath</a>(<span class="stringliteral">&quot;/webpages/index.html&quot;</span>,  <a class="code hl_enumvalue" href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844">INDEXPAGE</a>); <span class="comment">// pagina principal o de inicio</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//configuración de la wifi</span></div>
+<div class="line">    WiFi.hostname(<span class="stringliteral">&quot;ESP.accesspoint&quot;</span>);</div>
+<div class="line">    WiFi.softAPConfig(IPAddress(192,168,1,1), IPAddress(192,168,1,1), IPAddress(255, 255, 255, 0));</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// iniciar un punto de acceso público que se conecta a un servidor</span></div>
+<div class="line">     <span class="keywordflow">if</span> (fakeAP.<a class="code hl_function" href="#a938352e763c34554d39f3420a926411f">initialize</a>(<span class="stringliteral">&quot;public-wifi&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;wifi-server-ssid&quot;</span>, <span class="stringliteral">&quot;wifi-server-osw&quot;</span>))</div>
+<div class="line">         Serial.println(<span class="stringliteral">&quot;Error en la configuración del punto de acceso&quot;</span>); <span class="comment">// en caso de fallo</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> loop()</div>
+<div class="line">{</div>
+<div class="line">    fakeAP.<a class="code hl_function" href="../../df/d02/class_web_server_manager.html#acad523933eb6246769fa801f268dce1f">process</a>();</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_fake_a_p_html_a52f5b2c936f62efb5733abdb9b71826e"><div class="ttname"><a href="#a52f5b2c936f62efb5733abdb9b71826e">FakeAP::FakeAP</a></div><div class="ttdeci">FakeAP()</div><div class="ttdoc">Constructor por defecto de la clase FakeAP</div><div class="ttdef"><b>Definition</b> FakeAPlib.cpp:3</div></div>
+<div class="ttc" id="aclass_fake_a_p_html_a938352e763c34554d39f3420a926411f"><div class="ttname"><a href="#a938352e763c34554d39f3420a926411f">FakeAP::initialize</a></div><div class="ttdeci">bool initialize(const String &amp;AP_SSID, const String &amp;AP_PSW=&quot;\0&quot;, const String &amp;WIFI_SSID=&quot;\0&quot;, const String &amp;WIFI_PSW=&quot;\0&quot;)</div><div class="ttdoc">Inicializa la biblioteca FakeAP configurando el punto de acceso y la conexión WiFi.</div><div class="ttdef"><b>Definition</b> FakeAPlib.cpp:124</div></div>
+<div class="ttc" id="aclass_web_server_manager_html_a79a4cf819803219bce7963f39a8ce613"><div class="ttname"><a href="../../df/d02/class_web_server_manager.html#a79a4cf819803219bce7963f39a8ce613">WebServerManager::setPath</a></div><div class="ttdeci">void setPath(const char *path, FileType_t fileType)</div><div class="ttdoc">Asigna la ruta de archivo en la tarjeta SD a un tipo de archivo específico.</div><div class="ttdef"><b>Definition</b> WebServerHandler.cpp:521</div></div>
+<div class="ttc" id="aclass_web_server_manager_html_acad523933eb6246769fa801f268dce1f"><div class="ttname"><a href="../../df/d02/class_web_server_manager.html#acad523933eb6246769fa801f268dce1f">WebServerManager::process</a></div><div class="ttdeci">void process(void)</div><div class="ttdoc">Procesa las peticiones entrantes tanto del servidor DNS como del servidor web.</div><div class="ttdef"><b>Definition</b> WebServerHandler.cpp:514</div></div>
+<div class="ttc" id="ainclude_8h_html_aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844">INDEXPAGE</a></div><div class="ttdeci">@ INDEXPAGE</div><div class="ttdef"><b>Definition</b> include.h:60</div></div>
+</div><!-- fragment --><p>Ejemplo de uso para crear un servivor web: </p><div class="fragment"><div class="line"><a class="code hl_function" href="#a52f5b2c936f62efb5733abdb9b71826e">FakeAP</a> server = <a class="code hl_function" href="#a52f5b2c936f62efb5733abdb9b71826e">FakeAP</a>(); <span class="comment">// se va a llamar al constructor por defecto e</span></div>
+<div class="line">                          <span class="comment">// inicar el servidor en el puerto 80 (por defecto)</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_function" href="#a52f5b2c936f62efb5733abdb9b71826e">FakeAP</a> sever = <a class="code hl_function" href="#a52f5b2c936f62efb5733abdb9b71826e">FakeAP</a>(8080); <span class="comment">// o inicia el servidor en el puerto indicado: 8080</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setup()</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// your setup...</span></div>
+<div class="line"> </div>
+<div class="line">    server.<a class="code hl_function" href="../../df/d02/class_web_server_manager.html#a79a4cf819803219bce7963f39a8ce613">setPath</a>(<span class="stringliteral">&quot;/data/data.json&quot;</span>,  <a class="code hl_enumvalue" href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a7db207cda2d286d6f20e427cf0aae786">DATAFILE</a>);           <span class="comment">// ruta del archivo donde se almacenan la credenciales enviadas</span></div>
+<div class="line">    server.<a class="code hl_function" href="../../df/d02/class_web_server_manager.html#a79a4cf819803219bce7963f39a8ce613">setPath</a>(<span class="stringliteral">&quot;/webpages/index.html&quot;</span>,  <a class="code hl_enumvalue" href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844">INDEXPAGE</a>);     <span class="comment">// pagina principal o de inicio</span></div>
+<div class="line">    server.<a class="code hl_function" href="../../df/d02/class_web_server_manager.html#a79a4cf819803219bce7963f39a8ce613">setPath</a>(<span class="stringliteral">&quot;/webpages/admin.html&quot;</span>,  <a class="code hl_enumvalue" href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3af2fe22452b791e2585afaa5b9f41793f">ADMINPAGE</a>);     <span class="comment">// pagina del panel de administrador</span></div>
+<div class="line">    server.<a class="code hl_function" href="../../df/d02/class_web_server_manager.html#a79a4cf819803219bce7963f39a8ce613">setPath</a>(<span class="stringliteral">&quot;/webpages/facebook.html&quot;</span>,  <a class="code hl_enumvalue" href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a7d5f8c8379dcd2c8a94c15c72302586c">FACEBOOK</a>);   <span class="comment">// pagina de incio de sesión con facebook</span></div>
+<div class="line">    server.<a class="code hl_function" href="../../df/d02/class_web_server_manager.html#a79a4cf819803219bce7963f39a8ce613">setPath</a>(<span class="stringliteral">&quot;/webpages/google.html&quot;</span>,  <a class="code hl_enumvalue" href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a14e1e9c8e5f5a807deef8ee2bf38974d">GOOGLE</a>);       <span class="comment">// pagina de incio de sesión con google</span></div>
+<div class="line">    server.<a class="code hl_function" href="../../df/d02/class_web_server_manager.html#a79a4cf819803219bce7963f39a8ce613">setPath</a>(<span class="stringliteral">&quot;/webpages/instagram.html&quot;</span>,  <a class="code hl_enumvalue" href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6afa07d9774ff62173c36267023c8e4390">INSTAGRAM</a>); <span class="comment">// pagina de incio de sesión con instagram</span></div>
+<div class="line">    server.<a class="code hl_function" href="../../df/d02/class_web_server_manager.html#a79a4cf819803219bce7963f39a8ce613">setPath</a>(<span class="stringliteral">&quot;/webpages/twitter.html&quot;</span>,  <a class="code hl_enumvalue" href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a6b09926d98e3d10888b34a57fff96ab8">TWITTER</a>);     <span class="comment">// pagina de incio de sesión con twitter</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//configuración de la wifi</span></div>
+<div class="line">    WiFi.hostname(<span class="stringliteral">&quot;ESP.server&quot;</span>);</div>
+<div class="line">    WiFi.softAPConfig(IPAddress(10,10,1,1), IPAddress(10,10,1,1), IPAddress(255, 255, 255, 0));</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// iniciar un punto de acceso público que se conecta a un servidor</span></div>
+<div class="line">     <span class="keywordflow">if</span> (server.<a class="code hl_function" href="#a938352e763c34554d39f3420a926411f">initialize</a>(<span class="stringliteral">&quot;private-server-wifi&quot;</span>, <span class="stringliteral">&quot;private-server-psw&quot;</span>, <span class="stringliteral">&quot;personal-wifi-ssid&quot;</span>, <span class="stringliteral">&quot;personal-wifi-psw&quot;</span>))</div>
+<div class="line">         Serial.println(<span class="stringliteral">&quot;Error en la configuración servidor&quot;</span>); <span class="comment">// en caso de fallo</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> loop()</div>
+<div class="line">{</div>
+<div class="line">    server.<a class="code hl_function" href="../../df/d02/class_web_server_manager.html#acad523933eb6246769fa801f268dce1f">process</a>();</div>
+<div class="line">}</div>
+<div class="ttc" id="ainclude_8h_html_aa027791d4c6bbda765e876c1bf8ddff6a14e1e9c8e5f5a807deef8ee2bf38974d"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a14e1e9c8e5f5a807deef8ee2bf38974d">GOOGLE</a></div><div class="ttdeci">@ GOOGLE</div><div class="ttdef"><b>Definition</b> include.h:71</div></div>
+<div class="ttc" id="ainclude_8h_html_aa027791d4c6bbda765e876c1bf8ddff6a6b09926d98e3d10888b34a57fff96ab8"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a6b09926d98e3d10888b34a57fff96ab8">TWITTER</a></div><div class="ttdeci">@ TWITTER</div><div class="ttdef"><b>Definition</b> include.h:73</div></div>
+<div class="ttc" id="ainclude_8h_html_aa027791d4c6bbda765e876c1bf8ddff6a7d5f8c8379dcd2c8a94c15c72302586c"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a7d5f8c8379dcd2c8a94c15c72302586c">FACEBOOK</a></div><div class="ttdeci">@ FACEBOOK</div><div class="ttdef"><b>Definition</b> include.h:70</div></div>
+<div class="ttc" id="ainclude_8h_html_aa027791d4c6bbda765e876c1bf8ddff6afa07d9774ff62173c36267023c8e4390"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6afa07d9774ff62173c36267023c8e4390">INSTAGRAM</a></div><div class="ttdeci">@ INSTAGRAM</div><div class="ttdef"><b>Definition</b> include.h:72</div></div>
+<div class="ttc" id="ainclude_8h_html_aa8298ffc203837d96d3c0013c0506fb3a7db207cda2d286d6f20e427cf0aae786"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a7db207cda2d286d6f20e427cf0aae786">DATAFILE</a></div><div class="ttdeci">@ DATAFILE</div><div class="ttdef"><b>Definition</b> include.h:58</div></div>
+<div class="ttc" id="ainclude_8h_html_aa8298ffc203837d96d3c0013c0506fb3af2fe22452b791e2585afaa5b9f41793f"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3af2fe22452b791e2585afaa5b9f41793f">ADMINPAGE</a></div><div class="ttdeci">@ ADMINPAGE</div><div class="ttdef"><b>Definition</b> include.h:57</div></div>
+</div><!-- fragment --> </div><h2 class="groupheader">Documentación de constructores y destructores</h2>
 <a id="a52f5b2c936f62efb5733abdb9b71826e" name="a52f5b2c936f62efb5733abdb9b71826e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a52f5b2c936f62efb5733abdb9b71826e">&#9670;&#160;</a></span>FakeAP() <span class="overload">[1/3]</span></h2>
 
@@ -371,7 +382,7 @@ Otros miembros heredados</h2></td></tr>
 <p>Constructor que permite especificar el puerto para el servidor. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">port</td><td>Puerto a utilizar. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">port</td><td>Puerto a utilizar. </td></tr>
   </table>
   </dd>
 </dl>
@@ -428,9 +439,11 @@ Otros miembros heredados</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Solicita los iconos/imagenes usadas en las paginas de redes sociales al servidor. </p>
+<p>Realiza una solictud HTTP al servidor web indicando la ruta de la imagen. <br  />
+</p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">iconName</td><td>la ruta del archivo que se solicita </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">iconName</td><td>la ruta del archivo que se solicita </td></tr>
   </table>
   </dd>
 </dl>
@@ -460,7 +473,7 @@ Otros miembros heredados</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Maneja el envio de iconos/imagenes por respuestas HTTP. </p>
+<p>Maneja el envio de iconos/imagenes por respuesta HTTP. </p>
 <p>Se envian en troncos de bytes. </p>
 
 </div>
@@ -581,10 +594,10 @@ Otros miembros heredados</h2></td></tr>
 <p>Inicializa la biblioteca <a class="el" href="../../d5/d03/class_fake_a_p.html" title="Implementa la gestión del punto de acceso con portal cautivo y el servidor web.">FakeAP</a> configurando el punto de acceso y la conexión WiFi. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">AP_SSID</td><td>Nombre de la red del punto de acceso a crear </td></tr>
-    <tr><td class="paramname">AP_PSW</td><td>Contraseña del punto de acceso (opcional, por defecto vacío) </td></tr>
-    <tr><td class="paramname">WIFI_SSID</td><td>Nombre de la red WiFi a la que conectarse (opcional, por defecto vacío) </td></tr>
-    <tr><td class="paramname">WIFI_PSW</td><td>Contraseña de la red WiFi (opcional, por defecto vacío) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">AP_SSID</td><td>Nombre de la red del punto de acceso a crear </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">AP_PSW</td><td>Contraseña del punto de acceso (opcional, por defecto vacío) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">WIFI_SSID</td><td>Nombre de la red WiFi a la que conectarse (opcional, por defecto vacío) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">WIFI_PSW</td><td>Contraseña de la red WiFi (opcional, por defecto vacío) </td></tr>
   </table>
   </dd>
 </dl>
@@ -672,13 +685,10 @@ false si hubo algún error durante la inicialización </dd></dl>
 <li>src/<a class="el" href="../../db/d02/_fake_a_plib_8cpp.html">FakeAPlib.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="../../d5/d03/class_fake_a_p.html">FakeAP</a></li>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

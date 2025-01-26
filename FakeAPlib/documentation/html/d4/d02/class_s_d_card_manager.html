@@ -9,20 +9,8 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
-<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
 <script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../cookie.js"></script>
-<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../search/searchdata.js"></script>
-<script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
-/* @license-end */
-</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -36,18 +24,6 @@
    </div>
    <div id="projectbrief">Librería arduino para ESP32 que permite crear un punto de acceso falso</div>
   </td>
-    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
-          </span>
-        </div>
-</td>
  </tr>
  </tbody>
 </table>
@@ -56,52 +32,16 @@
 <!-- Generado por Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() { codefold.init(1); });
 /* @license-end */
 </script>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('d4/d02/class_s_d_card_manager.html','../../'); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
+</div><!-- top -->
 <div id="doc-content">
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
-</div>
-
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Métodos públicos</a> &#124;
@@ -287,8 +227,8 @@ Atributos protegidos</h2></td></tr>
 <p>Agrega contenido a un archivo existente (sin eliminar su contenido previo). </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Ruta del archivo en el que se agrega contenido. </td></tr>
-    <tr><td class="paramname">content</td><td>Contenido que será anexado en el archivo. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Ruta del archivo en el que se agrega contenido. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">content</td><td>Contenido que será anexado en el archivo. </td></tr>
   </table>
   </dd>
 </dl>
@@ -318,8 +258,8 @@ Atributos protegidos</h2></td></tr>
 <p>Sobrecarga para anexar contenido a un archivo a partir de un String. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Ruta del archivo en el que se agrega contenido. </td></tr>
-    <tr><td class="paramname">content</td><td>Contenido que será anexado en el archivo. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Ruta del archivo en el que se agrega contenido. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">content</td><td>Contenido que será anexado en el archivo. </td></tr>
   </table>
   </dd>
 </dl>
@@ -345,7 +285,7 @@ Atributos protegidos</h2></td></tr>
 <p>Crea un directorio en la tarjeta SD a partir de una cadena tipo C. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Ruta del directorio a crear. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Ruta del directorio a crear. </td></tr>
   </table>
   </dd>
 </dl>
@@ -371,7 +311,7 @@ Atributos protegidos</h2></td></tr>
 <p>Crea un directorio en la tarjeta SD a partir de un String. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Ruta del directorio a crear. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Ruta del directorio a crear. </td></tr>
   </table>
   </dd>
 </dl>
@@ -397,7 +337,7 @@ Atributos protegidos</h2></td></tr>
 <p>Elimina un archivo de la tarjeta SD a partir de una cadena tipo C. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Ruta del archivo a eliminar. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Ruta del archivo a eliminar. </td></tr>
   </table>
   </dd>
 </dl>
@@ -423,7 +363,7 @@ Atributos protegidos</h2></td></tr>
 <p>Sobrecarga para eliminar un archivo a partir de un String. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Ruta del archivo a eliminar. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Ruta del archivo a eliminar. </td></tr>
   </table>
   </dd>
 </dl>
@@ -449,7 +389,7 @@ Atributos protegidos</h2></td></tr>
 <p>Elimina recursivamente un archivo o directorio de la tarjeta SD, incluyendo su contenido. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Ruta del archivo o directorio a eliminar. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Ruta del archivo o directorio a eliminar. </td></tr>
   </table>
   </dd>
 </dl>
@@ -483,7 +423,7 @@ Atributos protegidos</h2></td></tr>
 <p>Retorna una cadena con el tipo de tarjeta SD detectada. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">card</td><td>Identificador del tipo de tarjeta devuelto por el hardware. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">card</td><td>Identificador del tipo de tarjeta devuelto por el hardware. </td></tr>
   </table>
   </dd>
 </dl>
@@ -517,7 +457,7 @@ Atributos protegidos</h2></td></tr>
 <p>Obtiene el directorio dado el camino absoluto de un archivo. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Ruta completa de un archivo, como cadena de caracteres. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Ruta completa de un archivo, como cadena de caracteres. </td></tr>
   </table>
   </dd>
 </dl>
@@ -551,7 +491,7 @@ Atributos protegidos</h2></td></tr>
 <p>Sobrecarga para obtener el directorio de un archivo a partir de un String. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Ruta completa de un archivo, como objeto String. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Ruta completa de un archivo, como objeto String. </td></tr>
   </table>
   </dd>
 </dl>
@@ -575,7 +515,7 @@ Atributos protegidos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Devuelve la referencia al sistema de archivos asociado a la tarjeta SD. </p>
-<dl class="section return"><dt>Devuelve</dt><dd>Referencia al objeto fs::FS utilizado para la operación con archivos. </dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Referencia al objeto utilizado para la operación con archivos. </dd></dl>
 
 </div>
 </div>
@@ -641,8 +581,8 @@ Atributos protegidos</h2></td></tr>
 <p>Lista los archivos y directorios dentro de una ruta dada. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dirname</td><td>Directorio que se listará. </td></tr>
-    <tr><td class="paramname">levels</td><td>Niveles de profundidad para listar recursivamente. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dirname</td><td>Directorio que se listará. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">levels</td><td>Niveles de profundidad para listar recursivamente. </td></tr>
   </table>
   </dd>
 </dl>
@@ -667,7 +607,7 @@ Atributos protegidos</h2></td></tr>
 <p>Registra un evento en el archivo de log designado. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>Mensaje o información a ser registrada en el archivo de log. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td>Mensaje o información a ser registrada en el archivo de log. </td></tr>
   </table>
   </dd>
 </dl>
@@ -693,7 +633,7 @@ Atributos protegidos</h2></td></tr>
 <p>Operador definido para escribir un archivo. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Ruta del archivo donde se escribirá. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Ruta del archivo donde se escribirá. </td></tr>
   </table>
   </dd>
 </dl>
@@ -719,7 +659,7 @@ Atributos protegidos</h2></td></tr>
 <p>Operador definido para eliminar un archivo. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Ruta del archivo a eliminar. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Ruta del archivo a eliminar. </td></tr>
   </table>
   </dd>
 </dl>
@@ -770,7 +710,7 @@ Atributos protegidos</h2></td></tr>
 <p>Lee el contenido de un archivo en la tarjeta SD. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Ruta del archivo a leer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Ruta del archivo a leer. </td></tr>
   </table>
   </dd>
 </dl>
@@ -796,7 +736,7 @@ Atributos protegidos</h2></td></tr>
 <p>Sobrecarga para leer el contenido de un archivo a partir de un String. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Ruta del archivo a leer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Ruta del archivo a leer. </td></tr>
   </table>
   </dd>
 </dl>
@@ -822,7 +762,7 @@ Atributos protegidos</h2></td></tr>
 <p>Elimina un directorio de la tarjeta SD. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Ruta del directorio a eliminar. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Ruta del directorio a eliminar. </td></tr>
   </table>
   </dd>
 </dl>
@@ -852,8 +792,8 @@ Atributos protegidos</h2></td></tr>
 <p>Cambia el nombre de un archivo o lo mueve a otra ruta. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path1</td><td>Ruta o nombre original del archivo. </td></tr>
-    <tr><td class="paramname">path2</td><td>Nueva ruta o nombre para el archivo. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path1</td><td>Ruta o nombre original del archivo. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path2</td><td>Nueva ruta o nombre para el archivo. </td></tr>
   </table>
   </dd>
 </dl>
@@ -883,8 +823,8 @@ Atributos protegidos</h2></td></tr>
 <p>Escribe contenido en un archivo (creándolo si no existe). </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Ruta del archivo donde se va a escribir. </td></tr>
-    <tr><td class="paramname">content</td><td>Contenido a escribir en el archivo. Por defecto es cadena vacía. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Ruta del archivo donde se va a escribir. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">content</td><td>Contenido a escribir en el archivo. Por defecto es cadena vacía. </td></tr>
   </table>
   </dd>
 </dl>
@@ -914,8 +854,8 @@ Atributos protegidos</h2></td></tr>
 <p>Sobrecarga para escribir contenido en un archivo a partir de un String. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Ruta del archivo donde se va a escribir. </td></tr>
-    <tr><td class="paramname">content</td><td>Contenido a escribir en el archivo. Por defecto es cadena vacía. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Ruta del archivo donde se va a escribir. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">content</td><td>Contenido a escribir en el archivo. Por defecto es cadena vacía. </td></tr>
   </table>
   </dd>
 </dl>
@@ -975,13 +915,10 @@ Atributos protegidos</h2></td></tr>
 <li>src/include/<a class="el" href="../../d9/d00/_s_d_card_manager_8cpp.html">SDCardManager.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="../../d4/d02/class_s_d_card_manager.html">SDCardManager</a></li>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

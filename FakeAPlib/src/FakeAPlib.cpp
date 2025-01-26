@@ -1,14 +1,3 @@
-/**
- * @file FakeAPlib.cpp
- * @author NGUEYOU SIMO, Neil L.; MORENO ROMO, Lucas; RUBIO JIMÉNEZ, Mario
- * @brief
- * @version 0.1
- * @date 2024-12-08
- *
- * @copyright Copyright (c) 2024
- *
- */
-
 #include "FakeAPlib.h"
 
 FakeAP::FakeAP()

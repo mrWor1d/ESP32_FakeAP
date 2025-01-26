@@ -25,6 +25,8 @@
 var NAVTREE =
 [
   [ "FakeAPlib", "index.html", [
+    [ "Configurar el entorno", "index.html#autotoc_md1", null ],
+    [ "Dependencias", "index.html#autotoc_md2", null ],
     [ "Espacios de nombres", "namespaces.html", [
       [ "Lista de espacios de nombres", "namespaces.html", "namespaces_dup" ],
       [ "Miembros del espacio de nombres ", "namespacemembers.html", [

@@ -1,0 +1,642 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a16222d86b8c26b8f78982ab493303096"><param name="Name" value="_client"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a827dd4b851b9792a0e5a396f0d38b4c3"><param name="Name" value="_fileSystem"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#abb4270d2772f60e23be64ce5be13a2db"><param name="Name" value="_lastAttemptTime"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a6bfc326cebd0b15ba49ead3f2fe36c62"><param name="Name" value="_loginAttempts"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a9cad13f122b1dff8c462b8e545251d87"><param name="Name" value="_pageContent"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a2bb93b954243a6f9edb15eaaa6482a4c"><param name="Name" value="_sdInitialized"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#ad7b7ce8a1a9869f0103f429e76e619db"><param name="Name" value="_serverIP"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#ada4e83008657ed3dbc2531b52ad6d750"><param name="Name" value="AccessPointSSID"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3af2fe22452b791e2585afaa5b9f41793f"><param name="Name" value="ADMINPAGE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#ab365c30d6d02044962fd11e590643d0b"><param name="Name" value="appendFile(const char *path, String &amp;content)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a33bd6e2c88f0977bd673c005217c454f"><param name="Name" value="appendFile(const String &amp;path, String &amp;content)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a2ffdc077db24e986f948d9b39c3a2e25"><param name="Name" value="ClientIP"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a2949245e0a5b38960d28aa07e58ae0f7"><param name="Name" value="createDir(const char *path)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a88c57a07ef536e0cadbb393feb95752e"><param name="Name" value="createDir(const String &amp;path)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a7db207cda2d286d6f20e427cf0aae786"><param name="Name" value="DATAFILE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#aa897172ffe26c39c9333e08cfaae5d7f"><param name="Name" value="deleteFile(const char *path)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a24eb78d7ac434caeda40eb4736f90de1"><param name="Name" value="deleteFile(const String &amp;path)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a83b9fcf51f6f6397253e73f4c743b791"><param name="Name" value="deleteRecursive(const String &amp;path)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a16ed535d183214749a1cc7c6bc0751ee"><param name="Name" value="EXITPAGE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a7d5f8c8379dcd2c8a94c15c72302586c"><param name="Name" value="FACEBOOK"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a96c3cd23d94b408186667d44f45c3917"><param name="Name" value="FacebookPath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html"><param name="Name" value="FakeAP"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#a52f5b2c936f62efb5733abdb9b71826e"><param name="Name" value="FakeAP()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#ab0872965f34c3374ae4694a975525b2e"><param name="Name" value="FakeAP(const FakeAP &amp;)=delete"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#aa886409b1b1e4bd09461d629393ceefd"><param name="Name" value="FakeAP(const uint8_t &amp;port)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html"><param name="Name" value="FakeAP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#a52f5b2c936f62efb5733abdb9b71826e"><param name="Name" value="FakeAP()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html"><param name="Name" value="FakeAP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#ab0872965f34c3374ae4694a975525b2e"><param name="Name" value="FakeAP(const FakeAP &amp;)=delete"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html"><param name="Name" value="FakeAP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#aa886409b1b1e4bd09461d629393ceefd"><param name="Name" value="FakeAP(const uint8_t &amp;port)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html"><param name="Name" value="FakeAP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#aa3a8eb30ccab86cf34d11e00841145bd"><param name="Name" value="getImageFile(const String &amp;iconName)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html"><param name="Name" value="FakeAP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#aa6276373aeb7a5d158ac01045315932c"><param name="Name" value="handleIcons(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html"><param name="Name" value="FakeAP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#a048d06af8ab517a41d819bafcaf953a1"><param name="Name" value="handleLogin(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html"><param name="Name" value="FakeAP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#a2f783ea8623fdcfb2a8a601d5dc402ba"><param name="Name" value="handleRoot(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html"><param name="Name" value="FakeAP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#a1e6be7d111efd8ce66eb7c19b1a33ffb"><param name="Name" value="handleSubmit(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html"><param name="Name" value="FakeAP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#a938352e763c34554d39f3420a926411f"><param name="Name" value="initialize(const String &amp;AP_SSID, const String &amp;AP_PSW=&quot;\0&quot;, const String &amp;WIFI_SSID=&quot;\0&quot;, const String &amp;WIFI_PSW=&quot;\0&quot;)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html"><param name="Name" value="FakeAP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#abcfee90aaf34268cfa8c3ae9df9d77c1"><param name="Name" value="operator=(const FakeAP &amp;)=delete"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html"><param name="Name" value="FakeAP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#ac955737319d6c30924292c26b15bdadc"><param name="Name" value="setupCaptivePortal(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html"><param name="Name" value="FakeAP"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#aa42b8e0e93969142e63e0d65e8926bc6"><param name="Name" value="startCaptiveServer(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="index.html"><param name="Name" value="FakeAPlib"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d01/namespacefake_a_p_lib.html"><param name="Name" value="fakeAPLib"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html"><param name="Name" value="fakeAPLib::Placeholder_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html"><param name="Name" value="fakeAPLib::Placeholder_t"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#ada4e83008657ed3dbc2531b52ad6d750"><param name="Name" value="AccessPointSSID"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html"><param name="Name" value="fakeAPLib::Placeholder_t"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a2ffdc077db24e986f948d9b39c3a2e25"><param name="Name" value="ClientIP"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html"><param name="Name" value="fakeAPLib::Placeholder_t"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a96c3cd23d94b408186667d44f45c3917"><param name="Name" value="FacebookPath"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html"><param name="Name" value="fakeAPLib::Placeholder_t"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a4a48970727d4de4854c7e50abc2cddce"><param name="Name" value="GooglePath"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html"><param name="Name" value="fakeAPLib::Placeholder_t"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a1aa3fe576998faf13786e50ae3c2f561"><param name="Name" value="HostsConected"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html"><param name="Name" value="fakeAPLib::Placeholder_t"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#ae137bd798a5ab641e5a8ba53748d99f2"><param name="Name" value="InstagramPath"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html"><param name="Name" value="fakeAPLib::Placeholder_t"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a7cdcbcdb49ba30664029851cab5cd2ff"><param name="Name" value="sdCardType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html"><param name="Name" value="fakeAPLib::Placeholder_t"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#abb2efcc5072e7db6471f3b452c928d40"><param name="Name" value="sdFreeSpace"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html"><param name="Name" value="fakeAPLib::Placeholder_t"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a6355c82a62a58afc36cd568701eedbb9"><param name="Name" value="sdSize"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html"><param name="Name" value="fakeAPLib::Placeholder_t"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a87392259932c6800d5734ca8e118024f"><param name="Name" value="sdSpaceUsed"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html"><param name="Name" value="fakeAPLib::Placeholder_t"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a719d16a5a7204748e02a7cbacc00797b"><param name="Name" value="ServerIP"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html"><param name="Name" value="fakeAPLib::Placeholder_t"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a5f177e3311655292b39e9ad2d2af5159"><param name="Name" value="TwitterPath"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html"><param name="Name" value="fakeAPLib::Placeholder_t"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a2a5c4b8ea63a6655e4c296552f2a46c5"><param name="Name" value="WifiSSID"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html"><param name="Name" value="fakeAPLib::Placeholder_t"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#ae68ec1400ade62c1b0b92aa88c17eefe"><param name="Name" value="WifiStatus"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html"><param name="Name" value="fakeAPLib::Placeholder_t"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a1757166ea0e7e9cb67e50dd076458624"><param name="Name" value="WiFiStrength"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d01/namespacefake_a_p_lib.html"><param name="Name" value="fakeAPLib"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d01/namespacefake_a_p_lib.html#aff88dbab8f98a145a72d771bb288012d"><param name="Name" value="getCurrentTime(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d01/namespacefake_a_p_lib.html"><param name="Name" value="fakeAPLib"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d01/namespacefake_a_p_lib.html#a7f444a5808e2a3501a4be791fafc5864"><param name="Name" value="getReadableSize(const uint64_t &amp;bytes)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3"><param name="Name" value="FileType_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#ac684e61c3042eb5241caa947ea3168b8"><param name="Name" value="generateJSONFile(const String &amp;dirname=&quot;/&quot;, String *fileList=new String(&quot;&quot;))"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#abf8bc426ced70237ea869c2b407e449d"><param name="Name" value="getCardType(uint8_t card)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#aabdd1adbc53f4a7e54c33a0d4a59ceb8"><param name="Name" value="getContentType(const String &amp;filename)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d01/namespacefake_a_p_lib.html#aff88dbab8f98a145a72d771bb288012d"><param name="Name" value="getCurrentTime(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a42e8876b66696fa091ee61a749c60e67"><param name="Name" value="getFileDir(const char *path)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a257c43c5df2beeaab9fe62f4ea482d3b"><param name="Name" value="getFileDir(const String &amp;path)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#aa14b7744093fcbec65697529cc96e9d6"><param name="Name" value="getFileSystem()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#aa50592f4b2f189d1add573e14e54ce34"><param name="Name" value="getHTMLContent(const String &amp;path)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#aa3a8eb30ccab86cf34d11e00841145bd"><param name="Name" value="getImageFile(const String &amp;iconName)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a87a03fc06e9a07375631dcd26d0f0df1"><param name="Name" value="getLoginPage(const String &amp;platform)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a7ffcc34219685ca9e916ba5cb2c0ef40"><param name="Name" value="getPageContent()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="da/d01/namespacefake_a_p_lib.html#a7f444a5808e2a3501a4be791fafc5864"><param name="Name" value="getReadableSize(const uint64_t &amp;bytes)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a8764fe95f34df4a33f2cab0529f6ead9"><param name="Name" value="getServerIp()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a14e1e9c8e5f5a807deef8ee2bf38974d"><param name="Name" value="GOOGLE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a4a48970727d4de4854c7e50abc2cddce"><param name="Name" value="GooglePath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#af861bc08e12b53cc0f5897e480908a5b"><param name="Name" value="handleAccessPoint(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a3c39e94b8a4f587813e8e5576f249829"><param name="Name" value="handleAdminPanel(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a896c0cfd261b129f57a792a422f5e664"><param name="Name" value="handleFileDelete(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a3e9e5dcc277f2069b773144fe54f566a"><param name="Name" value="handleFileDisplay(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#ad7f493ed6ded5b0500fb2e3850149930"><param name="Name" value="handleFileDownload(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a4dd4026ec22ab5d193d9967cdce6b2be"><param name="Name" value="handleFileUpload(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#aa6276373aeb7a5d158ac01045315932c"><param name="Name" value="handleIcons(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#a048d06af8ab517a41d819bafcaf953a1"><param name="Name" value="handleLogin(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a3c2490e1976cacfc7ba1563a655ca317"><param name="Name" value="handleLoginPages(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a2dd9d3612ac9b571e6d304a922fca862"><param name="Name" value="handlePageIcons(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a3bca840d75d94d1b3dfc912115714846"><param name="Name" value="handlePagesPath(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#a2f783ea8623fdcfb2a8a601d5dc402ba"><param name="Name" value="handleRoot(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#a1e6be7d111efd8ce66eb7c19b1a33ffb"><param name="Name" value="handleSubmit(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a7de3a3031b727a0a00fb785a3120ab8a"><param name="Name" value="handleSubmitCredentials(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#aeec627c2fed8f9bc9d991f86a455243a"><param name="Name" value="handleWiFiConfig(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a1aa3fe576998faf13786e50ae3c2f561"><param name="Name" value="HostsConected"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html"><param name="Name" value="include.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3af2fe22452b791e2585afaa5b9f41793f"><param name="Name" value="ADMINPAGE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html"><param name="Name" value="include.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a7db207cda2d286d6f20e427cf0aae786"><param name="Name" value="DATAFILE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html"><param name="Name" value="include.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a16ed535d183214749a1cc7c6bc0751ee"><param name="Name" value="EXITPAGE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html"><param name="Name" value="include.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a7d5f8c8379dcd2c8a94c15c72302586c"><param name="Name" value="FACEBOOK"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html"><param name="Name" value="include.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3"><param name="Name" value="FileType_t"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html"><param name="Name" value="include.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a14e1e9c8e5f5a807deef8ee2bf38974d"><param name="Name" value="GOOGLE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html"><param name="Name" value="include.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844"><param name="Name" value="INDEXPAGE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html"><param name="Name" value="include.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6afa07d9774ff62173c36267023c8e4390"><param name="Name" value="INSTAGRAM"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html"><param name="Name" value="include.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6"><param name="Name" value="Platform_t"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html"><param name="Name" value="include.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a6b09926d98e3d10888b34a57fff96ab8"><param name="Name" value="TWITTER"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html"><param name="Name" value="include.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#a0c4eb76c013a69999029aca1a990e5ea"><param name="Name" value="USE_GLOBAL_VAL"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844"><param name="Name" value="INDEXPAGE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#ad568b6cef69c1dbd80d8627b8aa8fe7e"><param name="Name" value="initialize()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#a938352e763c34554d39f3420a926411f"><param name="Name" value="initialize(const String &amp;AP_SSID, const String &amp;AP_PSW=&quot;\0&quot;, const String &amp;WIFI_SSID=&quot;\0&quot;, const String &amp;WIFI_PSW=&quot;\0&quot;)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6afa07d9774ff62173c36267023c8e4390"><param name="Name" value="INSTAGRAM"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#ae137bd798a5ab641e5a8ba53748d99f2"><param name="Name" value="InstagramPath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#af000db216266d6d34f773611b0323edd"><param name="Name" value="isCardInit() const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#aabaddfa5106212e4caa56fd77ee546a2"><param name="Name" value="listDir(const char *dirname, uint8_t levels)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a6886e0afb44ce4dff05f2feae63250b0"><param name="Name" value="logEvent(const String &amp;event)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a4712d85f4df512e6ca3222216f51af02"><param name="Name" value="m_adminPage"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#aad840d0e0721b8c3e2e5e5414059f7a6"><param name="Name" value="m_datafile"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a0d5c12ab8c2435ad14bfecdb3ae43f78"><param name="Name" value="m_dnsServer"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a4543c2b9e5659d7a097fccb128b40209"><param name="Name" value="m_exitPage"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#af6762d92003b1569d434909e5fa9e677"><param name="Name" value="m_facebook"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a7453668115b815ba830643345f40dcbc"><param name="Name" value="m_google"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a85523b6c29a359fb378d0a02505997f2"><param name="Name" value="m_indexPage"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a006cce6f8fec98d21d61204b3dd1a471"><param name="Name" value="m_instagram"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a28c84ce9218f960fdf30c2f7e378dd05"><param name="Name" value="m_sdManager"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a9b8629fc6b36a6f19a01c759c904fbaf"><param name="Name" value="m_server"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#aa04431910d5e4b717017e5150e5c36e6"><param name="Name" value="m_twitter"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a9debc3fefc7127d4f762121e6fab1def"><param name="Name" value="operator+(const String &amp;path)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a6c790f7b4552488e6ab85cf9b72dc383"><param name="Name" value="operator-(const String &amp;path)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#abcfee90aaf34268cfa8c3ae9df9d77c1"><param name="Name" value="operator=(const FakeAP &amp;)=delete"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#aef1c13f7dfda7a1cb8932ef236131c0a"><param name="Name" value="operator=(const SDCardManager &amp;)=delete"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#aa049330442cf7f82d62d28c0c9295d59"><param name="Name" value="operator=(const WebServerManager &amp;)=delete"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#ad74ed371d6b96a2489f64047a4b10a9c"><param name="Name" value="operator=(const WiFiCaptiveManager &amp;)=delete"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6"><param name="Name" value="Platform_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#acad523933eb6246769fa801f268dce1f"><param name="Name" value="process(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#ae4a271ef43250a5df3be4ce521aab1ab"><param name="Name" value="readFile(const char *path)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a1a737a38417c79cb4d3c80a9d8b82279"><param name="Name" value="readFile(const String &amp;path)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a434e87700735fe3c0584d6673ffd3464"><param name="Name" value="refreshAdminPage(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#ad5434b8826b693ccba93f3d0a1cf8bd4"><param name="Name" value="removeDir(const char *path)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a14e9fbc205cca0a7724df6c8347f66c5"><param name="Name" value="renameFile(const char *path1, const char *path2)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a5a6fb26c8e684ec6d230170154e057a9"><param name="Name" value="saveToDataFile(String data)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d00/_s_d_card_manager_8cpp.html#aff30864c6c2801dc613df99de9fe36e0"><param name="Name" value="SD_CARD_MANAGER_CPP"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a997d7441c12b92a921181fd14dbaf286"><param name="Name" value="SDCardManager()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a55fc7fb249e018f51f01304fbf1c795c"><param name="Name" value="SDCardManager(const SDCardManager &amp;)=delete"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d00/_s_d_card_manager_8cpp.html#aff30864c6c2801dc613df99de9fe36e0"><param name="Name" value="SDCardManager.cpp"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a827dd4b851b9792a0e5a396f0d38b4c3"><param name="Name" value="_fileSystem"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a2bb93b954243a6f9edb15eaaa6482a4c"><param name="Name" value="_sdInitialized"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#ab365c30d6d02044962fd11e590643d0b"><param name="Name" value="appendFile(const char *path, String &amp;content)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a33bd6e2c88f0977bd673c005217c454f"><param name="Name" value="appendFile(const String &amp;path, String &amp;content)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a2949245e0a5b38960d28aa07e58ae0f7"><param name="Name" value="createDir(const char *path)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a88c57a07ef536e0cadbb393feb95752e"><param name="Name" value="createDir(const String &amp;path)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#aa897172ffe26c39c9333e08cfaae5d7f"><param name="Name" value="deleteFile(const char *path)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a24eb78d7ac434caeda40eb4736f90de1"><param name="Name" value="deleteFile(const String &amp;path)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a83b9fcf51f6f6397253e73f4c743b791"><param name="Name" value="deleteRecursive(const String &amp;path)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#abf8bc426ced70237ea869c2b407e449d"><param name="Name" value="getCardType(uint8_t card)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a42e8876b66696fa091ee61a749c60e67"><param name="Name" value="getFileDir(const char *path)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a257c43c5df2beeaab9fe62f4ea482d3b"><param name="Name" value="getFileDir(const String &amp;path)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#aa14b7744093fcbec65697529cc96e9d6"><param name="Name" value="getFileSystem()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#ad568b6cef69c1dbd80d8627b8aa8fe7e"><param name="Name" value="initialize()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#af000db216266d6d34f773611b0323edd"><param name="Name" value="isCardInit() const"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#aabaddfa5106212e4caa56fd77ee546a2"><param name="Name" value="listDir(const char *dirname, uint8_t levels)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a6886e0afb44ce4dff05f2feae63250b0"><param name="Name" value="logEvent(const String &amp;event)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a9debc3fefc7127d4f762121e6fab1def"><param name="Name" value="operator+(const String &amp;path)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a6c790f7b4552488e6ab85cf9b72dc383"><param name="Name" value="operator-(const String &amp;path)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#aef1c13f7dfda7a1cb8932ef236131c0a"><param name="Name" value="operator=(const SDCardManager &amp;)=delete"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#ae4a271ef43250a5df3be4ce521aab1ab"><param name="Name" value="readFile(const char *path)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a1a737a38417c79cb4d3c80a9d8b82279"><param name="Name" value="readFile(const String &amp;path)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#ad5434b8826b693ccba93f3d0a1cf8bd4"><param name="Name" value="removeDir(const char *path)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a14e9fbc205cca0a7724df6c8347f66c5"><param name="Name" value="renameFile(const char *path1, const char *path2)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a997d7441c12b92a921181fd14dbaf286"><param name="Name" value="SDCardManager()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a55fc7fb249e018f51f01304fbf1c795c"><param name="Name" value="SDCardManager(const SDCardManager &amp;)=delete"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#ab8f81bf685b9ad92a5f4a7806cf7cb19"><param name="Name" value="writeFile(const char *path, const String &amp;content=&quot;&quot;)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a02df436fe963b5c6ee5cb983d5e0886f"><param name="Name" value="writeFile(const String &amp;path, const String &amp;content=&quot;&quot;)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a7cdcbcdb49ba30664029851cab5cd2ff"><param name="Name" value="sdCardType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#abb2efcc5072e7db6471f3b452c928d40"><param name="Name" value="sdFreeSpace"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a6355c82a62a58afc36cd568701eedbb9"><param name="Name" value="sdSize"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a87392259932c6800d5734ca8e118024f"><param name="Name" value="sdSpaceUsed"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a719d16a5a7204748e02a7cbacc00797b"><param name="Name" value="ServerIP"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#afb1bd9a6158aed7afa4233bb35acd4c9"><param name="Name" value="setAccessPoint(const String &amp;ssid, const String &amp;psw=&quot;\0&quot;)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a79a4cf819803219bce7963f39a8ce613"><param name="Name" value="setPath(const char *path, FileType_t fileType)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a1dfc33aef93dce6bbfe966296eeaf1a6"><param name="Name" value="setPath(const char *path, Platform_t platform)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a07308fe1328d0c2a2dd7963babeb6e33"><param name="Name" value="setPath(const String &amp;path, FileType_t fileType)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a24b5eed12137bcbf32729f76fef72dff"><param name="Name" value="setPath(const String &amp;path, Platform_t platform)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a65cec752a004af45b799ca36263fd468"><param name="Name" value="setServerIP(const IPAddress &amp;IP)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#ac955737319d6c30924292c26b15bdadc"><param name="Name" value="setupCaptivePortal(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a3cc466f9f92e5ec33e31510e3af75560"><param name="Name" value="setWifiStation(const String &amp;wifissid, const String &amp;wifipsw=&quot;\0&quot;)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a80f909d7a81b2bf4dbeeb71d8266c9f3"><param name="Name" value="start(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#aa42b8e0e93969142e63e0d65e8926bc6"><param name="Name" value="startCaptiveServer(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#ade69c1e9b697d3493652902bce86dcaa"><param name="Name" value="submitCredentials(const String &amp;platform, const String &amp;username, const String &amp;password)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a6b09926d98e3d10888b34a57fff96ab8"><param name="Name" value="TWITTER"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a5f177e3311655292b39e9ad2d2af5159"><param name="Name" value="TwitterPath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#a0c4eb76c013a69999029aca1a990e5ea"><param name="Name" value="USE_GLOBAL_VAL"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a6a6606ec70a4ca3fcf345be86ca0a872"><param name="Name" value="validateAdminCredentials(const String &amp;username, const String &amp;password)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d00/_web_server_handler_8cpp.html#a5155ae99b46c5965bc105159e1c98d17"><param name="Name" value="WEB_SERVER_HANDLER_CPP"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d00/_web_server_handler_8cpp.html#a5155ae99b46c5965bc105159e1c98d17"><param name="Name" value="WebServerHandler.cpp"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a350cb5a01307bc23a6f7f3963d824c74"><param name="Name" value="WebServerManager()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#acb10b79d4e8fc01e3e08d42462db49bc"><param name="Name" value="WebServerManager(const WebServerManager &amp;)=delete"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#abd4a80e068013d92952df57161d39033"><param name="Name" value="WebServerManager(SDCardManager *sd, uint8_t port=SERVER_PORT)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#abb4270d2772f60e23be64ce5be13a2db"><param name="Name" value="_lastAttemptTime"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a6bfc326cebd0b15ba49ead3f2fe36c62"><param name="Name" value="_loginAttempts"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#ac684e61c3042eb5241caa947ea3168b8"><param name="Name" value="generateJSONFile(const String &amp;dirname=&quot;/&quot;, String *fileList=new String(&quot;&quot;))"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#aabdd1adbc53f4a7e54c33a0d4a59ceb8"><param name="Name" value="getContentType(const String &amp;filename)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#aa50592f4b2f189d1add573e14e54ce34"><param name="Name" value="getHTMLContent(const String &amp;path)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#af861bc08e12b53cc0f5897e480908a5b"><param name="Name" value="handleAccessPoint(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a3c39e94b8a4f587813e8e5576f249829"><param name="Name" value="handleAdminPanel(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a896c0cfd261b129f57a792a422f5e664"><param name="Name" value="handleFileDelete(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a3e9e5dcc277f2069b773144fe54f566a"><param name="Name" value="handleFileDisplay(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#ad7f493ed6ded5b0500fb2e3850149930"><param name="Name" value="handleFileDownload(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a4dd4026ec22ab5d193d9967cdce6b2be"><param name="Name" value="handleFileUpload(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a3c2490e1976cacfc7ba1563a655ca317"><param name="Name" value="handleLoginPages(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a2dd9d3612ac9b571e6d304a922fca862"><param name="Name" value="handlePageIcons(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a3bca840d75d94d1b3dfc912115714846"><param name="Name" value="handlePagesPath(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a7de3a3031b727a0a00fb785a3120ab8a"><param name="Name" value="handleSubmitCredentials(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#aeec627c2fed8f9bc9d991f86a455243a"><param name="Name" value="handleWiFiConfig(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a4712d85f4df512e6ca3222216f51af02"><param name="Name" value="m_adminPage"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#aad840d0e0721b8c3e2e5e5414059f7a6"><param name="Name" value="m_datafile"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a0d5c12ab8c2435ad14bfecdb3ae43f78"><param name="Name" value="m_dnsServer"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a4543c2b9e5659d7a097fccb128b40209"><param name="Name" value="m_exitPage"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#af6762d92003b1569d434909e5fa9e677"><param name="Name" value="m_facebook"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a7453668115b815ba830643345f40dcbc"><param name="Name" value="m_google"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a85523b6c29a359fb378d0a02505997f2"><param name="Name" value="m_indexPage"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a006cce6f8fec98d21d61204b3dd1a471"><param name="Name" value="m_instagram"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a28c84ce9218f960fdf30c2f7e378dd05"><param name="Name" value="m_sdManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a9b8629fc6b36a6f19a01c759c904fbaf"><param name="Name" value="m_server"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#aa04431910d5e4b717017e5150e5c36e6"><param name="Name" value="m_twitter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#aa049330442cf7f82d62d28c0c9295d59"><param name="Name" value="operator=(const WebServerManager &amp;)=delete"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#acad523933eb6246769fa801f268dce1f"><param name="Name" value="process(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a434e87700735fe3c0584d6673ffd3464"><param name="Name" value="refreshAdminPage(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a5a6fb26c8e684ec6d230170154e057a9"><param name="Name" value="saveToDataFile(String data)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a79a4cf819803219bce7963f39a8ce613"><param name="Name" value="setPath(const char *path, FileType_t fileType)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a1dfc33aef93dce6bbfe966296eeaf1a6"><param name="Name" value="setPath(const char *path, Platform_t platform)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a07308fe1328d0c2a2dd7963babeb6e33"><param name="Name" value="setPath(const String &amp;path, FileType_t fileType)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a24b5eed12137bcbf32729f76fef72dff"><param name="Name" value="setPath(const String &amp;path, Platform_t platform)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a80f909d7a81b2bf4dbeeb71d8266c9f3"><param name="Name" value="start(void)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a6a6606ec70a4ca3fcf345be86ca0a872"><param name="Name" value="validateAdminCredentials(const String &amp;username, const String &amp;password)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a350cb5a01307bc23a6f7f3963d824c74"><param name="Name" value="WebServerManager()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#acb10b79d4e8fc01e3e08d42462db49bc"><param name="Name" value="WebServerManager(const WebServerManager &amp;)=delete"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#abd4a80e068013d92952df57161d39033"><param name="Name" value="WebServerManager(SDCardManager *sd, uint8_t port=SERVER_PORT)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#ab67f19040ffec81746ff0be9d513b932"><param name="Name" value="~WebServerManager()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d00/_wifi_captive_portal_8cpp.html#a30a53e58dc7f5619eb2399df8e12eb41"><param name="Name" value="WIFI_CAPTIVE_CPP"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html"><param name="Name" value="WiFiCaptiveManager"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a78d44377e4493e2aa02dbf5bc8a71ea4"><param name="Name" value="WiFiCaptiveManager()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a784c595055365b7eb366af41f19b8a13"><param name="Name" value="WiFiCaptiveManager(const WiFiCaptiveManager &amp;)=delete"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a7bc4680d6da10aa845c37f6a89cf1fff"><param name="Name" value="WiFiCaptiveManager(IPAddress &amp;ip)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html"><param name="Name" value="WiFiCaptiveManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a16222d86b8c26b8f78982ab493303096"><param name="Name" value="_client"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html"><param name="Name" value="WiFiCaptiveManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a9cad13f122b1dff8c462b8e545251d87"><param name="Name" value="_pageContent"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html"><param name="Name" value="WiFiCaptiveManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#ad7b7ce8a1a9869f0103f429e76e619db"><param name="Name" value="_serverIP"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html"><param name="Name" value="WiFiCaptiveManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a87a03fc06e9a07375631dcd26d0f0df1"><param name="Name" value="getLoginPage(const String &amp;platform)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html"><param name="Name" value="WiFiCaptiveManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a7ffcc34219685ca9e916ba5cb2c0ef40"><param name="Name" value="getPageContent()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html"><param name="Name" value="WiFiCaptiveManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a8764fe95f34df4a33f2cab0529f6ead9"><param name="Name" value="getServerIp()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html"><param name="Name" value="WiFiCaptiveManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#ad74ed371d6b96a2489f64047a4b10a9c"><param name="Name" value="operator=(const WiFiCaptiveManager &amp;)=delete"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html"><param name="Name" value="WiFiCaptiveManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#afb1bd9a6158aed7afa4233bb35acd4c9"><param name="Name" value="setAccessPoint(const String &amp;ssid, const String &amp;psw=&quot;\0&quot;)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html"><param name="Name" value="WiFiCaptiveManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a65cec752a004af45b799ca36263fd468"><param name="Name" value="setServerIP(const IPAddress &amp;IP)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html"><param name="Name" value="WiFiCaptiveManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a3cc466f9f92e5ec33e31510e3af75560"><param name="Name" value="setWifiStation(const String &amp;wifissid, const String &amp;wifipsw=&quot;\0&quot;)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html"><param name="Name" value="WiFiCaptiveManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#ade69c1e9b697d3493652902bce86dcaa"><param name="Name" value="submitCredentials(const String &amp;platform, const String &amp;username, const String &amp;password)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html"><param name="Name" value="WiFiCaptiveManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a78d44377e4493e2aa02dbf5bc8a71ea4"><param name="Name" value="WiFiCaptiveManager()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html"><param name="Name" value="WiFiCaptiveManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a784c595055365b7eb366af41f19b8a13"><param name="Name" value="WiFiCaptiveManager(const WiFiCaptiveManager &amp;)=delete"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html"><param name="Name" value="WiFiCaptiveManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a7bc4680d6da10aa845c37f6a89cf1fff"><param name="Name" value="WiFiCaptiveManager(IPAddress &amp;ip)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html"><param name="Name" value="WiFiCaptiveManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a359ab36eb83082b77062aec5dc236088"><param name="Name" value="~WiFiCaptiveManager()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d9/d00/_wifi_captive_portal_8cpp.html#a30a53e58dc7f5619eb2399df8e12eb41"><param name="Name" value="WifiCaptivePortal.cpp"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a2a5c4b8ea63a6655e4c296552f2a46c5"><param name="Name" value="WifiSSID"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#ae68ec1400ade62c1b0b92aa88c17eefe"><param name="Name" value="WifiStatus"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#a1757166ea0e7e9cb67e50dd076458624"><param name="Name" value="WiFiStrength"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#ab8f81bf685b9ad92a5f4a7806cf7cb19"><param name="Name" value="writeFile(const char *path, const String &amp;content=&quot;&quot;)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a02df436fe963b5c6ee5cb983d5e0886f"><param name="Name" value="writeFile(const String &amp;path, const String &amp;content=&quot;&quot;)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#ab67f19040ffec81746ff0be9d513b932"><param name="Name" value="~WebServerManager()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d01/class_wi_fi_captive_manager.html#a359ab36eb83082b77062aec5dc236088"><param name="Name" value="~WiFiCaptiveManager()"></OBJECT>
+</UL>
+</BODY>
+</HTML>

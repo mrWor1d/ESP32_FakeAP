@@ -10,7 +10,6 @@
 #include <NetworkClient.h>
 #include <WebServer.h>
 #include <DNSServer.h>
-#include <base64.h>
 #include <String>
 //#include <WiFiMulti.h>
 //#include <UrlEncode.h>
@@ -28,18 +27,23 @@ namespace fakeAPLib
     /**
      * @brief Obtener el valor del tiempo actual.
      * 
-     * @note Hablamos del tiempo de actividad, es decir, el tiempo
-     *       desde que se ha iniciado/reinicializado el ESP32.
+     * @remark Hablamos del tiempo de actividad, es decir, el tiempo
+     *         desde que se ha iniciado/reinicializado el ESP32.
      * 
      * @return Una cadena HH:MM:SS que representa el tiempo actual
      */
     static inline String getCurrentTime(void);
 
     /**
-     * @brief Get the Readable Size object
+     * @brief convierte el tamaño desde bytes a la unidad correspondiente
+     *        siguiendo el patrón siguiente:
+     *          - B (bytes): menos de 1024 bytes
+     *          - KB (Kilobytes): de 1024 bytes hasta menos de (1024 * 1024) bytes
+     *          - MB (Megabytes): de (1024 * 1024) bytes hasta menos de (1024 * 1024 * 1024)
+     *          - GB (Gigabytes): a partir de (1024 * 1024 * 1024)
      * 
-     * @param bytes 
-     * @return una cadena que representa el tamaño convertido 
+     * @param bytes el tamaño en bytes (1 byte = 8 bits)
+     * @return una cadena que representa el tamaño convertido a la unidad correspondiente
      */
     static inline String getReadableSize(const uint64_t& bytes);
 }
@@ -72,7 +76,6 @@ typedef enum
 
 
 /**
- * @struct Placeholder_t
  * @brief Estructura que contiene marcadores de posición (placeholders) para la librería FakeAPlib
  * 
  * Esta estructura define una colección de marcadores de posición estáticos utilizados para
@@ -85,7 +88,8 @@ typedef enum
  * - Información de la tarjeta SD (espacio, tipo)
  * - Rutas a archivos HTML de redes sociales
  * 
- * @note Todos los marcadores son constantes String estáticas inline
+ * @note Todos los marcadores son constantes String estáticas para que que se puedan
+ *       llamar sin la necesidad de crear un objeto de esta clase.
  * @see fakeAPLib
  */
 typedef struct fakeAPLib::Placeholder_t
@@ -165,7 +169,7 @@ using namespace fakeAPLib;
     #endif
 
     #ifndef LOG_FILE
-    #define LOG_FILE "/logs/logs.yaml"
+    #define LOG_FILE "/logs/logs.log"
     #endif
 
     #ifndef JSON_FILE_PATH
@@ -204,22 +208,22 @@ using namespace fakeAPLib;
     #endif
 
     #if (WITH_ERROR_TYPE)
-        #define ERROR_SD_NOT_INIT  "[ERROR] La tarjeta SD no ha sido inicializada"
-        #define ERROR_SD_CARD_TYPE "[ERROR] El tipo de tarjeta SD es incompatible"
-        #define ERROR_SD_CARD_READ "[ERROR] error en la lectura de la tarjeta"
-        #define ERROR_FILE_OPEN "[ERROR] Error al abrir el archivo: %s\n"
-        #define ERROR_NO_FILE "[ERROR] El archivo %s no existe\n"
-        #define ERROR_FILE_WRITE "[ERROR] Error al escribir en el archivo: %s\n"
-        #define ERROR_FILE_RENAME "[ERROR] Error al renombrar archivo/carpeta: %s\n"
-        #define ERROR_FILE_TYPE "[ERROR] Error de tipo de archivo/carpeta: %s\n"
-        #define ERROR_FILE_DELETE "[ERROR] Error al borrar el archivo: %s\n"
-        #define ERROR_DIR_CREATE "[ERROR] Error al crear la carpeta: %s\n"
-        #define ERROR_DIR_DELETE "[ERROR] Error al borrar la carpeta: %s\n"
-        #define ERROR_WIFIAP_CREATE "[ERROR] La creación del punto de acceso ha fallado"
-        #define ERROR_WIFI_CONNECT "[ERROR] No se pudo conectar a la red wifi %s\n"
+        #define ERROR_SD_NOT_INIT      "[ERROR] La tarjeta SD no ha sido inicializada"
+        #define ERROR_SD_CARD_TYPE     "[ERROR] El tipo de tarjeta SD es incompatible"
+        #define ERROR_SD_CARD_READ     "[ERROR] error en la lectura de la tarjeta"
+        #define ERROR_FILE_OPEN        "[ERROR] Error al abrir el archivo: %s\n"
+        #define ERROR_NO_FILE          "[ERROR] El archivo %s no existe\n"
+        #define ERROR_FILE_WRITE       "[ERROR] Error al escribir en el archivo: %s\n"
+        #define ERROR_FILE_RENAME      "[ERROR] Error al renombrar archivo/carpeta: %s\n"
+        #define ERROR_FILE_TYPE        "[ERROR] Error de tipo de archivo/carpeta: %s\n"
+        #define ERROR_FILE_DELETE      "[ERROR] Error al borrar el archivo: %s\n"
+        #define ERROR_DIR_CREATE       "[ERROR] Error al crear la carpeta: %s\n"
+        #define ERROR_DIR_DELETE       "[ERROR] Error al borrar la carpeta: %s\n"
+        #define ERROR_WIFIAP_CREATE    "[ERROR] La creación del punto de acceso ha fallado"
+        #define ERROR_WIFI_CONNECT     "[ERROR] No se pudo conectar a la red wifi %s\n"
         #define ERROR_SAVE_CREDENTIALS "[ERROR] Error al guardar las credenciales"
-        #define ERROR_GENERATE_JSON "[ERROR] Error al crear el fichero JSON"
-        #define ERROR_SERVER_IMAGE "[ERROR] Respuesta del servidor erronea"
+        #define ERROR_GENERATE_JSON    "[ERROR] Error al crear el fichero JSON"
+        #define ERROR_SERVER_IMAGE     "[ERROR] Respuesta del servidor erronea"
     #endif
 
     #if (WITH_SUCCESS_MESSAGE)
@@ -253,6 +257,7 @@ using namespace fakeAPLib;
         #define FAILED_FILE_UPLOAD "[SERVER] El archivo %s no se pudo subir al servidor\n"
         #define FAILED_ADMIN_LOGIN "[SERVER] Intento de connexión como admin fallado."
         #define FAILED_CREDENTIALS "[SERVER] Error al guardar las credenciales"
+        #define FAILED_UNEXPECTED  "[SERVER] Ha occurido un error inesperado al subir el archivo"
     #endif
 
 #endif //USE_GLOBAL_VAR

@@ -1,9 +1,11 @@
 #utility files/folders
+debugoutput.yaml
 debug-output.yaml
 dump
 FakeAPlib/dump
 .zip
 FakeAPlib/latex
+tools
 
 #IDE specific files
 #vscode

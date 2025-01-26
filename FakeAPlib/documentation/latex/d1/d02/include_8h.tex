@@ -1,0 +1,109 @@
+\doxysection{Referencia del archivo src/include/include.h}
+\hypertarget{include_8h}{}\label{include_8h}\index{src/include/include.h@{src/include/include.h}}
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$FS.\+h$>$}\newline
+{\ttfamily \#include $<$SD\+\_\+\+MMC.\+h$>$}\newline
+{\ttfamily \#include $<$Wi\+Fi.\+h$>$}\newline
+{\ttfamily \#include $<$Wi\+Fi\+AP.\+h$>$}\newline
+{\ttfamily \#include $<$Wi\+Fi\+STA.\+h$>$}\newline
+{\ttfamily \#include $<$Network\+Client.\+h$>$}\newline
+{\ttfamily \#include $<$Web\+Server.\+h$>$}\newline
+{\ttfamily \#include $<$DNSServer.\+h$>$}\newline
+{\ttfamily \#include $<$String$>$}\newline
+\doxysubsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t}{fake\+APLib\+::\+Placeholder\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Estructura que contiene marcadores de posición (placeholders) para la librería Fake\+APlib. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Espacios de nombres}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacefake_a_p_lib}{fake\+APLib}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{include_8h_a0c4eb76c013a69999029aca1a990e5ea}{USE\+\_\+\+GLOBAL\+\_\+\+VAL}}~true
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumeraciones}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{include_8h_aa8298ffc203837d96d3c0013c0506fb3}{File\+Type\+\_\+t}} \{ \mbox{\hyperlink{include_8h_aa8298ffc203837d96d3c0013c0506fb3af2fe22452b791e2585afaa5b9f41793f}{ADMINPAGE}} = \textquotesingle{}A\textquotesingle{}
+, \mbox{\hyperlink{include_8h_aa8298ffc203837d96d3c0013c0506fb3a7db207cda2d286d6f20e427cf0aae786}{DATAFILE}} = \textquotesingle{}D\textquotesingle{}
+, \mbox{\hyperlink{include_8h_aa8298ffc203837d96d3c0013c0506fb3a16ed535d183214749a1cc7c6bc0751ee}{EXITPAGE}} = \textquotesingle{}E\textquotesingle{}
+, \mbox{\hyperlink{include_8h_aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844}{INDEXPAGE}} = \textquotesingle{}I\textquotesingle{}
+ \}
+\item 
+enum \mbox{\hyperlink{include_8h_aa027791d4c6bbda765e876c1bf8ddff6}{Platform\+\_\+t}} \{ \mbox{\hyperlink{include_8h_aa027791d4c6bbda765e876c1bf8ddff6a7d5f8c8379dcd2c8a94c15c72302586c}{FACEBOOK}} = \textquotesingle{}F\textquotesingle{}
+, \mbox{\hyperlink{include_8h_aa027791d4c6bbda765e876c1bf8ddff6a14e1e9c8e5f5a807deef8ee2bf38974d}{GOOGLE}} = \textquotesingle{}G\textquotesingle{}
+, \mbox{\hyperlink{include_8h_aa027791d4c6bbda765e876c1bf8ddff6afa07d9774ff62173c36267023c8e4390}{INSTAGRAM}} = \textquotesingle{}I\textquotesingle{}
+, \mbox{\hyperlink{include_8h_aa027791d4c6bbda765e876c1bf8ddff6a6b09926d98e3d10888b34a57fff96ab8}{TWITTER}} = \textquotesingle{}T\textquotesingle{}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+static String \mbox{\hyperlink{namespacefake_a_p_lib_aff88dbab8f98a145a72d771bb288012d}{fake\+APLib\+::get\+Current\+Time}} (void)
+\begin{DoxyCompactList}\small\item\em Obtener el valor del tiempo actual. \end{DoxyCompactList}\item 
+static String \mbox{\hyperlink{namespacefake_a_p_lib_a7f444a5808e2a3501a4be791fafc5864}{fake\+APLib\+::get\+Readable\+Size}} (const uint64\+\_\+t \&bytes)
+\begin{DoxyCompactList}\small\item\em convierte el tamaño desde bytes a la unidad correspondiente siguiendo el patrón siguiente\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de «define»}
+\Hypertarget{include_8h_a0c4eb76c013a69999029aca1a990e5ea}\index{include.h@{include.h}!USE\_GLOBAL\_VAL@{USE\_GLOBAL\_VAL}}
+\index{USE\_GLOBAL\_VAL@{USE\_GLOBAL\_VAL}!include.h@{include.h}}
+\doxysubsubsection{\texorpdfstring{USE\_GLOBAL\_VAL}{USE\_GLOBAL\_VAL}}
+{\footnotesize\ttfamily \label{include_8h_a0c4eb76c013a69999029aca1a990e5ea} 
+\#define USE\+\_\+\+GLOBAL\+\_\+\+VAL~true}
+
+
+
+\doxysubsection{Documentación de enumeraciones}
+\Hypertarget{include_8h_aa8298ffc203837d96d3c0013c0506fb3}\index{include.h@{include.h}!FileType\_t@{FileType\_t}}
+\index{FileType\_t@{FileType\_t}!include.h@{include.h}}
+\doxysubsubsection{\texorpdfstring{FileType\_t}{FileType\_t}}
+{\footnotesize\ttfamily \label{include_8h_aa8298ffc203837d96d3c0013c0506fb3} 
+enum \mbox{\hyperlink{include_8h_aa8298ffc203837d96d3c0013c0506fb3}{File\+Type\+\_\+t}}}
+
+\begin{DoxyEnumFields}[2]{Valores de enumeraciones}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADMINPAGE@{ADMINPAGE}!include.h@{include.h}}\index{include.h@{include.h}!ADMINPAGE@{ADMINPAGE}}}\Hypertarget{include_8h_aa8298ffc203837d96d3c0013c0506fb3af2fe22452b791e2585afaa5b9f41793f}\label{include_8h_aa8298ffc203837d96d3c0013c0506fb3af2fe22452b791e2585afaa5b9f41793f} 
+ADMINPAGE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DATAFILE@{DATAFILE}!include.h@{include.h}}\index{include.h@{include.h}!DATAFILE@{DATAFILE}}}\Hypertarget{include_8h_aa8298ffc203837d96d3c0013c0506fb3a7db207cda2d286d6f20e427cf0aae786}\label{include_8h_aa8298ffc203837d96d3c0013c0506fb3a7db207cda2d286d6f20e427cf0aae786} 
+DATAFILE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXITPAGE@{EXITPAGE}!include.h@{include.h}}\index{include.h@{include.h}!EXITPAGE@{EXITPAGE}}}\Hypertarget{include_8h_aa8298ffc203837d96d3c0013c0506fb3a16ed535d183214749a1cc7c6bc0751ee}\label{include_8h_aa8298ffc203837d96d3c0013c0506fb3a16ed535d183214749a1cc7c6bc0751ee} 
+EXITPAGE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INDEXPAGE@{INDEXPAGE}!include.h@{include.h}}\index{include.h@{include.h}!INDEXPAGE@{INDEXPAGE}}}\Hypertarget{include_8h_aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844}\label{include_8h_aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844} 
+INDEXPAGE&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{include_8h_aa027791d4c6bbda765e876c1bf8ddff6}\index{include.h@{include.h}!Platform\_t@{Platform\_t}}
+\index{Platform\_t@{Platform\_t}!include.h@{include.h}}
+\doxysubsubsection{\texorpdfstring{Platform\_t}{Platform\_t}}
+{\footnotesize\ttfamily \label{include_8h_aa027791d4c6bbda765e876c1bf8ddff6} 
+enum \mbox{\hyperlink{include_8h_aa027791d4c6bbda765e876c1bf8ddff6}{Platform\+\_\+t}}}
+
+\begin{DoxyEnumFields}[2]{Valores de enumeraciones}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FACEBOOK@{FACEBOOK}!include.h@{include.h}}\index{include.h@{include.h}!FACEBOOK@{FACEBOOK}}}\Hypertarget{include_8h_aa027791d4c6bbda765e876c1bf8ddff6a7d5f8c8379dcd2c8a94c15c72302586c}\label{include_8h_aa027791d4c6bbda765e876c1bf8ddff6a7d5f8c8379dcd2c8a94c15c72302586c} 
+FACEBOOK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GOOGLE@{GOOGLE}!include.h@{include.h}}\index{include.h@{include.h}!GOOGLE@{GOOGLE}}}\Hypertarget{include_8h_aa027791d4c6bbda765e876c1bf8ddff6a14e1e9c8e5f5a807deef8ee2bf38974d}\label{include_8h_aa027791d4c6bbda765e876c1bf8ddff6a14e1e9c8e5f5a807deef8ee2bf38974d} 
+GOOGLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INSTAGRAM@{INSTAGRAM}!include.h@{include.h}}\index{include.h@{include.h}!INSTAGRAM@{INSTAGRAM}}}\Hypertarget{include_8h_aa027791d4c6bbda765e876c1bf8ddff6afa07d9774ff62173c36267023c8e4390}\label{include_8h_aa027791d4c6bbda765e876c1bf8ddff6afa07d9774ff62173c36267023c8e4390} 
+INSTAGRAM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TWITTER@{TWITTER}!include.h@{include.h}}\index{include.h@{include.h}!TWITTER@{TWITTER}}}\Hypertarget{include_8h_aa027791d4c6bbda765e876c1bf8ddff6a6b09926d98e3d10888b34a57fff96ab8}\label{include_8h_aa027791d4c6bbda765e876c1bf8ddff6a6b09926d98e3d10888b34a57fff96ab8} 
+TWITTER&\\
+\hline
+
+\end{DoxyEnumFields}

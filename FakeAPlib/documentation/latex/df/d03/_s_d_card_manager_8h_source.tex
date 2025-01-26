@@ -1,0 +1,78 @@
+\doxysection{SDCard\+Manager.\+h}
+\hypertarget{_s_d_card_manager_8h_source}{}\label{_s_d_card_manager_8h_source}\index{src/include/SDCardManager.h@{src/include/SDCardManager.h}}
+\mbox{\hyperlink{_s_d_card_manager_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ SD\_CARD\_MANAGER\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ SD\_CARD\_MANAGER\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{include_8h}{include.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_d_card_manager_a997d7441c12b92a921181fd14dbaf286}{SDCardManager}}}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00044\ \ \ \ \ fs::SDMMCFS\&\ \mbox{\hyperlink{class_s_d_card_manager_a827dd4b851b9792a0e5a396f0d38b4c3}{\_fileSystem}};\ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_d_card_manager_a2bb93b954243a6f9edb15eaaa6482a4c}{\_sdInitialized}};\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ String\ \_logFile;}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_s_d_card_manager_a997d7441c12b92a921181fd14dbaf286}{SDCardManager}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_s_d_card_manager_a55fc7fb249e018f51f01304fbf1c795c}{SDCardManager}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_s_d_card_manager_a997d7441c12b92a921181fd14dbaf286}{SDCardManager}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_s_d_card_manager_a997d7441c12b92a921181fd14dbaf286}{SDCardManager}}\ \mbox{\hyperlink{class_s_d_card_manager_aef1c13f7dfda7a1cb8932ef236131c0a}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_s_d_card_manager_a997d7441c12b92a921181fd14dbaf286}{SDCardManager}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_d_card_manager_a9debc3fefc7127d4f762121e6fab1def}{operator+}}(\textcolor{keyword}{const}\ String\ \&path);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_d_card_manager_a6c790f7b4552488e6ab85cf9b72dc383}{operator-\/}}(\textcolor{keyword}{const}\ String\ \&path);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_d_card_manager_af000db216266d6d34f773611b0323edd}{isCardInit}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00084\ \ \ \ \ fs::SDMMCFS\&\ \mbox{\hyperlink{class_s_d_card_manager_aa14b7744093fcbec65697529cc96e9d6}{getFileSystem}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{class_s_d_card_manager_abf8bc426ced70237ea869c2b407e449d}{getCardType}}(uint8\_t\ card);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{class_s_d_card_manager_a42e8876b66696fa091ee61a749c60e67}{getFileDir}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *path);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{class_s_d_card_manager_a42e8876b66696fa091ee61a749c60e67}{getFileDir}}(\textcolor{keyword}{const}\ String\ \&path);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_d_card_manager_a6886e0afb44ce4dff05f2feae63250b0}{logEvent}}(\textcolor{keyword}{const}\ String\ \&event);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_d_card_manager_ad568b6cef69c1dbd80d8627b8aa8fe7e}{initialize}}();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00125\ \ \ \ \ String\ \mbox{\hyperlink{class_s_d_card_manager_ae4a271ef43250a5df3be4ce521aab1ab}{readFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *path);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00132\ \ \ \ \ String\ \mbox{\hyperlink{class_s_d_card_manager_ae4a271ef43250a5df3be4ce521aab1ab}{readFile}}(\textcolor{keyword}{const}\ String\ \&path);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_d_card_manager_ab8f81bf685b9ad92a5f4a7806cf7cb19}{writeFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *path,\ \textcolor{keyword}{const}\ String\ \&content\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_d_card_manager_ab8f81bf685b9ad92a5f4a7806cf7cb19}{writeFile}}(\textcolor{keyword}{const}\ String\ \&path,\ \textcolor{keyword}{const}\ String\ \&content\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_d_card_manager_aabaddfa5106212e4caa56fd77ee546a2}{listDir}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *dirname,\ uint8\_t\ levels);}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_d_card_manager_a88c57a07ef536e0cadbb393feb95752e}{createDir}}(\textcolor{keyword}{const}\ String\ \&path);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_d_card_manager_a88c57a07ef536e0cadbb393feb95752e}{createDir}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *path);}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_d_card_manager_ad5434b8826b693ccba93f3d0a1cf8bd4}{removeDir}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *path);}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_d_card_manager_ab365c30d6d02044962fd11e590643d0b}{appendFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *path,\ String\ \&content);}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_d_card_manager_ab365c30d6d02044962fd11e590643d0b}{appendFile}}(\textcolor{keyword}{const}\ String\ \&path,\ String\ \&content);}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_d_card_manager_a14e9fbc205cca0a7724df6c8347f66c5}{renameFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *path1,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *path2);}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_d_card_manager_aa897172ffe26c39c9333e08cfaae5d7f}{deleteFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *path);}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_d_card_manager_aa897172ffe26c39c9333e08cfaae5d7f}{deleteFile}}(\textcolor{keyword}{const}\ String\&\ path);}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_d_card_manager_a83b9fcf51f6f6397253e73f4c743b791}{deleteRecursive}}(\textcolor{keyword}{const}\ String\ \&path);}
+\DoxyCodeLine{00222\ \};}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SD\_CARD\_MANAGER\_H}}
+
+\end{DoxyCode}

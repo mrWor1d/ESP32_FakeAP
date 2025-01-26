@@ -1,0 +1,183 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Fake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}APlib}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Configurar el entorno}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Dependencias}{2}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Índice de espacios de nombres}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Lista de espacios de nombres}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Índice jerárquico}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Jerarquía de clases}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Índice de clases}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Lista de clases}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Índice de archivos}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Lista de archivos}{9}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Documentación de espacios de nombres}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Referencia del espacio de nombres fake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}APLib}{11}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Documentación de funciones}{11}{subsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.1}getCurrentTime()}{11}{subsubsection.6.1.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.2}getReadableSize()}{12}{subsubsection.6.1.1.2}%
+\contentsline {chapter}{\numberline {7}Documentación de clases}{13}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Referencia de la clase Fake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}AP}{13}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Descripción detallada}{16}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Documentación de constructores y destructores}{17}{subsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.2.1}FakeAP()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{17}{subsubsection.7.1.2.1}%
+\contentsline {subsubsection}{\numberline {7.1.2.2}FakeAP()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{18}{subsubsection.7.1.2.2}%
+\contentsline {subsubsection}{\numberline {7.1.2.3}FakeAP()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{18}{subsubsection.7.1.2.3}%
+\contentsline {subsection}{\numberline {7.1.3}Documentación de funciones miembro}{18}{subsection.7.1.3}%
+\contentsline {subsubsection}{\numberline {7.1.3.1}getImageFile()}{18}{subsubsection.7.1.3.1}%
+\contentsline {subsubsection}{\numberline {7.1.3.2}handleIcons()}{18}{subsubsection.7.1.3.2}%
+\contentsline {subsubsection}{\numberline {7.1.3.3}handleLogin()}{19}{subsubsection.7.1.3.3}%
+\contentsline {subsubsection}{\numberline {7.1.3.4}handleRoot()}{19}{subsubsection.7.1.3.4}%
+\contentsline {subsubsection}{\numberline {7.1.3.5}handleSubmit()}{19}{subsubsection.7.1.3.5}%
+\contentsline {subsubsection}{\numberline {7.1.3.6}initialize()}{19}{subsubsection.7.1.3.6}%
+\contentsline {subsubsection}{\numberline {7.1.3.7}operator=()}{20}{subsubsection.7.1.3.7}%
+\contentsline {subsubsection}{\numberline {7.1.3.8}setupCaptivePortal()}{20}{subsubsection.7.1.3.8}%
+\contentsline {subsubsection}{\numberline {7.1.3.9}startCaptiveServer()}{20}{subsubsection.7.1.3.9}%
+\contentsline {section}{\numberline {7.2}Referencia de la estructura fake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}APLib\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Placeholder\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t}{20}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Descripción detallada}{21}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Documentación de datos miembro}{21}{subsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.2.1}AccessPointSSID}{21}{subsubsection.7.2.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2.2}ClientIP}{21}{subsubsection.7.2.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.2.3}FacebookPath}{21}{subsubsection.7.2.2.3}%
+\contentsline {subsubsection}{\numberline {7.2.2.4}GooglePath}{21}{subsubsection.7.2.2.4}%
+\contentsline {subsubsection}{\numberline {7.2.2.5}HostsConected}{22}{subsubsection.7.2.2.5}%
+\contentsline {subsubsection}{\numberline {7.2.2.6}InstagramPath}{22}{subsubsection.7.2.2.6}%
+\contentsline {subsubsection}{\numberline {7.2.2.7}sdCardType}{22}{subsubsection.7.2.2.7}%
+\contentsline {subsubsection}{\numberline {7.2.2.8}sdFreeSpace}{22}{subsubsection.7.2.2.8}%
+\contentsline {subsubsection}{\numberline {7.2.2.9}sdSize}{22}{subsubsection.7.2.2.9}%
+\contentsline {subsubsection}{\numberline {7.2.2.10}sdSpaceUsed}{22}{subsubsection.7.2.2.10}%
+\contentsline {subsubsection}{\numberline {7.2.2.11}ServerIP}{22}{subsubsection.7.2.2.11}%
+\contentsline {subsubsection}{\numberline {7.2.2.12}TwitterPath}{22}{subsubsection.7.2.2.12}%
+\contentsline {subsubsection}{\numberline {7.2.2.13}WifiSSID}{23}{subsubsection.7.2.2.13}%
+\contentsline {subsubsection}{\numberline {7.2.2.14}WifiStatus}{23}{subsubsection.7.2.2.14}%
+\contentsline {subsubsection}{\numberline {7.2.2.15}WiFiStrength}{23}{subsubsection.7.2.2.15}%
+\contentsline {section}{\numberline {7.3}Referencia de la clase SDCard\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager}{23}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Descripción detallada}{25}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Documentación de constructores y destructores}{25}{subsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.2.1}SDCardManager()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{25}{subsubsection.7.3.2.1}%
+\contentsline {subsubsection}{\numberline {7.3.2.2}SDCardManager()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{25}{subsubsection.7.3.2.2}%
+\contentsline {subsection}{\numberline {7.3.3}Documentación de funciones miembro}{25}{subsection.7.3.3}%
+\contentsline {subsubsection}{\numberline {7.3.3.1}appendFile()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{25}{subsubsection.7.3.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.3.2}appendFile()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{26}{subsubsection.7.3.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.3.3}createDir()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{26}{subsubsection.7.3.3.3}%
+\contentsline {subsubsection}{\numberline {7.3.3.4}createDir()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{26}{subsubsection.7.3.3.4}%
+\contentsline {subsubsection}{\numberline {7.3.3.5}deleteFile()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{27}{subsubsection.7.3.3.5}%
+\contentsline {subsubsection}{\numberline {7.3.3.6}deleteFile()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{27}{subsubsection.7.3.3.6}%
+\contentsline {subsubsection}{\numberline {7.3.3.7}deleteRecursive()}{27}{subsubsection.7.3.3.7}%
+\contentsline {subsubsection}{\numberline {7.3.3.8}getCardType()}{28}{subsubsection.7.3.3.8}%
+\contentsline {subsubsection}{\numberline {7.3.3.9}getFileDir()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{28}{subsubsection.7.3.3.9}%
+\contentsline {subsubsection}{\numberline {7.3.3.10}getFileDir()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{28}{subsubsection.7.3.3.10}%
+\contentsline {subsubsection}{\numberline {7.3.3.11}getFileSystem()}{29}{subsubsection.7.3.3.11}%
+\contentsline {subsubsection}{\numberline {7.3.3.12}initialize()}{29}{subsubsection.7.3.3.12}%
+\contentsline {subsubsection}{\numberline {7.3.3.13}isCardInit()}{29}{subsubsection.7.3.3.13}%
+\contentsline {subsubsection}{\numberline {7.3.3.14}listDir()}{29}{subsubsection.7.3.3.14}%
+\contentsline {subsubsection}{\numberline {7.3.3.15}logEvent()}{30}{subsubsection.7.3.3.15}%
+\contentsline {subsubsection}{\numberline {7.3.3.16}operator+()}{30}{subsubsection.7.3.3.16}%
+\contentsline {subsubsection}{\numberline {7.3.3.17}operator-\/()}{30}{subsubsection.7.3.3.17}%
+\contentsline {subsubsection}{\numberline {7.3.3.18}operator=()}{31}{subsubsection.7.3.3.18}%
+\contentsline {subsubsection}{\numberline {7.3.3.19}readFile()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{31}{subsubsection.7.3.3.19}%
+\contentsline {subsubsection}{\numberline {7.3.3.20}readFile()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{31}{subsubsection.7.3.3.20}%
+\contentsline {subsubsection}{\numberline {7.3.3.21}removeDir()}{31}{subsubsection.7.3.3.21}%
+\contentsline {subsubsection}{\numberline {7.3.3.22}renameFile()}{31}{subsubsection.7.3.3.22}%
+\contentsline {subsubsection}{\numberline {7.3.3.23}writeFile()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{32}{subsubsection.7.3.3.23}%
+\contentsline {subsubsection}{\numberline {7.3.3.24}writeFile()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{32}{subsubsection.7.3.3.24}%
+\contentsline {subsection}{\numberline {7.3.4}Documentación de datos miembro}{32}{subsection.7.3.4}%
+\contentsline {subsubsection}{\numberline {7.3.4.1}\_fileSystem}{32}{subsubsection.7.3.4.1}%
+\contentsline {subsubsection}{\numberline {7.3.4.2}\_sdInitialized}{33}{subsubsection.7.3.4.2}%
+\contentsline {section}{\numberline {7.4}Referencia de la clase Web\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Server\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager}{33}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Descripción detallada}{35}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Documentación de constructores y destructores}{36}{subsection.7.4.2}%
+\contentsline {subsubsection}{\numberline {7.4.2.1}WebServerManager()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{36}{subsubsection.7.4.2.1}%
+\contentsline {subsubsection}{\numberline {7.4.2.2}WebServerManager()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{36}{subsubsection.7.4.2.2}%
+\contentsline {subsubsection}{\numberline {7.4.2.3}WebServerManager()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{36}{subsubsection.7.4.2.3}%
+\contentsline {subsubsection}{\numberline {7.4.2.4}$\sim $WebServerManager()}{36}{subsubsection.7.4.2.4}%
+\contentsline {subsection}{\numberline {7.4.3}Documentación de funciones miembro}{36}{subsection.7.4.3}%
+\contentsline {subsubsection}{\numberline {7.4.3.1}generateJSONFile()}{36}{subsubsection.7.4.3.1}%
+\contentsline {subsubsection}{\numberline {7.4.3.2}getContentType()}{37}{subsubsection.7.4.3.2}%
+\contentsline {subsubsection}{\numberline {7.4.3.3}getHTMLContent()}{37}{subsubsection.7.4.3.3}%
+\contentsline {subsubsection}{\numberline {7.4.3.4}handleAccessPoint()}{37}{subsubsection.7.4.3.4}%
+\contentsline {subsubsection}{\numberline {7.4.3.5}handleAdminPanel()}{38}{subsubsection.7.4.3.5}%
+\contentsline {subsubsection}{\numberline {7.4.3.6}handleFileDelete()}{38}{subsubsection.7.4.3.6}%
+\contentsline {subsubsection}{\numberline {7.4.3.7}handleFileDisplay()}{38}{subsubsection.7.4.3.7}%
+\contentsline {subsubsection}{\numberline {7.4.3.8}handleFileDownload()}{38}{subsubsection.7.4.3.8}%
+\contentsline {subsubsection}{\numberline {7.4.3.9}handleFileUpload()}{38}{subsubsection.7.4.3.9}%
+\contentsline {subsubsection}{\numberline {7.4.3.10}handleLoginPages()}{39}{subsubsection.7.4.3.10}%
+\contentsline {subsubsection}{\numberline {7.4.3.11}handlePageIcons()}{39}{subsubsection.7.4.3.11}%
+\contentsline {subsubsection}{\numberline {7.4.3.12}handlePagesPath()}{39}{subsubsection.7.4.3.12}%
+\contentsline {subsubsection}{\numberline {7.4.3.13}handleSubmitCredentials()}{39}{subsubsection.7.4.3.13}%
+\contentsline {subsubsection}{\numberline {7.4.3.14}handleWiFiConfig()}{39}{subsubsection.7.4.3.14}%
+\contentsline {subsubsection}{\numberline {7.4.3.15}operator=()}{40}{subsubsection.7.4.3.15}%
+\contentsline {subsubsection}{\numberline {7.4.3.16}process()}{40}{subsubsection.7.4.3.16}%
+\contentsline {subsubsection}{\numberline {7.4.3.17}refreshAdminPage()}{40}{subsubsection.7.4.3.17}%
+\contentsline {subsubsection}{\numberline {7.4.3.18}saveToDataFile()}{40}{subsubsection.7.4.3.18}%
+\contentsline {subsubsection}{\numberline {7.4.3.19}setPath()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{40}{subsubsection.7.4.3.19}%
+\contentsline {subsubsection}{\numberline {7.4.3.20}setPath()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{40}{subsubsection.7.4.3.20}%
+\contentsline {subsubsection}{\numberline {7.4.3.21}setPath()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{41}{subsubsection.7.4.3.21}%
+\contentsline {subsubsection}{\numberline {7.4.3.22}setPath()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{41}{subsubsection.7.4.3.22}%
+\contentsline {subsubsection}{\numberline {7.4.3.23}start()}{41}{subsubsection.7.4.3.23}%
+\contentsline {subsubsection}{\numberline {7.4.3.24}validateAdminCredentials()}{41}{subsubsection.7.4.3.24}%
+\contentsline {subsection}{\numberline {7.4.4}Documentación de datos miembro}{42}{subsection.7.4.4}%
+\contentsline {subsubsection}{\numberline {7.4.4.1}\_lastAttemptTime}{42}{subsubsection.7.4.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.4.2}\_loginAttempts}{42}{subsubsection.7.4.4.2}%
+\contentsline {subsubsection}{\numberline {7.4.4.3}m\_adminPage}{42}{subsubsection.7.4.4.3}%
+\contentsline {subsubsection}{\numberline {7.4.4.4}m\_datafile}{42}{subsubsection.7.4.4.4}%
+\contentsline {subsubsection}{\numberline {7.4.4.5}m\_dnsServer}{42}{subsubsection.7.4.4.5}%
+\contentsline {subsubsection}{\numberline {7.4.4.6}m\_exitPage}{42}{subsubsection.7.4.4.6}%
+\contentsline {subsubsection}{\numberline {7.4.4.7}m\_facebook}{43}{subsubsection.7.4.4.7}%
+\contentsline {subsubsection}{\numberline {7.4.4.8}m\_google}{43}{subsubsection.7.4.4.8}%
+\contentsline {subsubsection}{\numberline {7.4.4.9}m\_indexPage}{43}{subsubsection.7.4.4.9}%
+\contentsline {subsubsection}{\numberline {7.4.4.10}m\_instagram}{43}{subsubsection.7.4.4.10}%
+\contentsline {subsubsection}{\numberline {7.4.4.11}m\_sdManager}{43}{subsubsection.7.4.4.11}%
+\contentsline {subsubsection}{\numberline {7.4.4.12}m\_server}{43}{subsubsection.7.4.4.12}%
+\contentsline {subsubsection}{\numberline {7.4.4.13}m\_twitter}{43}{subsubsection.7.4.4.13}%
+\contentsline {section}{\numberline {7.5}Referencia de la clase Wi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Fi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Captive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager}{44}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Descripción detallada}{45}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Documentación de constructores y destructores}{45}{subsection.7.5.2}%
+\contentsline {subsubsection}{\numberline {7.5.2.1}WiFiCaptiveManager()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{45}{subsubsection.7.5.2.1}%
+\contentsline {subsubsection}{\numberline {7.5.2.2}WiFiCaptiveManager()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{45}{subsubsection.7.5.2.2}%
+\contentsline {subsubsection}{\numberline {7.5.2.3}$\sim $WiFiCaptiveManager()}{46}{subsubsection.7.5.2.3}%
+\contentsline {subsubsection}{\numberline {7.5.2.4}WiFiCaptiveManager()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{46}{subsubsection.7.5.2.4}%
+\contentsline {subsection}{\numberline {7.5.3}Documentación de funciones miembro}{46}{subsection.7.5.3}%
+\contentsline {subsubsection}{\numberline {7.5.3.1}getLoginPage()}{46}{subsubsection.7.5.3.1}%
+\contentsline {subsubsection}{\numberline {7.5.3.2}getPageContent()}{46}{subsubsection.7.5.3.2}%
+\contentsline {subsubsection}{\numberline {7.5.3.3}getServerIp()}{47}{subsubsection.7.5.3.3}%
+\contentsline {subsubsection}{\numberline {7.5.3.4}operator=()}{47}{subsubsection.7.5.3.4}%
+\contentsline {subsubsection}{\numberline {7.5.3.5}setAccessPoint()}{47}{subsubsection.7.5.3.5}%
+\contentsline {subsubsection}{\numberline {7.5.3.6}setServerIP()}{47}{subsubsection.7.5.3.6}%
+\contentsline {subsubsection}{\numberline {7.5.3.7}setWifiStation()}{47}{subsubsection.7.5.3.7}%
+\contentsline {subsubsection}{\numberline {7.5.3.8}submitCredentials()}{48}{subsubsection.7.5.3.8}%
+\contentsline {subsection}{\numberline {7.5.4}Documentación de datos miembro}{48}{subsection.7.5.4}%
+\contentsline {subsubsection}{\numberline {7.5.4.1}\_client}{48}{subsubsection.7.5.4.1}%
+\contentsline {subsubsection}{\numberline {7.5.4.2}\_pageContent}{48}{subsubsection.7.5.4.2}%
+\contentsline {subsubsection}{\numberline {7.5.4.3}\_serverIP}{48}{subsubsection.7.5.4.3}%
+\contentsline {chapter}{\numberline {8}Documentación de archivos}{49}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Referencia del archivo README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md}{49}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Referencia del archivo src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Fake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}APlib.cpp}{49}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Referencia del archivo src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Fake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}APlib.h}{49}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Descripción detallada}{49}{subsection.8.3.1}%
+\contentsline {section}{\numberline {8.4}Fake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}APlib.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{50}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Referencia del archivo src/include/include.h}{51}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Documentación de «define»}{51}{subsection.8.5.1}%
+\contentsline {subsubsection}{\numberline {8.5.1.1}USE\_GLOBAL\_VAL}{51}{subsubsection.8.5.1.1}%
+\contentsline {subsection}{\numberline {8.5.2}Documentación de enumeraciones}{51}{subsection.8.5.2}%
+\contentsline {subsubsection}{\numberline {8.5.2.1}FileType\_t}{51}{subsubsection.8.5.2.1}%
+\contentsline {subsubsection}{\numberline {8.5.2.2}Platform\_t}{52}{subsubsection.8.5.2.2}%
+\contentsline {section}{\numberline {8.6}include.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{52}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Referencia del archivo src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SDCard\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.cpp}{55}{section.8.7}%
+\contentsline {subsection}{\numberline {8.7.1}Documentación de «define»}{55}{subsection.8.7.1}%
+\contentsline {subsubsection}{\numberline {8.7.1.1}SD\_CARD\_MANAGER\_CPP}{55}{subsubsection.8.7.1.1}%
+\contentsline {section}{\numberline {8.8}Referencia del archivo src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SDCard\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.h}{55}{section.8.8}%
+\contentsline {section}{\numberline {8.9}SDCard\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{55}{section.8.9}%
+\contentsline {section}{\numberline {8.10}Referencia del archivo src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Web\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Server\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.cpp}{56}{section.8.10}%
+\contentsline {subsection}{\numberline {8.10.1}Documentación de «define»}{56}{subsection.8.10.1}%
+\contentsline {subsubsection}{\numberline {8.10.1.1}WEB\_SERVER\_HANDLER\_CPP}{56}{subsubsection.8.10.1.1}%
+\contentsline {section}{\numberline {8.11}Referencia del archivo src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Web\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Server\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.h}{57}{section.8.11}%
+\contentsline {subsection}{\numberline {8.11.1}Descripción detallada}{57}{subsection.8.11.1}%
+\contentsline {section}{\numberline {8.12}Web\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Server\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{57}{section.8.12}%
+\contentsline {section}{\numberline {8.13}Referencia del archivo src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wifi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Captive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Portal.cpp}{58}{section.8.13}%
+\contentsline {subsection}{\numberline {8.13.1}Documentación de «define»}{59}{subsection.8.13.1}%
+\contentsline {subsubsection}{\numberline {8.13.1.1}WIFI\_CAPTIVE\_CPP}{59}{subsubsection.8.13.1.1}%
+\contentsline {section}{\numberline {8.14}Referencia del archivo src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wifi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Captive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Portal.h}{59}{section.8.14}%
+\contentsline {subsection}{\numberline {8.14.1}Descripción detallada}{59}{subsection.8.14.1}%
+\contentsline {section}{\numberline {8.15}Wifi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Captive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Portal.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{59}{section.8.15}%
+\contentsline {chapter}{\'{I}ndice alfab\'{e}tico}{61}{section*.40}%

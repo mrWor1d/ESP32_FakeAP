@@ -1,0 +1,59 @@
+\doxysection{Referencia del espacio de nombres fake\+APLib}
+\hypertarget{namespacefake_a_p_lib}{}\label{namespacefake_a_p_lib}\index{fakeAPLib@{fakeAPLib}}
+\doxysubsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structfake_a_p_lib_1_1_placeholder__t}{Placeholder\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Estructura que contiene marcadores de posición (placeholders) para la librería Fake\+APlib. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+static String \mbox{\hyperlink{namespacefake_a_p_lib_aff88dbab8f98a145a72d771bb288012d}{get\+Current\+Time}} (void)
+\begin{DoxyCompactList}\small\item\em Obtener el valor del tiempo actual. \end{DoxyCompactList}\item 
+static String \mbox{\hyperlink{namespacefake_a_p_lib_a7f444a5808e2a3501a4be791fafc5864}{get\+Readable\+Size}} (const uint64\+\_\+t \&bytes)
+\begin{DoxyCompactList}\small\item\em convierte el tamaño desde bytes a la unidad correspondiente siguiendo el patrón siguiente\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{namespacefake_a_p_lib_aff88dbab8f98a145a72d771bb288012d}\index{fakeAPLib@{fakeAPLib}!getCurrentTime@{getCurrentTime}}
+\index{getCurrentTime@{getCurrentTime}!fakeAPLib@{fakeAPLib}}
+\doxysubsubsection{\texorpdfstring{getCurrentTime()}{getCurrentTime()}}
+{\footnotesize\ttfamily \label{namespacefake_a_p_lib_aff88dbab8f98a145a72d771bb288012d} 
+static String fake\+APLib\+::get\+Current\+Time (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Obtener el valor del tiempo actual. 
+
+\begin{DoxyRemark}{Comentarios}
+Hablamos del tiempo de actividad, es decir, el tiempo desde que se ha iniciado/reinicializado el ESP32.
+\end{DoxyRemark}
+\begin{DoxyReturn}{Devuelve}
+Una cadena HH\+:\+MM\+:SS que representa el tiempo actual 
+\end{DoxyReturn}
+\Hypertarget{namespacefake_a_p_lib_a7f444a5808e2a3501a4be791fafc5864}\index{fakeAPLib@{fakeAPLib}!getReadableSize@{getReadableSize}}
+\index{getReadableSize@{getReadableSize}!fakeAPLib@{fakeAPLib}}
+\doxysubsubsection{\texorpdfstring{getReadableSize()}{getReadableSize()}}
+{\footnotesize\ttfamily \label{namespacefake_a_p_lib_a7f444a5808e2a3501a4be791fafc5864} 
+static String fake\+APLib\+::get\+Readable\+Size (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{bytes}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+convierte el tamaño desde bytes a la unidad correspondiente siguiendo el patrón siguiente\+: 
+
+
+\begin{DoxyItemize}
+\item B (bytes)\+: menos de 1024 bytes
+\item KB (Kilobytes)\+: de 1024 bytes hasta menos de (1024 \texorpdfstring{$\ast$}{*} 1024) bytes
+\item MB (Megabytes)\+: de (1024 \texorpdfstring{$\ast$}{*} 1024) bytes hasta menos de (1024 \texorpdfstring{$\ast$}{*} 1024 \texorpdfstring{$\ast$}{*} 1024)
+\item GB (Gigabytes)\+: a partir de (1024 \texorpdfstring{$\ast$}{*} 1024 \texorpdfstring{$\ast$}{*} 1024)
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em bytes} & el tamaño en bytes (1 byte = 8 bits) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+una cadena que representa el tamaño convertido a la unidad correspondiente 
+\end{DoxyReturn}

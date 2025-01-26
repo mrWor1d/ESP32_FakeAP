@@ -341,7 +341,6 @@ bool SDCardManager::createDir(const String &path)
         return 0;
     }
 
-    Serial.printf("Creating Dir: %s\n", path.c_str());
     if (!_fileSystem.mkdir(path))
     {
 #if (WITH_ERROR_TYPE)
@@ -367,7 +366,6 @@ bool SDCardManager::createDir(const char *path)
         return 0;
     }
 
-    Serial.printf("Creating Dir: %s\n", path);
     if (!_fileSystem.mkdir(path))
     {
 #if (WITH_ERROR_TYPE)
@@ -513,7 +511,6 @@ bool SDCardManager::deleteFile(const char *path)
         return 0;
     }
 
-    Serial.printf("Deleting file: %s\n", path);
     if (!_fileSystem.remove(path))
     {
 #if (WITH_ERROR_TYPE)
@@ -539,7 +536,6 @@ bool SDCardManager::deleteFile(const String& path)
         return 0;
     }
 
-    Serial.printf("Deleting file: %s\n", path.c_str());
     if (!_fileSystem.remove(path))
     {
 #if (WITH_ERROR_TYPE)

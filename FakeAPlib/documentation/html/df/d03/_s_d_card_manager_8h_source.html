@@ -9,20 +9,8 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
-<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
 <script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../cookie.js"></script>
-<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../search/searchdata.js"></script>
-<script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
-/* @license-end */
-</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -36,18 +24,6 @@
    </div>
    <div id="projectbrief">Librería arduino para ESP32 que permite crear un punto de acceso falso</div>
   </td>
-    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
-          </span>
-        </div>
-</td>
  </tr>
  </tbody>
 </table>
@@ -56,52 +32,20 @@
 <!-- Generado por Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() { codefold.init(1); });
 /* @license-end */
 </script>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('df/d03/_s_d_card_manager_8h_source.html','../../'); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div id="doc-content">
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
-</div>
-
 <div class="header">
   <div class="headertitle"><div class="title">SDCardManager.h</div></div>
 </div><!--header-->
@@ -180,37 +124,34 @@ $(function(){initNavTree('df/d03/_s_d_card_manager_8h_source.html','../../'); in
 </div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="preprocessor">#endif </span><span class="comment">// SD_CARD_MANAGER_H</span></div>
-<div class="ttc" id="aclass_s_d_card_manager_html_a14e9fbc205cca0a7724df6c8347f66c5"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#a14e9fbc205cca0a7724df6c8347f66c5">SDCardManager::renameFile</a></div><div class="ttdeci">bool renameFile(const char *path1, const char *path2)</div><div class="ttdoc">Cambia el nombre de un archivo o lo mueve a otra ruta.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:484</div></div>
+<div class="ttc" id="aclass_s_d_card_manager_html_a14e9fbc205cca0a7724df6c8347f66c5"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#a14e9fbc205cca0a7724df6c8347f66c5">SDCardManager::renameFile</a></div><div class="ttdeci">bool renameFile(const char *path1, const char *path2)</div><div class="ttdoc">Cambia el nombre de un archivo o lo mueve a otra ruta.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:482</div></div>
 <div class="ttc" id="aclass_s_d_card_manager_html_a2bb93b954243a6f9edb15eaaa6482a4c"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#a2bb93b954243a6f9edb15eaaa6482a4c">SDCardManager::_sdInitialized</a></div><div class="ttdeci">bool _sdInitialized</div><div class="ttdef"><b>Definition</b> SDCardManager.h:45</div></div>
 <div class="ttc" id="aclass_s_d_card_manager_html_a42e8876b66696fa091ee61a749c60e67"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#a42e8876b66696fa091ee61a749c60e67">SDCardManager::getFileDir</a></div><div class="ttdeci">static String getFileDir(const char *path)</div><div class="ttdoc">Obtiene el directorio dado el camino absoluto de un archivo.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:41</div></div>
 <div class="ttc" id="aclass_s_d_card_manager_html_a55fc7fb249e018f51f01304fbf1c795c"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#a55fc7fb249e018f51f01304fbf1c795c">SDCardManager::SDCardManager</a></div><div class="ttdeci">SDCardManager(const SDCardManager &amp;)=delete</div></div>
 <div class="ttc" id="aclass_s_d_card_manager_html_a6886e0afb44ce4dff05f2feae63250b0"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#a6886e0afb44ce4dff05f2feae63250b0">SDCardManager::logEvent</a></div><div class="ttdeci">bool logEvent(const String &amp;event)</div><div class="ttdoc">Registra un evento en el archivo de log designado.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:58</div></div>
 <div class="ttc" id="aclass_s_d_card_manager_html_a6c790f7b4552488e6ab85cf9b72dc383"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#a6c790f7b4552488e6ab85cf9b72dc383">SDCardManager::operator-</a></div><div class="ttdeci">bool operator-(const String &amp;path)</div><div class="ttdoc">Operador definido para eliminar un archivo.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:14</div></div>
 <div class="ttc" id="aclass_s_d_card_manager_html_a827dd4b851b9792a0e5a396f0d38b4c3"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#a827dd4b851b9792a0e5a396f0d38b4c3">SDCardManager::_fileSystem</a></div><div class="ttdeci">fs::SDMMCFS &amp; _fileSystem</div><div class="ttdef"><b>Definition</b> SDCardManager.h:44</div></div>
-<div class="ttc" id="aclass_s_d_card_manager_html_a83b9fcf51f6f6397253e73f4c743b791"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#a83b9fcf51f6f6397253e73f4c743b791">SDCardManager::deleteRecursive</a></div><div class="ttdeci">bool deleteRecursive(const String &amp;path)</div><div class="ttdoc">Elimina recursivamente un archivo o directorio de la tarjeta SD, incluyendo su contenido.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:558</div></div>
+<div class="ttc" id="aclass_s_d_card_manager_html_a83b9fcf51f6f6397253e73f4c743b791"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#a83b9fcf51f6f6397253e73f4c743b791">SDCardManager::deleteRecursive</a></div><div class="ttdeci">bool deleteRecursive(const String &amp;path)</div><div class="ttdoc">Elimina recursivamente un archivo o directorio de la tarjeta SD, incluyendo su contenido.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:554</div></div>
 <div class="ttc" id="aclass_s_d_card_manager_html_a88c57a07ef536e0cadbb393feb95752e"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#a88c57a07ef536e0cadbb393feb95752e">SDCardManager::createDir</a></div><div class="ttdeci">bool createDir(const String &amp;path)</div><div class="ttdoc">Crea un directorio en la tarjeta SD a partir de un String.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:334</div></div>
 <div class="ttc" id="aclass_s_d_card_manager_html_a997d7441c12b92a921181fd14dbaf286"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#a997d7441c12b92a921181fd14dbaf286">SDCardManager::SDCardManager</a></div><div class="ttdeci">SDCardManager()</div><div class="ttdoc">Constructor por defecto que inicializa los miembros de la clase. Asigna el sistema de archivos por de...</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:7</div></div>
 <div class="ttc" id="aclass_s_d_card_manager_html_a9debc3fefc7127d4f762121e6fab1def"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#a9debc3fefc7127d4f762121e6fab1def">SDCardManager::operator+</a></div><div class="ttdeci">bool operator+(const String &amp;path)</div><div class="ttdoc">Operador definido para escribir un archivo.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:12</div></div>
 <div class="ttc" id="aclass_s_d_card_manager_html_aa14b7744093fcbec65697529cc96e9d6"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#aa14b7744093fcbec65697529cc96e9d6">SDCardManager::getFileSystem</a></div><div class="ttdeci">fs::SDMMCFS &amp; getFileSystem()</div><div class="ttdoc">Devuelve la referencia al sistema de archivos asociado a la tarjeta SD.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:18</div></div>
-<div class="ttc" id="aclass_s_d_card_manager_html_aa897172ffe26c39c9333e08cfaae5d7f"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#aa897172ffe26c39c9333e08cfaae5d7f">SDCardManager::deleteFile</a></div><div class="ttdeci">bool deleteFile(const char *path)</div><div class="ttdoc">Elimina un archivo de la tarjeta SD a partir de una cadena tipo C.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:506</div></div>
+<div class="ttc" id="aclass_s_d_card_manager_html_aa897172ffe26c39c9333e08cfaae5d7f"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#aa897172ffe26c39c9333e08cfaae5d7f">SDCardManager::deleteFile</a></div><div class="ttdeci">bool deleteFile(const char *path)</div><div class="ttdoc">Elimina un archivo de la tarjeta SD a partir de una cadena tipo C.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:504</div></div>
 <div class="ttc" id="aclass_s_d_card_manager_html_aabaddfa5106212e4caa56fd77ee546a2"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#aabaddfa5106212e4caa56fd77ee546a2">SDCardManager::listDir</a></div><div class="ttdeci">void listDir(const char *dirname, uint8_t levels)</div><div class="ttdoc">Lista los archivos y directorios dentro de una ruta dada.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:279</div></div>
-<div class="ttc" id="aclass_s_d_card_manager_html_ab365c30d6d02044962fd11e590643d0b"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#ab365c30d6d02044962fd11e590643d0b">SDCardManager::appendFile</a></div><div class="ttdeci">bool appendFile(const char *path, String &amp;content)</div><div class="ttdoc">Agrega contenido a un archivo existente (sin eliminar su contenido previo).</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:412</div></div>
+<div class="ttc" id="aclass_s_d_card_manager_html_ab365c30d6d02044962fd11e590643d0b"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#ab365c30d6d02044962fd11e590643d0b">SDCardManager::appendFile</a></div><div class="ttdeci">bool appendFile(const char *path, String &amp;content)</div><div class="ttdoc">Agrega contenido a un archivo existente (sin eliminar su contenido previo).</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:410</div></div>
 <div class="ttc" id="aclass_s_d_card_manager_html_ab8f81bf685b9ad92a5f4a7806cf7cb19"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#ab8f81bf685b9ad92a5f4a7806cf7cb19">SDCardManager::writeFile</a></div><div class="ttdeci">bool writeFile(const char *path, const String &amp;content=&quot;&quot;)</div><div class="ttdoc">Escribe contenido en un archivo (creándolo si no existe).</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:205</div></div>
 <div class="ttc" id="aclass_s_d_card_manager_html_abf8bc426ced70237ea869c2b407e449d"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#abf8bc426ced70237ea869c2b407e449d">SDCardManager::getCardType</a></div><div class="ttdeci">static char * getCardType(uint8_t card)</div><div class="ttdoc">Retorna una cadena con el tipo de tarjeta SD detectada.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:21</div></div>
-<div class="ttc" id="aclass_s_d_card_manager_html_ad5434b8826b693ccba93f3d0a1cf8bd4"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#ad5434b8826b693ccba93f3d0a1cf8bd4">SDCardManager::removeDir</a></div><div class="ttdeci">bool removeDir(const char *path)</div><div class="ttdoc">Elimina un directorio de la tarjeta SD.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:386</div></div>
+<div class="ttc" id="aclass_s_d_card_manager_html_ad5434b8826b693ccba93f3d0a1cf8bd4"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#ad5434b8826b693ccba93f3d0a1cf8bd4">SDCardManager::removeDir</a></div><div class="ttdeci">bool removeDir(const char *path)</div><div class="ttdoc">Elimina un directorio de la tarjeta SD.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:384</div></div>
 <div class="ttc" id="aclass_s_d_card_manager_html_ad568b6cef69c1dbd80d8627b8aa8fe7e"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#ad568b6cef69c1dbd80d8627b8aa8fe7e">SDCardManager::initialize</a></div><div class="ttdeci">bool initialize()</div><div class="ttdoc">Inicializa la tarjeta SD y muestra información sobre ella.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:100</div></div>
 <div class="ttc" id="aclass_s_d_card_manager_html_ae4a271ef43250a5df3be4ce521aab1ab"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#ae4a271ef43250a5df3be4ce521aab1ab">SDCardManager::readFile</a></div><div class="ttdeci">String readFile(const char *path)</div><div class="ttdoc">Lee el contenido de un archivo en la tarjeta SD.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:140</div></div>
 <div class="ttc" id="aclass_s_d_card_manager_html_aef1c13f7dfda7a1cb8932ef236131c0a"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#aef1c13f7dfda7a1cb8932ef236131c0a">SDCardManager::operator=</a></div><div class="ttdeci">SDCardManager operator=(const SDCardManager &amp;)=delete</div></div>
 <div class="ttc" id="aclass_s_d_card_manager_html_af000db216266d6d34f773611b0323edd"><div class="ttname"><a href="../../d4/d02/class_s_d_card_manager.html#af000db216266d6d34f773611b0323edd">SDCardManager::isCardInit</a></div><div class="ttdeci">bool isCardInit() const</div><div class="ttdoc">Indica si la tarjeta SD ha sido inicializada.</div><div class="ttdef"><b>Definition</b> SDCardManager.cpp:16</div></div>
 <div class="ttc" id="ainclude_8h_html"><div class="ttname"><a href="../../d1/d02/include_8h.html">include.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="../../df/d03/_s_d_card_manager_8h.html">SDCardManager.h</a></li>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>
