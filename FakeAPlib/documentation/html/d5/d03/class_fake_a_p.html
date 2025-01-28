@@ -9,8 +9,20 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
 <script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -24,6 +36,18 @@
    </div>
    <div id="projectbrief">Librería arduino para ESP32 que permite crear un punto de acceso falso</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -32,16 +56,52 @@
 <!-- Generado por Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(1); });
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function() { codefold.init(1); });
 /* @license-end */
 </script>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('d5/d03/class_fake_a_p.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
 <div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Métodos públicos</a> &#124;
@@ -199,9 +259,9 @@ Otros miembros heredados</h2></td></tr>
 <tr class="memitem:ad7f493ed6ded5b0500fb2e3850149930 inherit pro_methods_class_web_server_manager" id="r_ad7f493ed6ded5b0500fb2e3850149930"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d02/class_web_server_manager.html#ad7f493ed6ded5b0500fb2e3850149930">handleFileDownload</a> (void)</td></tr>
 <tr class="memdesc:ad7f493ed6ded5b0500fb2e3850149930 inherit pro_methods_class_web_server_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maneja la descarga de archivos desde el servidor web.  <br /></td></tr>
 <tr class="separator:ad7f493ed6ded5b0500fb2e3850149930 inherit pro_methods_class_web_server_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dd4026ec22ab5d193d9967cdce6b2be inherit pro_methods_class_web_server_manager" id="r_a4dd4026ec22ab5d193d9967cdce6b2be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d02/class_web_server_manager.html#a4dd4026ec22ab5d193d9967cdce6b2be">handleFileUpload</a> (void)</td></tr>
-<tr class="memdesc:a4dd4026ec22ab5d193d9967cdce6b2be inherit pro_methods_class_web_server_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manejador para la subida de archivos al servidor (vía formulario o HTTP POST).  <br /></td></tr>
-<tr class="separator:a4dd4026ec22ab5d193d9967cdce6b2be inherit pro_methods_class_web_server_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73048ef16c93754eaaf6edcb1e9b7919 inherit pro_methods_class_web_server_manager" id="r_a73048ef16c93754eaaf6edcb1e9b7919"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d02/class_web_server_manager.html#a73048ef16c93754eaaf6edcb1e9b7919">handleFileUpload</a> (const HTTPUpload &amp;upload)</td></tr>
+<tr class="memdesc:a73048ef16c93754eaaf6edcb1e9b7919 inherit pro_methods_class_web_server_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manejador para la subida de archivos al servidor (vía formulario o HTTP POST).  <br /></td></tr>
+<tr class="separator:a73048ef16c93754eaaf6edcb1e9b7919 inherit pro_methods_class_web_server_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e9e5dcc277f2069b773144fe54f566a inherit pro_methods_class_web_server_manager" id="r_a3e9e5dcc277f2069b773144fe54f566a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d02/class_web_server_manager.html#a3e9e5dcc277f2069b773144fe54f566a">handleFileDisplay</a> (void)</td></tr>
 <tr class="memdesc:a3e9e5dcc277f2069b773144fe54f566a inherit pro_methods_class_web_server_manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maneja la visualización de archivos en el servidor web.  <br /></td></tr>
 <tr class="separator:a3e9e5dcc277f2069b773144fe54f566a inherit pro_methods_class_web_server_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -304,8 +364,8 @@ Otros miembros heredados</h2></td></tr>
 <div class="line">}</div>
 <div class="ttc" id="aclass_fake_a_p_html_a52f5b2c936f62efb5733abdb9b71826e"><div class="ttname"><a href="#a52f5b2c936f62efb5733abdb9b71826e">FakeAP::FakeAP</a></div><div class="ttdeci">FakeAP()</div><div class="ttdoc">Constructor por defecto de la clase FakeAP</div><div class="ttdef"><b>Definition</b> FakeAPlib.cpp:3</div></div>
 <div class="ttc" id="aclass_fake_a_p_html_a938352e763c34554d39f3420a926411f"><div class="ttname"><a href="#a938352e763c34554d39f3420a926411f">FakeAP::initialize</a></div><div class="ttdeci">bool initialize(const String &amp;AP_SSID, const String &amp;AP_PSW=&quot;\0&quot;, const String &amp;WIFI_SSID=&quot;\0&quot;, const String &amp;WIFI_PSW=&quot;\0&quot;)</div><div class="ttdoc">Inicializa la biblioteca FakeAP configurando el punto de acceso y la conexión WiFi.</div><div class="ttdef"><b>Definition</b> FakeAPlib.cpp:124</div></div>
-<div class="ttc" id="aclass_web_server_manager_html_a79a4cf819803219bce7963f39a8ce613"><div class="ttname"><a href="../../df/d02/class_web_server_manager.html#a79a4cf819803219bce7963f39a8ce613">WebServerManager::setPath</a></div><div class="ttdeci">void setPath(const char *path, FileType_t fileType)</div><div class="ttdoc">Asigna la ruta de archivo en la tarjeta SD a un tipo de archivo específico.</div><div class="ttdef"><b>Definition</b> WebServerHandler.cpp:521</div></div>
-<div class="ttc" id="aclass_web_server_manager_html_acad523933eb6246769fa801f268dce1f"><div class="ttname"><a href="../../df/d02/class_web_server_manager.html#acad523933eb6246769fa801f268dce1f">WebServerManager::process</a></div><div class="ttdeci">void process(void)</div><div class="ttdoc">Procesa las peticiones entrantes tanto del servidor DNS como del servidor web.</div><div class="ttdef"><b>Definition</b> WebServerHandler.cpp:514</div></div>
+<div class="ttc" id="aclass_web_server_manager_html_a79a4cf819803219bce7963f39a8ce613"><div class="ttname"><a href="../../df/d02/class_web_server_manager.html#a79a4cf819803219bce7963f39a8ce613">WebServerManager::setPath</a></div><div class="ttdeci">void setPath(const char *path, FileType_t fileType)</div><div class="ttdoc">Asigna la ruta de archivo en la tarjeta SD a un tipo de archivo específico.</div><div class="ttdef"><b>Definition</b> WebServerHandler.cpp:524</div></div>
+<div class="ttc" id="aclass_web_server_manager_html_acad523933eb6246769fa801f268dce1f"><div class="ttname"><a href="../../df/d02/class_web_server_manager.html#acad523933eb6246769fa801f268dce1f">WebServerManager::process</a></div><div class="ttdeci">void process(void)</div><div class="ttdoc">Procesa las peticiones entrantes tanto del servidor DNS como del servidor web.</div><div class="ttdef"><b>Definition</b> WebServerHandler.cpp:517</div></div>
 <div class="ttc" id="ainclude_8h_html_aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa8298ffc203837d96d3c0013c0506fb3a8771f09b8524afabaf96763fb43e0844">INDEXPAGE</a></div><div class="ttdeci">@ INDEXPAGE</div><div class="ttdef"><b>Definition</b> include.h:60</div></div>
 </div><!-- fragment --><p>Ejemplo de uso para crear un servivor web: </p><div class="fragment"><div class="line"><a class="code hl_function" href="#a52f5b2c936f62efb5733abdb9b71826e">FakeAP</a> server = <a class="code hl_function" href="#a52f5b2c936f62efb5733abdb9b71826e">FakeAP</a>(); <span class="comment">// se va a llamar al constructor por defecto e</span></div>
 <div class="line">                          <span class="comment">// inicar el servidor en el puerto 80 (por defecto)</span></div>
@@ -685,10 +745,13 @@ false si hubo algún error durante la inicialización </dd></dl>
 <li>src/<a class="el" href="../../db/d02/_fake_a_plib_8cpp.html">FakeAPlib.cpp</a></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d5/d03/class_fake_a_p.html">FakeAP</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
 </body>
 </html>

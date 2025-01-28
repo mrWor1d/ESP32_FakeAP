@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.25)  26 JAN 2025 00:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.25)  26 JAN 2025 23:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -853,7 +853,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 11.
  <./image.png>
-<image.png, id=940, 487.06969pt x 239.39438pt>
+<image.png, id=935, 487.06969pt x 239.39438pt>
 File: image.png Graphic file (type png)
 <use image.png>
 Package pdftex.def Info: image.png  used on input line 17.
@@ -965,7 +965,7 @@ LaTeX Info: Redefining \% on input line 248.
 [12]
 Cap\'{\i }tulo 7.
 (d5/d03/class_fake_a_p.tex <./d5/d03/class_fake_a_p.pdf>
-<d5/d03/class_fake_a_p.pdf, id=1067, 501.875pt x 144.54pt>
+<d5/d03/class_fake_a_p.pdf, id=1062, 501.875pt x 144.54pt>
 File: d5/d03/class_fake_a_p.pdf Graphic file (type pdf)
 <use d5/d03/class_fake_a_p.pdf>
 Package pdftex.def Info: d5/d03/class_fake_a_p.pdf  used on input line 15.
@@ -1061,160 +1061,160 @@ LaTeX Info: Redefining \% on input line 43.
 LaTeX Info: Redefining \. on input line 89.
 LaTeX Info: Redefining \% on input line 89.
 [24]
-Underfull \hbox (badness 10000) detected at line 95
+Underfull \hbox (badness 10000) detected at line 93
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 98
+Underfull \hbox (badness 10000) detected at line 96
 [][][]
  []
 
 
 
-LaTeX Info: Redefining \. on input line 139.
-LaTeX Info: Redefining \% on input line 139.
+LaTeX Info: Redefining \. on input line 137.
+LaTeX Info: Redefining \% on input line 137.
 [25]
-Underfull \hbox (badness 10000) detected at line 140
+Underfull \hbox (badness 10000) detected at line 138
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 160
+Underfull \hbox (badness 10000) detected at line 158
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 178
+Underfull \hbox (badness 10000) detected at line 176
 [][][]
  []
 
 
 
-LaTeX Info: Redefining \. on input line 195.
-LaTeX Info: Redefining \% on input line 195.
+LaTeX Info: Redefining \. on input line 193.
+LaTeX Info: Redefining \% on input line 193.
 [26]
-Underfull \hbox (badness 10000) detected at line 196
+Underfull \hbox (badness 10000) detected at line 194
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 214
+Underfull \hbox (badness 10000) detected at line 212
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 232
+Underfull \hbox (badness 10000) detected at line 230
 [][][]
  []
 
 
 
-LaTeX Info: Redefining \. on input line 249.
-LaTeX Info: Redefining \% on input line 249.
+LaTeX Info: Redefining \. on input line 247.
+LaTeX Info: Redefining \% on input line 247.
 [27]
-Underfull \hbox (badness 10000) detected at line 250
+Underfull \hbox (badness 10000) detected at line 248
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 268
+Underfull \hbox (badness 10000) detected at line 266
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 286
+Underfull \hbox (badness 10000) detected at line 284
 [][][]
  []
 
 
 
-LaTeX Info: Redefining \. on input line 303.
-LaTeX Info: Redefining \% on input line 303.
+LaTeX Info: Redefining \. on input line 301.
+LaTeX Info: Redefining \% on input line 301.
 [28]
-Underfull \hbox (badness 10000) detected at line 304
+Underfull \hbox (badness 10000) detected at line 302
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 317
+Underfull \hbox (badness 10000) detected at line 315
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 330
+Underfull \hbox (badness 10000) detected at line 328
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 343
+Underfull \hbox (badness 10000) detected at line 341
 [][][]
  []
 
 
 
-LaTeX Info: Redefining \. on input line 362.
-LaTeX Info: Redefining \% on input line 362.
+LaTeX Info: Redefining \. on input line 358.
+LaTeX Info: Redefining \% on input line 358.
 [29]
-Underfull \hbox (badness 10000) detected at line 378
+Underfull \hbox (badness 10000) detected at line 359
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 396
+Underfull \hbox (badness 10000) detected at line 377
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 414
+Underfull \hbox (badness 10000) detected at line 395
 [][][]
  []
 
 
 
-LaTeX Info: Redefining \. on input line 428.
-LaTeX Info: Redefining \% on input line 428.
+LaTeX Info: Redefining \. on input line 418.
+LaTeX Info: Redefining \% on input line 418.
 [30]
-Underfull \hbox (badness 10000) detected at line 438
+Underfull \hbox (badness 10000) detected at line 419
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 456
+Underfull \hbox (badness 10000) detected at line 437
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 474
+Underfull \hbox (badness 10000) detected at line 455
 [][][]
  []
 
 
 
-LaTeX Info: Redefining \. on input line 493.
-LaTeX Info: Redefining \% on input line 493.
+LaTeX Info: Redefining \. on input line 474.
+LaTeX Info: Redefining \% on input line 474.
 [31]
-Underfull \hbox (badness 10000) detected at line 494
+Underfull \hbox (badness 10000) detected at line 475
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 514
+Underfull \hbox (badness 10000) detected at line 495
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 534
+Underfull \hbox (badness 10000) detected at line 515
 [][][]
  []
 
 
 
-LaTeX Info: Redefining \. on input line 557.
-LaTeX Info: Redefining \% on input line 557.
+LaTeX Info: Redefining \. on input line 538.
+LaTeX Info: Redefining \% on input line 538.
 [32]) (df/d02/class_web_server_manager.tex <./df/d02/class_web_server_manager.p
 df>
-<df/d02/class_web_server_manager.pdf, id=1503, 501.875pt x 298.11375pt>
+<df/d02/class_web_server_manager.pdf, id=1495, 501.875pt x 298.11375pt>
 File: df/d02/class_web_server_manager.pdf Graphic file (type pdf)
 <use df/d02/class_web_server_manager.pdf>
 Package pdftex.def Info: df/d02/class_web_server_manager.pdf  used on input lin
@@ -1307,7 +1307,7 @@ LaTeX Info: Redefining \. on input line 584.
 LaTeX Info: Redefining \% on input line 584.
 [42]) (df/d01/class_wi_fi_captive_manager.tex <./df/d01/class_wi_fi_captive_man
 ager.pdf>
-<df/d01/class_wi_fi_captive_manager.pdf, id=1638, 501.875pt x 289.08pt>
+<df/d01/class_wi_fi_captive_manager.pdf, id=1630, 501.875pt x 289.08pt>
 File: df/d01/class_wi_fi_captive_manager.pdf Graphic file (type pdf)
 <use df/d01/class_wi_fi_captive_manager.pdf>
 Package pdftex.def Info: df/d01/class_wi_fi_captive_manager.pdf  used on input 
@@ -1457,8 +1457,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
 ) (df/d03/_s_d_card_manager_8h_source.tex
 
-LaTeX Info: Redefining \. on input line 34.
-LaTeX Info: Redefining \% on input line 34.
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
 [55]) (d5/d00/_web_server_handler_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
@@ -1536,8 +1536,8 @@ LaTeX Info: Redefining \% on input line 377.
 
 
 
-LaTeX Info: Redefining \. on input line 402.
-LaTeX Info: Redefining \% on input line 402.
+LaTeX Info: Redefining \. on input line 399.
+LaTeX Info: Redefining \% on input line 399.
 [64
 
 ]) (refman.aux
@@ -1549,13 +1549,13 @@ LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
  ***********
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: A8629C31F0235225EECD4AA560B1D8D4;38378.
+(rerunfilecheck)             Checksum: 6E9BE3FE836EE981DD7B004127D7025B;38205.
  ) 
 Here is how much of TeX's memory you used:
- 20462 strings out of 473536
- 346377 string characters out of 5725023
- 802660 words of memory out of 5000000
- 42766 multiletter control sequences out of 15000+600000
+ 20456 strings out of 473536
+ 346201 string characters out of 5725023
+ 802345 words of memory out of 5000000
+ 42763 multiletter control sequences out of 15000+600000
  621246 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,16n,117p,720b,812s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1568,9 +1568,9 @@ gram Files/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb><D:/Program Files/MiKTeX/
 fonts/type1/urw/helvetic/uhvb8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/he
 lvetic/uhvb8ac.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb
 ><D:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (72 pages, 619158 bytes).
+Output written on refman.pdf (72 pages, 617623 bytes).
 PDF statistics:
- 2387 PDF objects out of 2487 (max. 8388607)
- 482 named destinations out of 1000 (max. 500000)
- 1469 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2377 PDF objects out of 2487 (max. 8388607)
+ 479 named destinations out of 1000 (max. 500000)
+ 1461 words of extra memory for PDF output out of 10000 (max. 10000000)
 

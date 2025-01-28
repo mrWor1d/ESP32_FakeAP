@@ -169,7 +169,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a896c0cfd261b129f57a792a422f5e664"><param name="Name" value="handleFileDelete(void)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a3e9e5dcc277f2069b773144fe54f566a"><param name="Name" value="handleFileDisplay(void)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#ad7f493ed6ded5b0500fb2e3850149930"><param name="Name" value="handleFileDownload(void)"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a4dd4026ec22ab5d193d9967cdce6b2be"><param name="Name" value="handleFileUpload(void)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a73048ef16c93754eaaf6edcb1e9b7919"><param name="Name" value="handleFileUpload(const HTTPUpload &amp;upload)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#aa6276373aeb7a5d158ac01045315932c"><param name="Name" value="handleIcons(void)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d03/class_fake_a_p.html#a048d06af8ab517a41d819bafcaf953a1"><param name="Name" value="handleLogin(void)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a3c2490e1976cacfc7ba1563a655ca317"><param name="Name" value="handleLoginPages(void)"></OBJECT>
@@ -230,7 +230,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6afa07d9774ff62173c36267023c8e4390"><param name="Name" value="INSTAGRAM"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#ae137bd798a5ab641e5a8ba53748d99f2"><param name="Name" value="InstagramPath"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#af000db216266d6d34f773611b0323edd"><param name="Name" value="isCardInit() const"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#aabaddfa5106212e4caa56fd77ee546a2"><param name="Name" value="listDir(const char *dirname, uint8_t levels)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#a6886e0afb44ce4dff05f2feae63250b0"><param name="Name" value="logEvent(const String &amp;event)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a4712d85f4df512e6ca3222216f51af02"><param name="Name" value="m_adminPage"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#aad840d0e0721b8c3e2e5e5414059f7a6"><param name="Name" value="m_datafile"></OBJECT>
@@ -321,10 +320,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#af000db216266d6d34f773611b0323edd"><param name="Name" value="isCardInit() const"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html#aabaddfa5106212e4caa56fd77ee546a2"><param name="Name" value="listDir(const char *dirname, uint8_t levels)"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d02/class_s_d_card_manager.html"><param name="Name" value="SDCardManager"></OBJECT>
   <UL>
@@ -442,7 +437,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a4dd4026ec22ab5d193d9967cdce6b2be"><param name="Name" value="handleFileUpload(void)"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html#a73048ef16c93754eaaf6edcb1e9b7919"><param name="Name" value="handleFileUpload(const HTTPUpload &amp;upload)"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="df/d02/class_web_server_manager.html"><param name="Name" value="WebServerManager"></OBJECT>
   <UL>

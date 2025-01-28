@@ -18,8 +18,8 @@ Esto es un proyecto escolar que tiene como objetivo el descubrimiento y el uso d
 
 ## Descripción
 Este código sirve tanto para crear un `punto de acceso falso` (Fake Access Point) como servidor web usando la placa `ESP32`.<br>
-Será un _wifi_ público, que perdirá al usuario de conectarse a su cuenta en una de sus redes (`Instagram`, `Facebook`, `X`... etc.) para poder usar la red de wifi.<br>
-Las datos proporcionados serán transferidos a una segunda placa que actuará como _servidor_, igualmente implementado con una placa `ESP32`, para almacenarse en una _tarjeta SD_.<br>
+Se trata de un _wifi_ público, que pedirá al usuario de conectarse a su cuenta en una de sus redes (`Instagram`, `Facebook`, `X`... etc.) para poder usar la red de wifi.<br>
+Los datos proporcionados serán transferidos a una segunda placa que actuará como _servidor_, igualmente implementado con una placa `ESP32`, donde se almacenarán en una _tarjeta SD_.<br>
 El Servidor tiene diferentes funcionalidades como:
 * Proporciona información de la red y del almacenamiento en tiempo real
 * Gestión de archivos (carga/descarga, borrar)
@@ -32,20 +32,20 @@ El Servidor tiene diferentes funcionalidades como:
 
 ### Estructura
 Para facilitar el mantenimiento, la legibilidad y la reusabilidad del código, se desarolló una librería que solo se tendrá que añadir a `Arduino IDE` y usarla en su sketch.
-* Los archivos fuentes de la librería se encontrarán en la carpet [FakeAPlib](/FakeAPlib). Su documentación se puede encontrar en:
-    - [index.html](/FakeAPlib/documentation/html/index.html): documentación en formato HTML
-    - [doc.chm](/FakeAPlib/documentation/html/doc.chm): documentación en formato HTML compilado (Windows)
-    - [refman.pdf](/FakeAPlib/documentation/latex/refman.pdf): documentación en formato PDF
+* Los archivos fuentes de la librería se encontrarán en la carpet [FakeAPlib](FakeAPlib). Su documentación se puede encontrar en:
+    - [index.html](FakeAPlib/documentation/html/index.html): documentación en formato HTML
+    - [doc.chm](FakeAPlib/documentation/html/doc.chm): documentación en formato HTML compilado (Windows)
+    - [refman.pdf](FakeAPlib/documentation/latex/refman.pdf): documentación en formato PDF
 * Se encontrará el código Arduino en las carpetas:
-    - [ESP32_honeyPot](/ESP32_honeyPot): código a ejecutar en la placa del punto de acceso
-    - [ESP32_Server](/ESP32_Server): código a ejecutar en la placa del servidor
-* Todas las rutas web están recogidas en el archivo [IP_Routes.txt](/IP_Routes.txt)
+    - [ESP32_honeyPot](ESP32_honeyPot): código a ejecutar en la placa del punto de acceso
+    - [ESP32_Server](ESP32_Server): código a ejecutar en la placa del servidor
+* Todas las rutas web están recogidas en el archivo [IP_Routes.txt](IP_Routes.txt)
 * Codigo fuente de las páginas html:
-    - [index.html](/webpages/index.html): página de inicio del punto de acceso cautivo
-    - [index-styles.css](/webpages/index-styles.css): para el formato de la página [index.html](/webpages/index.html) 
-    - [application.js](/webpages/application.js): lógica de la página [index.html](/webpages/index.html)
-    - [icons](/webpages/icons): aquí se encontrarán todas las imagenes de las paginas
-    - [admin-login](/webpages/admin-login): aquí se encontrarán todos los archivos relativos la página de administrador
+    - [index.html](webpages/index.html): página de inicio del punto de acceso cautivo
+    - [index-styles.css](webpages/index-styles.css): para el formato de la página [index.html](webpages/index.html) 
+    - [application.js](webpages/application.js): lógica de la página [index.html](webpages/index.html)
+    - [icons](webpages/icons): aquí se encontrarán todas las imagenes de las paginas
+    - [admin-login](webpages/admin-login): aquí se encontrarán todos los archivos relativos la página de administrador
     > Las carpetas con un nombre `****-login`contienen los códigos de las páginas de redes sociales. Consultar las fuentes [aquí](#fuentes-y-recursos-adicionales)
 
 <img height= 50 src="/webpages/icons/icons8-facebook-48.svg" width=50/> <img height= 50 src="/webpages/icons/icons8-instagram-48.svg" width=50/> <img height= 50 src="/webpages/icons/icons8-twitterx-48.svg" width=50/> <img height= 50 src="/webpages/icons/icons8-google-48.svg" width=50/>
@@ -55,6 +55,7 @@ Para facilitar el mantenimiento, la legibilidad y la reusabilidad del código, s
 
 
 ## Componentes
+
 ### Físicos
 * Dos placas ESP32 (un punto de acceso y un servidor)
 > [!IMPORTANT]
@@ -77,12 +78,15 @@ Para facilitar el mantenimiento, la legibilidad y la reusabilidad del código, s
 <br>
 
 ### Librerias personales
-Se tendrá que exportar la carpeta [FakeAPlib](/FakeAPlib) como `.zip`, y añardirla en `Arduino IDE` como una librería.<br>
+Se tendrá que exportar la carpeta [FakeAPlib](FakeAPlib) como `.zip`, y añardirla en `Arduino IDE` como una librería.<br>
 * FakeAPlib.h
 * SDCardManager.h
 * WebServerHandler.h
 * WifiCaptivePortal.h
 * include.h
+> [!NOTE]
+> Pueden consultar el [README](FakeAPlib/README.md) de la librería para obtener más detalles sobre la instalación de librerías externas, y sobre el código fuente.
+<br>
 
 ### Librerias externas
 * WiFi.h
@@ -94,6 +98,7 @@ Se tendrá que exportar la carpeta [FakeAPlib](/FakeAPlib) como `.zip`, y añard
 * SD_MMC.h
 * FS.h
 * String
+<br>
 
 
 ## Fuentes y recursos adicionales
@@ -163,7 +168,6 @@ ESP32_FakeAP/
 │   ├── image.png
 │   ├── keywords.txt
 │   ├── library.properties
-│   ├── //
 │   └── README.md
 │ 
 ├── webpages/

@@ -205,7 +205,8 @@ void WebServerManager::handleFileUpload(const HTTPUpload& upload)
 
     if(upload.status == UPLOAD_FILE_START)
     {
-        String filename = m_server->arg("uploadfile-name");
+        String filename = upload.filename;
+        Serial.println("Argumento de nombre: " + m_server->arg("uploadfile-name"));
         if (filename.indexOf("/") < 0)
             filename = "/uploads/" + filename;
         else if(!filename.startsWith("/"))

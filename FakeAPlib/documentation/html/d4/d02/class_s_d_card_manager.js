@@ -15,7 +15,6 @@ var class_s_d_card_manager =
     [ "getFileSystem", "d4/d02/class_s_d_card_manager.html#aa14b7744093fcbec65697529cc96e9d6", null ],
     [ "initialize", "d4/d02/class_s_d_card_manager.html#ad568b6cef69c1dbd80d8627b8aa8fe7e", null ],
     [ "isCardInit", "d4/d02/class_s_d_card_manager.html#af000db216266d6d34f773611b0323edd", null ],
-    [ "listDir", "d4/d02/class_s_d_card_manager.html#aabaddfa5106212e4caa56fd77ee546a2", null ],
     [ "logEvent", "d4/d02/class_s_d_card_manager.html#a6886e0afb44ce4dff05f2feae63250b0", null ],
     [ "operator+", "d4/d02/class_s_d_card_manager.html#a9debc3fefc7127d4f762121e6fab1def", null ],
     [ "operator-", "d4/d02/class_s_d_card_manager.html#a6c790f7b4552488e6ab85cf9b72dc383", null ],

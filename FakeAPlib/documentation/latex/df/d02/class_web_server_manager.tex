@@ -59,7 +59,7 @@ void \mbox{\hyperlink{class_web_server_manager_a2dd9d3612ac9b571e6d304a922fca862
 \begin{DoxyCompactList}\small\item\em Maneja las solicitudes de iconos de las páginas web. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_web_server_manager_ad7f493ed6ded5b0500fb2e3850149930}{handle\+File\+Download}} (void)
 \begin{DoxyCompactList}\small\item\em Maneja la descarga de archivos desde el servidor web. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_web_server_manager_a4dd4026ec22ab5d193d9967cdce6b2be}{handle\+File\+Upload}} (void)
+void \mbox{\hyperlink{class_web_server_manager_a73048ef16c93754eaaf6edcb1e9b7919}{handle\+File\+Upload}} (const HTTPUpload \&upload)
 \begin{DoxyCompactList}\small\item\em Manejador para la subida de archivos al servidor (vía formulario o HTTP POST). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_web_server_manager_a3e9e5dcc277f2069b773144fe54f566a}{handle\+File\+Display}} (void)
 \begin{DoxyCompactList}\small\item\em Maneja la visualización de archivos en el servidor web. \end{DoxyCompactList}\item 
@@ -308,11 +308,11 @@ void Web\+Server\+Manager\+::handle\+File\+Download (\begin{DoxyParamCaption}\it
 
 Maneja la descarga de archivos desde el servidor web. 
 
-Procesa las solicitudes de descarga de archivos realizadas al servidor web. Verifica la existencia del archivo solicitado y gestiona su transferencia al cliente. \Hypertarget{class_web_server_manager_a4dd4026ec22ab5d193d9967cdce6b2be}\index{WebServerManager@{WebServerManager}!handleFileUpload@{handleFileUpload}}
+Procesa las solicitudes de descarga de archivos realizadas al servidor web. Verifica la existencia del archivo solicitado y gestiona su transferencia al cliente. \Hypertarget{class_web_server_manager_a73048ef16c93754eaaf6edcb1e9b7919}\index{WebServerManager@{WebServerManager}!handleFileUpload@{handleFileUpload}}
 \index{handleFileUpload@{handleFileUpload}!WebServerManager@{WebServerManager}}
 \doxysubsubsection{\texorpdfstring{handleFileUpload()}{handleFileUpload()}}
-{\footnotesize\ttfamily \label{class_web_server_manager_a4dd4026ec22ab5d193d9967cdce6b2be} 
-void Web\+Server\+Manager\+::handle\+File\+Upload (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \label{class_web_server_manager_a73048ef16c93754eaaf6edcb1e9b7919} 
+void Web\+Server\+Manager\+::handle\+File\+Upload (\begin{DoxyParamCaption}\item[{const HTTPUpload \&}]{upload}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 

@@ -1,10 +1,10 @@
 #utility files/folders
-debugoutput.yaml
+FakeAPlib/debugoutput.yaml
 debug-output.yaml
 dump
 FakeAPlib/dump
 .zip
-FakeAPlib/latex
+FakeAPlib
 tools
 
 #IDE specific files

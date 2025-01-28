@@ -9,8 +9,20 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
 <script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -24,6 +36,18 @@
    </div>
    <div id="projectbrief">Librería arduino para ESP32 que permite crear un punto de acceso falso</div>
   </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -32,20 +56,52 @@
 <!-- Generado por Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(1); });
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function() { codefold.init(1); });
 /* @license-end */
 </script>
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
-</div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('d1/d02/include_8h_source.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
 <div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
 <div class="header">
   <div class="headertitle"><div class="title">include.h</div></div>
 </div><!--header-->
@@ -243,18 +299,18 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="preprocessor">    #if (WITH_SUCCESS_MESSAGE)</span></div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="preprocessor">        #define SUCCESS_SD_INIT          &quot;[SUCCESS] Tarjeta SD inicializada correctamente&quot;</span></div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="preprocessor">        #define SUCCESS_FILE_OPEN        &quot;[SUCCESS] El archivo: %s se ha leído correctamente. Tiempo: %dms\n&quot;</span></div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="preprocessor">        #define SUCCESS_FILE_WRITE       &quot;[SUCCESS] El archivo: %s se ha guardado correctamente. Tiempo: %dms\n&quot;</span></div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="preprocessor">        #define SUCCESS_FILE_RENAME      &quot;[SUCCESS] El archivo: %s se ha renombrado correctamente\n&quot;</span></div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="preprocessor">        #define SUCCESS_FILE_DELETE      &quot;[SUCCESS] El archivo: %s se ha borrado correctamente\n&quot;</span></div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="preprocessor">        #define SUCCESS_DIR_CREATE       &quot;[SUCCESS] La carpeta: %s se ha creado correctamente\n&quot;</span></div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="preprocessor">        #define SUCCESS_DIR_DELETE       &quot;[SUCCESS] La carpeta: %s se ha borrado correctamente\n&quot;</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="preprocessor">        #define SUCCESS_FILE_OPEN        &quot;[SUCCESS] El archivo %s se ha leído correctamente. Tiempo: %dms\n&quot;</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="preprocessor">        #define SUCCESS_FILE_WRITE       &quot;[SUCCESS] El archivo %s se ha guardado correctamente. Tiempo: %dms\n&quot;</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="preprocessor">        #define SUCCESS_FILE_RENAME      &quot;[SUCCESS] El archivo %s se ha renombrado correctamente\n&quot;</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="preprocessor">        #define SUCCESS_FILE_DELETE      &quot;[SUCCESS] El archivo %s se ha borrado correctamente\n&quot;</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="preprocessor">        #define SUCCESS_DIR_CREATE       &quot;[SUCCESS] La carpeta %s se ha creado correctamente\n&quot;</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="preprocessor">        #define SUCCESS_DIR_DELETE       &quot;[SUCCESS] La carpeta %s se ha borrado correctamente\n&quot;</span></div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="preprocessor">        #define SUCCESS_WIFIAP_INIT      &quot;[SUCCESS] Punto de acceso iniciado correctamente&quot;</span></div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="preprocessor">        #define SUCCESS_WIFISTA_CONECT   &quot;[SUCCESS] Se ha conectado correctamente a la red: %s\n&quot;</span></div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="preprocessor">        #define SUCCESS_SERVER_INIT      &quot;[SUCCESS] Servidor iniciado correctamente&quot;</span></div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="preprocessor">        #define SUCCESS_APSERVER_INIT    &quot;[SUCCESS] El servidor del punto de acceso cautivo iniciado correctamente&quot;</span></div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="preprocessor">        #define SUCCESS_LOG_EVENT        &quot;[LOGS] Evento guardado correctamente&quot;</span></div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="preprocessor">        #define SUCCESS_SAVE_CREDENTIALS &quot;[SUCCESS] Credenciales enviadas y guardadas correctamente&quot;</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="preprocessor">        #define SUCCESS_SAVE_CREDENTIALS &quot;[SUCCESS] Credenciales enviadas correctamente&quot;</span></div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="preprocessor">        #define SUCCESS_GENERATE_JSON    &quot;[SUCCESS] El archivo JSON se generó correctamente&quot;</span></div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <span class="comment">//#define SUCCESS_SD_CARD_TYPE &quot;[SUCCESS] El tipo de tarjeta es incompatible&quot;</span></div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        <span class="comment">//#define SUCCESS_SD_CARD_READ &quot;[SUCCESS] en la lectura de la tarjeta&quot;</span></div>
@@ -268,18 +324,19 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="preprocessor">        #define NEW_SOCIALS_PATH   &quot;[SERVER] Nuevas rutas indicadas para las paginas de redes sociales.&quot;</span></div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="preprocessor">        #define NEW_FILE_CONTENT   &quot;[SERVER] Displaying file %s\n&quot;</span></div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="preprocessor">        #define NEW_FILE_DELETED   &quot;[SERVER] El archivo %s se ha borrado correctamente\n&quot;</span></div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="preprocessor">        #define NEW_FILE_UPLOADED  &quot;[SERVER] El archivo %s se ha subido al servidor\n&quot;</span></div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="preprocessor">        #define FAILED_FILE_UPLOAD &quot;[SERVER] El archivo %s no se pudo subir al servidor\n&quot;</span></div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="preprocessor">        #define FAILED_ADMIN_LOGIN &quot;[SERVER] Intento de connexión como admin fallado.&quot;</span></div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="preprocessor">        #define FAILED_CREDENTIALS &quot;[SERVER] Error al guardar las credenciales&quot;</span></div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="preprocessor">        #define FAILED_UNEXPECTED  &quot;[SERVER] Ha occurido un error inesperado al subir el archivo&quot;</span></div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="preprocessor">    #endif</span></div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="preprocessor">#endif </span><span class="comment">//USE_GLOBAL_VAR</span></div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="preprocessor">        #define NEW_CREDENTIALS    &quot;[SERVER] Credenciales recibidas y guardadas correctamente&quot;</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="preprocessor">        #define NEW_FILE_UPLOADED  &quot;[SERVER] El archivo %s se ha subido al servidor\n&quot;</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="preprocessor">        #define FAILED_FILE_UPLOAD &quot;[SERVER] El archivo %s no se pudo subir al servidor\n&quot;</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="preprocessor">        #define FAILED_ADMIN_LOGIN &quot;[SERVER] Intento de connexión como admin fallado.&quot;</span></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="preprocessor">        #define FAILED_CREDENTIALS &quot;[SERVER] Error al guardar las credenciales&quot;</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="preprocessor">        #define FAILED_UNEXPECTED  &quot;[SERVER] Ha occurido un error inesperado al subir el archivo&quot;</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="preprocessor">#endif </span><span class="comment">//USE_GLOBAL_VAR</span></div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="preprocessor">#endif </span><span class="comment">//INCLUDE_H</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="preprocessor">#endif </span><span class="comment">//INCLUDE_H</span></div>
 <div class="ttc" id="ainclude_8h_html_aa027791d4c6bbda765e876c1bf8ddff6"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6">Platform_t</a></div><div class="ttdeci">Platform_t</div><div class="ttdef"><b>Definition</b> include.h:69</div></div>
 <div class="ttc" id="ainclude_8h_html_aa027791d4c6bbda765e876c1bf8ddff6a14e1e9c8e5f5a807deef8ee2bf38974d"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a14e1e9c8e5f5a807deef8ee2bf38974d">GOOGLE</a></div><div class="ttdeci">@ GOOGLE</div><div class="ttdef"><b>Definition</b> include.h:71</div></div>
 <div class="ttc" id="ainclude_8h_html_aa027791d4c6bbda765e876c1bf8ddff6a6b09926d98e3d10888b34a57fff96ab8"><div class="ttname"><a href="../../d1/d02/include_8h.html#aa027791d4c6bbda765e876c1bf8ddff6a6b09926d98e3d10888b34a57fff96ab8">TWITTER</a></div><div class="ttdeci">@ TWITTER</div><div class="ttdef"><b>Definition</b> include.h:73</div></div>
@@ -310,10 +367,13 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="astructfake_a_p_lib_1_1_placeholder__t_html_ae137bd798a5ab641e5a8ba53748d99f2"><div class="ttname"><a href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#ae137bd798a5ab641e5a8ba53748d99f2">fakeAPLib::Placeholder_t::InstagramPath</a></div><div class="ttdeci">static const String InstagramPath</div><div class="ttdef"><b>Definition</b> include.h:113</div></div>
 <div class="ttc" id="astructfake_a_p_lib_1_1_placeholder__t_html_ae68ec1400ade62c1b0b92aa88c17eefe"><div class="ttname"><a href="../../dd/d00/structfake_a_p_lib_1_1_placeholder__t.html#ae68ec1400ade62c1b0b92aa88c17eefe">fakeAPLib::Placeholder_t::WifiStatus</a></div><div class="ttdeci">static const String WifiStatus</div><div class="ttdef"><b>Definition</b> include.h:102</div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="../../d1/d02/include_8h.html">include.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
 </body>
 </html>

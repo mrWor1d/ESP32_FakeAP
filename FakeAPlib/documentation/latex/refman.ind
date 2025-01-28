@@ -183,10 +183,8 @@
 
   \indexspace
 
-  \item {listDir}
-    \subitem {SDCardManager}, \hyperpage{29}
   \item {logEvent}
-    \subitem {SDCardManager}, \hyperpage{30}
+    \subitem {SDCardManager}, \hyperpage{29}
 
   \indexspace
 
@@ -235,7 +233,7 @@
   \indexspace
 
   \item {readFile}
-    \subitem {SDCardManager}, \hyperpage{31}
+    \subitem {SDCardManager}, \hyperpage{30, 31}
   \item {README.md}, \hyperpage{49}
   \item {refreshAdminPage}
     \subitem {WebServerManager}, \hyperpage{40}
@@ -262,12 +260,11 @@
     \subitem {getFileSystem}, \hyperpage{29}
     \subitem {initialize}, \hyperpage{29}
     \subitem {isCardInit}, \hyperpage{29}
-    \subitem {listDir}, \hyperpage{29}
-    \subitem {logEvent}, \hyperpage{30}
+    \subitem {logEvent}, \hyperpage{29}
     \subitem {operator+}, \hyperpage{30}
     \subitem {operator-\/}, \hyperpage{30}
     \subitem {operator=}, \hyperpage{30}
-    \subitem {readFile}, \hyperpage{31}
+    \subitem {readFile}, \hyperpage{30, 31}
     \subitem {removeDir}, \hyperpage{31}
     \subitem {renameFile}, \hyperpage{31}
     \subitem {SDCardManager}, \hyperpage{25}

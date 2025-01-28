@@ -1,9 +1,3 @@
-#define JSON_FILE_PATH "/webpages/admin-login/filesdatos.json"
-#define LOG_FILE "/logs/logsfile.txt"
-#define ADMIN_USERNAME "neil"
-#define ADMIN_PASSWORD "simo"
-
-
 #include <FakeAPlib.h>
 
 
