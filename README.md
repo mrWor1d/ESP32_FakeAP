@@ -39,6 +39,7 @@ Para facilitar el mantenimiento, la legibilidad y la reusabilidad del código, s
 * Se encontrará el código Arduino en las carpetas:
     - [ESP32_honeyPot](ESP32_honeyPot): código a ejecutar en la placa del punto de acceso
     - [ESP32_Server](ESP32_Server): código a ejecutar en la placa del servidor
+* Hay ejemplos de uso en la carpeta [examples](FakeAPlib/examples/)
 * Todas las rutas web están recogidas en el archivo [IP_Routes.txt](IP_Routes.txt)
 * Codigo fuente de las páginas html:
     - [index.html](webpages/index.html): página de inicio del punto de acceso cautivo
@@ -143,8 +144,11 @@ ESP32_FakeAP/
 │
 ├── FakeAPlib/
 │   ├── examples/
-│   │   └── fake_access_point/
-│   │       └── fake_access_point.ino
+│   │   ├── fake_access_point/
+│   │   │   └── fake_access_point.ino
+│   │   │
+│   │   └── web_server/
+│   │       └── web_server.ino
 │   │
 │   ├── src/
 │   │   ├── documentation/
