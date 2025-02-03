@@ -4,7 +4,6 @@ debug-output.yaml
 dump
 FakeAPlib/dump
 .zip
-FakeAPlib
 tools
 
 #IDE specific files

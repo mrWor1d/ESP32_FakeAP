@@ -34,7 +34,7 @@ El Servidor tiene diferentes funcionalidades como:
 Para facilitar el mantenimiento, la legibilidad y la reusabilidad del código, se desarolló una librería que solo se tendrá que añadir a `Arduino IDE` y usarla en su sketch.
 * Los archivos fuentes de la librería se encontrarán en la carpet [FakeAPlib](FakeAPlib). Su documentación se puede encontrar en:
     - [index.html](FakeAPlib/documentation/html/index.html): documentación en formato HTML
-    - [doc.chm](FakeAPlib/documentation/html/doc.chm): documentación en formato HTML compilado (Windows)
+    - [doc.chm](FakeAPlib/documentation/hhc/doc.chm): documentación en formato HTML compilado (Windows)
     - [refman.pdf](FakeAPlib/documentation/latex/refman.pdf): documentación en formato PDF
 * Se encontrará el código Arduino en las carpetas:
     - [ESP32_honeyPot](ESP32_honeyPot): código a ejecutar en la placa del punto de acceso
